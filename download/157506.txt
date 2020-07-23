@@ -1,0 +1,50 @@
+=========================================================================
+Ubuntu Security Notice USN-4333-2
+April 30, 2020
+
+python3.8 vulnerabilities
+=========================================================================
+A security issue affects these releases of Ubuntu and its derivatives:
+
+- Ubuntu 20.04 LTS
+
+Summary:
+
+Several security issues were fixed in Python.
+
+Software Description:
+- python3.8: Interactive high-level object-oriented language (version 3.8)
+
+Details:
+
+USN-4333-1 fixed vulnerabilities in Python. This update provides
+the corresponding update for Ubuntu 20.04 LTS.
+
+Original advisory details:
+
+ It was discovered that Python incorrectly stripped certain characters from
+ requests. A remote attacker could use this issue to perform CRLF injection.
+ (CVE-2019-18348)
+
+ It was discovered that Python incorrectly handled certain HTTP requests.
+ An attacker could possibly use this issue to cause a denial of service.
+ (CVE-2020-8492)
+
+Update instructions:
+
+The problem can be corrected by updating your system to the following
+package versions:
+
+Ubuntu 20.04 LTS:
+  python3.8                       3.8.2-1ubuntu1.1
+  python3.8-minimal               3.8.2-1ubuntu1.1
+
+In general, a standard system update will make all the necessary changes.
+
+References:
+  https://usn.ubuntu.com/4333-2
+  https://usn.ubuntu.com/4333-1
+  CVE-2019-18348, CVE-2020-8492
+
+Package Information:
+  https://launchpad.net/ubuntu/+source/python3.8/3.8.2-1ubuntu1.1

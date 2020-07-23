@@ -1,0 +1,397 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Important: Red Hat JBoss Enterprise Application Platform 7.2.8 on RHEL 6 security update
+Advisory ID:       RHSA-2020:2058-01
+Product:           Red Hat JBoss Enterprise Application Platform
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:2058
+Issue date:        2020-05-11
+CVE Names:         CVE-2019-10172 CVE-2019-12423 CVE-2019-17573
+                   CVE-2020-1719 CVE-2020-1729 CVE-2020-1732
+                   CVE-2020-1745 CVE-2020-1757 CVE-2020-7226
+                   CVE-2020-10705 CVE-2020-10719
+====================================================================
+1. Summary:
+
+An update is now available for Red Hat JBoss Enterprise Application
+Platform 7.2 for Red Hat Enterprise Linux 6.
+
+Red Hat Product Security has rated this update as having a security impact
+of Important. A Common Vulnerability Scoring System (CVSS) base score,
+which gives a detailed severity rating, is available for each vulnerability
+from the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat JBoss EAP 7.2 for RHEL 6 Server - noarch
+
+3. Description:
+
+This release of Red Hat JBoss Enterprise Application Platform 7.2.8 serves
+as a replacement for Red Hat JBoss Enterprise Application Platform 7.2.7,
+and includes bug fixes and enhancements. See the Red Hat JBoss Enterprise
+Application Platform 7.2.8 Release Notes for information about the most
+significant bug fixes and enhancements included in this release.
+
+Security Fix(es):
+
+* cxf: reflected XSS in the services listing page (CVE-2019-17573)
+
+* smallrye-config: SmallRye: SecuritySupport class is incorrectly public
+and contains a static method to access the current threads context class
+loader (CVE-2020-1729)
+
+* jackson-databind: XML external entity similar to CVE-2016-3720
+(CVE-2019-10172)
+
+* wildfly: Soteria: security identity corruption across concurrent threads
+(CVE-2020-1732)
+
+* undertow: AJP File Read/Inclusion Vulnerability (CVE-2020-1745)
+
+* cryptacular: excessive memory allocation during a decode operation
+(CVE-2020-7226)
+
+* cxf-core: cxf: OpenId Connect token service does not properly validate
+the clientId (CVE-2019-12423)
+
+* undertow: servletPath in normalized incorrectly leading to dangerous
+application mapping which could result in security bypass (CVE-2020-1757)
+
+* wildfly: EJBContext principal is not popped back after invoking another
+EJB using a different Security Domain (CVE-2020-1719)
+
+* undertow: invalid HTTP request with large chunk size (CVE-2020-10719)
+
+* undertow: Memory exhaustion issue in HttpReadListener via "Expect:
+100-continue" header (CVE-2020-10705)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, and other related information, see the CVE page(s) listed in the
+References section.
+
+4. Solution:
+
+Before applying this update, back up your existing Red Hat JBoss Enterprise
+Application Platform installation and deployed applications.
+
+For details about how to apply this update, which includes the changes
+described in this advisory, see:
+
+https://access.redhat.com/articles/11258
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1715075 - CVE-2019-10172 jackson-mapper-asl: XML external entity similar to CVE-2016-3720
+1752770 - CVE-2020-1757 undertow: servletPath is normalized incorrectly leading to dangerous application mapping which could result in security bypass
+1796617 - CVE-2020-1719 Wildfly: EJBContext principal is not popped back after invoking another EJB using a different Security Domain
+1797006 - CVE-2019-12423 cxf: OpenId Connect token service does not properly validate the clientId
+1797011 - CVE-2019-17573 cxf: reflected XSS in the services listing page
+1801380 - CVE-2020-7226 cryptacular: excessive memory allocation during a decode operation
+1801726 - CVE-2020-1732 Soteria: security identity corruption across concurrent threads
+1802444 - CVE-2020-1729 SmallRye: SecuritySupport class is incorrectly public and contains a static method to access the current threads context class loader
+1803241 - CVE-2020-10705 undertow: Memory exhaustion issue in HttpReadListener via "Expect: 100-continue" header
+1807305 - CVE-2020-1745 undertow: AJP File Read/Inclusion Vulnerability
+1828459 - CVE-2020-10719 undertow: invalid HTTP request with large chunk size
+
+6. JIRA issues fixed (https://issues.jboss.org/):
+
+JBEAP-18071 - [GSS](7.2.z) Upgrade RESTEasy from 3.6.1.SP7 to 3.6.1.SP8
+JBEAP-18267 - [GSS] (7.2.z) Upgrade Undertow from 2.0.28.SP1-redhat-00001 to 2.0.30.SP1-redhat-00001
+JBEAP-18278 - [GSS](7.2.z) Upgrade JBoss JSF API from 2.3.5.SP2-redhat-00001 to 2.3.5.SP2-redhat-00003
+JBEAP-18423 - [GSS](7.2.z) Upgrade JSF based on Mojarra 2.3.5.SP3-redhat-00005 to 2.3.5.SP3-redhat-00008
+JBEAP-18438 - (7.2.z) Upgrade jboss-ejb-client from 4.0.28.Final to 4.0.31.Final
+JBEAP-18503 - (7.2.z) Upgrade WildFly Naming Client from 1.0.10.Final to 1.0.12.Final
+JBEAP-18506 - [GSS](7.2.z) Upgrade HAL from 3.0.20.Final to 3.0.21.Final
+JBEAP-18536 - [GSS](7.2.z) Upgrade Bouncycastle from 1.60.0-redhat-00001 to 1.60.0-redhat-00002
+JBEAP-18595 - [GSS](7.2.z) Upgrade JBoss Modules from 1.8.8 to 1.8.9
+JBEAP-18616 - [Runtimes] (7.2.z) Update components in line with EAP 7.3 stream
+JBEAP-18628 - [Runtimes] (7.2.x) Upgrade EAP components to latest Runtimes supported version
+JBEAP-18631 - [Runtimes] (7.2.x) WFCORE - Upgrade components to latest versions from EAP 7.3
+JBEAP-18639 - [Runtimes] (7.2.x) Upgrade slf4j-jboss-logmanager from 1.0.3.GA.redhat-2 to 1.0.4.GA.redhat-00001
+JBEAP-18646 - [GSS](7.2.z) Upgrade Artemis from 2.9.0.redhat-00009 to 2.9.0.redhat-00010
+JBEAP-18652 - (7.2.z) Upgrade Apache CXF from 3.2.11.redhat-00001 to 3.2.12.redhat-00001
+JBEAP-18664 - [GSS](7.2.z) Upgrade javax.el-impl from 3.0.1.b08-redhat-00003 to 3.0.1.b08-redhat-00004
+JBEAP-18724 - (7.2.z) Upgrade Soteria to 1.0.0-redhat-00002
+JBEAP-18729 - [GSS](7.2.z) Upgrade wildfly-transaction-client from 1.1.9.Final-redhat-00001 to 1.1.10.Final-redhat-00001
+JBEAP-18787 - (7.2.z) Upgrade wss4j from 2.2.2.redhat-00002 to 2.2.5.redhat-00001
+JBEAP-18789 - (7.2.z) Upgrade cryptacular from 1.2.0.redhat-1 to 1.2.4.redhat-00001
+JBEAP-18817 - (7.2.z) Upgrade PicketBox from 5.0.3.Final-redhat-00005 to 5.0.3.Final-redhat-00006
+JBEAP-18827 - [GSS](7.2.z) Upgrade JBoss Remoting from 5.0.17-redhat-00001 to 5.0.18-redhat-00001
+JBEAP-18835 - [GSS](7.2.z) Upgrade Remoting JMX from 3.0.3 to 3.0.4
+JBEAP-18885 - Tracker bug for the EAP 7.2.8 release for RHEL-6
+JBEAP-18931 - [GSS](7.2.z) Upgrade WildFly Elytron from 1.6.5.Final-redhat-00001 to 1.6.6.Final-redhat-00001
+JBEAP-18988 - (7.2.z) Upgrade jasypt from 1.9.2 to 1.9.3
+JBEAP-18989 - (7.2.z) Upgrade opensaml from 3.3.0.redhat-1 to 3.3.1-redhat-00002
+JBEAP-19233 - (7.2.z) Upgrade undertow from 2.0.30.SP1-redhat-00001 to 2.0.30.SP2-redhat-00001
+JBEAP-19234 - (7.2.z) Upgrade WildFly Core from 6.0.26.Final-redhat-00001 to 6.0.27.Final-redhat-00001
+
+7. Package List:
+
+Red Hat JBoss EAP 7.2 for RHEL 6 Server:
+
+Source:
+eap7-activemq-artemis-2.9.0-4.redhat_00010.1.el6eap.src.rpm
+eap7-apache-cxf-3.2.12-1.redhat_00001.1.el6eap.src.rpm
+eap7-bouncycastle-1.60.0-2.redhat_00002.1.el6eap.src.rpm
+eap7-codehaus-jackson-1.9.13-10.redhat_00007.1.el6eap.src.rpm
+eap7-cryptacular-1.2.4-1.redhat_00001.1.el6eap.src.rpm
+eap7-glassfish-el-3.0.1-5.b08_redhat_00004.1.el6eap.src.rpm
+eap7-glassfish-javamail-1.6.2-2.redhat_00001.1.el6eap.src.rpm
+eap7-glassfish-jsf-2.3.5-10.SP3_redhat_00008.1.el6eap.src.rpm
+eap7-hal-console-3.0.21-1.Final_redhat_00001.1.el6eap.src.rpm
+eap7-hibernate-commons-annotations-5.0.5-1.Final_redhat_00002.1.el6eap.src.rpm
+eap7-hibernate-search-5.10.7-1.Final_redhat_00001.1.el6eap.src.rpm
+eap7-httpcomponents-client-4.5.4-1.redhat_00001.1.el6eap.src.rpm
+eap7-httpcomponents-core-4.4.5-1.redhat_00001.1.el6eap.src.rpm
+eap7-jackson-databind-2.9.10.2-2.redhat_00002.1.el6eap.src.rpm
+eap7-jasypt-1.9.3-1.redhat_00001.1.el6eap.src.rpm
+eap7-javaee-security-soteria-1.0.0-3.redhat_00002.1.el6eap.src.rpm
+eap7-jaxbintros-1.0.3-1.GA_redhat_00001.1.el6eap.src.rpm
+eap7-jboss-batch-api_1.0_spec-1.0.2-1.Final_redhat_00001.1.el6eap.src.rpm
+eap7-jboss-classfilewriter-1.2.4-1.Final_redhat_00001.1.el6eap.src.rpm
+eap7-jboss-common-beans-2.0.1-1.Final_redhat_00001.1.el6eap.src.rpm
+eap7-jboss-ejb-api_3.2_spec-1.0.2-1.Final_redhat_00001.1.el6eap.src.rpm
+eap7-jboss-ejb-client-4.0.31-1.Final_redhat_00001.1.el6eap.src.rpm
+eap7-jboss-invocation-1.5.2-1.Final_redhat_00001.1.el6eap.src.rpm
+eap7-jboss-jsf-api_2.3_spec-2.3.5-5.SP2_redhat_00003.1.el6eap.src.rpm
+eap7-jboss-modules-1.8.9-1.Final_redhat_00001.1.el6eap.src.rpm
+eap7-jboss-openjdk-orb-8.1.4-3.Final_redhat_00002.1.el6eap.src.rpm
+eap7-jboss-remoting-5.0.18-1.Final_redhat_00001.1.el6eap.src.rpm
+eap7-jboss-remoting-jmx-3.0.4-1.Final_redhat_00001.1.el6eap.src.rpm
+eap7-jboss-security-negotiation-3.0.6-1.Final_redhat_00001.1.el6eap.src.rpm
+eap7-jboss-server-migration-1.3.1-10.Final_redhat_00011.1.el6eap.src.rpm
+eap7-jboss-threads-2.3.3-1.Final_redhat_00001.1.el6eap.src.rpm
+eap7-jboss-websocket-api_1.1_spec-1.1.4-1.Final_redhat_00001.1.el6eap.src.rpm
+eap7-jbossws-common-3.2.3-1.Final_redhat_00001.1.el6eap.src.rpm
+eap7-jgroups-4.0.20-2.Final_redhat_00002.1.el6eap.src.rpm
+eap7-jgroups-azure-1.2.1-1.Final_redhat_00001.1.el6eap.src.rpm
+eap7-jgroups-kubernetes-1.0.13-1.Final_redhat_00001.1.el6eap.src.rpm
+eap7-mod_cluster-1.4.1-1.Final_redhat_00001.1.el6eap.src.rpm
+eap7-narayana-5.9.8-1.Final_redhat_00002.1.el6eap.src.rpm
+eap7-opensaml-3.3.1-1.redhat_00002.1.el6eap.src.rpm
+eap7-picketbox-5.0.3-7.Final_redhat_00006.1.el6eap.src.rpm
+eap7-resteasy-3.6.1-9.SP8_redhat_00001.1.el6eap.src.rpm
+eap7-slf4j-jboss-logmanager-1.0.4-1.GA_redhat_00001.1.el6eap.src.rpm
+eap7-smallrye-config-1.3.6-1.SP01_redhat_00001.1.el6eap.src.rpm
+eap7-smallrye-health-1.0.2-2.redhat_00002.1.el6eap.src.rpm
+eap7-undertow-2.0.30-2.SP2_redhat_00001.1.el6eap.src.rpm
+eap7-weld-cdi-2.0-api-2.0.0-4.SP1_redhat_00004.1.el6eap.src.rpm
+eap7-wildfly-7.2.8-3.GA_redhat_00002.1.el6eap.src.rpm
+eap7-wildfly-elytron-1.6.6-1.Final_redhat_00001.1.el6eap.src.rpm
+eap7-wildfly-naming-client-1.0.12-1.Final_redhat_00001.1.el6eap.src.rpm
+eap7-wildfly-transaction-client-1.1.10-1.Final_redhat_00001.1.el6eap.src.rpm
+eap7-ws-commons-XmlSchema-2.2.4-1.redhat_00001.1.el6eap.src.rpm
+eap7-wss4j-2.2.5-1.redhat_00001.1.el6eap.src.rpm
+
+noarch:
+eap7-activemq-artemis-2.9.0-4.redhat_00010.1.el6eap.noarch.rpm
+eap7-activemq-artemis-cli-2.9.0-4.redhat_00010.1.el6eap.noarch.rpm
+eap7-activemq-artemis-commons-2.9.0-4.redhat_00010.1.el6eap.noarch.rpm
+eap7-activemq-artemis-core-client-2.9.0-4.redhat_00010.1.el6eap.noarch.rpm
+eap7-activemq-artemis-dto-2.9.0-4.redhat_00010.1.el6eap.noarch.rpm
+eap7-activemq-artemis-hornetq-protocol-2.9.0-4.redhat_00010.1.el6eap.noarch.rpm
+eap7-activemq-artemis-hqclient-protocol-2.9.0-4.redhat_00010.1.el6eap.noarch.rpm
+eap7-activemq-artemis-jdbc-store-2.9.0-4.redhat_00010.1.el6eap.noarch.rpm
+eap7-activemq-artemis-jms-client-2.9.0-4.redhat_00010.1.el6eap.noarch.rpm
+eap7-activemq-artemis-jms-server-2.9.0-4.redhat_00010.1.el6eap.noarch.rpm
+eap7-activemq-artemis-journal-2.9.0-4.redhat_00010.1.el6eap.noarch.rpm
+eap7-activemq-artemis-ra-2.9.0-4.redhat_00010.1.el6eap.noarch.rpm
+eap7-activemq-artemis-selector-2.9.0-4.redhat_00010.1.el6eap.noarch.rpm
+eap7-activemq-artemis-server-2.9.0-4.redhat_00010.1.el6eap.noarch.rpm
+eap7-activemq-artemis-service-extensions-2.9.0-4.redhat_00010.1.el6eap.noarch.rpm
+eap7-activemq-artemis-tools-2.9.0-4.redhat_00010.1.el6eap.noarch.rpm
+eap7-apache-cxf-3.2.12-1.redhat_00001.1.el6eap.noarch.rpm
+eap7-apache-cxf-rt-3.2.12-1.redhat_00001.1.el6eap.noarch.rpm
+eap7-apache-cxf-services-3.2.12-1.redhat_00001.1.el6eap.noarch.rpm
+eap7-apache-cxf-tools-3.2.12-1.redhat_00001.1.el6eap.noarch.rpm
+eap7-bouncycastle-1.60.0-2.redhat_00002.1.el6eap.noarch.rpm
+eap7-bouncycastle-mail-1.60.0-2.redhat_00002.1.el6eap.noarch.rpm
+eap7-bouncycastle-pkix-1.60.0-2.redhat_00002.1.el6eap.noarch.rpm
+eap7-bouncycastle-prov-1.60.0-2.redhat_00002.1.el6eap.noarch.rpm
+eap7-codehaus-jackson-1.9.13-10.redhat_00007.1.el6eap.noarch.rpm
+eap7-codehaus-jackson-core-asl-1.9.13-10.redhat_00007.1.el6eap.noarch.rpm
+eap7-codehaus-jackson-jaxrs-1.9.13-10.redhat_00007.1.el6eap.noarch.rpm
+eap7-codehaus-jackson-mapper-asl-1.9.13-10.redhat_00007.1.el6eap.noarch.rpm
+eap7-codehaus-jackson-xc-1.9.13-10.redhat_00007.1.el6eap.noarch.rpm
+eap7-cryptacular-1.2.4-1.redhat_00001.1.el6eap.noarch.rpm
+eap7-glassfish-el-3.0.1-5.b08_redhat_00004.1.el6eap.noarch.rpm
+eap7-glassfish-el-impl-3.0.1-5.b08_redhat_00004.1.el6eap.noarch.rpm
+eap7-glassfish-javamail-1.6.2-2.redhat_00001.1.el6eap.noarch.rpm
+eap7-glassfish-jsf-2.3.5-10.SP3_redhat_00008.1.el6eap.noarch.rpm
+eap7-hal-console-3.0.21-1.Final_redhat_00001.1.el6eap.noarch.rpm
+eap7-hibernate-commons-annotations-5.0.5-1.Final_redhat_00002.1.el6eap.noarch.rpm
+eap7-hibernate-search-5.10.7-1.Final_redhat_00001.1.el6eap.noarch.rpm
+eap7-hibernate-search-backend-jgroups-5.10.7-1.Final_redhat_00001.1.el6eap.noarch.rpm
+eap7-hibernate-search-backend-jms-5.10.7-1.Final_redhat_00001.1.el6eap.noarch.rpm
+eap7-hibernate-search-engine-5.10.7-1.Final_redhat_00001.1.el6eap.noarch.rpm
+eap7-hibernate-search-orm-5.10.7-1.Final_redhat_00001.1.el6eap.noarch.rpm
+eap7-hibernate-search-serialization-avro-5.10.7-1.Final_redhat_00001.1.el6eap.noarch.rpm
+eap7-httpcomponents-client-4.5.4-1.redhat_00001.1.el6eap.noarch.rpm
+eap7-httpcomponents-core-4.4.5-1.redhat_00001.1.el6eap.noarch.rpm
+eap7-jackson-databind-2.9.10.2-2.redhat_00002.1.el6eap.noarch.rpm
+eap7-jasypt-1.9.3-1.redhat_00001.1.el6eap.noarch.rpm
+eap7-javaee-security-soteria-1.0.0-3.redhat_00002.1.el6eap.noarch.rpm
+eap7-javaee-security-soteria-enterprise-1.0.0-3.redhat_00002.1.el6eap.noarch.rpm
+eap7-jaxbintros-1.0.3-1.GA_redhat_00001.1.el6eap.noarch.rpm
+eap7-jboss-batch-api_1.0_spec-1.0.2-1.Final_redhat_00001.1.el6eap.noarch.rpm
+eap7-jboss-classfilewriter-1.2.4-1.Final_redhat_00001.1.el6eap.noarch.rpm
+eap7-jboss-common-beans-2.0.1-1.Final_redhat_00001.1.el6eap.noarch.rpm
+eap7-jboss-ejb-api_3.2_spec-1.0.2-1.Final_redhat_00001.1.el6eap.noarch.rpm
+eap7-jboss-ejb-client-4.0.31-1.Final_redhat_00001.1.el6eap.noarch.rpm
+eap7-jboss-invocation-1.5.2-1.Final_redhat_00001.1.el6eap.noarch.rpm
+eap7-jboss-jsf-api_2.3_spec-2.3.5-5.SP2_redhat_00003.1.el6eap.noarch.rpm
+eap7-jboss-modules-1.8.9-1.Final_redhat_00001.1.el6eap.noarch.rpm
+eap7-jboss-openjdk-orb-8.1.4-3.Final_redhat_00002.1.el6eap.noarch.rpm
+eap7-jboss-remoting-5.0.18-1.Final_redhat_00001.1.el6eap.noarch.rpm
+eap7-jboss-remoting-jmx-3.0.4-1.Final_redhat_00001.1.el6eap.noarch.rpm
+eap7-jboss-security-negotiation-3.0.6-1.Final_redhat_00001.1.el6eap.noarch.rpm
+eap7-jboss-server-migration-1.3.1-10.Final_redhat_00011.1.el6eap.noarch.rpm
+eap7-jboss-server-migration-cli-1.3.1-10.Final_redhat_00011.1.el6eap.noarch.rpm
+eap7-jboss-server-migration-core-1.3.1-10.Final_redhat_00011.1.el6eap.noarch.rpm
+eap7-jboss-server-migration-eap6.4-1.3.1-10.Final_redhat_00011.1.el6eap.noarch.rpm
+eap7-jboss-server-migration-eap6.4-to-eap7.2-1.3.1-10.Final_redhat_00011.1.el6eap.noarch.rpm
+eap7-jboss-server-migration-eap7.0-1.3.1-10.Final_redhat_00011.1.el6eap.noarch.rpm
+eap7-jboss-server-migration-eap7.0-to-eap7.2-1.3.1-10.Final_redhat_00011.1.el6eap.noarch.rpm
+eap7-jboss-server-migration-eap7.1-1.3.1-10.Final_redhat_00011.1.el6eap.noarch.rpm
+eap7-jboss-server-migration-eap7.1-to-eap7.2-1.3.1-10.Final_redhat_00011.1.el6eap.noarch.rpm
+eap7-jboss-server-migration-eap7.2-1.3.1-10.Final_redhat_00011.1.el6eap.noarch.rpm
+eap7-jboss-server-migration-wildfly10.0-1.3.1-10.Final_redhat_00011.1.el6eap.noarch.rpm
+eap7-jboss-server-migration-wildfly10.0-to-eap7.2-1.3.1-10.Final_redhat_00011.1.el6eap.noarch.rpm
+eap7-jboss-server-migration-wildfly10.1-1.3.1-10.Final_redhat_00011.1.el6eap.noarch.rpm
+eap7-jboss-server-migration-wildfly10.1-to-eap7.2-1.3.1-10.Final_redhat_00011.1.el6eap.noarch.rpm
+eap7-jboss-server-migration-wildfly11.0-1.3.1-10.Final_redhat_00011.1.el6eap.noarch.rpm
+eap7-jboss-server-migration-wildfly11.0-to-eap7.2-1.3.1-10.Final_redhat_00011.1.el6eap.noarch.rpm
+eap7-jboss-server-migration-wildfly12.0-1.3.1-10.Final_redhat_00011.1.el6eap.noarch.rpm
+eap7-jboss-server-migration-wildfly12.0-to-eap7.2-1.3.1-10.Final_redhat_00011.1.el6eap.noarch.rpm
+eap7-jboss-server-migration-wildfly13.0-server-1.3.1-10.Final_redhat_00011.1.el6eap.noarch.rpm
+eap7-jboss-server-migration-wildfly14.0-server-1.3.1-10.Final_redhat_00011.1.el6eap.noarch.rpm
+eap7-jboss-server-migration-wildfly8.2-1.3.1-10.Final_redhat_00011.1.el6eap.noarch.rpm
+eap7-jboss-server-migration-wildfly8.2-to-eap7.2-1.3.1-10.Final_redhat_00011.1.el6eap.noarch.rpm
+eap7-jboss-server-migration-wildfly9.0-1.3.1-10.Final_redhat_00011.1.el6eap.noarch.rpm
+eap7-jboss-server-migration-wildfly9.0-to-eap7.2-1.3.1-10.Final_redhat_00011.1.el6eap.noarch.rpm
+eap7-jboss-threads-2.3.3-1.Final_redhat_00001.1.el6eap.noarch.rpm
+eap7-jboss-websocket-api_1.1_spec-1.1.4-1.Final_redhat_00001.1.el6eap.noarch.rpm
+eap7-jbossws-common-3.2.3-1.Final_redhat_00001.1.el6eap.noarch.rpm
+eap7-jgroups-4.0.20-2.Final_redhat_00002.1.el6eap.noarch.rpm
+eap7-jgroups-azure-1.2.1-1.Final_redhat_00001.1.el6eap.noarch.rpm
+eap7-jgroups-kubernetes-1.0.13-1.Final_redhat_00001.1.el6eap.noarch.rpm
+eap7-mod_cluster-1.4.1-1.Final_redhat_00001.1.el6eap.noarch.rpm
+eap7-narayana-5.9.8-1.Final_redhat_00002.1.el6eap.noarch.rpm
+eap7-narayana-compensations-5.9.8-1.Final_redhat_00002.1.el6eap.noarch.rpm
+eap7-narayana-jbosstxbridge-5.9.8-1.Final_redhat_00002.1.el6eap.noarch.rpm
+eap7-narayana-jbossxts-5.9.8-1.Final_redhat_00002.1.el6eap.noarch.rpm
+eap7-narayana-jts-idlj-5.9.8-1.Final_redhat_00002.1.el6eap.noarch.rpm
+eap7-narayana-jts-integration-5.9.8-1.Final_redhat_00002.1.el6eap.noarch.rpm
+eap7-narayana-restat-api-5.9.8-1.Final_redhat_00002.1.el6eap.noarch.rpm
+eap7-narayana-restat-bridge-5.9.8-1.Final_redhat_00002.1.el6eap.noarch.rpm
+eap7-narayana-restat-integration-5.9.8-1.Final_redhat_00002.1.el6eap.noarch.rpm
+eap7-narayana-restat-util-5.9.8-1.Final_redhat_00002.1.el6eap.noarch.rpm
+eap7-narayana-txframework-5.9.8-1.Final_redhat_00002.1.el6eap.noarch.rpm
+eap7-opensaml-3.3.1-1.redhat_00002.1.el6eap.noarch.rpm
+eap7-opensaml-core-3.3.1-1.redhat_00002.1.el6eap.noarch.rpm
+eap7-opensaml-profile-api-3.3.1-1.redhat_00002.1.el6eap.noarch.rpm
+eap7-opensaml-saml-api-3.3.1-1.redhat_00002.1.el6eap.noarch.rpm
+eap7-opensaml-saml-impl-3.3.1-1.redhat_00002.1.el6eap.noarch.rpm
+eap7-opensaml-security-api-3.3.1-1.redhat_00002.1.el6eap.noarch.rpm
+eap7-opensaml-security-impl-3.3.1-1.redhat_00002.1.el6eap.noarch.rpm
+eap7-opensaml-soap-api-3.3.1-1.redhat_00002.1.el6eap.noarch.rpm
+eap7-opensaml-xacml-api-3.3.1-1.redhat_00002.1.el6eap.noarch.rpm
+eap7-opensaml-xacml-impl-3.3.1-1.redhat_00002.1.el6eap.noarch.rpm
+eap7-opensaml-xacml-saml-api-3.3.1-1.redhat_00002.1.el6eap.noarch.rpm
+eap7-opensaml-xacml-saml-impl-3.3.1-1.redhat_00002.1.el6eap.noarch.rpm
+eap7-opensaml-xmlsec-api-3.3.1-1.redhat_00002.1.el6eap.noarch.rpm
+eap7-opensaml-xmlsec-impl-3.3.1-1.redhat_00002.1.el6eap.noarch.rpm
+eap7-picketbox-5.0.3-7.Final_redhat_00006.1.el6eap.noarch.rpm
+eap7-picketbox-infinispan-5.0.3-7.Final_redhat_00006.1.el6eap.noarch.rpm
+eap7-resteasy-3.6.1-9.SP8_redhat_00001.1.el6eap.noarch.rpm
+eap7-resteasy-atom-provider-3.6.1-9.SP8_redhat_00001.1.el6eap.noarch.rpm
+eap7-resteasy-cdi-3.6.1-9.SP8_redhat_00001.1.el6eap.noarch.rpm
+eap7-resteasy-client-3.6.1-9.SP8_redhat_00001.1.el6eap.noarch.rpm
+eap7-resteasy-client-microprofile-3.6.1-9.SP8_redhat_00001.1.el6eap.noarch.rpm
+eap7-resteasy-crypto-3.6.1-9.SP8_redhat_00001.1.el6eap.noarch.rpm
+eap7-resteasy-jackson-provider-3.6.1-9.SP8_redhat_00001.1.el6eap.noarch.rpm
+eap7-resteasy-jackson2-provider-3.6.1-9.SP8_redhat_00001.1.el6eap.noarch.rpm
+eap7-resteasy-jaxb-provider-3.6.1-9.SP8_redhat_00001.1.el6eap.noarch.rpm
+eap7-resteasy-jaxrs-3.6.1-9.SP8_redhat_00001.1.el6eap.noarch.rpm
+eap7-resteasy-jettison-provider-3.6.1-9.SP8_redhat_00001.1.el6eap.noarch.rpm
+eap7-resteasy-jose-jwt-3.6.1-9.SP8_redhat_00001.1.el6eap.noarch.rpm
+eap7-resteasy-jsapi-3.6.1-9.SP8_redhat_00001.1.el6eap.noarch.rpm
+eap7-resteasy-json-binding-provider-3.6.1-9.SP8_redhat_00001.1.el6eap.noarch.rpm
+eap7-resteasy-json-p-provider-3.6.1-9.SP8_redhat_00001.1.el6eap.noarch.rpm
+eap7-resteasy-multipart-provider-3.6.1-9.SP8_redhat_00001.1.el6eap.noarch.rpm
+eap7-resteasy-rxjava2-3.6.1-9.SP8_redhat_00001.1.el6eap.noarch.rpm
+eap7-resteasy-spring-3.6.1-9.SP8_redhat_00001.1.el6eap.noarch.rpm
+eap7-resteasy-validator-provider-11-3.6.1-9.SP8_redhat_00001.1.el6eap.noarch.rpm
+eap7-resteasy-yaml-provider-3.6.1-9.SP8_redhat_00001.1.el6eap.noarch.rpm
+eap7-slf4j-jboss-logmanager-1.0.4-1.GA_redhat_00001.1.el6eap.noarch.rpm
+eap7-smallrye-config-1.3.6-1.SP01_redhat_00001.1.el6eap.noarch.rpm
+eap7-smallrye-health-1.0.2-2.redhat_00002.1.el6eap.noarch.rpm
+eap7-undertow-2.0.30-2.SP2_redhat_00001.1.el6eap.noarch.rpm
+eap7-weld-cdi-2.0-api-2.0.0-4.SP1_redhat_00004.1.el6eap.noarch.rpm
+eap7-wildfly-7.2.8-3.GA_redhat_00002.1.el6eap.noarch.rpm
+eap7-wildfly-elytron-1.6.6-1.Final_redhat_00001.1.el6eap.noarch.rpm
+eap7-wildfly-javadocs-7.2.8-3.GA_redhat_00002.1.el6eap.noarch.rpm
+eap7-wildfly-modules-7.2.8-3.GA_redhat_00002.1.el6eap.noarch.rpm
+eap7-wildfly-naming-client-1.0.12-1.Final_redhat_00001.1.el6eap.noarch.rpm
+eap7-wildfly-transaction-client-1.1.10-1.Final_redhat_00001.1.el6eap.noarch.rpm
+eap7-ws-commons-XmlSchema-2.2.4-1.redhat_00001.1.el6eap.noarch.rpm
+eap7-wss4j-2.2.5-1.redhat_00001.1.el6eap.noarch.rpm
+eap7-wss4j-bindings-2.2.5-1.redhat_00001.1.el6eap.noarch.rpm
+eap7-wss4j-policy-2.2.5-1.redhat_00001.1.el6eap.noarch.rpm
+eap7-wss4j-ws-security-common-2.2.5-1.redhat_00001.1.el6eap.noarch.rpm
+eap7-wss4j-ws-security-dom-2.2.5-1.redhat_00001.1.el6eap.noarch.rpm
+eap7-wss4j-ws-security-policy-stax-2.2.5-1.redhat_00001.1.el6eap.noarch.rpm
+eap7-wss4j-ws-security-stax-2.2.5-1.redhat_00001.1.el6eap.noarch.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+8. References:
+
+https://access.redhat.com/security/cve/CVE-2019-10172
+https://access.redhat.com/security/cve/CVE-2019-12423
+https://access.redhat.com/security/cve/CVE-2019-17573
+https://access.redhat.com/security/cve/CVE-2020-1719
+https://access.redhat.com/security/cve/CVE-2020-1729
+https://access.redhat.com/security/cve/CVE-2020-1732
+https://access.redhat.com/security/cve/CVE-2020-1745
+https://access.redhat.com/security/cve/CVE-2020-1757
+https://access.redhat.com/security/cve/CVE-2020-7226
+https://access.redhat.com/security/cve/CVE-2020-10705
+https://access.redhat.com/security/cve/CVE-2020-10719
+https://access.redhat.com/security/updates/classification/#important
+https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.2/
+https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.2/html-single/installation_guide/
+
+9. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXrmzhdzjgjWX9erEAQhKUw/8C7kuLH4NK3684hpmRmarEbsuuMHA33Yk
+ODAx143G86hOZePxerF+6YDmF4nyPxjrY72oTLMogu1/fuiBFZUoSFi6yE1M3Y9V
+7PAfV9DHEmFL+n9PIGw+Q2NWWt9j9fGfJtu+i2nz40DLD68M2xp+Ohbz9JRp2Ns6
+AVLWnZg8cDRr6HuorQM6ucYxzHSDZQKv8WLGTHaQ90JoxrcfClOLat2GuWavostl
+myhV7/NEnyK0U71esizoSJS4Nc3ZnWzwztcHvKacX9PKojn1G97vdwTgnhLaF4t2
+XtsyItLzfDHZFrCeKgK2vYxXc9Yk7YuoOeP7JnvlQO5D2R11xeUlydie8+NBH3aR
+zxDxNeh283xCtDOdIPpF1n1sx2kztVMImNMtT5vpF2laW64EbB2b+SZxyHpEc4/a
+sn/1/GCAK6pPayKhjVaj0XBeUE+OHLFC0TxV+J9H42r5DAHp4sQ3ocp5guC/QqZX
+ffJdIYEbbA1AreAXHvsqDKjQ3/Rix7OnzDrw4qfrcj0ObmPkoCQSkCep/jnRj8R3
+k4WbA61F8duzrMVRHQLej1Xa6MbwkLMC9PFLYUfe7xwcPtBGDksmrezzc02m318A
+Y5+1peKMOhcuZlj+RToQmNtRAvUfzO1nSTEgvdf7zVYD2IWK1xYv7esZc56hgGrS
+Vn3pSAqsqlA=IDHP
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

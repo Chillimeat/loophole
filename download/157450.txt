@@ -1,0 +1,147 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Moderate: unbound security update
+Advisory ID:       RHSA-2020:1716-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:1716
+Issue date:        2020-04-28
+CVE Names:         CVE-2019-18934
+====================================================================
+1. Summary:
+
+An update for unbound is now available for Red Hat Enterprise Linux 8.
+
+Red Hat Product Security has rated this update as having a security impact
+of Moderate. A Common Vulnerability Scoring System (CVSS) base score, which
+gives a detailed severity rating, is available for each vulnerability from
+the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Enterprise Linux AppStream (v. 8) - aarch64, ppc64le, s390x, x86_64
+
+3. Description:
+
+The unbound packages provide a validating, recursive, and caching DNS or
+DNSSEC resolver.
+
+Security Fix(es):
+
+* unbound: command injection with data coming from a specially crafted
+IPSECKEY answer (CVE-2019-18934)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+Additional Changes:
+
+For detailed information on changes in this release, see the Red Hat
+Enterprise Linux 8.2 Release Notes linked from the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1775708 - High CPU consumption when log file I/O is slow
+1776762 - CVE-2019-18934 unbound: command injection with data coming from a specially crafted IPSECKEY answer
+
+6. Package List:
+
+Red Hat Enterprise Linux AppStream (v. 8):
+
+Source:
+unbound-1.7.3-10.el8.src.rpm
+
+aarch64:
+python3-unbound-1.7.3-10.el8.aarch64.rpm
+python3-unbound-debuginfo-1.7.3-10.el8.aarch64.rpm
+unbound-1.7.3-10.el8.aarch64.rpm
+unbound-debuginfo-1.7.3-10.el8.aarch64.rpm
+unbound-debugsource-1.7.3-10.el8.aarch64.rpm
+unbound-devel-1.7.3-10.el8.aarch64.rpm
+unbound-libs-1.7.3-10.el8.aarch64.rpm
+unbound-libs-debuginfo-1.7.3-10.el8.aarch64.rpm
+
+ppc64le:
+python3-unbound-1.7.3-10.el8.ppc64le.rpm
+python3-unbound-debuginfo-1.7.3-10.el8.ppc64le.rpm
+unbound-1.7.3-10.el8.ppc64le.rpm
+unbound-debuginfo-1.7.3-10.el8.ppc64le.rpm
+unbound-debugsource-1.7.3-10.el8.ppc64le.rpm
+unbound-devel-1.7.3-10.el8.ppc64le.rpm
+unbound-libs-1.7.3-10.el8.ppc64le.rpm
+unbound-libs-debuginfo-1.7.3-10.el8.ppc64le.rpm
+
+s390x:
+python3-unbound-1.7.3-10.el8.s390x.rpm
+python3-unbound-debuginfo-1.7.3-10.el8.s390x.rpm
+unbound-1.7.3-10.el8.s390x.rpm
+unbound-debuginfo-1.7.3-10.el8.s390x.rpm
+unbound-debugsource-1.7.3-10.el8.s390x.rpm
+unbound-devel-1.7.3-10.el8.s390x.rpm
+unbound-libs-1.7.3-10.el8.s390x.rpm
+unbound-libs-debuginfo-1.7.3-10.el8.s390x.rpm
+
+x86_64:
+python3-unbound-1.7.3-10.el8.x86_64.rpm
+python3-unbound-debuginfo-1.7.3-10.el8.i686.rpm
+python3-unbound-debuginfo-1.7.3-10.el8.x86_64.rpm
+unbound-1.7.3-10.el8.x86_64.rpm
+unbound-debuginfo-1.7.3-10.el8.i686.rpm
+unbound-debuginfo-1.7.3-10.el8.x86_64.rpm
+unbound-debugsource-1.7.3-10.el8.i686.rpm
+unbound-debugsource-1.7.3-10.el8.x86_64.rpm
+unbound-devel-1.7.3-10.el8.i686.rpm
+unbound-devel-1.7.3-10.el8.x86_64.rpm
+unbound-libs-1.7.3-10.el8.i686.rpm
+unbound-libs-1.7.3-10.el8.x86_64.rpm
+unbound-libs-debuginfo-1.7.3-10.el8.i686.rpm
+unbound-libs-debuginfo-1.7.3-10.el8.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2019-18934
+https://access.redhat.com/security/updates/classification/#moderate
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/8.2_release_notes/index
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXqhV8NzjgjWX9erEAQhrFA/8DDxdeDhHWqAu7tMEsghIOuMPtvCcmC/A
+8UocEkGHjzUyGMuX7yqYU0pNWA6+UV1y2YxsXQQknCu+HK3E/UxHfDTHLVIzD7IR
+Jsumjv2bLDE3wEiYTKL48L1NNNhtTcgKwKRZfpLyp6kfWEtop42Je3lWrXIcQJph
+vbTEm1wytDHQskSGA4VIR0W12LK/xqVL/82eGaZcApHCdgInUO7RKxwvBmDB1/Fm
+3yYr1Blm2q/muwSYGe0TXG4eCtZW7luyVGsEXqYWc4Yhs9zZAEviDZkq47rNKf/2
+S9WLol0i/nErl4O0yX2J8QzKqVMqsoejJf2gnEyGpbOb0fsDmHJMOM7Oi7orH5LW
+N5is5qs6BgSpn3pkWMZgEpzAJkQgeUuVxTIWmAr1nC+Jogg/fUWVcsi468BR9ywR
+EVYP85S4rbqQubRhvCBPqduB0Ns5AcY9jgG7smweW9pa5MKulPiA71YXmBJ657Sx
+YXaWe2DcDjyNxEZeFFlnMLmYCSMGUBN9R/YIUbMh0mYChSECUgv6QxL9xOARSLPP
+Zj5fJxnwMT5XojZzrwthRXkY7aLQM6d/pNB7lTaT0ZqmNdg5/GZLMofccw8RpI20
+fvHzlw0eAD380xJqXM+ruBVJj8DiybeaGWty9n+yYrOKy0V0fkK3HUi4ADlX6Zwv
+xpVq84MxO+o=7ZXC
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

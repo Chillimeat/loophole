@@ -1,0 +1,131 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+=====================================================================
+                   Red Hat Security Advisory
+
+Synopsis:          Important: kpatch-patch security update
+Advisory ID:       RHSA-2020:2203-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:2203
+Issue date:        2020-05-19
+CVE Names:         CVE-2019-19768 CVE-2020-10711 
+=====================================================================
+
+1. Summary:
+
+An update for kpatch-patch is now available for Red Hat Enterprise Linux
+8.1 Extended Update Support.
+
+Red Hat Product Security has rated this update as having a security impact
+of Important. A Common Vulnerability Scoring System (CVSS) base score,
+which gives a detailed severity rating, is available for each vulnerability
+from the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Enterprise Linux BaseOS EUS (v. 8.1) - ppc64le, x86_64
+
+3. Description:
+
+This is a kernel live patch module which is automatically loaded by the RPM
+post-install script to modify the code of a running kernel.
+
+Security Fix(es):
+
+* kernel: use-after-free in __blk_add_trace in kernel/trace/blktrace.c
+(CVE-2019-19768)
+
+* Kernel: NetLabel: null pointer dereference while receiving CIPSO packet
+with null category may cause kernel panic (CVE-2020-10711)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1786164 - CVE-2019-19768 kernel: use-after-free in __blk_add_trace in kernel/trace/blktrace.c
+1825116 - CVE-2020-10711 Kernel: NetLabel: null pointer dereference while receiving CIPSO packet with null category may cause kernel panic
+
+6. Package List:
+
+Red Hat Enterprise Linux BaseOS EUS (v. 8.1):
+
+Source:
+kpatch-patch-4_18_0-147-1-13.el8.src.rpm
+kpatch-patch-4_18_0-147_0_2-1-9.el8.src.rpm
+kpatch-patch-4_18_0-147_0_3-1-9.el8.src.rpm
+kpatch-patch-4_18_0-147_3_1-1-9.el8_1.src.rpm
+kpatch-patch-4_18_0-147_5_1-1-4.el8_1.src.rpm
+kpatch-patch-4_18_0-147_8_1-1-2.el8_1.src.rpm
+
+ppc64le:
+kpatch-patch-4_18_0-147-1-13.el8.ppc64le.rpm
+kpatch-patch-4_18_0-147-debuginfo-1-13.el8.ppc64le.rpm
+kpatch-patch-4_18_0-147-debugsource-1-13.el8.ppc64le.rpm
+kpatch-patch-4_18_0-147_0_2-1-9.el8.ppc64le.rpm
+kpatch-patch-4_18_0-147_0_2-debuginfo-1-9.el8.ppc64le.rpm
+kpatch-patch-4_18_0-147_0_2-debugsource-1-9.el8.ppc64le.rpm
+kpatch-patch-4_18_0-147_0_3-1-9.el8.ppc64le.rpm
+kpatch-patch-4_18_0-147_3_1-1-9.el8_1.ppc64le.rpm
+kpatch-patch-4_18_0-147_5_1-1-4.el8_1.ppc64le.rpm
+kpatch-patch-4_18_0-147_8_1-1-2.el8_1.ppc64le.rpm
+
+x86_64:
+kpatch-patch-4_18_0-147-1-13.el8.x86_64.rpm
+kpatch-patch-4_18_0-147-debuginfo-1-13.el8.x86_64.rpm
+kpatch-patch-4_18_0-147-debugsource-1-13.el8.x86_64.rpm
+kpatch-patch-4_18_0-147_0_2-1-9.el8.x86_64.rpm
+kpatch-patch-4_18_0-147_0_2-debuginfo-1-9.el8.x86_64.rpm
+kpatch-patch-4_18_0-147_0_2-debugsource-1-9.el8.x86_64.rpm
+kpatch-patch-4_18_0-147_0_3-1-9.el8.x86_64.rpm
+kpatch-patch-4_18_0-147_3_1-1-9.el8_1.x86_64.rpm
+kpatch-patch-4_18_0-147_5_1-1-4.el8_1.x86_64.rpm
+kpatch-patch-4_18_0-147_8_1-1-2.el8_1.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2019-19768
+https://access.redhat.com/security/cve/CVE-2020-10711
+https://access.redhat.com/security/updates/classification/#important
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXsPTo9zjgjWX9erEAQgoNQ/9EjN02UK3Mo2uBugYZ+eIF6C5ItTVb5/h
++v72q5nIjD98OzCuKxV/eQkNaKrGyB+PJauQcq0rikpC2r5qHobRiKV6DLZ0iOmD
+A8ZZKG635pDG+ZFi1QjpVXQa8LuRVKJ/vr2fWvaIW2LsywjcJx5kUgiGvFwbhAG+
+kb28bhcFCB02moUjVSi0bkjkQLRJ2tFQkgmBlCn0UlSbLQYAheGVbflydmOs+DbY
+0boX/lJtr8V4Ce1dK3kio3dUH3LiV5B+BXXty+9vd/TFgIkgUfZI1Gyox2hvjS/o
+pVQ4658d1aOVwrWrGvraJBAjcjB4rPFiZsl2WGq6/Ar8hJdkhDOwkFfGslsoDSZf
+BoMePtMRkbPSVhrfW5M6jamRBQF5luzadivSuVvUTTh9m4W0GPjBhqyq9CPBuxwY
+3R+qcHYnsJaA6k5qj55AF2XRxKivQsHAQSlFui++RgNYS7OwDOuxIYxHvpofby3f
+Ic9wZarPuz4qO3M0llj77phnmKJbV64rXcYieTo/84Tuiu3EmXDdYqHTy5tv5mxn
+dL3UEVnMyRfynmiJncWrnSMym6Uxqjlq5pvh2hcv/dQdUD+h/sStzzOZAHn1Um3v
+Rzl2fQYBzyX0pU4lLufsXkN8r7Tsk2H3wJ8hsSjXi6NxQCIg1CqUpaixCkqHBAm7
+Zd6sO96u5x4=
+=0Ucm
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

@@ -1,0 +1,117 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Important: libreswan security update
+Advisory ID:       RHSA-2020:2070-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:2070
+Issue date:        2020-05-12
+CVE Names:         CVE-2020-1763
+====================================================================
+1. Summary:
+
+An update for libreswan is now available for Red Hat Enterprise Linux 8.
+
+Red Hat Product Security has rated this update as having a security impact
+of Important. A Common Vulnerability Scoring System (CVSS) base score,
+which gives a detailed severity rating, is available for each vulnerability
+from the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Enterprise Linux AppStream (v. 8) - aarch64, ppc64le, s390x, x86_64
+
+3. Description:
+
+Libreswan is an implementation of IPsec and IKE for Linux. IPsec is the
+Internet Protocol Security and uses strong cryptography to provide both
+authentication and encryption services. These services allow you to build
+secure tunnels through untrusted networks such as virtual private network
+(VPN).
+
+Security Fix(es):
+
+* libreswan: DoS attack via malicious IKEv1 informational exchange message
+(CVE-2020-1763)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1814541 - CVE-2020-1763 libreswan: DoS attack via malicious IKEv1 informational exchange message
+
+6. Package List:
+
+Red Hat Enterprise Linux AppStream (v. 8):
+
+Source:
+libreswan-3.29-7.el8_2.src.rpm
+
+aarch64:
+libreswan-3.29-7.el8_2.aarch64.rpm
+libreswan-debuginfo-3.29-7.el8_2.aarch64.rpm
+libreswan-debugsource-3.29-7.el8_2.aarch64.rpm
+
+ppc64le:
+libreswan-3.29-7.el8_2.ppc64le.rpm
+libreswan-debuginfo-3.29-7.el8_2.ppc64le.rpm
+libreswan-debugsource-3.29-7.el8_2.ppc64le.rpm
+
+s390x:
+libreswan-3.29-7.el8_2.s390x.rpm
+libreswan-debuginfo-3.29-7.el8_2.s390x.rpm
+libreswan-debugsource-3.29-7.el8_2.s390x.rpm
+
+x86_64:
+libreswan-3.29-7.el8_2.x86_64.rpm
+libreswan-debuginfo-3.29-7.el8_2.x86_64.rpm
+libreswan-debugsource-3.29-7.el8_2.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2020-1763
+https://access.redhat.com/security/updates/classification/#important
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXrpg4tzjgjWX9erEAQicVBAApMUXLpDvbrEZF4P5MieyeuYxBDFK0gZ8
+uUSMSfiHmgCO1412tOnkLwt92DroQHCvD7yxDz5wKmA+/8/J+jS/qUEEOyYk9Vqs
+R3nB06sXdxx1JK0mkU/3ujW6OJXjcpLiLXPejW9nKVJeRlACMbtKEr/dOPrhCJti
+glHO+DGTLfY3TExvzw1hDk33ltOw8T7Na5idwVBmck/LWHU2M0rS3GjH9P+PLg5y
+uflD4pwB7h3YdRKJ6lJckbtEaba/5vvz1/zeG+5myytRYHkkzEZh2l4tpp/R3rIT
+chi0bM1HVuI/jbQ2+oFg+fQH9hayXcSLD9GO3YA1vnGbq6YnGvUXEmEkPuq/X3Iz
+gi1prT6U2GUfAn13SGhSIpfBswP0PkdBfYbaFo3IlQs8ZAtiEw8fMTD0aHlr03FO
+0NTbniWmCybYXrhK6V98jmKO+fBtpzWRD9BuxRoMFZzpCn/4Cv0V7lp0NE1iEIQ0
+yshJRwepkDPioTO5w9nEZeAkWkZeI0hfqyTlydTjNCOSAFTMsXMhIYWL7z9pRggH
++OqWbzZqjfryd2j9BYC57/jVJ5hV/w+A4NKDyOl8rk8fIXXzaDnhDByoQne1jNDp
+H+UzNpTFxvLBWBxo4X/9AJ34YbbvBJzNDte4oXQYkYd31WqxhKAcs6brq5iAhAhA
+vxKU3VV0Kx0=g+ua
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

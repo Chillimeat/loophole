@@ -1,0 +1,106 @@
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Gentoo Linux Security Advisory                           GLSA 202005-10
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+                                           https://security.gentoo.org/
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ Severity: Normal
+    Title: libmicrodns: Multiple vulnerabilities
+     Date: May 14, 2020
+     Bugs: #714606
+       ID: 202005-10
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Synopsis
+========
+
+Multiple vulnerabilities have been found in libmicrodns, the worst of
+which could result in the arbitrary execution of code.
+
+Background
+==========
+
+libmicrodns is an mDNS library, focused on being simple and
+cross-platform.
+
+Affected packages
+=================
+
+    -------------------------------------------------------------------
+     Package              /     Vulnerable     /            Unaffected
+    -------------------------------------------------------------------
+  1  net-libs/libmicrodns         < 0.1.2                    >= 0.1.2
+
+Description
+===========
+
+Multiple vulnerabilities have been discovered in libmicrodns. Please
+review the CVE identifiers and the upstream advisory referenced below
+for details.
+
+Impact
+======
+
+Please review the referenced CVE identifiers for details.
+
+Workaround
+==========
+
+There is no known workaround at this time.
+
+Resolution
+==========
+
+All libmicrodns users should upgrade to the latest version:
+
+  # emerge --sync
+  # emerge --ask --oneshot --verbose ">=net-libs/libmicrodns-0.1.2"
+
+References
+==========
+
+[ 1 ] CVE-2020-6071
+      https://nvd.nist.gov/vuln/detail/CVE-2020-6071
+[ 2 ] CVE-2020-6072
+      https://nvd.nist.gov/vuln/detail/CVE-2020-6072
+[ 3 ] CVE-2020-6073
+      https://nvd.nist.gov/vuln/detail/CVE-2020-6073
+[ 4 ] CVE-2020-6077
+      https://nvd.nist.gov/vuln/detail/CVE-2020-6077
+[ 5 ] CVE-2020-6078
+      https://nvd.nist.gov/vuln/detail/CVE-2020-6078
+[ 6 ] CVE-2020-6079
+      https://nvd.nist.gov/vuln/detail/CVE-2020-6079
+[ 7 ] CVE-2020-6080
+      https://nvd.nist.gov/vuln/detail/CVE-2020-6080
+[ 8 ] VideoLAN-SB-VLC-309
+      https://www.videolan.org/security/sb-vlc309.html
+
+Availability
+============
+
+This GLSA and any updates to it are available for viewing at
+the Gentoo Security Website:
+
+ https://security.gentoo.org/glsa/202005-10
+
+Concerns?
+=========
+
+Security is a primary focus of Gentoo Linux and ensuring the
+confidentiality and security of our users' machines is of utmost
+importance to us. Any security concerns should be addressed to
+security@gentoo.org or alternatively, you may file a bug at
+https://bugs.gentoo.org.
+
+License
+=======
+
+Copyright 2020 Gentoo Foundation, Inc; referenced text
+belongs to its owner(s).
+
+The contents of this document are licensed under the
+Creative Commons - Attribution / Share Alike license.
+
+https://creativecommons.org/licenses/by-sa/2.5

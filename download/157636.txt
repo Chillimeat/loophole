@@ -1,0 +1,91 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Important: Open Liberty 20.0.0.5 Runtime security update
+Advisory ID:       RHSA-2020:2054-01
+Product:           Open Liberty
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:2054
+Issue date:        2020-05-11
+CVE Names:         CVE-2020-4329 CVE-2020-4421
+====================================================================
+1. Summary:
+
+Open Liberty 20.0.0.5 Runtime is now available from the Customer Portal.
+
+Red Hat Product Security has rated this update as having a security impact
+of Important. A Common Vulnerability Scoring System (CVSS) base score,
+which gives a detailed severity rating, is available for each vulnerability
+from the CVE link(s) in the References section.
+
+2. Description:
+
+Open Liberty is a lightweight open framework for building fast and
+efficient cloud-native Java microservices.
+
+This release of Open Liberty 20.0.0.5 serves as a replacement for Open
+Liberty 20.0.0.4 and includes security fixes, bug fixes, and enhancements.
+For specific information about this release, see links in the References
+section.
+
+Security Fix(es):
+
+* Information disclosure in WebSphere Application Server (CVE-2020-4329)
+
+* Potential spoofing attack in Webshere Application Server (CVE-2020-4421)
+
+For more details about the security issue(s), see the IBM Security Bulletin
+links for each CVE, listed in the References section.
+
+3. Solution:
+
+Before applying the update, back up your existing installation, including
+all applications, configuration files, databases and database settings, and
+so on.
+
+The References section of this erratum contains a download link (you must
+log in to download the update).
+
+4. JIRA issues fixed (https://issues.jboss.org/):
+
+IBMRT-26 - Release Open Liberty 20.0.0.5
+
+5. References:
+
+https://access.redhat.com/security/cve/CVE-2020-4329
+https://access.redhat.com/security/cve/CVE-2020-4421
+https://access.redhat.com/security/updates/classification/#important
+https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?product=open.liberty&downloadType=distributions&version .0.0.5
+https://www.ibm.com/support/pages/node/6201862
+https://www.ibm.com/support/pages/node/6205926
+https://access.redhat.com/articles/4544981
+
+6. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXrlVOtzjgjWX9erEAQi4RQ/+LkTDq1YwoWoLnZseiqm3LXmgBjrosXhC
+xAFG3VJgtRWw8GBsWda/Ayb5bhxudsGbNCXzxRAOLUTmE3RoGYdiX1ul/UQQ8UXU
+JVgECe/R2NLePYWPxoK8hTEPSN4YRwhq+laHoYvjJX0/dq6BblV4N4otG0f661cc
+HODThkkzPYaCQup7OIxz/OfM/UpiaXDwU5I+WeIDUjAxAeJfkHLKmU3YtENSFf+T
+qBUnjoE81qdqEjoSLIlIBhiMqNAopyPCSEwuA5AfZ8/ESnBeOECHLaqeM0kpxt35
+f5H3SRYHnIQ0qjYYwWQJajLCgxu5lYVhZnS68hekHcsilCdEtojyaFmt674iHWOO
+AqHqDOyAcFMttP5+EGiawaRKKIN5cF0SGRBmQA3G9FWQPk5oDNXOvnt+42rJ35+O
+4wErBjfCv8r/cnGkIbeECSparqKmYkU763lc+haurOr2dUnMk+2uawVFWxG/VFeP
+NAo/ju4o7tjrgOJWNyl3mxQ4xa6BX+nGZx9U+gdaVxVVSH0F4uXNgKyzkOqYHU0c
+gJ9gdz0QIjvvv0g/PGp4wi0xgTuCpZdme2hGauYuptqkZkr+cBzjrIBOAT1GVZ74
+mVzDmZ3Rw09dUJ3EK9eKUsMwVIe5vvE08tpA7Zp3M4fxM+PHtS1ysSnk74dQfQ51
+GsqdCwdtxCc=RzY1
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

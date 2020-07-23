@@ -1,0 +1,151 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Important: ipmitool security update
+Advisory ID:       RHSA-2020:2213-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:2213
+Issue date:        2020-05-19
+CVE Names:         CVE-2020-5208
+====================================================================
+1. Summary:
+
+An update for ipmitool is now available for Red Hat Enterprise Linux 7.4
+Advanced Update Support, Red Hat Enterprise Linux 7.4 Telco Extended Update
+Support, and Red Hat Enterprise Linux 7.4 Update Services for SAP
+Solutions.
+
+Red Hat Product Security has rated this update as having a security impact
+of Important. A Common Vulnerability Scoring System (CVSS) base score,
+which gives a detailed severity rating, is available for each vulnerability
+from the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Enterprise Linux Server AUS (v. 7.4) - x86_64
+Red Hat Enterprise Linux Server E4S (v. 7.4) - ppc64le, x86_64
+Red Hat Enterprise Linux Server Optional AUS (v. 7.4) - noarch
+Red Hat Enterprise Linux Server Optional E4S (v. 7.4) - noarch
+Red Hat Enterprise Linux Server Optional TUS (v. 7.4) - noarch
+Red Hat Enterprise Linux Server TUS (v. 7.4) - x86_64
+
+3. Description:
+
+The ipmitool packages contain a command-line utility for interfacing with
+devices that support the Intelligent Platform Management Interface (IPMI)
+specification. IPMI is an open standard for machine health, inventory, and
+remote power control.
+
+Security Fix(es):
+
+* ipmitool: Buffer overflow in read_fru_area_section function in
+lib/ipmi_fru.c (CVE-2020-5208)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+After installing this update, the IPMI event daemon (ipmievd) will be
+restarted automatically.
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1798721 - CVE-2020-5208 ipmitool: Buffer overflow in read_fru_area_section function in lib/ipmi_fru.c
+
+6. Package List:
+
+Red Hat Enterprise Linux Server AUS (v. 7.4):
+
+Source:
+ipmitool-1.8.18-6.el7_4.src.rpm
+
+x86_64:
+ipmitool-1.8.18-6.el7_4.x86_64.rpm
+ipmitool-debuginfo-1.8.18-6.el7_4.x86_64.rpm
+
+Red Hat Enterprise Linux Server E4S (v. 7.4):
+
+Source:
+ipmitool-1.8.18-6.el7_4.src.rpm
+
+ppc64le:
+ipmitool-1.8.18-6.el7_4.ppc64le.rpm
+ipmitool-debuginfo-1.8.18-6.el7_4.ppc64le.rpm
+
+x86_64:
+ipmitool-1.8.18-6.el7_4.x86_64.rpm
+ipmitool-debuginfo-1.8.18-6.el7_4.x86_64.rpm
+
+Red Hat Enterprise Linux Server TUS (v. 7.4):
+
+Source:
+ipmitool-1.8.18-6.el7_4.src.rpm
+
+x86_64:
+ipmitool-1.8.18-6.el7_4.x86_64.rpm
+ipmitool-debuginfo-1.8.18-6.el7_4.x86_64.rpm
+
+Red Hat Enterprise Linux Server Optional AUS (v. 7.4):
+
+noarch:
+bmc-snmp-proxy-1.8.18-6.el7_4.noarch.rpm
+exchange-bmc-os-info-1.8.18-6.el7_4.noarch.rpm
+
+Red Hat Enterprise Linux Server Optional E4S (v. 7.4):
+
+noarch:
+bmc-snmp-proxy-1.8.18-6.el7_4.noarch.rpm
+exchange-bmc-os-info-1.8.18-6.el7_4.noarch.rpm
+
+Red Hat Enterprise Linux Server Optional TUS (v. 7.4):
+
+noarch:
+bmc-snmp-proxy-1.8.18-6.el7_4.noarch.rpm
+exchange-bmc-os-info-1.8.18-6.el7_4.noarch.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2020-5208
+https://access.redhat.com/security/updates/classification/#important
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXsPwRdzjgjWX9erEAQhq1w//cPQ4JUM78P/lzF3WjXsmSQy8CE0TFfF2
+3AxGlGpU73YoInShzabljPtM4/yrOSSDTYQUHFKpwwhs3ZGUWWT9VvteQB3pybb9
+S5krQV6LdvHIwu2E1GhXxAfvREdat8Vq2EXqd6H5rpEgPuZSbsdbp0IpYULFgxU2
+ncxT8pbGvtlBaLBCjQR1G0d9JH4JuRmaBA5hHLU/u7a2vHsyILICORehiADwzBC6
+sTIrvwFqnvS+rdPeu4jLVxyTMdt4i8z1izQb/3UHJzqKEjYuVqJy2pnfRT71BFY7
+GsXWmM9SipSe/e4HSTyWm61Uea9VRkrqMaoFjwfP+vu6zPyzS/BJtLZwXBj+kqgb
+pW/yCcffiSxldg6186xpLdt+rJo0bo3qObP43Z8YAD7uNiMIxRFuOsJA+0ZNxlne
+Oi7egdztJ7KUh2qcsf+rVK4VOUiDtEyRG5rmaYHT0a8FSoOYV/2v6csWVACuDoaP
+HlOXEBB5zIB/kFr9Fc96Dx5g7hUCwcXTwiqR0dTsuXsAJZo0CSL2hBc6DqZSi6nL
+tVLrO4ay+W9sEfh9T8Vc6U5Cu5PUoTYp8GiofAF0bvKACcfC+ccVB7+BR2d1swFC
+qj2jUAjJrMCR4HxGEotgv/YaHy+uVG0vrc7k13PZAMogfkoRG6d3vfL/XmYkdyFG
+r7giwWzcd08=0sCg
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

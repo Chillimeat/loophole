@@ -1,0 +1,161 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+=====================================================================
+                   Red Hat Security Advisory
+
+Synopsis:          Important: .NET Core on Red Hat Enterprise Linux security and bug fix update
+Advisory ID:       RHSA-2020:2249-01
+Product:           .NET Core on Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:2249
+Issue date:        2020-05-21
+CVE Names:         CVE-2020-1108 CVE-2020-1161 
+=====================================================================
+
+1. Summary:
+
+An update for rh-dotnet31-dotnet is now available for .NET Core on Red Hat
+Enterprise Linux 7.
+
+Red Hat Product Security has rated this update as having a security impact
+of Important. A Common Vulnerability Scoring System (CVSS) base score,
+which gives a detailed severity rating, is available for each vulnerability
+from the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+.NET Core on Red Hat Enterprise Linux ComputeNode (v. 7) - x86_64
+.NET Core on Red Hat Enterprise Linux Server (v. 7) - x86_64
+.NET Core on Red Hat Enterprise Linux Workstation (v. 7) - x86_64
+
+3. Description:
+
+.NET Core is a managed-software framework. It implements a subset of the
+.NET framework APIs and several new APIs, and it includes a CLR
+implementation.
+
+New versions of .NET Core that address security vulnerabilities are now
+available. The updated versions are .NET Core SDK 3.1.104 and .NET Core
+Runtime 3.1.4.
+
+Security Fix(es):
+
+* dotnet: Denial of service via untrusted input (CVE-2020-1108)
+* dotnet: Denial of service due to infinite loop (CVE-2020-1161)
+
+Default inclusions for applications built with .NET Core have been updated
+to reference the newest versions and their security fixes.
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1827643 - CVE-2020-1108 dotnet: Denial of service via untrusted input
+1827645 - CVE-2020-1161 dotnet: Denial of service due to infinite loop
+
+6. Package List:
+
+.NET Core on Red Hat Enterprise Linux ComputeNode (v. 7):
+
+Source:
+rh-dotnet31-dotnet-3.1.104-2.el7.src.rpm
+
+x86_64:
+rh-dotnet31-aspnetcore-runtime-3.1-3.1.4-2.el7.x86_64.rpm
+rh-dotnet31-aspnetcore-targeting-pack-3.1-3.1.4-2.el7.x86_64.rpm
+rh-dotnet31-dotnet-3.1.104-2.el7.x86_64.rpm
+rh-dotnet31-dotnet-apphost-pack-3.1-3.1.4-2.el7.x86_64.rpm
+rh-dotnet31-dotnet-debuginfo-3.1.104-2.el7.x86_64.rpm
+rh-dotnet31-dotnet-host-3.1.4-2.el7.x86_64.rpm
+rh-dotnet31-dotnet-hostfxr-3.1-3.1.4-2.el7.x86_64.rpm
+rh-dotnet31-dotnet-runtime-3.1-3.1.4-2.el7.x86_64.rpm
+rh-dotnet31-dotnet-sdk-3.1-3.1.104-2.el7.x86_64.rpm
+rh-dotnet31-dotnet-targeting-pack-3.1-3.1.4-2.el7.x86_64.rpm
+rh-dotnet31-dotnet-templates-3.1-3.1.104-2.el7.x86_64.rpm
+rh-dotnet31-netstandard-targeting-pack-2.1-3.1.104-2.el7.x86_64.rpm
+
+.NET Core on Red Hat Enterprise Linux Server (v. 7):
+
+Source:
+rh-dotnet31-dotnet-3.1.104-2.el7.src.rpm
+
+x86_64:
+rh-dotnet31-aspnetcore-runtime-3.1-3.1.4-2.el7.x86_64.rpm
+rh-dotnet31-aspnetcore-targeting-pack-3.1-3.1.4-2.el7.x86_64.rpm
+rh-dotnet31-dotnet-3.1.104-2.el7.x86_64.rpm
+rh-dotnet31-dotnet-apphost-pack-3.1-3.1.4-2.el7.x86_64.rpm
+rh-dotnet31-dotnet-debuginfo-3.1.104-2.el7.x86_64.rpm
+rh-dotnet31-dotnet-host-3.1.4-2.el7.x86_64.rpm
+rh-dotnet31-dotnet-hostfxr-3.1-3.1.4-2.el7.x86_64.rpm
+rh-dotnet31-dotnet-runtime-3.1-3.1.4-2.el7.x86_64.rpm
+rh-dotnet31-dotnet-sdk-3.1-3.1.104-2.el7.x86_64.rpm
+rh-dotnet31-dotnet-targeting-pack-3.1-3.1.4-2.el7.x86_64.rpm
+rh-dotnet31-dotnet-templates-3.1-3.1.104-2.el7.x86_64.rpm
+rh-dotnet31-netstandard-targeting-pack-2.1-3.1.104-2.el7.x86_64.rpm
+
+.NET Core on Red Hat Enterprise Linux Workstation (v. 7):
+
+Source:
+rh-dotnet31-dotnet-3.1.104-2.el7.src.rpm
+
+x86_64:
+rh-dotnet31-aspnetcore-runtime-3.1-3.1.4-2.el7.x86_64.rpm
+rh-dotnet31-aspnetcore-targeting-pack-3.1-3.1.4-2.el7.x86_64.rpm
+rh-dotnet31-dotnet-3.1.104-2.el7.x86_64.rpm
+rh-dotnet31-dotnet-apphost-pack-3.1-3.1.4-2.el7.x86_64.rpm
+rh-dotnet31-dotnet-debuginfo-3.1.104-2.el7.x86_64.rpm
+rh-dotnet31-dotnet-host-3.1.4-2.el7.x86_64.rpm
+rh-dotnet31-dotnet-hostfxr-3.1-3.1.4-2.el7.x86_64.rpm
+rh-dotnet31-dotnet-runtime-3.1-3.1.4-2.el7.x86_64.rpm
+rh-dotnet31-dotnet-sdk-3.1-3.1.104-2.el7.x86_64.rpm
+rh-dotnet31-dotnet-targeting-pack-3.1-3.1.4-2.el7.x86_64.rpm
+rh-dotnet31-dotnet-templates-3.1-3.1.104-2.el7.x86_64.rpm
+rh-dotnet31-netstandard-targeting-pack-2.1-3.1.104-2.el7.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2020-1108
+https://access.redhat.com/security/cve/CVE-2020-1161
+https://access.redhat.com/security/updates/classification/#important
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXsaf4tzjgjWX9erEAQjTHA//daLObmVWkk7wO3loCqPQJgXiuyshm1Jj
+2pXg1tT24AQE2lGzOts8f7HjpCC60LeSAXLQseKlmZ7Nrdhi/KE8dFto3JhcBp0n
+fjFHoImjPgz5cIOWU94LS9H3ST9Ih+kL9b9o4DIRff6/KlpWEvdfoMejgaNl4zjW
+YV+ozpiDxmvOo0OudxMgFiw17iSUO28a3HZqLBz+DE/7+2RY8irLGVyYo/0XVpz0
+mnbkDWcue4wJmDcQzrtsSSLm2L3m3CIHGF4kJ+C3QdSdtOQchHG3Y9XtkeEEIWz8
+uHE+gkfRU9Nm+cw+4QMW7o0b1mwX329oyd+1O5D/KeaJ6ABM8yfihEfmVxSpCGW1
+4+qSjDNeauC+c/Rm0jBtWRQCct/XJQbBrqii05dlarA9a+YHiBeIkDt5U46Y0/FD
+CcAsZtyf1Zfe8DyTFMsEQ5DDltudbRgguTbEmMBEeOOkmZFQE7aSI5veeWuUuxqs
+UIjckIgUN7MWYtm8Fq4KMOJe5l4uYwY3T3G6r8AxxJs1PLokuYvT7CHTkjPg9hEG
+Dv4J3fkzD9rybvaZUDkTDDLgGoK3zHSlcYlRAEwLT9aN2pCF0PyHYnZtsdz93oEP
+tyddvt2olVLDsJBkYlTvwRBVNLTzv7Uj4qFUJqW4LjhtGpHZvld60Gf7xh8ooqv7
+g8PwL1mfJdI=
+=8ZmH
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

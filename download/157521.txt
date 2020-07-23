@@ -1,0 +1,92 @@
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Gentoo Linux Security Advisory                           GLSA 202004-16
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+                                           https://security.gentoo.org/
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ Severity: Normal
+    Title: Cacti: Multiple vulnerabilities
+     Date: April 30, 2020
+     Bugs: #715166, #716406
+       ID: 202004-16
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Synopsis
+========
+
+Multiple vulnerabilities have been found in Cacti, the worst of which
+could result in the arbitrary execution of code.
+
+Background
+==========
+
+Cacti is a complete frontend to rrdtool.
+
+Affected packages
+=================
+
+    -------------------------------------------------------------------
+     Package              /     Vulnerable     /            Unaffected
+    -------------------------------------------------------------------
+  1  net-analyzer/cacti           < 1.2.11                  >= 1.2.11
+
+Description
+===========
+
+Multiple vulnerabilities have been discovered in Cacti. Please review
+the CVE identifiers referenced below for details.
+
+Impact
+======
+
+Please review the referenced CVE identifiers for details.
+
+Workaround
+==========
+
+There is no known workaround at this time.
+
+Resolution
+==========
+
+All Cacti users should upgrade to the latest version:
+
+  # emerge --sync
+  # emerge --ask --oneshot --verbose ">=net-analyzer/cacti-1.2.11"
+
+References
+==========
+
+[ 1 ] CVE-2020-8813
+      https://nvd.nist.gov/vuln/detail/CVE-2020-8813
+[ 2 ] Cacti 1.2.11 Release Notes
+      https://github.com/Cacti/cacti/releases/tag/release%2F1.2.11
+
+Availability
+============
+
+This GLSA and any updates to it are available for viewing at
+the Gentoo Security Website:
+
+ https://security.gentoo.org/glsa/202004-16
+
+Concerns?
+=========
+
+Security is a primary focus of Gentoo Linux and ensuring the
+confidentiality and security of our users' machines is of utmost
+importance to us. Any security concerns should be addressed to
+security@gentoo.org or alternatively, you may file a bug at
+https://bugs.gentoo.org.
+
+License
+=======
+
+Copyright 2020 Gentoo Foundation, Inc; referenced text
+belongs to its owner(s).
+
+The contents of this document are licensed under the
+Creative Commons - Attribution / Share Alike license.
+
+https://creativecommons.org/licenses/by-sa/2.5

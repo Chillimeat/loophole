@@ -1,0 +1,164 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Moderate: libsndfile security update
+Advisory ID:       RHSA-2020:1636-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:1636
+Issue date:        2020-04-28
+CVE Names:         CVE-2018-13139 CVE-2018-19662
+====================================================================
+1. Summary:
+
+An update for libsndfile is now available for Red Hat Enterprise Linux 8.
+
+Red Hat Product Security has rated this update as having a security impact
+of Moderate. A Common Vulnerability Scoring System (CVSS) base score, which
+gives a detailed severity rating, is available for each vulnerability from
+the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat CodeReady Linux Builder (v. 8) - aarch64, ppc64le, s390x, x86_64
+Red Hat Enterprise Linux AppStream (v. 8) - aarch64, ppc64le, s390x, x86_64
+
+3. Description:
+
+libsndfile is a C library for reading and writing files containing sampled
+sound, such as AIFF, AU, or WAV.
+
+Security Fix(es):
+
+* libsndfile: stack-based buffer overflow in sndfile-deinterleave utility
+(CVE-2018-13139)
+
+* libsndfile: buffer over-read in the function i2alaw_array in alaw.c
+(CVE-2018-19662)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+Additional Changes:
+
+For detailed information on changes in this release, see the Red Hat
+Enterprise Linux 8.2 Release Notes linked from the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1598480 - CVE-2018-13139 libsndfile: stack-based buffer overflow in sndfile-deinterleave utility
+1659631 - CVE-2018-19662 libsndfile: buffer over-read in the function i2alaw_array in alaw.c
+
+6. Package List:
+
+Red Hat Enterprise Linux AppStream (v. 8):
+
+Source:
+libsndfile-1.0.28-10.el8.src.rpm
+
+aarch64:
+libsndfile-1.0.28-10.el8.aarch64.rpm
+libsndfile-debuginfo-1.0.28-10.el8.aarch64.rpm
+libsndfile-debugsource-1.0.28-10.el8.aarch64.rpm
+libsndfile-utils-debuginfo-1.0.28-10.el8.aarch64.rpm
+
+ppc64le:
+libsndfile-1.0.28-10.el8.ppc64le.rpm
+libsndfile-debuginfo-1.0.28-10.el8.ppc64le.rpm
+libsndfile-debugsource-1.0.28-10.el8.ppc64le.rpm
+libsndfile-utils-debuginfo-1.0.28-10.el8.ppc64le.rpm
+
+s390x:
+libsndfile-1.0.28-10.el8.s390x.rpm
+libsndfile-debuginfo-1.0.28-10.el8.s390x.rpm
+libsndfile-debugsource-1.0.28-10.el8.s390x.rpm
+libsndfile-utils-debuginfo-1.0.28-10.el8.s390x.rpm
+
+x86_64:
+libsndfile-1.0.28-10.el8.i686.rpm
+libsndfile-1.0.28-10.el8.x86_64.rpm
+libsndfile-debuginfo-1.0.28-10.el8.i686.rpm
+libsndfile-debuginfo-1.0.28-10.el8.x86_64.rpm
+libsndfile-debugsource-1.0.28-10.el8.i686.rpm
+libsndfile-debugsource-1.0.28-10.el8.x86_64.rpm
+libsndfile-utils-debuginfo-1.0.28-10.el8.i686.rpm
+libsndfile-utils-debuginfo-1.0.28-10.el8.x86_64.rpm
+
+Red Hat CodeReady Linux Builder (v. 8):
+
+aarch64:
+libsndfile-debuginfo-1.0.28-10.el8.aarch64.rpm
+libsndfile-debugsource-1.0.28-10.el8.aarch64.rpm
+libsndfile-devel-1.0.28-10.el8.aarch64.rpm
+libsndfile-utils-debuginfo-1.0.28-10.el8.aarch64.rpm
+
+ppc64le:
+libsndfile-debuginfo-1.0.28-10.el8.ppc64le.rpm
+libsndfile-debugsource-1.0.28-10.el8.ppc64le.rpm
+libsndfile-devel-1.0.28-10.el8.ppc64le.rpm
+libsndfile-utils-debuginfo-1.0.28-10.el8.ppc64le.rpm
+
+s390x:
+libsndfile-debuginfo-1.0.28-10.el8.s390x.rpm
+libsndfile-debugsource-1.0.28-10.el8.s390x.rpm
+libsndfile-devel-1.0.28-10.el8.s390x.rpm
+libsndfile-utils-debuginfo-1.0.28-10.el8.s390x.rpm
+
+x86_64:
+libsndfile-debuginfo-1.0.28-10.el8.i686.rpm
+libsndfile-debuginfo-1.0.28-10.el8.x86_64.rpm
+libsndfile-debugsource-1.0.28-10.el8.i686.rpm
+libsndfile-debugsource-1.0.28-10.el8.x86_64.rpm
+libsndfile-devel-1.0.28-10.el8.i686.rpm
+libsndfile-devel-1.0.28-10.el8.x86_64.rpm
+libsndfile-utils-debuginfo-1.0.28-10.el8.i686.rpm
+libsndfile-utils-debuginfo-1.0.28-10.el8.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2018-13139
+https://access.redhat.com/security/cve/CVE-2018-19662
+https://access.redhat.com/security/updates/classification/#moderate
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/8.2_release_notes/index
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXqhV/dzjgjWX9erEAQj9zQ/9EIVcFpDlMbsgyUfhpn56tBV7aiBKA0dU
+tLGDENqitcMMkBd3j77Bk/7OcPnalP2tBhCc11/nIG9Rql0Y0mns2X4/5gJqlegp
+Qfhd3qoBfnWL5mjPfn7/sXjd3GcaIfi6DrY5yUH01yuPM6MRr80Jk93Z3DK1+yBC
+Z2ldNftiA7OCJvgBHRo+lYSw6SiQREVxUtXIAYQGSGVAeZT96m7wNz04BpXG/TEk
+wMzv1qsKkpeZW62TdZ8uaZy8XHitVoaD8Z/MesNcnTlZ9QWk4iWem5jmDdCxZOro
+5iwuFH2hA0TqjdFINIMIpOokM987yzR53KRKwF0RpBBlzxHbgi8oldHL2k4ixXNN
+MRaeE393+163+kE/yhE4VgOJP9kiotKLtIpe1rQNba5fHaAf10i6gnpK7ybszVzo
+vsnf2gTo/vBOPOayMKb9Y20GO5W2FE9IQJHjCHLL3cfLY4NPL+03SuXzBBGfd2I4
+eFigcAW5JHILQNNyJ+zsQLFkO5SPhHQUGQDEgAUGhNx2VUZkIZS62pqb+R/31VAk
+E9HAi+toYMK5OmgnYTRcgCsbl7PIODpDZZjYGPs4n7LcmJYBTh1pilulKztCu76W
+wSniNTz786XpJSzloqKI0DECOq30SaVHJ5vVbNNj0zC4tebvpq6Kj/A1uOW5YUyQ
+JcSrEiV3UAk=HQAL
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

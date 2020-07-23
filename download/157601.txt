@@ -1,0 +1,56 @@
+==========================================================================
+Ubuntu Security Notice USN-4352-1
+May 06, 2020
+
+openldap vulnerability
+==========================================================================
+
+A security issue affects these releases of Ubuntu and its derivatives:
+
+- Ubuntu 20.04 LTS
+- Ubuntu 19.10
+- Ubuntu 18.04 LTS
+- Ubuntu 16.04 LTS
+
+Summary:
+
+OpenLDAP could be made to crash if it received specially crafted network
+traffic.
+
+Software Description:
+- openldap: Lightweight Directory Access Protocol
+
+Details:
+
+It was discovered that OpenLDAP incorrectly handled certain queries. A
+remote attacker could possibly use this issue to cause OpenLDAP to consume
+resources, resulting in a denial of service.
+
+Update instructions:
+
+The problem can be corrected by updating your system to the following
+package versions:
+
+Ubuntu 20.04 LTS:
+  slapd                           2.4.49+dfsg-2ubuntu1.2
+
+Ubuntu 19.10:
+  slapd                           2.4.48+dfsg-1ubuntu1.1
+
+Ubuntu 18.04 LTS:
+  slapd                           2.4.45+dfsg-1ubuntu1.5
+
+Ubuntu 16.04 LTS:
+  slapd                           2.4.42+dfsg-2ubuntu3.8
+
+In general, a standard system update will make all the necessary changes.
+
+References:
+  https://usn.ubuntu.com/4352-1
+  CVE-2020-12243
+
+Package Information:
+  https://launchpad.net/ubuntu/+source/openldap/2.4.49+dfsg-2ubuntu1.2
+  https://launchpad.net/ubuntu/+source/openldap/2.4.48+dfsg-1ubuntu1.1
+  https://launchpad.net/ubuntu/+source/openldap/2.4.45+dfsg-1ubuntu1.5
+  https://launchpad.net/ubuntu/+source/openldap/2.4.42+dfsg-2ubuntu3.8

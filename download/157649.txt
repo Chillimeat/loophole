@@ -1,0 +1,118 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Important: libreswan security update
+Advisory ID:       RHSA-2020:2071-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:2071
+Issue date:        2020-05-12
+CVE Names:         CVE-2020-1763
+====================================================================
+1. Summary:
+
+An update for libreswan is now available for Red Hat Enterprise Linux 8.1
+Extended Update Support.
+
+Red Hat Product Security has rated this update as having a security impact
+of Important. A Common Vulnerability Scoring System (CVSS) base score,
+which gives a detailed severity rating, is available for each vulnerability
+from the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Enterprise Linux AppStream EUS (v. 8.1) - aarch64, ppc64le, s390x, x86_64
+
+3. Description:
+
+Libreswan is an implementation of IPsec and IKE for Linux. IPsec is the
+Internet Protocol Security and uses strong cryptography to provide both
+authentication and encryption services. These services allow you to build
+secure tunnels through untrusted networks such as virtual private network
+(VPN).
+
+Security Fix(es):
+
+* libreswan: DoS attack via malicious IKEv1 informational exchange message
+(CVE-2020-1763)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1814541 - CVE-2020-1763 libreswan: DoS attack via malicious IKEv1 informational exchange message
+
+6. Package List:
+
+Red Hat Enterprise Linux AppStream EUS (v. 8.1):
+
+Source:
+libreswan-3.29-7.el8_1.src.rpm
+
+aarch64:
+libreswan-3.29-7.el8_1.aarch64.rpm
+libreswan-debuginfo-3.29-7.el8_1.aarch64.rpm
+libreswan-debugsource-3.29-7.el8_1.aarch64.rpm
+
+ppc64le:
+libreswan-3.29-7.el8_1.ppc64le.rpm
+libreswan-debuginfo-3.29-7.el8_1.ppc64le.rpm
+libreswan-debugsource-3.29-7.el8_1.ppc64le.rpm
+
+s390x:
+libreswan-3.29-7.el8_1.s390x.rpm
+libreswan-debuginfo-3.29-7.el8_1.s390x.rpm
+libreswan-debugsource-3.29-7.el8_1.s390x.rpm
+
+x86_64:
+libreswan-3.29-7.el8_1.x86_64.rpm
+libreswan-debuginfo-3.29-7.el8_1.x86_64.rpm
+libreswan-debugsource-3.29-7.el8_1.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2020-1763
+https://access.redhat.com/security/updates/classification/#important
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXrpUdtzjgjWX9erEAQiHQBAAom1EBMnNMWSMuImkq3q9B7dP9GfmKQQk
+n5NqCwdp8K7DPmtetXlJeodLVhGZ1YoyBH+dHfKiGe4+BBTmR6bh9ffBqSyxbjWP
+g932aclQy+cZbpd3R7BeqYV8B58noB+ggPytZXT9mydCvDfiFanzPkSSDYkYNb0y
+SNS27nV8W/OovN8wjSNHpFMS+ZwtS7/3C4xzZ2kwUmxDwkvmwOaBe1Wvd8lLytFm
+60PHTcmF3XmFcKE4VVSRer7DGz/slE0LFx2szv66gAudQIZqZY5GY9C8aGu90WYr
+piKs7DWwHP/poPy21g7iIO670U1YS0fSmxI2cI7gCstoqAk8YGiogR3HjhOQNlpS
+4wl85CyC5GPqVdciPNT8SNiSgWr/EkwvsfPln4Thjdtef0bxWLIfgOeyBstunpA7
+Ny5pOGmH6tnjEZKOqGHz/gbboKLh+v9dY4tSUJp8H6DGcuJV9EFd51FREP+4dxwt
+lR+48vspVC8FywkG2WKUQ+wZwjqqR3XYKlR6rUQJNV3AvU/1Y1gaAwv5JhfE0x3O
+eUsSnpdW6PMTWq9buk6uRvPB6RHCKG+Xh8Fyuus/7NiKbwB6CsI0chqSHcKfPNLM
+Xksmx7KbQ1x/Uioq2pb7fxGD92mHCqOvqQLIPDm8pbORk0ZK8ldghMnxu2q/muTb
+OMzmvQQoImo=WMAo
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

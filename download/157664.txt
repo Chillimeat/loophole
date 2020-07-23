@@ -1,0 +1,136 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+=====================================================================
+                   Red Hat Security Advisory
+
+Synopsis:          Important: Red Hat Single Sign-On 7.3.8 security update
+Advisory ID:       RHSA-2020:2112-01
+Product:           Red Hat Single Sign-On
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:2112
+Issue date:        2020-05-12
+CVE Names:         CVE-2019-10172 CVE-2019-14900 CVE-2019-17573 
+                   CVE-2020-1695 CVE-2020-1718 CVE-2020-1719 
+                   CVE-2020-1724 CVE-2020-1757 CVE-2020-1758 
+                   CVE-2020-7226 
+=====================================================================
+
+1. Summary:
+
+A security update is now available for Red Hat Single Sign-On 7.3 from the
+Customer Portal.
+
+Red Hat Product Security has rated this update as having a security impact
+of Important. A Common Vulnerability Scoring System (CVSS) base score,
+which gives a detailed severity rating, is available for each vulnerability
+from the CVE link(s) in the References section.
+
+2. Description:
+
+Red Hat Single Sign-On 7.3 is a standalone server, based on the Keycloak
+project, that provides authentication and standards-based single sign-on
+capabilities for web and mobile applications.
+
+This release of Red Hat Single Sign-On 7.3.8 serves as a replacement for
+Red Hat Single Sign-On 7.3.7, and includes bug fixes and enhancements,
+which are documented in the Release Notes document linked to in the
+References.
+
+Security Fix(es):
+
+* keycloak: security issue on reset credential flow (CVE-2020-1718)
+
+* undertow: servletPath is normalized incorrectly leading to dangerous
+application mapping which could result in security bypass (CVE-2020-1757)
+
+* jackson-mapper-asl: XML external entity similar to CVE-2016-3720
+(CVE-2019-10172)
+
+* hibernate: SQL injection issue in Hibernate ORM (CVE-2019-14900)
+
+* cxf: reflected XSS in the services listing page (CVE-2019-17573)
+
+* resteasy: Improper validation of response header in
+MediaTypeHeaderDelegate.java class (CVE-2020-1695)
+
+* Wildfly: EJBContext principal is not popped back after invoking another
+EJB using a different Security Domain (CVE-2020-1719)
+
+* keycloak: improper verification of certificate with host mismatch could
+result in information disclosure (CVE-2020-1758)
+
+* cryptacular: excessive memory allocation during a decode operation
+(CVE-2020-7226)
+
+* keycloak: problem with privacy after user logout (CVE-2020-1724)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+3. Solution:
+
+Before applying the update, back up your existing installation, including
+all applications, configuration files, databases and database settings, and
+so on.
+
+The References section of this erratum contains a download link (you must
+log in to download the update).
+
+4. Bugs fixed (https://bugzilla.redhat.com/):
+
+1666499 - CVE-2019-14900 hibernate: SQL injection issue in Hibernate ORM
+1715075 - CVE-2019-10172 jackson-mapper-asl: XML external entity similar to CVE-2016-3720
+1730462 - CVE-2020-1695 resteasy: Improper validation of response header in MediaTypeHeaderDelegate.java class
+1752770 - CVE-2020-1757 undertow: servletPath is normalized incorrectly leading to dangerous application mapping which could result in security bypass
+1796617 - CVE-2020-1719 Wildfly: EJBContext principal is not popped back after invoking another EJB using a different Security Domain
+1796756 - CVE-2020-1718 keycloak: security issue on reset credential flow
+1797011 - CVE-2019-17573 cxf: reflected XSS in the services listing page
+1800527 - CVE-2020-1724 keycloak: problem with privacy after user logout
+1801380 - CVE-2020-7226 cryptacular: excessive memory allocation during a decode operation
+1812514 - CVE-2020-1758 keycloak: improper verification of certificate with host mismatch could result in information disclosure
+
+5. References:
+
+https://access.redhat.com/security/cve/CVE-2019-10172
+https://access.redhat.com/security/cve/CVE-2019-14900
+https://access.redhat.com/security/cve/CVE-2019-17573
+https://access.redhat.com/security/cve/CVE-2020-1695
+https://access.redhat.com/security/cve/CVE-2020-1718
+https://access.redhat.com/security/cve/CVE-2020-1719
+https://access.redhat.com/security/cve/CVE-2020-1724
+https://access.redhat.com/security/cve/CVE-2020-1757
+https://access.redhat.com/security/cve/CVE-2020-1758
+https://access.redhat.com/security/cve/CVE-2020-7226
+https://access.redhat.com/security/updates/classification/#important
+https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?product=core.service.rhsso&downloadType=securityPatches&version=7.3
+https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.3/
+
+6. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXrraStzjgjWX9erEAQjGGA/9H+0mP7aNzf3QiX+wiwuKCODpzIctTO18
+UvyIux7XIxiatyb65qegnQi307KWyb0hYxNdocnI1m08tz8Lp+qebtkJmJSy3Ngt
+OgnQXQmFUqw/jjoK00sbYeOOUC+NxPE85yh+ooIsyuvS8WBYuFHBlXlxa029SVc9
+igTxQ7GXB1+/Ku8vXBkIsc+YC4t3lGHtUnMZS48fDmyMM0NcDEX+b5kwJXiKrIGm
+80j25g1P72Y84DRF2/7c64J/xwwwQrotZ30px1ZmjlclrpPT7XQ2TuFQVxilZh9X
+F8e/0Gih1rDsRy7Xza5X+bmnT5Cq16nBVR7wnKvFlDk0ITd2OcbqUxCYUrbsfHU4
+91oettbysDViIWsPbM91V1NGTHMC070mQsJ/lmwAy9XOHQFalgAWrVIhkvMOH8O9
+a/0A0+KsjSOlBYk6f+YzSzzgfRG9oQ4Bc2NADj56B0BSWX/FLajA4JNuijOJNmUd
+P54fBKKJRQ0w1Td0oQs/DrIwkdMpsz3kRP/c8k+aJNpZ7IDILIPopdpsaCOUGgGn
+9UTzdqVAKFPtI4l5iLEI3jB9SvFfSXwDjHDCpw6RlcEYxiKL4TBWW9VCUocAAOz0
+2UWHRKVztrtRznKVq9EZ8jkGwK8ybgZpfV1DrcaGCtzzEKoVRd3XTs9ljfrrfnnj
+ViMG5m2vpXo=
+=aH/+
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

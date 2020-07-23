@@ -1,0 +1,129 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Important: buildah security and bug fix update
+Advisory ID:       RHSA-2020:2116-01
+Product:           Red Hat Enterprise Linux Extras
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:2116
+Issue date:        2020-05-12
+CVE Names:         CVE-2020-1702 CVE-2020-10696
+====================================================================
+1. Summary:
+
+An update for buildah is now available for Red Hat Enterprise Linux 7
+Extras.
+
+Red Hat Product Security has rated this update as having a security impact
+of Important. A Common Vulnerability Scoring System (CVSS) base score,
+which gives a detailed severity rating, is available for each vulnerability
+from the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Enterprise Linux 7 Extras - ppc64le, s390x, x86_64
+
+3. Description:
+
+The buildah package provides a tool for facilitating building OCI container
+images. Among other things, buildah enables you to: Create a working
+container, either from scratch or using an image as a starting point;
+Create an image, either from a working container or using the instructions
+in a Dockerfile; Build both Docker and OCI images.
+
+Security Fix(es):
+
+* buildah: Crafted input tar file may lead to local file overwrite during
+image build process (CVE-2020-10696)
+
+* containers/image: Container images read entire image manifest into memory
+(CVE-2020-1702)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+Bug Fix(es):
+
+* buildah is not expanding env vars in file paths (BZ#1822031)
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1792796 - CVE-2020-1702 containers/image: Container images read entire image manifest into memory
+1817651 - CVE-2020-10696 buildah: Crafted input tar file may lead to local file overwrite during image build process
+1822031 - buildah is not expanding env vars in file paths [extras-rhel-7.8/buildah]
+
+6. Package List:
+
+Red Hat Enterprise Linux 7 Extras:
+
+Source:
+buildah-1.11.6-11.el7_8.src.rpm
+
+ppc64le:
+buildah-1.11.6-11.el7_8.ppc64le.rpm
+buildah-debuginfo-1.11.6-11.el7_8.ppc64le.rpm
+
+s390x:
+buildah-1.11.6-11.el7_8.s390x.rpm
+buildah-debuginfo-1.11.6-11.el7_8.s390x.rpm
+
+x86_64:
+buildah-1.11.6-11.el7_8.x86_64.rpm
+buildah-debuginfo-1.11.6-11.el7_8.x86_64.rpm
+
+Red Hat Enterprise Linux 7 Extras:
+
+Source:
+buildah-1.11.6-11.el7_8.src.rpm
+
+x86_64:
+buildah-1.11.6-11.el7_8.x86_64.rpm
+buildah-debuginfo-1.11.6-11.el7_8.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2020-1702
+https://access.redhat.com/security/cve/CVE-2020-10696
+https://access.redhat.com/security/updates/classification/#important
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXrr+YtzjgjWX9erEAQgHcA/8Cemka/UdjwZPlwS0qTtW7g3a4UUpOQT9
+SDRHmOBWM3h9niD+RvxvRH/O15QvyqxFUOXqaQMzVLzHoHpAp2ytO2SUfvg1/v52
+CElMjnavuBaKtduFjzUqV+OfdqGz66bq2L4PUBKqAyyShNmGteEf87gbE3/+v2/5
+lsW0pqWqPG0tQUtPAqJZHZStc4gD6JmzLjPlbShQyLxd+KBjH1MgIWdLt6fS6LYY
+nY7KEGjUY/7CmQQp3CiZKTps0KArYH3i7BPCxEc81VcjV42ijKVXt9DN43sxnacv
+2JPPP6h8HB6wAHtN+Km7uTsU4HO1A9OUkvE8D3argSVtQb5DfloRpa2KaOCXVFao
+Imqi2likMBu8tI47PlaIOslTNFxarkgECJMyE8LQxD8W3Vbgfxiq7Dk1GJIHVAbe
+tE18/5U3n0iL8LDGRoMp/y7a2gtCB4UGQ1VIHZWr3Fi0rPnKZo7rPjDfUocrF7vl
+jWaJQFVkgT/6FUAFs6MMyUFfxwWZtVLKorzbVVfIzo0RboxfTaNKfhgCkvSSlBwT
+GkwEDzTYSBDIiaDYokuk8PvZe1HDbCzBlghBvTrFDvbJaoivKbqas0idec4g6h2T
+WxMp+x9J3ALjqCb52RqUz+kY8IA5ARAcsmEscBpXKIU65dIi8v0YRTZbi3Z9DYWg
+9GwAg6mZnpc=xJFh
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

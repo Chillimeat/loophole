@@ -1,0 +1,100 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+=====================================================================
+                   Red Hat Security Advisory
+
+Synopsis:          Important: Red Hat Single Sign-On 7.3.8 security update
+Advisory ID:       RHSA-2020:2113-01
+Product:           Red Hat Single Sign-On
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:2113
+Issue date:        2020-05-12
+CVE Names:         CVE-2018-14371 CVE-2019-10174 CVE-2020-6950 
+=====================================================================
+
+1. Summary:
+
+A security update is now available for Red Hat Single Sign-On 7.3 from the
+Customer Portal.
+
+Red Hat Product Security has rated this update as having a security impact
+of Important. A Common Vulnerability Scoring System (CVSS) base score,
+which gives a detailed severity rating, is available for each vulnerability
+from the CVE link(s) in the References section.
+
+2. Description:
+
+Red Hat Single Sign-On 7.3 is a standalone server, based on the Keycloak
+project, that provides authentication and standards-based single sign-on
+capabilities for web and mobile applications.
+
+This asynchronous patch is a security update for the Undertow package in
+Red Hat Single Sign-On 7.3.8. 
+
+Security Fix(es):
+
+* infinispan: invokeAccessibly method from ReflectionUtil class allows to
+invoke private methods (CVE-2019-10174)
+
+* mojarra: Path traversal in ResourceManager.java:getLocalePrefix() via the
+loc parameter (CVE-2018-14371)
+
+* Mojarra: Path traversal via either the loc parameter or the con
+parameter, incomplete fix of CVE-2018-14371 (CVE-2020-6950)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+3. Solution:
+
+Before applying the update, back up your existing installation, including
+all applications, configuration files, databases and database settings, and
+so on.
+
+The References section of this erratum contains a download link (you must
+log in to download the update).
+
+4. Bugs fixed (https://bugzilla.redhat.com/):
+
+1607709 - CVE-2018-14371 mojarra: Path traversal in ResourceManager.java:getLocalePrefix() via the loc parameter
+1703469 - CVE-2019-10174 infinispan: invokeAccessibly method from ReflectionUtil class allows to invoke private methods
+1805006 - CVE-2020-6950 Mojarra: Path traversal via either the loc parameter or the con parameter, incomplete fix of CVE-2018-14371
+
+5. References:
+
+https://access.redhat.com/security/cve/CVE-2018-14371
+https://access.redhat.com/security/cve/CVE-2019-10174
+https://access.redhat.com/security/cve/CVE-2020-6950
+https://access.redhat.com/security/updates/classification/#important
+https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?product=core.service.rhsso&downloadType=securityPatches&version=7.3
+https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.3/
+
+6. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXrraT9zjgjWX9erEAQgaGQ//ZOD0WL47ABG9jIfNdIoMLPQ+s1wKFzEK
+W/0QER6bmuF6u/fd/uBXJVcK0KlOUHTYJQGUhFE1JYg63lF5MeS+AY2DGjGekCQV
+fB9YkNV7CSB1IbK09QCbsqgIVvyEw2Kgj1SnyZbJbNM7NJB1gnkN1CqaEXvxGp8O
+MTqjtrhwRT9m59ukHpvaAu+XLZ3u5Bx4XE/Q30/ZkNsg6wyHAwSg9cuJir0vUtvN
+n8qGWVkE2hHAUdcqEnZEeaNsTDmWr0G9F6WeREOlt9zOpQdBRxc+TfzHzCENNc4Q
+/tUAN5XjPwrOPzriNI1CRvcXe0cFgS/Q3bYsbvP1W1jnzBtV5aVrMewrLeHLieaT
+Nm/j4EZMIfA8GXgrdQ4wTJTToM3OVW/WkZupO+qF52nNVpGpHoPj0wGNclAYk2NJ
+NbRj+10YX0UDOGmUKAbDV+hs+VRE0ZyJ8Ie2yKbQ9SjfJJeNtTGthz2PYgurSzNE
+7In8IDNftqLpAWL/cyTrgMvNIGW6yvjK+aCCsqp3Uhv7incBb6ITVpVbjCLsXYUH
+I+J/Eqfk7KENGQCEUKoD1KUFxQLEBMA+Z/2G6w8IA5lSdWrmmjoNJ/0GqdODxlFX
+sQhtW2UExNb5OMOoSjcfVYwx8r0aE5Y0LPj2kmWH6jgUthV+FlBK1jfa9g3HzSo+
+2sC3EmunJo8=
+=w9MO
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

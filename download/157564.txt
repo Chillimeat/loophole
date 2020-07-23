@@ -1,0 +1,226 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+=====================================================================
+                   Red Hat Security Advisory
+
+Synopsis:          Important: sqlite security update
+Advisory ID:       RHSA-2020:2014-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:2014
+Issue date:        2020-05-05
+CVE Names:         CVE-2019-13734 
+=====================================================================
+
+1. Summary:
+
+An update for sqlite is now available for Red Hat Enterprise Linux 7.6
+Extended Update Support.
+
+Red Hat Product Security has rated this update as having a security impact
+of Important. A Common Vulnerability Scoring System (CVSS) base score,
+which gives a detailed severity rating, is available for each vulnerability
+from the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Enterprise Linux ComputeNode EUS (v. 7.6) - x86_64
+Red Hat Enterprise Linux ComputeNode Optional EUS (v. 7.6) - noarch, x86_64
+Red Hat Enterprise Linux Server EUS (v. 7.6) - ppc64, ppc64le, s390x, x86_64
+Red Hat Enterprise Linux Server Optional EUS (v. 7.6) - noarch, ppc64, ppc64le, s390x, x86_64
+Red Hat Enterprise Linux for ARM and IBM Power LE (POWER9) Server (v. 7) - aarch64, ppc64le, s390x
+Red Hat Enterprise Linux for ARM and IBM Power LE (POWER9) Server Optional (v. 7) - aarch64, noarch, ppc64le, s390x
+
+3. Description:
+
+SQLite is a C library that implements an SQL database engine. A large
+subset of SQL92 is supported. A complete database is stored in a single
+disk file. The API is designed for convenience and ease of use.
+Applications that link against SQLite can enjoy the power and flexibility
+of an SQL database without the administrative hassles of supporting a
+separate database server.
+
+Security Fix(es):
+
+* sqlite: fts3: improve shadow table corruption detection (CVE-2019-13734)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1781980 - CVE-2019-13734 sqlite: fts3: improve shadow table corruption detection
+
+6. Package List:
+
+Red Hat Enterprise Linux ComputeNode EUS (v. 7.6):
+
+Source:
+sqlite-3.7.17-8.el7_6.1.src.rpm
+
+x86_64:
+sqlite-3.7.17-8.el7_6.1.i686.rpm
+sqlite-3.7.17-8.el7_6.1.x86_64.rpm
+sqlite-debuginfo-3.7.17-8.el7_6.1.i686.rpm
+sqlite-debuginfo-3.7.17-8.el7_6.1.x86_64.rpm
+
+Red Hat Enterprise Linux ComputeNode Optional EUS (v. 7.6):
+
+noarch:
+sqlite-doc-3.7.17-8.el7_6.1.noarch.rpm
+
+x86_64:
+lemon-3.7.17-8.el7_6.1.x86_64.rpm
+sqlite-debuginfo-3.7.17-8.el7_6.1.i686.rpm
+sqlite-debuginfo-3.7.17-8.el7_6.1.x86_64.rpm
+sqlite-devel-3.7.17-8.el7_6.1.i686.rpm
+sqlite-devel-3.7.17-8.el7_6.1.x86_64.rpm
+sqlite-tcl-3.7.17-8.el7_6.1.x86_64.rpm
+
+Red Hat Enterprise Linux Server EUS (v. 7.6):
+
+Source:
+sqlite-3.7.17-8.el7_6.1.src.rpm
+
+ppc64:
+sqlite-3.7.17-8.el7_6.1.ppc.rpm
+sqlite-3.7.17-8.el7_6.1.ppc64.rpm
+sqlite-debuginfo-3.7.17-8.el7_6.1.ppc.rpm
+sqlite-debuginfo-3.7.17-8.el7_6.1.ppc64.rpm
+sqlite-devel-3.7.17-8.el7_6.1.ppc.rpm
+sqlite-devel-3.7.17-8.el7_6.1.ppc64.rpm
+
+ppc64le:
+sqlite-3.7.17-8.el7_6.1.ppc64le.rpm
+sqlite-debuginfo-3.7.17-8.el7_6.1.ppc64le.rpm
+sqlite-devel-3.7.17-8.el7_6.1.ppc64le.rpm
+
+s390x:
+sqlite-3.7.17-8.el7_6.1.s390.rpm
+sqlite-3.7.17-8.el7_6.1.s390x.rpm
+sqlite-debuginfo-3.7.17-8.el7_6.1.s390.rpm
+sqlite-debuginfo-3.7.17-8.el7_6.1.s390x.rpm
+sqlite-devel-3.7.17-8.el7_6.1.s390.rpm
+sqlite-devel-3.7.17-8.el7_6.1.s390x.rpm
+
+x86_64:
+sqlite-3.7.17-8.el7_6.1.i686.rpm
+sqlite-3.7.17-8.el7_6.1.x86_64.rpm
+sqlite-debuginfo-3.7.17-8.el7_6.1.i686.rpm
+sqlite-debuginfo-3.7.17-8.el7_6.1.x86_64.rpm
+sqlite-devel-3.7.17-8.el7_6.1.i686.rpm
+sqlite-devel-3.7.17-8.el7_6.1.x86_64.rpm
+
+Red Hat Enterprise Linux for ARM and IBM Power LE (POWER9) Server (v. 7):
+
+Source:
+sqlite-3.7.17-8.el7_6.1.src.rpm
+
+aarch64:
+sqlite-3.7.17-8.el7_6.1.aarch64.rpm
+sqlite-debuginfo-3.7.17-8.el7_6.1.aarch64.rpm
+sqlite-devel-3.7.17-8.el7_6.1.aarch64.rpm
+
+ppc64le:
+sqlite-3.7.17-8.el7_6.1.ppc64le.rpm
+sqlite-debuginfo-3.7.17-8.el7_6.1.ppc64le.rpm
+sqlite-devel-3.7.17-8.el7_6.1.ppc64le.rpm
+
+s390x:
+sqlite-3.7.17-8.el7_6.1.s390.rpm
+sqlite-3.7.17-8.el7_6.1.s390x.rpm
+sqlite-debuginfo-3.7.17-8.el7_6.1.s390.rpm
+sqlite-debuginfo-3.7.17-8.el7_6.1.s390x.rpm
+sqlite-devel-3.7.17-8.el7_6.1.s390.rpm
+sqlite-devel-3.7.17-8.el7_6.1.s390x.rpm
+
+Red Hat Enterprise Linux Server Optional EUS (v. 7.6):
+
+noarch:
+sqlite-doc-3.7.17-8.el7_6.1.noarch.rpm
+
+ppc64:
+lemon-3.7.17-8.el7_6.1.ppc64.rpm
+sqlite-debuginfo-3.7.17-8.el7_6.1.ppc64.rpm
+sqlite-tcl-3.7.17-8.el7_6.1.ppc64.rpm
+
+ppc64le:
+lemon-3.7.17-8.el7_6.1.ppc64le.rpm
+sqlite-debuginfo-3.7.17-8.el7_6.1.ppc64le.rpm
+sqlite-tcl-3.7.17-8.el7_6.1.ppc64le.rpm
+
+s390x:
+lemon-3.7.17-8.el7_6.1.s390x.rpm
+sqlite-debuginfo-3.7.17-8.el7_6.1.s390x.rpm
+sqlite-tcl-3.7.17-8.el7_6.1.s390x.rpm
+
+x86_64:
+lemon-3.7.17-8.el7_6.1.x86_64.rpm
+sqlite-debuginfo-3.7.17-8.el7_6.1.x86_64.rpm
+sqlite-tcl-3.7.17-8.el7_6.1.x86_64.rpm
+
+Red Hat Enterprise Linux for ARM and IBM Power LE (POWER9) Server Optional (v. 7):
+
+aarch64:
+lemon-3.7.17-8.el7_6.1.aarch64.rpm
+sqlite-debuginfo-3.7.17-8.el7_6.1.aarch64.rpm
+sqlite-tcl-3.7.17-8.el7_6.1.aarch64.rpm
+
+noarch:
+sqlite-doc-3.7.17-8.el7_6.1.noarch.rpm
+
+ppc64le:
+lemon-3.7.17-8.el7_6.1.ppc64le.rpm
+sqlite-debuginfo-3.7.17-8.el7_6.1.ppc64le.rpm
+sqlite-tcl-3.7.17-8.el7_6.1.ppc64le.rpm
+
+s390x:
+lemon-3.7.17-8.el7_6.1.s390x.rpm
+sqlite-debuginfo-3.7.17-8.el7_6.1.s390x.rpm
+sqlite-tcl-3.7.17-8.el7_6.1.s390x.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2019-13734
+https://access.redhat.com/security/updates/classification/#important
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXrE0c9zjgjWX9erEAQhcvg/8DmVNPy23jGskQFjKw96zS5x02Umh8pyg
+ZVdgV66QNQ2tQJ/6Zu03AlsyiNA261zW05vkK3+ToEEUIcoP+nOiZqCHkXr5pVJb
+Ma28sNlWSEZhYqsho1Y7EtF1JxWugF8olukj4Xylu+5azcIuMwWHyjZufK1/dPzY
+hYLJeXeAgK4Gdb22s8DyZPxgrNdKXYxRwqr0KoPD04yq/xb6tGV8k9dlZNbjTm7W
+WigJi8+yJ2DU2yaUOlqNhnWKcawKjK6bRv+FMBs03uUcrboaTuApD9ABWnkCspoW
+flpWqSpzhES3JWmLFPtX9FvhogV3GKQiSJ2/AFM81i9IfzHJCc9RRkj15LhNEaZD
+s4/p6Bz8rcBuh+6cGLiAe4I1ETi15zcQZ9vyL2LuSNcC2ffKo2MLRVrM9whUllBW
+y1cRb+fnLcUSzwzWlRQYxU0aNVcAz19ePkxspj+HzHHpQ07iABW0IGwVw6g9D0rp
+3b7pgRCeq4PQpWJGBZFT0nu+zSeW/36gFDBgHHVRNZ8qLIz+jhn50Z+fA36NTTHT
+0O7dZSbbZQK9ByyxXAZbaLf/9+omGovH0rzQGTlrJddPhflsdvGwANmzMnmUP3pZ
+24620B5cI0uku+KkfEk4gtX3Lra40aMYgCfSoupUsYYY/L0TP5jUPRX+890KwBdW
+v/hqFZdErqM=
+=4Eb1
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

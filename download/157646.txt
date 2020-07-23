@@ -1,0 +1,152 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Important: qemu-kvm-ma security update
+Advisory ID:       RHSA-2020:2065-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:2065
+Issue date:        2020-05-11
+CVE Names:         CVE-2019-14378
+====================================================================
+1. Summary:
+
+An update for qemu-kvm-ma is now available for Red Hat Enterprise Linux 7.6
+Extended Update Support.
+
+Red Hat Product Security has rated this update as having a security impact
+of Important. A Common Vulnerability Scoring System (CVSS) base score,
+which gives a detailed severity rating, is available for each vulnerability
+from the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Enterprise Linux Server EUS (v. 7.6) - ppc64, ppc64le, s390x
+Red Hat Enterprise Linux for ARM and IBM Power LE (POWER9) Server (v. 7) - ppc64le, s390x
+Red Hat Enterprise Linux for ARM and IBM Power LE (POWER9) Server Optional (v. 7) - aarch64
+
+3. Description:
+
+Kernel-based Virtual Machine (KVM) is a full virtualization solution for
+Linux on a variety of architectures. The qemu-kvm-ma packages provide the
+user-space component for running virtual machines that use KVM on the IBM z
+Systems, IBM Power, and 64-bit ARM architectures.
+
+Security Fix(es):
+
+* QEMU: slirp: heap buffer overflow during packet reassembly
+(CVE-2019-14378)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+After installing this update, shut down all running virtual machines. Once
+all virtual machines have shut down, start them again for this update to
+take effect.
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1734745 - CVE-2019-14378 QEMU: slirp: heap buffer overflow during packet reassembly
+
+6. Package List:
+
+Red Hat Enterprise Linux Server EUS (v. 7.6):
+
+Source:
+qemu-kvm-ma-2.12.0-18.el7_6.6.src.rpm
+
+ppc64:
+qemu-img-ma-2.12.0-18.el7_6.6.ppc64.rpm
+qemu-kvm-ma-debuginfo-2.12.0-18.el7_6.6.ppc64.rpm
+
+ppc64le:
+qemu-img-ma-2.12.0-18.el7_6.6.ppc64le.rpm
+qemu-kvm-common-ma-2.12.0-18.el7_6.6.ppc64le.rpm
+qemu-kvm-ma-2.12.0-18.el7_6.6.ppc64le.rpm
+qemu-kvm-ma-debuginfo-2.12.0-18.el7_6.6.ppc64le.rpm
+qemu-kvm-tools-ma-2.12.0-18.el7_6.6.ppc64le.rpm
+
+s390x:
+qemu-img-ma-2.12.0-18.el7_6.6.s390x.rpm
+qemu-kvm-common-ma-2.12.0-18.el7_6.6.s390x.rpm
+qemu-kvm-ma-2.12.0-18.el7_6.6.s390x.rpm
+qemu-kvm-ma-debuginfo-2.12.0-18.el7_6.6.s390x.rpm
+qemu-kvm-tools-ma-2.12.0-18.el7_6.6.s390x.rpm
+
+Red Hat Enterprise Linux for ARM and IBM Power LE (POWER9) Server (v. 7):
+
+Source:
+qemu-kvm-ma-2.12.0-18.el7_6.6.src.rpm
+
+ppc64le:
+qemu-img-ma-2.12.0-18.el7_6.6.ppc64le.rpm
+qemu-kvm-common-ma-2.12.0-18.el7_6.6.ppc64le.rpm
+qemu-kvm-ma-2.12.0-18.el7_6.6.ppc64le.rpm
+qemu-kvm-ma-debuginfo-2.12.0-18.el7_6.6.ppc64le.rpm
+qemu-kvm-tools-ma-2.12.0-18.el7_6.6.ppc64le.rpm
+
+s390x:
+qemu-img-ma-2.12.0-18.el7_6.6.s390x.rpm
+qemu-kvm-common-ma-2.12.0-18.el7_6.6.s390x.rpm
+qemu-kvm-ma-2.12.0-18.el7_6.6.s390x.rpm
+qemu-kvm-ma-debuginfo-2.12.0-18.el7_6.6.s390x.rpm
+qemu-kvm-tools-ma-2.12.0-18.el7_6.6.s390x.rpm
+
+Red Hat Enterprise Linux for ARM and IBM Power LE (POWER9) Server Optional (v. 7):
+
+Source:
+qemu-kvm-ma-2.12.0-18.el7_6.6.src.rpm
+
+aarch64:
+qemu-img-ma-2.12.0-18.el7_6.6.aarch64.rpm
+qemu-kvm-common-ma-2.12.0-18.el7_6.6.aarch64.rpm
+qemu-kvm-ma-2.12.0-18.el7_6.6.aarch64.rpm
+qemu-kvm-ma-debuginfo-2.12.0-18.el7_6.6.aarch64.rpm
+qemu-kvm-tools-ma-2.12.0-18.el7_6.6.aarch64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2019-14378
+https://access.redhat.com/security/updates/classification/#important
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXrnFBtzjgjWX9erEAQgJZQ/+IDl0/VQly0p3lR0z+DKlWnqQ1gb3ukhS
+1LpWLL10yW8UQsqzqK2mIMt/edMize6kqU9xVr6tuK6m7GsbOTcad9VcsGzNe+Ua
+FtehjFTJQV26GcnlO+Bdz5vCGWpCJ68RzWWeXTL0c+PF1w3StvvQd51J1I9zit61
+EacRN0xwHMQRjLackb5IaVm+/2e2BoRf9tMvYUwXUKCvp0gjw4s8+8Pv6GUctgu8
+VIYlFOGJEWXnAjF3SgRWjVOXu8Gq86rfwxbJv9RIIPbarIVsyN2zwbQDntfN3OIX
+qgh9axfH6CwNm4V5IoCTh+GAzZBDZxu78tJiwXBIfP94OYUm9Uk57p96TzOoDNYP
+3yL/7z6M04zh8YcpoZGuaLLBhK7q6EOvPAd6J/MCT4U8NjrelL90xR9kGBfVbcOZ
+EM1U1RHPZciDyK/ej6naMQ7XsUWkkMcDVAog1V76C3LSG3fwbmqSok0Iu05vaaeH
+7JXLV1DrtfU7mC7y0VHB/Nwqe6k+jq698L95PR+WPfb934E2VOVLxQRPCDQkN6nx
+GdSBv56H/GOCLkUbokUUW4EfkS0Zv3IGGub3v11OVl47SHyIpsS5T1emsO85j37B
+4GinecQ0Coj93iEJuF7WoBISM7VT4ougGNS1eQsuqAmBJRMnXJQHUOlxHvXII6o+
+qOBMz36Q4q0=5NoZ
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

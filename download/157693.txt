@@ -1,0 +1,39 @@
+=========================================================================
+Ubuntu Security Notice USN-4357-1
+May 13, 2020
+
+iproute2 vulnerability
+=========================================================================
+A security issue affects these releases of Ubuntu and its derivatives:
+
+- Ubuntu 18.04 LTS
+
+Summary:
+
+IPRoute could be made to execute arbitrary code if it received a specially
+crafted input.
+
+Software Description:
+- iproute2: networking and traffic control tools
+
+Details:
+
+It was discovered that IPRoute incorrectly handled certain inputs.
+An attacker could possibly use this issue to execute arbitrary code.
+
+Update instructions:
+
+The problem can be corrected by updating your system to the following
+package versions:
+
+Ubuntu 18.04 LTS:
+  iproute2                        4.15.0-2ubuntu1.1
+
+In general, a standard system update will make all the necessary changes.
+
+References:
+  https://usn.ubuntu.com/4357-1
+  CVE-2019-20795
+
+Package Information:
+  https://launchpad.net/ubuntu/+source/iproute2/4.15.0-2ubuntu1.1

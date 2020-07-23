@@ -1,0 +1,164 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Important: squid security update
+Advisory ID:       RHSA-2020:2040-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:2040
+Issue date:        2020-05-06
+CVE Names:         CVE-2019-12519 CVE-2019-12525 CVE-2020-11945
+====================================================================
+1. Summary:
+
+An update for squid is now available for Red Hat Enterprise Linux 7.
+
+Red Hat Product Security has rated this update as having a security impact
+of Important. A Common Vulnerability Scoring System (CVSS) base score,
+which gives a detailed severity rating, is available for each vulnerability
+from the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Enterprise Linux Server (v. 7) - ppc64, ppc64le, s390x, x86_64
+Red Hat Enterprise Linux Server Optional (v. 7) - ppc64, ppc64le, s390x, x86_64
+Red Hat Enterprise Linux Workstation (v. 7) - x86_64
+Red Hat Enterprise Linux Workstation Optional (v. 7) - x86_64
+
+3. Description:
+
+Squid is a high-performance proxy caching server for web clients,
+supporting FTP, Gopher, and HTTP data objects.
+
+Security Fix(es):
+
+* squid: improper check for new member in ESIExpression::Evaluate allows
+for stack buffer overflow (CVE-2019-12519)
+
+* squid: improper access restriction upon Digest Authentication nonce
+replay could lead to remote code execution (CVE-2020-11945)
+
+* squid: parsing of header Proxy-Authentication leads to memory corruption
+(CVE-2019-12525)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+After installing this update, the squid service will be restarted
+automatically.
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1730535 - CVE-2019-12525 squid: parsing of header Proxy-Authentication leads to memory corruption
+1827552 - CVE-2019-12519 squid: improper check for new member in ESIExpression::Evaluate allows for stack buffer overflow
+1827563 - CVE-2020-11945 squid: improper access restriction upon Digest Authentication nonce replay could lead to remote code execution
+
+6. Package List:
+
+Red Hat Enterprise Linux Server (v. 7):
+
+Source:
+squid-3.5.20-15.el7_8.1.src.rpm
+
+ppc64:
+squid-3.5.20-15.el7_8.1.ppc64.rpm
+squid-debuginfo-3.5.20-15.el7_8.1.ppc64.rpm
+squid-migration-script-3.5.20-15.el7_8.1.ppc64.rpm
+
+ppc64le:
+squid-3.5.20-15.el7_8.1.ppc64le.rpm
+squid-debuginfo-3.5.20-15.el7_8.1.ppc64le.rpm
+squid-migration-script-3.5.20-15.el7_8.1.ppc64le.rpm
+
+s390x:
+squid-3.5.20-15.el7_8.1.s390x.rpm
+squid-debuginfo-3.5.20-15.el7_8.1.s390x.rpm
+squid-migration-script-3.5.20-15.el7_8.1.s390x.rpm
+
+x86_64:
+squid-3.5.20-15.el7_8.1.x86_64.rpm
+squid-debuginfo-3.5.20-15.el7_8.1.x86_64.rpm
+squid-migration-script-3.5.20-15.el7_8.1.x86_64.rpm
+
+Red Hat Enterprise Linux Server Optional (v. 7):
+
+ppc64:
+squid-debuginfo-3.5.20-15.el7_8.1.ppc64.rpm
+squid-sysvinit-3.5.20-15.el7_8.1.ppc64.rpm
+
+ppc64le:
+squid-debuginfo-3.5.20-15.el7_8.1.ppc64le.rpm
+squid-sysvinit-3.5.20-15.el7_8.1.ppc64le.rpm
+
+s390x:
+squid-debuginfo-3.5.20-15.el7_8.1.s390x.rpm
+squid-sysvinit-3.5.20-15.el7_8.1.s390x.rpm
+
+x86_64:
+squid-debuginfo-3.5.20-15.el7_8.1.x86_64.rpm
+squid-sysvinit-3.5.20-15.el7_8.1.x86_64.rpm
+
+Red Hat Enterprise Linux Workstation (v. 7):
+
+Source:
+squid-3.5.20-15.el7_8.1.src.rpm
+
+x86_64:
+squid-3.5.20-15.el7_8.1.x86_64.rpm
+squid-debuginfo-3.5.20-15.el7_8.1.x86_64.rpm
+squid-migration-script-3.5.20-15.el7_8.1.x86_64.rpm
+
+Red Hat Enterprise Linux Workstation Optional (v. 7):
+
+x86_64:
+squid-debuginfo-3.5.20-15.el7_8.1.x86_64.rpm
+squid-sysvinit-3.5.20-15.el7_8.1.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2019-12519
+https://access.redhat.com/security/cve/CVE-2019-12525
+https://access.redhat.com/security/cve/CVE-2020-11945
+https://access.redhat.com/security/updates/classification/#important
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXrLAVNzjgjWX9erEAQitsA//QKGJHm9pXkCjeOqm2elyBgK24nAOwaSS
+xzC6bf0VDPA3kZt2PlyTtVstWZ2wtRvRtHsm2aQmvlLhYx4CmsP9FTN0T4aljwnr
+Z1ZIobVEMfkgSKA8/2v6RVkpEiXkOR9CWLOoXZR13lJ4VLpgIt0BoADbu8gsU7FE
+BYKLkHw3yerpuLLU3DFtKCFpuZNx1Ld4Sh8CB4gB4opuMkosMiXSyotS87V+AVjs
+CzOqG0l5CRzMq8sUvcuyoiraN5pRiGv4uz4KJDVYO4/3VKUlkVoQ8Q/ZCFc/Pd0A
+P358Q1vMyz/zQ7Bbf+MfrancGfGSrtR0f7nNOuT7h9mnEAm4tQQmTVyQYB2TCTVn
+QdVrJDgl1NSpUppcvnAhPPj/S/DReN9Sg8eUMMadcnOl8R3BsfDf35EAtfmbDOJW
+4Dv3eElCoEO3hJRN71brR2pmcxAExeHmYppLUgDF8AE3rb5J2gaxyaDD2OI87T9O
+F2sIz7d1V6LrKm1T36Ehvx0kNAxiwNccir8sSrXJA8LyUsikWAYu0zDzKE8pefAG
+5rJrS5tYnfkMOyDLpD2q/i94iwmJwH3spHeXUyjZ81be8kJwfSxXkUBajSwA55Xc
+OfBv0OsNyshWYR1pcSr2SJGELIH1IsZhDgyHVWXItezZbHqH9MzEHkrKasRRCcMn
+gJRZqQuHBdw=i6KB
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

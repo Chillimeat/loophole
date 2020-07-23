@@ -1,0 +1,68 @@
+==========================================================================
+Ubuntu Security Notice USN-4356-1
+May 13, 2020
+
+squid, squid3 vulnerabilities
+==========================================================================
+
+A security issue affects these releases of Ubuntu and its derivatives:
+
+- Ubuntu 20.04 LTS
+- Ubuntu 19.10
+- Ubuntu 18.04 LTS
+- Ubuntu 16.04 LTS
+
+Summary:
+
+Several security issues were fixed in Squid.
+
+Software Description:
+- squid: Web proxy cache server
+- squid3: Web proxy cache server
+
+Details:
+
+Jeriko One discovered that Squid incorrectly handled certain Edge Side
+Includes (ESI) responses. A malicious remote server could cause Squid to
+crash, possibly poison the cache, or possibly execute arbitrary code.
+(CVE-2019-12519, CVE-2019-12521)
+
+It was discovered that Squid incorrectly handled the hostname parameter to
+cachemgr.cgi when certain browsers are used. A remote attacker could
+possibly use this issue to inject HTML or invalid characters in the
+hostname parameter. This issue only affected Ubuntu 16.04 LTS, Ubuntu 18.04
+LTS, and Ubuntu 19.10. (CVE-2019-18860)
+
+Clément Berthaux and Florian Guilbert discovered that Squid incorrectly
+handled Digest Authentication nonce values. A remote attacker could
+use this issue to replay nonce values, or possibly execute arbitrary code.
+(CVE-2020-11945)
+
+Update instructions:
+
+The problem can be corrected by updating your system to the following
+package versions:
+
+Ubuntu 20.04 LTS:
+  squid                           4.10-1ubuntu1.1
+
+Ubuntu 19.10:
+  squid                           4.8-1ubuntu2.3
+
+Ubuntu 18.04 LTS:
+  squid                           3.5.27-1ubuntu1.6
+
+Ubuntu 16.04 LTS:
+  squid                           3.5.12-1ubuntu7.11
+
+In general, a standard system update will make all the necessary changes.
+
+References:
+  https://usn.ubuntu.com/4356-1
+  CVE-2019-12519, CVE-2019-12521, CVE-2019-18860, CVE-2020-11945
+
+Package Information:
+  https://launchpad.net/ubuntu/+source/squid/4.10-1ubuntu1.1
+  https://launchpad.net/ubuntu/+source/squid/4.8-1ubuntu2.3
+  https://launchpad.net/ubuntu/+source/squid3/3.5.27-1ubuntu1.6
+  https://launchpad.net/ubuntu/+source/squid3/3.5.12-1ubuntu7.11

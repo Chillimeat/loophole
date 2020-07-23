@@ -1,0 +1,110 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Moderate: edk2 security, bug fix, and enhancement update
+Advisory ID:       RHSA-2020:1712-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:1712
+Issue date:        2020-04-28
+CVE Names:         CVE-2019-14563
+====================================================================
+1. Summary:
+
+An update for edk2 is now available for Red Hat Enterprise Linux 8.
+
+Red Hat Product Security has rated this update as having a security impact
+of Moderate. A Common Vulnerability Scoring System (CVSS) base score, which
+gives a detailed severity rating, is available for each vulnerability from
+the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Enterprise Linux AppStream (v. 8) - noarch
+
+3. Description:
+
+EDK (Embedded Development Kit) is a project to enable UEFI support for
+Virtual Machines. This package contains a sample 64-bit UEFI firmware for
+QEMU and KVM.
+
+Security Fix(es):
+
+* edk2: numeric truncation in MdeModulePkg/PiDxeS3BootScriptLib
+(CVE-2019-14563)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+Additional Changes:
+
+For detailed information on changes in this release, see the Red Hat
+Enterprise Linux 8.2 Release Notes linked from the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1748180 - rebase edk2 to upstream tag edk2-stable201908 for RHEL-8.2
+1751993 - DxeImageVerificationLib handles "DENY execute on security violation" like "DEFER execute on security violation" [rhel8]
+1758620 - CVE-2019-14563 edk2: numeric truncation in MdeModulePkg/PiDxeS3BootScriptLib
+1789335 - VM with edk2 can't boot when setting memory with '-m 2001'
+1789797 - Backport upstream patch series: "UefiBootManagerLib, HttpDxe: tweaks for large HTTP(S) downloads" to improve HTTP(S) Boot experience with large (4GiB+) files
+1806359 - bochs-display cannot show graphic wihout driver attach
+
+6. Package List:
+
+Red Hat Enterprise Linux AppStream (v. 8):
+
+Source:
+edk2-20190829git37eef91017ad-9.el8.src.rpm
+
+noarch:
+edk2-aarch64-20190829git37eef91017ad-9.el8.noarch.rpm
+edk2-ovmf-20190829git37eef91017ad-9.el8.noarch.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2019-14563
+https://access.redhat.com/security/updates/classification/#moderate
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/8.2_release_notes/index
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXqhWMNzjgjWX9erEAQgZNA//azx5BrNDB6m1TojDJLgmarTyk2vkLPfD
+d2ARAnJMFGpP8CfJBmIqP9Cl0dmye9J1/TJUBJf6wmhY8r7C9NReFNUBe9UKJCkC
+uDhJoACnf5HRtTnK0gWjWEA8NmyO2JMmhKNLG5v4QclH7dysjhmwXRcZ+XRkbNB1
+ChOs9mTYjM9RZOsHntQu3LIZ2iNi1+c4H8TJXFIuxCbolTaBWP/iAxX2cGuNH/3u
+CDPX+Oga3AQlo+3qap4D88/oWyxkbsbDra9ERlDN5AKhBM932ThioyCQnazeQ2L8
+KH/8euQ8DZOLRS7LpeWhN7h4J4TBg73ANa0kVbeNa/BdqRNo+Dwyn4MHT5eaOimY
+R+62YYSj2hpltHmoyrFfh/Cry+J9hjBY/raESeiQ3pHq9TBb4plCWDpjsz8+znDP
+CDSPYHO6tZSrE8K8uqqfxzsV35i9LPAsjVVi5luvTDBTOjtixsGC6pb+Dnfjs7KB
+p5onUPre2DH4SWH7xf98jMaqO0+xQzGOKkz0IIw6UNaoKRFO81pnCXfUdhMBhju8
+vDvZDqzrEj7p9Q4bybIHn25MlST9p+55lb4fGhEfTv/9FJpH6TgDhA2TCeAtx/Y3
+jHB9QyHmbfOq7tGm3oqhA/FY+6dAJSWvSAbrRnp1hXO9A5+zcujHCgNNcTwEg1SX
+tedazVPrGow=4W/p
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

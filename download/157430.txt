@@ -1,0 +1,242 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Moderate: evolution security and bug fix update
+Advisory ID:       RHSA-2020:1600-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:1600
+Issue date:        2020-04-28
+CVE Names:         CVE-2018-15587
+====================================================================
+1. Summary:
+
+An update for evolution, evolution-data-server, and evolution-ews is now
+available for Red Hat Enterprise Linux 8.
+
+Red Hat Product Security has rated this update as having a security impact
+of Moderate. A Common Vulnerability Scoring System (CVSS) base score, which
+gives a detailed severity rating, is available for each vulnerability from
+the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat CodeReady Linux Builder (v. 8) - aarch64, noarch, ppc64le, x86_64
+Red Hat Enterprise Linux AppStream (v. 8) - aarch64, noarch, ppc64le, x86_64
+
+3. Description:
+
+Evolution is a GNOME application that provides integrated email, calendar,
+contact management, and communications functionality.
+
+The evolution-data-server packages provide a unified back end for
+applications which interact with contacts, tasks and calendar information.
+Evolution Data Server was originally developed as a back end for the
+Evolution information management application, but is now used by various
+other applications.
+
+Security Fix(es):
+
+* evolution: specially crafted email leading to OpenPGP signatures being
+spoofed for arbitrary messages (CVE-2018-15587)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+Additional Changes:
+
+For detailed information on changes in this release, see the Red Hat
+Enterprise Linux 8.2 Release Notes linked from the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+All running instances of Evolution must be restarted for this update to
+take effect.
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1677650 - CVE-2018-15587 evolution: specially crafted email leading to OpenPGP signatures being spoofed for arbitrary messages
+1741091 - Birthday date of Contact depends on system timezone
+1753220 - GalA11yETableItem: Incorrect implementation of AtkObjectClass::ref_child()
+1764818 - Sync CategoryList with mail Labels
+1765005 - Reject creating meetings organized by other users
+1778799 - New Mail account wizard ignores email address change
+1788478 - EDBusServer: Delay new module load
+1791547 - [abrt] [faf] test-cal-meta-backend cannot run without installed Evolution
+
+6. Package List:
+
+Red Hat Enterprise Linux AppStream (v. 8):
+
+Source:
+evolution-3.28.5-12.el8.src.rpm
+evolution-data-server-3.28.5-13.el8.src.rpm
+evolution-ews-3.28.5-9.el8.src.rpm
+
+aarch64:
+evolution-3.28.5-12.el8.aarch64.rpm
+evolution-bogofilter-3.28.5-12.el8.aarch64.rpm
+evolution-bogofilter-debuginfo-3.28.5-12.el8.aarch64.rpm
+evolution-data-server-3.28.5-13.el8.aarch64.rpm
+evolution-data-server-debuginfo-3.28.5-13.el8.aarch64.rpm
+evolution-data-server-debugsource-3.28.5-13.el8.aarch64.rpm
+evolution-data-server-devel-3.28.5-13.el8.aarch64.rpm
+evolution-data-server-tests-debuginfo-3.28.5-13.el8.aarch64.rpm
+evolution-debuginfo-3.28.5-12.el8.aarch64.rpm
+evolution-debugsource-3.28.5-12.el8.aarch64.rpm
+evolution-ews-3.28.5-9.el8.aarch64.rpm
+evolution-ews-debuginfo-3.28.5-9.el8.aarch64.rpm
+evolution-ews-debugsource-3.28.5-9.el8.aarch64.rpm
+evolution-pst-3.28.5-12.el8.aarch64.rpm
+evolution-pst-debuginfo-3.28.5-12.el8.aarch64.rpm
+evolution-spamassassin-3.28.5-12.el8.aarch64.rpm
+evolution-spamassassin-debuginfo-3.28.5-12.el8.aarch64.rpm
+
+noarch:
+evolution-data-server-langpacks-3.28.5-13.el8.noarch.rpm
+evolution-ews-langpacks-3.28.5-9.el8.noarch.rpm
+evolution-help-3.28.5-12.el8.noarch.rpm
+evolution-langpacks-3.28.5-12.el8.noarch.rpm
+
+ppc64le:
+evolution-3.28.5-12.el8.ppc64le.rpm
+evolution-bogofilter-3.28.5-12.el8.ppc64le.rpm
+evolution-bogofilter-debuginfo-3.28.5-12.el8.ppc64le.rpm
+evolution-data-server-3.28.5-13.el8.ppc64le.rpm
+evolution-data-server-debuginfo-3.28.5-13.el8.ppc64le.rpm
+evolution-data-server-debugsource-3.28.5-13.el8.ppc64le.rpm
+evolution-data-server-devel-3.28.5-13.el8.ppc64le.rpm
+evolution-data-server-tests-debuginfo-3.28.5-13.el8.ppc64le.rpm
+evolution-debuginfo-3.28.5-12.el8.ppc64le.rpm
+evolution-debugsource-3.28.5-12.el8.ppc64le.rpm
+evolution-ews-3.28.5-9.el8.ppc64le.rpm
+evolution-ews-debuginfo-3.28.5-9.el8.ppc64le.rpm
+evolution-ews-debugsource-3.28.5-9.el8.ppc64le.rpm
+evolution-pst-3.28.5-12.el8.ppc64le.rpm
+evolution-pst-debuginfo-3.28.5-12.el8.ppc64le.rpm
+evolution-spamassassin-3.28.5-12.el8.ppc64le.rpm
+evolution-spamassassin-debuginfo-3.28.5-12.el8.ppc64le.rpm
+
+x86_64:
+evolution-3.28.5-12.el8.x86_64.rpm
+evolution-bogofilter-3.28.5-12.el8.x86_64.rpm
+evolution-bogofilter-debuginfo-3.28.5-12.el8.x86_64.rpm
+evolution-data-server-3.28.5-13.el8.i686.rpm
+evolution-data-server-3.28.5-13.el8.x86_64.rpm
+evolution-data-server-debuginfo-3.28.5-13.el8.i686.rpm
+evolution-data-server-debuginfo-3.28.5-13.el8.x86_64.rpm
+evolution-data-server-debugsource-3.28.5-13.el8.i686.rpm
+evolution-data-server-debugsource-3.28.5-13.el8.x86_64.rpm
+evolution-data-server-devel-3.28.5-13.el8.i686.rpm
+evolution-data-server-devel-3.28.5-13.el8.x86_64.rpm
+evolution-data-server-tests-debuginfo-3.28.5-13.el8.i686.rpm
+evolution-data-server-tests-debuginfo-3.28.5-13.el8.x86_64.rpm
+evolution-debuginfo-3.28.5-12.el8.x86_64.rpm
+evolution-debugsource-3.28.5-12.el8.x86_64.rpm
+evolution-ews-3.28.5-9.el8.x86_64.rpm
+evolution-ews-debuginfo-3.28.5-9.el8.x86_64.rpm
+evolution-ews-debugsource-3.28.5-9.el8.x86_64.rpm
+evolution-pst-3.28.5-12.el8.x86_64.rpm
+evolution-pst-debuginfo-3.28.5-12.el8.x86_64.rpm
+evolution-spamassassin-3.28.5-12.el8.x86_64.rpm
+evolution-spamassassin-debuginfo-3.28.5-12.el8.x86_64.rpm
+
+Red Hat CodeReady Linux Builder (v. 8):
+
+aarch64:
+evolution-bogofilter-debuginfo-3.28.5-12.el8.aarch64.rpm
+evolution-data-server-debuginfo-3.28.5-13.el8.aarch64.rpm
+evolution-data-server-debugsource-3.28.5-13.el8.aarch64.rpm
+evolution-data-server-perl-3.28.5-13.el8.aarch64.rpm
+evolution-data-server-tests-3.28.5-13.el8.aarch64.rpm
+evolution-data-server-tests-debuginfo-3.28.5-13.el8.aarch64.rpm
+evolution-debuginfo-3.28.5-12.el8.aarch64.rpm
+evolution-debugsource-3.28.5-12.el8.aarch64.rpm
+evolution-devel-3.28.5-12.el8.aarch64.rpm
+evolution-pst-debuginfo-3.28.5-12.el8.aarch64.rpm
+evolution-spamassassin-debuginfo-3.28.5-12.el8.aarch64.rpm
+
+noarch:
+evolution-data-server-doc-3.28.5-13.el8.noarch.rpm
+
+ppc64le:
+evolution-bogofilter-debuginfo-3.28.5-12.el8.ppc64le.rpm
+evolution-data-server-debuginfo-3.28.5-13.el8.ppc64le.rpm
+evolution-data-server-debugsource-3.28.5-13.el8.ppc64le.rpm
+evolution-data-server-perl-3.28.5-13.el8.ppc64le.rpm
+evolution-data-server-tests-3.28.5-13.el8.ppc64le.rpm
+evolution-data-server-tests-debuginfo-3.28.5-13.el8.ppc64le.rpm
+evolution-debuginfo-3.28.5-12.el8.ppc64le.rpm
+evolution-debugsource-3.28.5-12.el8.ppc64le.rpm
+evolution-devel-3.28.5-12.el8.ppc64le.rpm
+evolution-pst-debuginfo-3.28.5-12.el8.ppc64le.rpm
+evolution-spamassassin-debuginfo-3.28.5-12.el8.ppc64le.rpm
+
+x86_64:
+evolution-bogofilter-debuginfo-3.28.5-12.el8.i686.rpm
+evolution-bogofilter-debuginfo-3.28.5-12.el8.x86_64.rpm
+evolution-data-server-debuginfo-3.28.5-13.el8.i686.rpm
+evolution-data-server-debuginfo-3.28.5-13.el8.x86_64.rpm
+evolution-data-server-debugsource-3.28.5-13.el8.i686.rpm
+evolution-data-server-debugsource-3.28.5-13.el8.x86_64.rpm
+evolution-data-server-perl-3.28.5-13.el8.x86_64.rpm
+evolution-data-server-tests-3.28.5-13.el8.i686.rpm
+evolution-data-server-tests-3.28.5-13.el8.x86_64.rpm
+evolution-data-server-tests-debuginfo-3.28.5-13.el8.i686.rpm
+evolution-data-server-tests-debuginfo-3.28.5-13.el8.x86_64.rpm
+evolution-debuginfo-3.28.5-12.el8.i686.rpm
+evolution-debuginfo-3.28.5-12.el8.x86_64.rpm
+evolution-debugsource-3.28.5-12.el8.i686.rpm
+evolution-debugsource-3.28.5-12.el8.x86_64.rpm
+evolution-devel-3.28.5-12.el8.i686.rpm
+evolution-devel-3.28.5-12.el8.x86_64.rpm
+evolution-pst-debuginfo-3.28.5-12.el8.i686.rpm
+evolution-pst-debuginfo-3.28.5-12.el8.x86_64.rpm
+evolution-spamassassin-debuginfo-3.28.5-12.el8.i686.rpm
+evolution-spamassassin-debuginfo-3.28.5-12.el8.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2018-15587
+https://access.redhat.com/security/updates/classification/#moderate
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/8.2_release_notes/index
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXqhVwNzjgjWX9erEAQg8KQ/8CaKBjvP7IZxCLeDSOA7PHBylbD4zBe/l
+G671d7eKBUBXmZnws9gN44ccXdMmnYrUOvrJs+NteVzuew4b6DGWl+Qw/J1luvni
+GuTUgSnxsH0uLeBhdejpLM6okSZwQEl7UEp5zrTux0U/p0+KYxbpDI2F8Hb2ImCk
+jVwiwoVP4YrxFAM4QmXcRcdIX9n3yV7I/ck54LAlAOhbsvhhOJZVFNFvLpcZxT5R
+qNrVBs78nsEFQoWeDOXr+/tdlUMB7uZBIJ2Bld5njmUmVhbdw/DqpvmL+rLJq02k
+NuN8d6CtAkMZ9xh6pJCDboCyAQNv4+B7WqU4uW7vN9S8j57kLXgCXx5NTolBdZDc
+nSxCd3uXw7wnkCqvKwz5D4ybMre1KIULY5z/uT/lzgw7yzhjP2zdH3Y/3+NnSae0
+Jem4KMQ864kiAJMliL3Vdh/5SD6gKr0cV1mPOF4yu5vB5hJFGUfd6LeBcyfBetSQ
+86sI96p/b4+/FI6tAfuh7k3HskapFpqLJOHqjvrSQHTIlzjF7PIHJJAxXOnHdxHH
+yZ1yG3+G8IIV7KQnIdVUMph8mPjqcwRfxTvZaxMaH0om0hv80Zc2kT1SlAxfEBtR
+/ZHgC/IYm6wVQqZzHB7DG+iXCLE569/5VXZCCLQ0J0S/0cSd9A6RFF9pQaV4MENu
+Wt4NJwfb6Zw=SgCD
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

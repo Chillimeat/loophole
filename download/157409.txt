@@ -1,0 +1,45 @@
+==========================================================================
+Ubuntu Security Notice USN-4332-2
+April 27, 2020
+
+file-roller vulnerability
+==========================================================================
+
+A security issue affects these releases of Ubuntu and its derivatives:
+
+- Ubuntu 20.04 LTS
+
+Summary:
+
+File Roller could be made to expose sensitive information.
+
+Software Description:
+- file-roller: archive manager for GNOME
+
+Details:
+
+USN-4332-1 fixed vulnerabilities in File Roller. This update provides
+the corresponding update for Ubuntu 20.04 LTS.
+
+Original advisory details:
+
+ It was discovered that File Roller incorrectly handled symlinks.
+ An attacker could possibly use this issue to expose sensitive information.
+
+Update instructions:
+
+The problem can be corrected by updating your system to the following
+package versions:
+
+Ubuntu 20.04 LTS:
+  file-roller                     3.36.1-1ubuntu0.1
+
+In general, a standard system update will make all the necessary changes.
+
+References:
+  https://usn.ubuntu.com/4332-2
+  https://usn.ubuntu.com/4332-1
+  CVE-2020-11736
+
+Package Information:
+  https://launchpad.net/ubuntu/+source/file-roller/3.36.1-1ubuntu0.1

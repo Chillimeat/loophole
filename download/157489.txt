@@ -1,0 +1,164 @@
+==========================================================================
+Ubuntu Security Notice USN-4345-1
+April 28, 2020
+
+linux, linux-aws, linux-aws-hwe, linux-azure, linux-gcp,
+linux-gke-4.15, linux-hwe, linux-kvm, linux-oem, linux-oracle,
+linux-raspi2, linux-snapdragon vulnerabilities
+==========================================================================
+
+A security issue affects these releases of Ubuntu and its derivatives:
+
+- Ubuntu 18.04 LTS
+- Ubuntu 16.04 LTS
+
+Summary:
+
+Several security issues were fixed in the Linux kernel.
+
+Software Description:
+- linux: Linux kernel
+- linux-aws: Linux kernel for Amazon Web Services (AWS) systems
+- linux-gke-4.15: Linux kernel for Google Container Engine (GKE) systems
+- linux-kvm: Linux kernel for cloud environments
+- linux-oem: Linux kernel for OEM processors
+- linux-oracle: Linux kernel for Oracle Cloud systems
+- linux-raspi2: Linux kernel for Raspberry Pi 2
+- linux-snapdragon: Linux kernel for Snapdragon processors
+- linux-aws-hwe: Linux kernel for Amazon Web Services (AWS-HWE) systems
+- linux-azure: Linux kernel for Microsoft Azure Cloud systems
+- linux-gcp: Linux kernel for Google Cloud Platform (GCP) systems
+- linux-hwe: Linux hardware enablement (HWE) kernel
+
+Details:
+
+Al Viro discovered that the Linux kernel for s390x systems did not properly
+perform page table upgrades for kernel sections that use secondary address
+mode. A local attacker could use this to cause a denial of service (system
+crash) or execute arbitrary code. (CVE-2020-11884)
+
+It was discovered that the Intel Wi-Fi driver in the Linux kernel did not
+properly check for errors in some situations. A local attacker could
+possibly use this to cause a denial of service (system crash).
+(CVE-2019-16234)
+
+Tristan Madani discovered that the block I/O tracing implementation in the
+Linux kernel contained a race condition. A local attacker could use this to
+cause a denial of service (system crash) or possibly expose sensitive
+information. (CVE-2019-19768)
+
+It was discovered that the vhost net driver in the Linux kernel contained a
+stack buffer overflow. A local attacker with the ability to perform ioctl()
+calls on /dev/vhost-net could use this to cause a denial of service (system
+crash). (CVE-2020-10942)
+
+It was discovered that the OV51x USB Camera device driver in the Linux
+kernel did not properly validate device metadata. A physically proximate
+attacker could use this to cause a denial of service (system crash).
+(CVE-2020-11608)
+
+It was discovered that the STV06XX USB Camera device driver in the Linux
+kernel did not properly validate device metadata. A physically proximate
+attacker could use this to cause a denial of service (system crash).
+(CVE-2020-11609)
+
+It was discovered that the Xirlink C-It USB Camera device driver in the
+Linux kernel did not properly validate device metadata. A physically
+proximate attacker could use this to cause a denial of service (system
+crash). (CVE-2020-11668)
+
+It was discovered that the virtual terminal implementation in the Linux
+kernel contained a race condition. A local attacker could possibly use this
+to cause a denial of service (system crash) or expose sensitive
+information. (CVE-2020-8648)
+
+Jordy Zomer discovered that the floppy driver in the Linux kernel did not
+properly check for errors in some situations. A local attacker could
+possibly use this to cause a denial of service (system crash) or possibly
+expose sensitive information. (CVE-2020-9383)
+
+Update instructions:
+
+The problem can be corrected by updating your system to the following
+package versions:
+
+Ubuntu 18.04 LTS:
+  linux-image-4.15.0-1038-oracle  4.15.0-1038.42
+  linux-image-4.15.0-1058-gke     4.15.0-1058.61
+  linux-image-4.15.0-1059-kvm     4.15.0-1059.60
+  linux-image-4.15.0-1061-raspi2  4.15.0-1061.65
+  linux-image-4.15.0-1066-aws     4.15.0-1066.70
+  linux-image-4.15.0-1077-snapdragon  4.15.0-1077.84
+  linux-image-4.15.0-1080-oem     4.15.0-1080.90
+  linux-image-4.15.0-99-generic   4.15.0-99.100
+  linux-image-4.15.0-99-generic-lpae  4.15.0-99.100
+  linux-image-4.15.0-99-lowlatency  4.15.0-99.100
+  linux-image-aws-lts-18.04       4.15.0.1066.69
+  linux-image-generic             4.15.0.99.89
+  linux-image-generic-lpae        4.15.0.99.89
+  linux-image-gke                 4.15.0.1058.62
+  linux-image-gke-4.15            4.15.0.1058.62
+  linux-image-kvm                 4.15.0.1059.59
+  linux-image-lowlatency          4.15.0.99.89
+  linux-image-oem                 4.15.0.1080.84
+  linux-image-oracle-lts-18.04    4.15.0.1038.47
+  linux-image-powerpc-e500mc      4.15.0.99.89
+  linux-image-powerpc-smp         4.15.0.99.89
+  linux-image-powerpc64-emb       4.15.0.99.89
+  linux-image-powerpc64-smp       4.15.0.99.89
+  linux-image-raspi2              4.15.0.1061.59
+  linux-image-snapdragon          4.15.0.1077.80
+  linux-image-virtual             4.15.0.99.89
+
+Ubuntu 16.04 LTS:
+  linux-image-4.15.0-1038-oracle  4.15.0-1038.42~16.04.1
+  linux-image-4.15.0-1061-gcp     4.15.0-1061.65
+  linux-image-4.15.0-1066-aws     4.15.0-1066.70~16.04.1
+  linux-image-4.15.0-1082-azure   4.15.0-1082.92~16.04.1
+  linux-image-4.15.0-99-generic   4.15.0-99.100~16.04.1
+  linux-image-4.15.0-99-generic-lpae  4.15.0-99.100~16.04.1
+  linux-image-4.15.0-99-lowlatency  4.15.0-99.100~16.04.1
+  linux-image-aws-hwe             4.15.0.1066.66
+  linux-image-azure               4.15.0.1082.81
+  linux-image-azure-edge          4.15.0.1082.81
+  linux-image-gcp                 4.15.0.1061.75
+  linux-image-generic-hwe-16.04   4.15.0.99.106
+  linux-image-generic-lpae-hwe-16.04  4.15.0.99.106
+  linux-image-gke                 4.15.0.1061.75
+  linux-image-lowlatency-hwe-16.04  4.15.0.99.106
+  linux-image-oem                 4.15.0.99.106
+  linux-image-oracle              4.15.0.1038.31
+  linux-image-virtual-hwe-16.04   4.15.0.99.106
+
+After a standard system update you need to reboot your computer to make
+all the necessary changes.
+
+ATTENTION: Due to an unavoidable ABI change the kernel updates have
+been given a new version number, which requires you to recompile and
+reinstall all third party kernel modules you might have installed.
+Unless you manually uninstalled the standard kernel metapackages
+(e.g. linux-generic, linux-generic-lts-RELEASE, linux-virtual,
+linux-powerpc), a standard system upgrade will automatically perform
+this as well.
+
+References:
+  https://usn.ubuntu.com/4345-1
+  CVE-2019-16234, CVE-2019-19768, CVE-2020-10942, CVE-2020-11608,
+  CVE-2020-11609, CVE-2020-11668, CVE-2020-11884, CVE-2020-8648,
+  CVE-2020-9383
+
+Package Information:
+  https://launchpad.net/ubuntu/+source/linux/4.15.0-99.100
+  https://launchpad.net/ubuntu/+source/linux-aws/4.15.0-1066.70
+  https://launchpad.net/ubuntu/+source/linux-gke-4.15/4.15.0-1058.61
+  https://launchpad.net/ubuntu/+source/linux-kvm/4.15.0-1059.60
+  https://launchpad.net/ubuntu/+source/linux-oem/4.15.0-1080.90
+  https://launchpad.net/ubuntu/+source/linux-oracle/4.15.0-1038.42
+  https://launchpad.net/ubuntu/+source/linux-raspi2/4.15.0-1061.65
+  https://launchpad.net/ubuntu/+source/linux-snapdragon/4.15.0-1077.84
+  https://launchpad.net/ubuntu/+source/linux-aws-hwe/4.15.0-1066.70~16.04.1
+  https://launchpad.net/ubuntu/+source/linux-azure/4.15.0-1082.92~16.04.1
+  https://launchpad.net/ubuntu/+source/linux-gcp/4.15.0-1061.65
+  https://launchpad.net/ubuntu/+source/linux-hwe/4.15.0-99.100~16.04.1
+  https://launchpad.net/ubuntu/+source/linux-oracle/4.15.0-1038.42~16.04.1
+

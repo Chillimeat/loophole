@@ -1,0 +1,103 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+=====================================================================
+                   Red Hat Security Advisory
+
+Synopsis:          Moderate: openstack-manila security update
+Advisory ID:       RHSA-2020:2165-01
+Product:           Red Hat OpenStack Platform
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:2165
+Issue date:        2020-05-14
+CVE Names:         CVE-2020-9543 
+=====================================================================
+
+1. Summary:
+
+An update for openstack-manila is now available for Red Hat OpenStack
+Platform 16 (Train).
+
+Red Hat Product Security has rated this update as having a security impact
+of Moderate. A Common Vulnerability Scoring System (CVSS) base score, which
+gives a detailed severity rating, is available for each vulnerability from
+the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat OpenStack Platform 16.0 - noarch
+
+3. Description:
+
+OpenStack Shared Filesystem Service (Manila) provides services to manage
+network filesystems for use by Virtual Machine instances.
+
+Security Fix(es):
+
+* User with share-network UUID is able to show create and delete shares
+(CVE-2020-9543)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page listed in the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1809855 - CVE-2020-9543 openstack-manila: User with share-network UUID  is able to show, create and delete shares
+1824519 - Rebase openstack-manila to f071a43
+
+6. Package List:
+
+Red Hat OpenStack Platform 16.0:
+
+Source:
+openstack-manila-9.1.2-0.20200405045746.f071a43.el8ost.src.rpm
+
+noarch:
+openstack-manila-9.1.2-0.20200405045746.f071a43.el8ost.noarch.rpm
+openstack-manila-share-9.1.2-0.20200405045746.f071a43.el8ost.noarch.rpm
+python3-manila-9.1.2-0.20200405045746.f071a43.el8ost.noarch.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2020-9543
+https://access.redhat.com/security/updates/classification/#moderate
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXr00pdzjgjWX9erEAQiYfw//YzUt5qzgY5l4Vsq51VeftRuHBWeOnRbM
+njsAMWiLxqffF1DFbJ4cR66e+1dtUjLfkLj6KJDb9QxBjiAK9vlhsyWz6mzPVhv/
+EbjZy64qQU5JW9ad+eT5e3kCls17EUneM68vmI5YLuo2BqiTrS0f4YxtQ2lq67kC
+qTRyJUDHkL1Hh0vOspZt8g9uLA1X+mFk5rdB0W1WxS/VcqId+XoT4wVhI8JTyHfD
+uYovug7rJ4VMqpTZTaHowQDFpihqgYFypCvLJXvj0XNjJsb+21OxFsx6D/l3Rr6N
+bdQRNMlhjEY4q0ZbZm02acQ2XyBDyzPfYiCwbm1kSx89T7gHL++R2yYWSs6Scy7p
+kR/ARmzO5S/wQ2C94bb7oyDdOu1LgHLIZ37fgH1IYXsUU1vzJFoHf2gS6E/UDDuB
+vE3Z/+/Vo2QeP2NKCX2fRLukUX/WiCnnV8mWilYjSMJZHjcvWFfKwlZvGztQwe88
+GTe6jNJmG2aSOxlmy9vm+1jX4tQERAMG5r112w8E6ZPCch0V9BYbeTtUC5/K+uch
+3WbiXzt7ET6ONUwqqVQe1h6L3lLsm97XRMweK4RJlw4kh2VqElJP03vRdSEy5H1w
+BiArjFab++9Il5akdoLopKYsHdFH9+zzgtjKUDZNYhZHG61S0LQF90RrHBbXaWn2
+GlHm2eMm9dw=
+=KkVq
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

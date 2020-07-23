@@ -1,0 +1,101 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Moderate: OpenShift Container Platform 4.4.3 hadoop-container security update
+Advisory ID:       RHSA-2020:1938-01
+Product:           Red Hat OpenShift Enterprise
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:1938
+Issue date:        2020-05-04
+CVE Names:         CVE-2019-19354 CVE-2020-2754 CVE-2020-2755
+                   CVE-2020-2756 CVE-2020-2757 CVE-2020-2773
+                   CVE-2020-2781 CVE-2020-2800 CVE-2020-2803
+                   CVE-2020-2805 CVE-2020-2830
+====================================================================
+1. Summary:
+
+An update for hadoop-container is now available for Red Hat OpenShift
+Container Platform 4.4.
+
+Red Hat Product Security has rated this update as having a security impact
+of Moderate. A Common Vulnerability Scoring System (CVSS) base score, which
+gives a detailed severity rating, is available for each vulnerability from
+the CVE link(s) in the References section.
+
+2. Description:
+
+Red Hat OpenShift Container Platform is Red Hat's cloud computing
+Kubernetes application platform solution designed for on-premise or private
+cloud deployments.
+
+Security Fix(es):
+
+* operator-framework/hadoop: /etc/passwd was given incorrect privileges
+(CVE-2019-19354)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+3. Solution:
+
+For OpenShift Container Platform 4.4 see the following documentation, which
+will be updated shortly for release 4.4.3, for important instructions on
+how to upgrade your cluster and fully apply this asynchronous errata
+update:
+
+https://docs.openshift.com/container-platform/4.4/release_notes/ocp-4-4-rel
+ease-notes.html
+
+Details on how to access this content are available at
+https://docs.openshift.com/container-platform/4.4/updating/updating-cluster
+- -cli.html.
+
+4. Bugs fixed (https://bugzilla.redhat.com/):
+
+1793278 - CVE-2019-19354 operator-framework/hadoop: /etc/passwd is given incorrect privileges
+
+5. References:
+
+https://access.redhat.com/security/cve/CVE-2019-19354
+https://access.redhat.com/security/cve/CVE-2020-2754
+https://access.redhat.com/security/cve/CVE-2020-2755
+https://access.redhat.com/security/cve/CVE-2020-2756
+https://access.redhat.com/security/cve/CVE-2020-2757
+https://access.redhat.com/security/cve/CVE-2020-2773
+https://access.redhat.com/security/cve/CVE-2020-2781
+https://access.redhat.com/security/cve/CVE-2020-2800
+https://access.redhat.com/security/cve/CVE-2020-2803
+https://access.redhat.com/security/cve/CVE-2020-2805
+https://access.redhat.com/security/cve/CVE-2020-2830
+https://access.redhat.com/security/updates/classification/#moderate
+
+6. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXq/0F9zjgjWX9erEAQiEWw//euIeajvtLPtAjaK2wyI6z8sDsoXe5Vnv
+anyegRUlfcqYmwDn5g8F7QGT52Fu3Ud4e23PsB3K9cH8vAO/+U96By3H+NNQLg18
+CubkdZkRKI4OOJUSsma3C2gzbcmxIkaVwswDpGJYfj2p7osFyuKyA4Ed6PUJziFX
+TQY8gDbGhc91jineEFBWfMr17thys7rhIO4JWuIOkgO62QAt1vYHWduF+pbMv5HC
+1ghGGYaS8k2y2a6GfEHQqLQt8bD22mYF/XdJa4YdY8sPluivt1Q6FnnR0gzJLRTI
+oT+ZxMeIaEfnJ4TzHfDCovnfUDoKqlJqqDS/xsF1SM8tweVBTQS+M0JS+EVRa+kb
+dQ6Zu1T4oCkYt+JKK2c8U5/O7Lxn9/g0BRzTA3ZSBMg+lbz0YZAq43aHi6lr7cId
+thMBemJyXJ2CzyoOIRRUkxmLWYtp6tU/ZQ7JLNT3qXlT3HOhPPY/FjinFCUeNgIh
+dSAd69iPsE5pcOZsAs+AykHnYf6wlb7MzZuN6MKZxuBA+tJZRhoCwpL/tPonz2BD
+v2aCHpZbIteR6W/Kox/96n7mTzxUBOsXQwJ4fNsPadG0dgLS8A7zLcITjwwmrKNW
+2NcyoWx0GlWKMKI8qoV4ZcbPCXR93K0yc3g/QMR/GYxgThZg7YJNWf9ix5cRCOxR
+FhEEibKEZZE=/2uj
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

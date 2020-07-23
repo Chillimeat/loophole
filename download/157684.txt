@@ -1,0 +1,105 @@
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Gentoo Linux Security Advisory                           GLSA 202005-01
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+                                           https://security.gentoo.org/
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ Severity: Low
+    Title: Long Range ZIP: Multiple vulnerabilities
+     Date: May 12, 2020
+     Bugs: #617930, #624462
+       ID: 202005-01
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Synopsis
+========
+
+Multiple vulnerabilities have been found in Long Range ZIP, the worst
+of which could result in a Denial of Service condition.
+
+Background
+==========
+
+Optimized for compressing large files
+
+Affected packages
+=================
+
+    -------------------------------------------------------------------
+     Package              /     Vulnerable     /            Unaffected
+    -------------------------------------------------------------------
+  1  app-arch/lrzip          < 0.631_p20190619     >= 0.631_p20190619
+
+Description
+===========
+
+Multiple vulnerabilities have been discovered in Long Range ZIP. Please
+review the CVE identifiers referenced below for details.
+
+Impact
+======
+
+A remote attacker could entice a user to open a specially crafted
+archive file possibly resulting in a Denial of Service condition.
+
+Workaround
+==========
+
+There is no known workaround at this time.
+
+Resolution
+==========
+
+All Long Range ZIP users should upgrade to the latest version:
+
+  # emerge --sync
+  # emerge --ask --oneshot --verbose ">=app-arch/lrzip-0.631_p20190619"
+
+References
+==========
+
+[ 1 ] CVE-2017-8842
+      https://nvd.nist.gov/vuln/detail/CVE-2017-8842
+[ 2 ] CVE-2017-8843
+      https://nvd.nist.gov/vuln/detail/CVE-2017-8843
+[ 3 ] CVE-2017-8844
+      https://nvd.nist.gov/vuln/detail/CVE-2017-8844
+[ 4 ] CVE-2017-8845
+      https://nvd.nist.gov/vuln/detail/CVE-2017-8845
+[ 5 ] CVE-2017-8846
+      https://nvd.nist.gov/vuln/detail/CVE-2017-8846
+[ 6 ] CVE-2017-8847
+      https://nvd.nist.gov/vuln/detail/CVE-2017-8847
+[ 7 ] CVE-2017-9928
+      https://nvd.nist.gov/vuln/detail/CVE-2017-9928
+[ 8 ] CVE-2017-9929
+      https://nvd.nist.gov/vuln/detail/CVE-2017-9929
+
+Availability
+============
+
+This GLSA and any updates to it are available for viewing at
+the Gentoo Security Website:
+
+ https://security.gentoo.org/glsa/202005-01
+
+Concerns?
+=========
+
+Security is a primary focus of Gentoo Linux and ensuring the
+confidentiality and security of our users' machines is of utmost
+importance to us. Any security concerns should be addressed to
+security@gentoo.org or alternatively, you may file a bug at
+https://bugs.gentoo.org.
+
+License
+=======
+
+Copyright 2020 Gentoo Foundation, Inc; referenced text
+belongs to its owner(s).
+
+The contents of this document are licensed under the
+Creative Commons - Attribution / Share Alike license.
+
+https://creativecommons.org/licenses/by-sa/2.5

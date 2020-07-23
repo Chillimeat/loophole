@@ -1,0 +1,118 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Important: libreswan security update
+Advisory ID:       RHSA-2020:2069-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:2069
+Issue date:        2020-05-12
+CVE Names:         CVE-2020-1763
+====================================================================
+1. Summary:
+
+An update for libreswan is now available for Red Hat Enterprise Linux 8.0
+Update Services for SAP Solutions.
+
+Red Hat Product Security has rated this update as having a security impact
+of Important. A Common Vulnerability Scoring System (CVSS) base score,
+which gives a detailed severity rating, is available for each vulnerability
+from the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Enterprise Linux AppStream E4S (v. 8.0) - aarch64, ppc64le, s390x, x86_64
+
+3. Description:
+
+Libreswan is an implementation of IPsec and IKE for Linux. IPsec is the
+Internet Protocol Security and uses strong cryptography to provide both
+authentication and encryption services. These services allow you to build
+secure tunnels through untrusted networks such as virtual private network
+(VPN).
+
+Security Fix(es):
+
+* libreswan: DoS attack via malicious IKEv1 informational exchange message
+(CVE-2020-1763)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1814541 - CVE-2020-1763 libreswan: DoS attack via malicious IKEv1 informational exchange message
+
+6. Package List:
+
+Red Hat Enterprise Linux AppStream E4S (v. 8.0):
+
+Source:
+libreswan-3.27-10.el8_0.src.rpm
+
+aarch64:
+libreswan-3.27-10.el8_0.aarch64.rpm
+libreswan-debuginfo-3.27-10.el8_0.aarch64.rpm
+libreswan-debugsource-3.27-10.el8_0.aarch64.rpm
+
+ppc64le:
+libreswan-3.27-10.el8_0.ppc64le.rpm
+libreswan-debuginfo-3.27-10.el8_0.ppc64le.rpm
+libreswan-debugsource-3.27-10.el8_0.ppc64le.rpm
+
+s390x:
+libreswan-3.27-10.el8_0.s390x.rpm
+libreswan-debuginfo-3.27-10.el8_0.s390x.rpm
+libreswan-debugsource-3.27-10.el8_0.s390x.rpm
+
+x86_64:
+libreswan-3.27-10.el8_0.x86_64.rpm
+libreswan-debuginfo-3.27-10.el8_0.x86_64.rpm
+libreswan-debugsource-3.27-10.el8_0.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2020-1763
+https://access.redhat.com/security/updates/classification/#important
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXrpRatzjgjWX9erEAQjrOQ//RhGgRGAbNZjVLmmLen+vfTM3gzG1FLe6
+U7Y8d5lNjP+Cw93/4m1iabuw94KlT+VduyN4AwlBL5co+B4Vw6gEPk6IiMVQIz6F
+NJvO/Lo0Ys/wql5crriz007Rg5k1/QRrVLQ6B11fC/h+I5tcBe2kl2Eh/MxlBo8Q
+bs0KZyWS/qfEpdXA8I3NLqN5k/1VjTsHDl2ScpDguYFE2a0UpQv6HjFMKYAGq+3R
+cQSFDowXn/DCnyPHzBqAuwZB20IE0BHIidy05L2DRo/3PnyWg9uWuF59QoloNVh5
+6dTjzEOne/sA3MC3cH1YsbFAyR3m2uCidRfWtyg4VwBCPxEvB499NxrI3EWDPmMU
+8KzO+4k6vLg4rgLMym7iXgutMY3SwUyWwRP1OkzieiXPHa3ad2UVb1HPS7Lwh5hu
+16KDABTTMJ3HKuzF1LB9iuA2WJkQehUGSkzkZ811GUnQNF24nMgV5m6QTCKWjwkw
+KYQl64aJW1cp/YeCPVA3IV2tdB2NFQ13PIVNPqaf6SM2nIvwVJxqm3Ead5sulXXC
+qp7lf1l9eXbQnSA7sTHjvOSYRm/fyIhLPk0KLxXcOwGQoXLOWRMPLT4eJr1JOKxR
+HfwioJiAbPneX0eBrgS6wxDK17cU76vcSaPJlJY3nCpYyIkgHY1Yd9mUrpV6ew75
+xahpKCFnJrM=7uUT
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

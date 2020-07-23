@@ -1,0 +1,142 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+=====================================================================
+                   Red Hat Security Advisory
+
+Synopsis:          Important: squid:4 security update
+Advisory ID:       RHSA-2020:2039-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:2039
+Issue date:        2020-05-06
+CVE Names:         CVE-2019-12519 CVE-2020-11945 
+=====================================================================
+
+1. Summary:
+
+An update for the squid:4 module is now available for Red Hat Enterprise
+Linux 8.1 Extended Update Support.
+
+Red Hat Product Security has rated this update as having a security impact
+of Important. A Common Vulnerability Scoring System (CVSS) base score,
+which gives a detailed severity rating, is available for each vulnerability
+from the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Enterprise Linux AppStream EUS (v. 8.1) - aarch64, ppc64le, s390x, x86_64
+
+3. Description:
+
+Squid is a high-performance proxy caching server for web clients,
+supporting FTP, Gopher, and HTTP data objects.
+
+Security Fix(es):
+
+* squid: improper check for new member in ESIExpression::Evaluate allows
+for stack buffer overflow (CVE-2019-12519)
+
+* squid: improper access restriction upon Digest Authentication nonce
+replay could lead to remote code execution (CVE-2020-11945)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+After installing this update, the squid service will be restarted
+automatically.
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1827552 - CVE-2019-12519 squid: improper check for new member in ESIExpression::Evaluate allows for stack buffer overflow
+1827563 - CVE-2020-11945 squid: improper access restriction upon Digest Authentication nonce replay could lead to remote code execution
+
+6. Package List:
+
+Red Hat Enterprise Linux AppStream EUS (v. 8.1):
+
+Source:
+libecap-1.0.1-2.module+el8.1.0+4044+36416a77.src.rpm
+squid-4.4-8.module+el8.1.0+6436+af881f9b.1.src.rpm
+
+aarch64:
+libecap-1.0.1-2.module+el8.1.0+4044+36416a77.aarch64.rpm
+libecap-debuginfo-1.0.1-2.module+el8.1.0+4044+36416a77.aarch64.rpm
+libecap-debugsource-1.0.1-2.module+el8.1.0+4044+36416a77.aarch64.rpm
+libecap-devel-1.0.1-2.module+el8.1.0+4044+36416a77.aarch64.rpm
+squid-4.4-8.module+el8.1.0+6436+af881f9b.1.aarch64.rpm
+squid-debuginfo-4.4-8.module+el8.1.0+6436+af881f9b.1.aarch64.rpm
+squid-debugsource-4.4-8.module+el8.1.0+6436+af881f9b.1.aarch64.rpm
+
+ppc64le:
+libecap-1.0.1-2.module+el8.1.0+4044+36416a77.ppc64le.rpm
+libecap-debuginfo-1.0.1-2.module+el8.1.0+4044+36416a77.ppc64le.rpm
+libecap-debugsource-1.0.1-2.module+el8.1.0+4044+36416a77.ppc64le.rpm
+libecap-devel-1.0.1-2.module+el8.1.0+4044+36416a77.ppc64le.rpm
+squid-4.4-8.module+el8.1.0+6436+af881f9b.1.ppc64le.rpm
+squid-debuginfo-4.4-8.module+el8.1.0+6436+af881f9b.1.ppc64le.rpm
+squid-debugsource-4.4-8.module+el8.1.0+6436+af881f9b.1.ppc64le.rpm
+
+s390x:
+libecap-1.0.1-2.module+el8.1.0+4044+36416a77.s390x.rpm
+libecap-debuginfo-1.0.1-2.module+el8.1.0+4044+36416a77.s390x.rpm
+libecap-debugsource-1.0.1-2.module+el8.1.0+4044+36416a77.s390x.rpm
+libecap-devel-1.0.1-2.module+el8.1.0+4044+36416a77.s390x.rpm
+squid-4.4-8.module+el8.1.0+6436+af881f9b.1.s390x.rpm
+squid-debuginfo-4.4-8.module+el8.1.0+6436+af881f9b.1.s390x.rpm
+squid-debugsource-4.4-8.module+el8.1.0+6436+af881f9b.1.s390x.rpm
+
+x86_64:
+libecap-1.0.1-2.module+el8.1.0+4044+36416a77.x86_64.rpm
+libecap-debuginfo-1.0.1-2.module+el8.1.0+4044+36416a77.x86_64.rpm
+libecap-debugsource-1.0.1-2.module+el8.1.0+4044+36416a77.x86_64.rpm
+libecap-devel-1.0.1-2.module+el8.1.0+4044+36416a77.x86_64.rpm
+squid-4.4-8.module+el8.1.0+6436+af881f9b.1.x86_64.rpm
+squid-debuginfo-4.4-8.module+el8.1.0+6436+af881f9b.1.x86_64.rpm
+squid-debugsource-4.4-8.module+el8.1.0+6436+af881f9b.1.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2019-12519
+https://access.redhat.com/security/cve/CVE-2020-11945
+https://access.redhat.com/security/updates/classification/#important
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXrK6rtzjgjWX9erEAQi/8g/8DKwPWzDWzjkGwk/j7/bTDWiRQWEqAA+J
+Gt8aD/b5ekfD6ihxxlY0GGiEQht3jJbngyN5D0XfRdaoyxdySVpT/+bXJOSq25SM
+eW5Y0TNhYDNbnFlm/e4w/P16ToFHXJ0Hib5+vP2jyyw3DLn1tWL4mizyBsIdH9Ym
+MhaSWrGcLHDfm5/TodjKIjpd1ILeugeIEbYD1Q/Gg5gp0mfWEqyeFqQkegZeqEyz
+grbM/vqNL7mFowkJIm6ZXiaVP3ruBrHAXouSfL2s8Og10Yk2mDCKE5h2YMn52fRe
+ioPSlfOqxpVTTZ9A0ZpVGZaNWEAGpkdVs4P4W0IOztxPh6ToRpySsdChGH0DuEFn
+yV/BN0Zs+WgVotResLmcLa4EtCzQT0KQ0hx+2+NwvLL/CKjikboWpxKZ741y4zHy
+pyePmNjMKhfjhsbVUlq54JrRr0PapuyBE6R+yYV1rn7gLAjRdu8is5+wyUDGeIWV
+/H0Ll5WgIxaUG2vSotSsjYYicbsnC8o4B5/6TG6eDIdiVFMn2nkZW0y32m0e3g6k
+NzbRVXMl9X8qJEmAjp44U7NGsZ8DQXiGYfAtYOy7rcUc2X8PJlbwfdzYxER7+7Hd
+oIDacda3flmo4FpVA9M28aYuiTapZ04up1FlxOg2hnxn8OhkeiKqKCNZ01059KMn
+iMnJehqmjSY=
+=eE+j
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

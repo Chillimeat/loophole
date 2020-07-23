@@ -1,0 +1,52 @@
+=========================================================================
+Ubuntu Security Notice USN-4348-1
+April 29, 2020
+
+mailman vulnerabilities
+=========================================================================
+A security issue affects these releases of Ubuntu and its derivatives:
+
+- Ubuntu 18.04 LTS
+- Ubuntu 16.04 LTS
+
+Summary:
+
+Several security issues were fixed in Mailman.
+
+Software Description:
+- mailman: Web-based mailing list manager (legacy branch)
+
+Details:
+
+It was discovered that Mailman incorrectly handled certain inputs.
+An attacker could possibly use this to issue execute arbitrary scripts
+or HTML. (CVE-2018-0618)
+
+It was discovered that Mailman incorrectly handled certain inputs.
+An attacker could possibly use this issue to display arbitrary text
+on a web page. (CVE-2018-13796)
+
+It was discovered that Mailman incorrectly handled certain files.
+An attacker could possibly use this issue to execute arbitrary code.
+(CVE-2020-12137)
+
+Update instructions:
+
+The problem can be corrected by updating your system to the following
+package versions:
+
+Ubuntu 18.04 LTS:
+  mailman                         1:2.1.26-1ubuntu0.1
+
+Ubuntu 16.04 LTS:
+  mailman                         1:2.1.20-1ubuntu0.4
+
+In general, a standard system update will make all the necessary changes.
+
+References:
+  https://usn.ubuntu.com/4348-1
+  CVE-2018-0618, CVE-2018-13796, CVE-2020-12137
+
+Package Information:
+  https://launchpad.net/ubuntu/+source/mailman/1:2.1.26-1ubuntu0.1
+  https://launchpad.net/ubuntu/+source/mailman/1:2.1.20-1ubuntu0.4

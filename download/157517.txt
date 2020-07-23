@@ -1,0 +1,301 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+=====================================================================
+                   Red Hat Security Advisory
+
+Synopsis:          Moderate: kernel security and bug fix update
+Advisory ID:       RHSA-2020:1984-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:1984
+Issue date:        2020-04-30
+CVE Names:         CVE-2019-18660 
+=====================================================================
+
+1. Summary:
+
+An update for kernel is now available for Red Hat Enterprise Linux 7.7
+Extended Update Support.
+
+Red Hat Product Security has rated this update as having a security impact
+of Moderate. A Common Vulnerability Scoring System (CVSS) base score, which
+gives a detailed severity rating, is available for each vulnerability from
+the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Enterprise Linux ComputeNode EUS (v. 7.7) - noarch, x86_64
+Red Hat Enterprise Linux ComputeNode Optional EUS (v. 7.7) - x86_64
+Red Hat Enterprise Linux Server EUS (v. 7.7) - noarch, ppc64, ppc64le, s390x, x86_64
+Red Hat Enterprise Linux Server Optional EUS (v. 7.7) - ppc64, ppc64le, x86_64
+
+3. Description:
+
+The kernel packages contain the Linux kernel, the core of any Linux
+operating system.
+
+Security Fix(es):
+
+* kernel: powerpc: incomplete Spectre-RSB mitigation leads to information
+exposure (CVE-2019-18660)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+Bug Fix(es):
+
+* [Stratus 7.6 Bug] Deadlock on hcd->bandwidth_mutex when usb controller
+fails during initialization (BZ#1764528)
+
+* RHEL7.7 Snapshot5 - retry when cpu offline races with migration
+(BZ#1766094)
+
+* Slow console output with ast (Aspeed) graphics driver (BZ#1780147)
+
+* RHEL7.7 - qeth: add safeguards to RX data path (BZ#1792248)
+
+* 'soft lockup' events during unmount of container file system due to
+bloated dentry cache / memory cgroup slab cache reclaim not available in
+RHEL7 (BZ#1796358)
+
+* [GSS] Can't access the mount point due to possible blocking of i/o on rbd
+(BZ#1796435)
+
+* [xfstests]: copy_file_range cause corruption on rhel-7 (BZ#1797967)
+
+* kernel: UAF in cdev_put() when a PTP device is removed while its chardev
+is open (BZ#1798395)
+
+* [HPE 7.8 Bug] RHEL7.8 kernel may ignore NMI from ilo (BZ#1798397)
+
+* [HPEMC RHEL 7.7 RHEL 7.8 REGRESSION]  kernel not populating numa_nod in
+/sys/devices... for PMEM (BZ#1801697)
+
+* Unable to exclude files from auditing (BZ#1806429)
+
+* DNAT'd packet is not unmangled upon reply on openshift node (BZ#1806446)
+
+* port show-kabi to python3 (BZ#1806929)
+
+* top shows super high loads when tuned profile realtime-virtual-host is
+applied (BZ#1808029)
+
+* Backport CIFS stale ESTALE handling and dentry revalidation patches
+(BZ#1811053)
+
+* Observed a memory leak while using dm-multipath (BZ#1812936)
+
+* dm-multipath high load backport incorrect (BZ#1814536)
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+The system must be rebooted for this update to take effect.
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1777825 - CVE-2019-18660 kernel: powerpc: incomplete Spectre-RSB mitigation leads to information exposure
+
+6. Package List:
+
+Red Hat Enterprise Linux ComputeNode EUS (v. 7.7):
+
+Source:
+kernel-3.10.0-1062.21.1.el7.src.rpm
+
+noarch:
+kernel-abi-whitelists-3.10.0-1062.21.1.el7.noarch.rpm
+kernel-doc-3.10.0-1062.21.1.el7.noarch.rpm
+
+x86_64:
+bpftool-3.10.0-1062.21.1.el7.x86_64.rpm
+bpftool-debuginfo-3.10.0-1062.21.1.el7.x86_64.rpm
+kernel-3.10.0-1062.21.1.el7.x86_64.rpm
+kernel-debug-3.10.0-1062.21.1.el7.x86_64.rpm
+kernel-debug-debuginfo-3.10.0-1062.21.1.el7.x86_64.rpm
+kernel-debug-devel-3.10.0-1062.21.1.el7.x86_64.rpm
+kernel-debuginfo-3.10.0-1062.21.1.el7.x86_64.rpm
+kernel-debuginfo-common-x86_64-3.10.0-1062.21.1.el7.x86_64.rpm
+kernel-devel-3.10.0-1062.21.1.el7.x86_64.rpm
+kernel-headers-3.10.0-1062.21.1.el7.x86_64.rpm
+kernel-tools-3.10.0-1062.21.1.el7.x86_64.rpm
+kernel-tools-debuginfo-3.10.0-1062.21.1.el7.x86_64.rpm
+kernel-tools-libs-3.10.0-1062.21.1.el7.x86_64.rpm
+perf-3.10.0-1062.21.1.el7.x86_64.rpm
+perf-debuginfo-3.10.0-1062.21.1.el7.x86_64.rpm
+python-perf-3.10.0-1062.21.1.el7.x86_64.rpm
+python-perf-debuginfo-3.10.0-1062.21.1.el7.x86_64.rpm
+
+Red Hat Enterprise Linux ComputeNode Optional EUS (v. 7.7):
+
+x86_64:
+bpftool-debuginfo-3.10.0-1062.21.1.el7.x86_64.rpm
+kernel-debug-debuginfo-3.10.0-1062.21.1.el7.x86_64.rpm
+kernel-debuginfo-3.10.0-1062.21.1.el7.x86_64.rpm
+kernel-debuginfo-common-x86_64-3.10.0-1062.21.1.el7.x86_64.rpm
+kernel-tools-debuginfo-3.10.0-1062.21.1.el7.x86_64.rpm
+kernel-tools-libs-devel-3.10.0-1062.21.1.el7.x86_64.rpm
+perf-debuginfo-3.10.0-1062.21.1.el7.x86_64.rpm
+python-perf-debuginfo-3.10.0-1062.21.1.el7.x86_64.rpm
+
+Red Hat Enterprise Linux Server EUS (v. 7.7):
+
+Source:
+kernel-3.10.0-1062.21.1.el7.src.rpm
+
+noarch:
+kernel-abi-whitelists-3.10.0-1062.21.1.el7.noarch.rpm
+kernel-doc-3.10.0-1062.21.1.el7.noarch.rpm
+
+ppc64:
+bpftool-3.10.0-1062.21.1.el7.ppc64.rpm
+bpftool-debuginfo-3.10.0-1062.21.1.el7.ppc64.rpm
+kernel-3.10.0-1062.21.1.el7.ppc64.rpm
+kernel-bootwrapper-3.10.0-1062.21.1.el7.ppc64.rpm
+kernel-debug-3.10.0-1062.21.1.el7.ppc64.rpm
+kernel-debug-debuginfo-3.10.0-1062.21.1.el7.ppc64.rpm
+kernel-debug-devel-3.10.0-1062.21.1.el7.ppc64.rpm
+kernel-debuginfo-3.10.0-1062.21.1.el7.ppc64.rpm
+kernel-debuginfo-common-ppc64-3.10.0-1062.21.1.el7.ppc64.rpm
+kernel-devel-3.10.0-1062.21.1.el7.ppc64.rpm
+kernel-headers-3.10.0-1062.21.1.el7.ppc64.rpm
+kernel-tools-3.10.0-1062.21.1.el7.ppc64.rpm
+kernel-tools-debuginfo-3.10.0-1062.21.1.el7.ppc64.rpm
+kernel-tools-libs-3.10.0-1062.21.1.el7.ppc64.rpm
+perf-3.10.0-1062.21.1.el7.ppc64.rpm
+perf-debuginfo-3.10.0-1062.21.1.el7.ppc64.rpm
+python-perf-3.10.0-1062.21.1.el7.ppc64.rpm
+python-perf-debuginfo-3.10.0-1062.21.1.el7.ppc64.rpm
+
+ppc64le:
+bpftool-3.10.0-1062.21.1.el7.ppc64le.rpm
+bpftool-debuginfo-3.10.0-1062.21.1.el7.ppc64le.rpm
+kernel-3.10.0-1062.21.1.el7.ppc64le.rpm
+kernel-bootwrapper-3.10.0-1062.21.1.el7.ppc64le.rpm
+kernel-debug-3.10.0-1062.21.1.el7.ppc64le.rpm
+kernel-debug-debuginfo-3.10.0-1062.21.1.el7.ppc64le.rpm
+kernel-debuginfo-3.10.0-1062.21.1.el7.ppc64le.rpm
+kernel-debuginfo-common-ppc64le-3.10.0-1062.21.1.el7.ppc64le.rpm
+kernel-devel-3.10.0-1062.21.1.el7.ppc64le.rpm
+kernel-headers-3.10.0-1062.21.1.el7.ppc64le.rpm
+kernel-tools-3.10.0-1062.21.1.el7.ppc64le.rpm
+kernel-tools-debuginfo-3.10.0-1062.21.1.el7.ppc64le.rpm
+kernel-tools-libs-3.10.0-1062.21.1.el7.ppc64le.rpm
+perf-3.10.0-1062.21.1.el7.ppc64le.rpm
+perf-debuginfo-3.10.0-1062.21.1.el7.ppc64le.rpm
+python-perf-3.10.0-1062.21.1.el7.ppc64le.rpm
+python-perf-debuginfo-3.10.0-1062.21.1.el7.ppc64le.rpm
+
+s390x:
+bpftool-3.10.0-1062.21.1.el7.s390x.rpm
+bpftool-debuginfo-3.10.0-1062.21.1.el7.s390x.rpm
+kernel-3.10.0-1062.21.1.el7.s390x.rpm
+kernel-debug-3.10.0-1062.21.1.el7.s390x.rpm
+kernel-debug-debuginfo-3.10.0-1062.21.1.el7.s390x.rpm
+kernel-debug-devel-3.10.0-1062.21.1.el7.s390x.rpm
+kernel-debuginfo-3.10.0-1062.21.1.el7.s390x.rpm
+kernel-debuginfo-common-s390x-3.10.0-1062.21.1.el7.s390x.rpm
+kernel-devel-3.10.0-1062.21.1.el7.s390x.rpm
+kernel-headers-3.10.0-1062.21.1.el7.s390x.rpm
+kernel-kdump-3.10.0-1062.21.1.el7.s390x.rpm
+kernel-kdump-debuginfo-3.10.0-1062.21.1.el7.s390x.rpm
+kernel-kdump-devel-3.10.0-1062.21.1.el7.s390x.rpm
+perf-3.10.0-1062.21.1.el7.s390x.rpm
+perf-debuginfo-3.10.0-1062.21.1.el7.s390x.rpm
+python-perf-3.10.0-1062.21.1.el7.s390x.rpm
+python-perf-debuginfo-3.10.0-1062.21.1.el7.s390x.rpm
+
+x86_64:
+bpftool-3.10.0-1062.21.1.el7.x86_64.rpm
+bpftool-debuginfo-3.10.0-1062.21.1.el7.x86_64.rpm
+kernel-3.10.0-1062.21.1.el7.x86_64.rpm
+kernel-debug-3.10.0-1062.21.1.el7.x86_64.rpm
+kernel-debug-debuginfo-3.10.0-1062.21.1.el7.x86_64.rpm
+kernel-debug-devel-3.10.0-1062.21.1.el7.x86_64.rpm
+kernel-debuginfo-3.10.0-1062.21.1.el7.x86_64.rpm
+kernel-debuginfo-common-x86_64-3.10.0-1062.21.1.el7.x86_64.rpm
+kernel-devel-3.10.0-1062.21.1.el7.x86_64.rpm
+kernel-headers-3.10.0-1062.21.1.el7.x86_64.rpm
+kernel-tools-3.10.0-1062.21.1.el7.x86_64.rpm
+kernel-tools-debuginfo-3.10.0-1062.21.1.el7.x86_64.rpm
+kernel-tools-libs-3.10.0-1062.21.1.el7.x86_64.rpm
+perf-3.10.0-1062.21.1.el7.x86_64.rpm
+perf-debuginfo-3.10.0-1062.21.1.el7.x86_64.rpm
+python-perf-3.10.0-1062.21.1.el7.x86_64.rpm
+python-perf-debuginfo-3.10.0-1062.21.1.el7.x86_64.rpm
+
+Red Hat Enterprise Linux Server Optional EUS (v. 7.7):
+
+ppc64:
+bpftool-debuginfo-3.10.0-1062.21.1.el7.ppc64.rpm
+kernel-debug-debuginfo-3.10.0-1062.21.1.el7.ppc64.rpm
+kernel-debuginfo-3.10.0-1062.21.1.el7.ppc64.rpm
+kernel-debuginfo-common-ppc64-3.10.0-1062.21.1.el7.ppc64.rpm
+kernel-tools-debuginfo-3.10.0-1062.21.1.el7.ppc64.rpm
+kernel-tools-libs-devel-3.10.0-1062.21.1.el7.ppc64.rpm
+perf-debuginfo-3.10.0-1062.21.1.el7.ppc64.rpm
+python-perf-debuginfo-3.10.0-1062.21.1.el7.ppc64.rpm
+
+ppc64le:
+bpftool-debuginfo-3.10.0-1062.21.1.el7.ppc64le.rpm
+kernel-debug-debuginfo-3.10.0-1062.21.1.el7.ppc64le.rpm
+kernel-debug-devel-3.10.0-1062.21.1.el7.ppc64le.rpm
+kernel-debuginfo-3.10.0-1062.21.1.el7.ppc64le.rpm
+kernel-debuginfo-common-ppc64le-3.10.0-1062.21.1.el7.ppc64le.rpm
+kernel-tools-debuginfo-3.10.0-1062.21.1.el7.ppc64le.rpm
+kernel-tools-libs-devel-3.10.0-1062.21.1.el7.ppc64le.rpm
+perf-debuginfo-3.10.0-1062.21.1.el7.ppc64le.rpm
+python-perf-debuginfo-3.10.0-1062.21.1.el7.ppc64le.rpm
+
+x86_64:
+bpftool-debuginfo-3.10.0-1062.21.1.el7.x86_64.rpm
+kernel-debug-debuginfo-3.10.0-1062.21.1.el7.x86_64.rpm
+kernel-debuginfo-3.10.0-1062.21.1.el7.x86_64.rpm
+kernel-debuginfo-common-x86_64-3.10.0-1062.21.1.el7.x86_64.rpm
+kernel-tools-debuginfo-3.10.0-1062.21.1.el7.x86_64.rpm
+kernel-tools-libs-devel-3.10.0-1062.21.1.el7.x86_64.rpm
+perf-debuginfo-3.10.0-1062.21.1.el7.x86_64.rpm
+python-perf-debuginfo-3.10.0-1062.21.1.el7.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2019-18660
+https://access.redhat.com/security/updates/classification/#moderate
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXqsIS9zjgjWX9erEAQiG2w//RXyfOd6Kn6ajdqU3TIoy169SAFO+Eb3B
+zejevdXiJF65FGwdi3yNlIQ85w1X7VjETp+7lHE1Qnx6pXbbz1Tps7btNUu9uwQm
+176w6T0QWe1Pyj8/rL5SS7vEQqpCQOrY8cJ7KYZZC7rdGqGdjsQp5q0LeqPEryn/
+l1SzAkLD3GHghSziWo7LaNmApRkoIZajS+sgyJOYCzyo5hEW2ui0YKYuTSCRTSN8
+lqI96TMGTTvcOBj1clJV0NTD5g/gcXs7Ua88H+EEWugfmJwwHdltLP6+x56a6s89
+BLkpL875yuUpwutGw3BSzr9Y04dH8ernd0QyF5netqbEGoRkHZvBGiTdT14vu0UH
+hh2+JGGOTZbqimv1vHbJ17kC6RUdmnpcWmmX0usQ8LZzrnaAMZXyI5DREeekByGu
+NaeZu7eR1qtYBzerCrcYybQGH28afcI7DWWWg7YpZe1PpG7Ohh/iacXfQcsJcB5T
+b71XTBo+8OK+B5xLirOdNO438wBxXVuq7pyEYqB+kjS+6sgByXrUSE/XpcZsq5Hj
+KCVE78hOnB4/d58+9nmBzEUTt/9NKzuTi2l7JDjp34iv+TcPDgcg0EWKGok0P5RK
+eCbhmcjuVcjGcndelj03xmMX6pLMK2TgytCssjjFL7qJIqjiZjMQxumyK7GfvSnu
+dH8Irhtzbos=
+=ctTc
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

@@ -1,0 +1,135 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Moderate: python-virtualenv security update
+Advisory ID:       RHSA-2020:2081-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:2081
+Issue date:        2020-05-12
+CVE Names:         CVE-2018-18074 CVE-2018-20060 CVE-2019-11236
+====================================================================
+1. Summary:
+
+An update for python-virtualenv is now available for Red Hat Enterprise
+Linux 7.
+
+Red Hat Product Security has rated this update as having a security impact
+of Moderate. A Common Vulnerability Scoring System (CVSS) base score, which
+gives a detailed severity rating, is available for each vulnerability from
+the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Enterprise Linux Client Optional (v. 7) - noarch
+Red Hat Enterprise Linux ComputeNode Optional (v. 7) - noarch
+Red Hat Enterprise Linux Server (v. 7) - noarch
+Red Hat Enterprise Linux Workstation (v. 7) - noarch
+
+3. Description:
+
+The virtualenv tool creates isolated Python environments. The virtualenv
+tool is a successor to workingenv, and an extension of virtual-python.
+
+Security Fix(es):
+
+* python-urllib3: Cross-host redirect does not remove Authorization header
+allow for credential exposure (CVE-2018-20060)
+
+* python-urllib3: CRLF injection due to not encoding the '\r\n' sequence
+leading to possible attack on internal service (CVE-2019-11236)
+
+* python-requests: Redirect from HTTPS to HTTP does not remove
+Authorization header (CVE-2018-18074)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1643829 - CVE-2018-18074 python-requests: Redirect from HTTPS to HTTP does not remove Authorization header
+1649153 - CVE-2018-20060 python-urllib3: Cross-host redirect does not remove Authorization header allow for credential exposure
+1700824 - CVE-2019-11236 python-urllib3: CRLF injection due to not encoding the '\r\n' sequence leading to possible attack on internal service
+
+6. Package List:
+
+Red Hat Enterprise Linux Client Optional (v. 7):
+
+Source:
+python-virtualenv-15.1.0-4.el7_8.src.rpm
+
+noarch:
+python-virtualenv-15.1.0-4.el7_8.noarch.rpm
+
+Red Hat Enterprise Linux ComputeNode Optional (v. 7):
+
+Source:
+python-virtualenv-15.1.0-4.el7_8.src.rpm
+
+noarch:
+python-virtualenv-15.1.0-4.el7_8.noarch.rpm
+
+Red Hat Enterprise Linux Server (v. 7):
+
+Source:
+python-virtualenv-15.1.0-4.el7_8.src.rpm
+
+noarch:
+python-virtualenv-15.1.0-4.el7_8.noarch.rpm
+
+Red Hat Enterprise Linux Workstation (v. 7):
+
+Source:
+python-virtualenv-15.1.0-4.el7_8.src.rpm
+
+noarch:
+python-virtualenv-15.1.0-4.el7_8.noarch.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2018-18074
+https://access.redhat.com/security/cve/CVE-2018-20060
+https://access.redhat.com/security/cve/CVE-2019-11236
+https://access.redhat.com/security/updates/classification/#moderate
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXrrtz9zjgjWX9erEAQhWIg//RJvoNdUXZ5WFViwEGFFTsMAfaTy//abz
+VRSlJxbDac+05eGI0YqwDejz188BYhX/ho0BIYXB99xsolkdxk3SxOUCv8Rvqk+4
+UzEwZm5QP4+/jh3daGUog0cfJ6iQBgsfZAU+rXnfdEeFEwcgI/PMUhey0fK62r70
+l7hf6rMt1PVLhECGul8mBDXrYB3NkVnom4iZdGMxQ+Xl4ABw4ixYOTwjfaVWw/b7
+pZYjb4ZnlWNxdY0V1X/OCoh+T3i132Z78EbvMsBtebCYNIegd/Lm5LBOmRxufx0G
+hkaD3DCALKQxO97YPzJksGHbYMkKoIa2wq+m5d2NXcMuBIV6eN2fx8q+BqQgucej
+X1Smc7FcI2a61y141S3xQIMz1vZsB6Y5n4BUaWavtYqOcuyhUvUIRmKt4JDwhyzY
+8HSLRyN7XPnEV1sHUg8C+tiFliFnl/0LbSGkxl1asQVUHsLHR3FXALG2HMLx+3uT
+rJ5fQjrkoROEeNRpi2hQOd5+iMKu+3UttbtA4TbnSu0CRzbYbCy5JDwSFTN5tAoZ
+an0aZM2UP4wHkK/ePzIK3cEVpLIG/1GJtp1g7FH/LLztH2L/Eu8MQwbyhkhiHZkH
+ZrjD+z3sQKw4VNS6gXyaD5gCiDqnDO7jjTHkbfDLyQUlvIto+KSt1FEWY2t6q/sd
+t3OTTIBRJ4M=YedM
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

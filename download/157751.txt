@@ -1,0 +1,52 @@
+==========================================================================
+Ubuntu Security Notice USN-4362-1
+May 18, 2020
+
+dpdk vulnerabilities
+==========================================================================
+
+A security issue affects these releases of Ubuntu and its derivatives:
+
+- Ubuntu 20.04 LTS
+- Ubuntu 19.10
+- Ubuntu 18.04 LTS
+
+Summary:
+
+Several security issues were fixed in DPDK.
+
+Software Description:
+- dpdk: set of libraries for fast packet processing
+
+Details:
+
+It was discovered that DPDK incorrectly handled certain inputs.
+An attacker could possibly use this issue to cause a crash or
+execute arbitrary code. (CVE-2020-10722, CVE-2020-10723,
+CVE-2020-10724, CVE-2020-10725, CVE-2020-10726)
+
+Update instructions:
+
+The problem can be corrected by updating your system to the following
+package versions:
+
+Ubuntu 20.04 LTS:
+  dpdk                            19.11.1-0ubuntu1.1
+
+Ubuntu 19.10:
+  dpdk                            18.11.5-0ubuntu0.19.10.2
+
+Ubuntu 18.04 LTS:
+  dpdk                            17.11.9-0ubuntu18.04.2
+
+In general, a standard system update will make all the necessary changes.
+
+References:
+  https://usn.ubuntu.com/4362-1
+  CVE-2020-10722, CVE-2020-10723, CVE-2020-10724, CVE-2020-10725,
+  CVE-2020-10726
+
+Package Information:
+  https://launchpad.net/ubuntu/+source/dpdk/19.11.1-0ubuntu1.1
+  https://launchpad.net/ubuntu/+source/dpdk/18.11.5-0ubuntu0.19.10.2
+  https://launchpad.net/ubuntu/+source/dpdk/17.11.9-0ubuntu18.04.2

@@ -1,0 +1,164 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Important: git security update
+Advisory ID:       RHSA-2020:1980-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:1980
+Issue date:        2020-04-30
+CVE Names:         CVE-2020-11008
+====================================================================
+1. Summary:
+
+An update for git is now available for Red Hat Enterprise Linux 8.
+
+Red Hat Product Security has rated this update as having a security impact
+of Important. A Common Vulnerability Scoring System (CVSS) base score,
+which gives a detailed severity rating, is available for each vulnerability
+from the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Enterprise Linux AppStream (v. 8) - aarch64, noarch, ppc64le, s390x, x86_64
+
+3. Description:
+
+Git is a distributed revision control system with a decentralized
+architecture. As opposed to centralized version control systems with a
+client-server model, Git ensures that each working copy of a Git repository
+is an exact copy with complete revision history. This not only allows the
+user to work on and contribute to projects without the need to have
+permission to push the changes to their official repositories, but also
+makes it possible for the user to work with no network connection.
+
+The following packages have been upgraded to a later upstream version: git
+(2.18.4). (BZ#1826008)
+
+Security Fix(es):
+
+* git: Crafted URL containing new lines, empty host or lacks a scheme can
+cause credential leak (CVE-2020-11008)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1826001 - CVE-2020-11008 git: Crafted URL containing new lines, empty host or lacks a scheme can cause credential leak
+
+6. Package List:
+
+Red Hat Enterprise Linux AppStream (v. 8):
+
+Source:
+git-2.18.4-2.el8_2.src.rpm
+
+aarch64:
+git-2.18.4-2.el8_2.aarch64.rpm
+git-core-2.18.4-2.el8_2.aarch64.rpm
+git-core-debuginfo-2.18.4-2.el8_2.aarch64.rpm
+git-daemon-2.18.4-2.el8_2.aarch64.rpm
+git-daemon-debuginfo-2.18.4-2.el8_2.aarch64.rpm
+git-debuginfo-2.18.4-2.el8_2.aarch64.rpm
+git-debugsource-2.18.4-2.el8_2.aarch64.rpm
+git-instaweb-2.18.4-2.el8_2.aarch64.rpm
+git-subtree-2.18.4-2.el8_2.aarch64.rpm
+git-svn-2.18.4-2.el8_2.aarch64.rpm
+git-svn-debuginfo-2.18.4-2.el8_2.aarch64.rpm
+
+noarch:
+git-all-2.18.4-2.el8_2.noarch.rpm
+git-core-doc-2.18.4-2.el8_2.noarch.rpm
+git-email-2.18.4-2.el8_2.noarch.rpm
+git-gui-2.18.4-2.el8_2.noarch.rpm
+gitk-2.18.4-2.el8_2.noarch.rpm
+gitweb-2.18.4-2.el8_2.noarch.rpm
+perl-Git-2.18.4-2.el8_2.noarch.rpm
+perl-Git-SVN-2.18.4-2.el8_2.noarch.rpm
+
+ppc64le:
+git-2.18.4-2.el8_2.ppc64le.rpm
+git-core-2.18.4-2.el8_2.ppc64le.rpm
+git-core-debuginfo-2.18.4-2.el8_2.ppc64le.rpm
+git-daemon-2.18.4-2.el8_2.ppc64le.rpm
+git-daemon-debuginfo-2.18.4-2.el8_2.ppc64le.rpm
+git-debuginfo-2.18.4-2.el8_2.ppc64le.rpm
+git-debugsource-2.18.4-2.el8_2.ppc64le.rpm
+git-instaweb-2.18.4-2.el8_2.ppc64le.rpm
+git-subtree-2.18.4-2.el8_2.ppc64le.rpm
+git-svn-2.18.4-2.el8_2.ppc64le.rpm
+git-svn-debuginfo-2.18.4-2.el8_2.ppc64le.rpm
+
+s390x:
+git-2.18.4-2.el8_2.s390x.rpm
+git-core-2.18.4-2.el8_2.s390x.rpm
+git-core-debuginfo-2.18.4-2.el8_2.s390x.rpm
+git-daemon-2.18.4-2.el8_2.s390x.rpm
+git-daemon-debuginfo-2.18.4-2.el8_2.s390x.rpm
+git-debuginfo-2.18.4-2.el8_2.s390x.rpm
+git-debugsource-2.18.4-2.el8_2.s390x.rpm
+git-instaweb-2.18.4-2.el8_2.s390x.rpm
+git-subtree-2.18.4-2.el8_2.s390x.rpm
+git-svn-2.18.4-2.el8_2.s390x.rpm
+git-svn-debuginfo-2.18.4-2.el8_2.s390x.rpm
+
+x86_64:
+git-2.18.4-2.el8_2.x86_64.rpm
+git-core-2.18.4-2.el8_2.x86_64.rpm
+git-core-debuginfo-2.18.4-2.el8_2.x86_64.rpm
+git-daemon-2.18.4-2.el8_2.x86_64.rpm
+git-daemon-debuginfo-2.18.4-2.el8_2.x86_64.rpm
+git-debuginfo-2.18.4-2.el8_2.x86_64.rpm
+git-debugsource-2.18.4-2.el8_2.x86_64.rpm
+git-instaweb-2.18.4-2.el8_2.x86_64.rpm
+git-subtree-2.18.4-2.el8_2.x86_64.rpm
+git-svn-2.18.4-2.el8_2.x86_64.rpm
+git-svn-debuginfo-2.18.4-2.el8_2.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2020-11008
+https://access.redhat.com/security/updates/classification/#important
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXqqzctzjgjWX9erEAQhIjg//byZKfiMKQxGTXzo12Jvl+Ki50hH5YLHx
+wURsem4vppv0ZJ24eJAZSB6S/LgNTbtj23XnGCypv4yixjAFtYw6qEfxqLKSOHyO
+onBv3owPf+Mu8CckTUkbz2DO+wJ8sCox56QIJ5rkAWHV8Bk+plevzupEhrgPTV8T
+Vb5bv6w4rhzNYajWKXUM6YwUQ3NuCMjJB5n+Zgs2OGUFh8akIwUjZplbjFHs3NAg
+QuK/Zzn6tY00kKp62x6PRKCper+PG2oQ3BO2E8R88nDXNLVtzYl443CTEdhLGaMR
+0mfwMJ5ZSn9X4e4/mE6HjLt8Mxa7L+d0RC2vW9E8z6722mXeWv7YS1JoeoU0cOtO
+WZeg9+VWcMwFbfbqFnOPyZBJg4AAWf/8OAUO0z+2I2laREktQo7Gh23gs3nM/PBP
+1kqCyL80mQFrO1q+t8kwv1zUjxuT0C7OhLEBaW/kUUkJ/xc1wUAG4TslAkYqDJK4
+jIVKgdq59CIaqudxyVuOCCoEEWGC6+T1qNus+hI5ggbBf3pskDrWkkY8OHV6cNkf
+sG1cY9bwrhwCwe2VhOS19tCcgERJK5e7Tavr8cz3zB4g0EGgWMe4QCE8R/7jiMNc
+6ZPo1UIH/XRukv6i/sVIcsEQtdt7AQ20kKzZ9r9wFAi5nc0AkQuOGK5b2eSnCzVj
+1VuuLc0m6Mc=yZiV
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

@@ -1,0 +1,45 @@
+=========================================================================
+Ubuntu Security Notice USN-4354-1
+May 11, 2020
+
+mailman vulnerability
+=========================================================================
+A security issue affects these releases of Ubuntu and its derivatives:
+
+- Ubuntu 18.04 LTS
+- Ubuntu 16.04 LTS
+
+Summary:
+
+Mailman could be made to inject arbitrary content in the login page
+if it received a specially crafted input.
+
+Software Description:
+- mailman: Web-based mailing list manager (legacy branch)
+
+Details:
+
+It was discovered that Mailman incorrectly handled certain inputs.
+An attacker could possibly use this issue to inject arbitrary content
+in the login page.
+
+Update instructions:
+
+The problem can be corrected by updating your system to the following
+package versions:
+
+Ubuntu 18.04 LTS:
+  mailman                         1:2.1.26-1ubuntu0.2
+
+Ubuntu 16.04 LTS:
+  mailman                         1:2.1.20-1ubuntu0.5
+
+In general, a standard system update will make all the necessary changes.
+
+References:
+  https://usn.ubuntu.com/4354-1
+  CVE-2020-12108
+
+Package Information:
+  https://launchpad.net/ubuntu/+source/mailman/1:2.1.26-1ubuntu0.2
+  https://launchpad.net/ubuntu/+source/mailman/1:2.1.20-1ubuntu0.5

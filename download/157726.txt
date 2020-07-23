@@ -1,0 +1,113 @@
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Gentoo Linux Security Advisory                           GLSA 202005-13
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+                                           https://security.gentoo.org/
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ Severity: Normal
+    Title: Chromium, Google Chrome: Multiple vulnerabilities
+     Date: May 14, 2020
+     Bugs: #719902, #721310
+       ID: 202005-13
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Synopsis
+========
+
+Multiple vulnerabilities have been found in Chromium and Google Chrome,
+the worst of which could result in the arbitrary execution of code.
+
+Background
+==========
+
+Chromium is an open-source browser project that aims to build a safer,
+faster, and more stable way for all users to experience the web.
+
+Google Chrome is one fast, simple, and secure browser for all your
+devices.
+
+Affected packages
+=================
+
+    -------------------------------------------------------------------
+     Package              /     Vulnerable     /            Unaffected
+    -------------------------------------------------------------------
+  1  www-client/chromium      < 81.0.4044.138        >= 81.0.4044.138
+  2  www-client/google-chrome
+                              < 81.0.4044.138        >= 81.0.4044.138
+    -------------------------------------------------------------------
+     2 affected packages
+
+Description
+===========
+
+Multiple vulnerabilities have been discovered in Chromium and Google
+Chrome. Please review the CVE identifiers referenced below for details.
+
+Impact
+======
+
+Please review the referenced CVE identifiers for details.
+
+Workaround
+==========
+
+There is no known workaround at this time.
+
+Resolution
+==========
+
+All Chromium users should upgrade to the latest version:
+
+  # emerge --sync
+  # emerge --ask --oneshot -v ">=www-client/chromium-81.0.4044.138"
+
+All Google Chrome users should upgrade to the latest version:
+
+  # emerge --sync
+  # emerge -a --oneshot -v ">=www-client/google-chrome-81.0.4044.138"
+
+References
+==========
+
+[ 1 ] CVE-2020-6461
+      https://nvd.nist.gov/vuln/detail/CVE-2020-6461
+[ 2 ] CVE-2020-6462
+      https://nvd.nist.gov/vuln/detail/CVE-2020-6462
+[ 3 ] CVE-2020-6464
+      https://nvd.nist.gov/vuln/detail/CVE-2020-6464
+[ 4 ] Release notes (81.0.4044.129)
+
+https://chromereleases.googleblog.com/2020/04/stable-channel-update-for-desktop_27.html
+[ 5 ] Release notes (81.0.4044.138)
+
+https://chromereleases.googleblog.com/2020/05/stable-channel-update-for-desktop.html
+
+Availability
+============
+
+This GLSA and any updates to it are available for viewing at
+the Gentoo Security Website:
+
+ https://security.gentoo.org/glsa/202005-13
+
+Concerns?
+=========
+
+Security is a primary focus of Gentoo Linux and ensuring the
+confidentiality and security of our users' machines is of utmost
+importance to us. Any security concerns should be addressed to
+security@gentoo.org or alternatively, you may file a bug at
+https://bugs.gentoo.org.
+
+License
+=======
+
+Copyright 2020 Gentoo Foundation, Inc; referenced text
+belongs to its owner(s).
+
+The contents of this document are licensed under the
+Creative Commons - Attribution / Share Alike license.
+
+https://creativecommons.org/licenses/by-sa/2.5

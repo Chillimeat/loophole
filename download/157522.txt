@@ -1,0 +1,107 @@
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Gentoo Linux Security Advisory                           GLSA 202004-17
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+                                           https://security.gentoo.org/
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ Severity: Normal
+    Title: Django: Multiple vulnerabilities
+     Date: April 30, 2020
+     Bugs: #692384, #701744, #706204, #707998, #711522
+       ID: 202004-17
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Synopsis
+========
+
+Multiple vulnerabilities have been found in Django, the worst of which
+could result in privilege escalation.
+
+Background
+==========
+
+Django is a Python-based web framework.
+
+Affected packages
+=================
+
+    -------------------------------------------------------------------
+     Package              /     Vulnerable     /            Unaffected
+    -------------------------------------------------------------------
+  1  dev-python/django            < 2.2.11                  >= 2.2.11
+
+Description
+===========
+
+Multiple vulnerabilities have been discovered in Django. Please review
+the CVE identifiers referenced below for details.
+
+Impact
+======
+
+A remote attacker, by sending specially crafted input, could possibly
+cause a Denial of Service condition, or alter the database.
+
+Workaround
+==========
+
+There is no known workaround at this time.
+
+Resolution
+==========
+
+All Django users should upgrade to the latest version:
+
+  # emerge --sync
+  # emerge --ask --oneshot --verbose ">=dev-python/django-2.2.11"
+
+References
+==========
+
+[ 1 ] CVE-2019-12308
+      https://nvd.nist.gov/vuln/detail/CVE-2019-12308
+[ 2 ] CVE-2019-14232
+      https://nvd.nist.gov/vuln/detail/CVE-2019-14232
+[ 3 ] CVE-2019-14233
+      https://nvd.nist.gov/vuln/detail/CVE-2019-14233
+[ 4 ] CVE-2019-14234
+      https://nvd.nist.gov/vuln/detail/CVE-2019-14234
+[ 5 ] CVE-2019-14235
+      https://nvd.nist.gov/vuln/detail/CVE-2019-14235
+[ 6 ] CVE-2019-19118
+      https://nvd.nist.gov/vuln/detail/CVE-2019-19118
+[ 7 ] CVE-2019-19844
+      https://nvd.nist.gov/vuln/detail/CVE-2019-19844
+[ 8 ] CVE-2020-7471
+      https://nvd.nist.gov/vuln/detail/CVE-2020-7471
+[ 9 ] CVE-2020-9402
+      https://nvd.nist.gov/vuln/detail/CVE-2020-9402
+
+Availability
+============
+
+This GLSA and any updates to it are available for viewing at
+the Gentoo Security Website:
+
+ https://security.gentoo.org/glsa/202004-17
+
+Concerns?
+=========
+
+Security is a primary focus of Gentoo Linux and ensuring the
+confidentiality and security of our users' machines is of utmost
+importance to us. Any security concerns should be addressed to
+security@gentoo.org or alternatively, you may file a bug at
+https://bugs.gentoo.org.
+
+License
+=======
+
+Copyright 2020 Gentoo Foundation, Inc; referenced text
+belongs to its owner(s).
+
+The contents of this document are licensed under the
+Creative Commons - Attribution / Share Alike license.
+
+https://creativecommons.org/licenses/by-sa/2.5

@@ -1,0 +1,247 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Important: kernel security update
+Advisory ID:       RHSA-2020:2214-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:2214
+Issue date:        2020-05-19
+CVE Names:         CVE-2017-18595 CVE-2019-19768 CVE-2020-10711
+====================================================================
+1. Summary:
+
+An update for kernel is now available for Red Hat Enterprise Linux 7.4
+Advanced Update Support, Red Hat Enterprise Linux 7.4 Telco Extended Update
+Support, and Red Hat Enterprise Linux 7.4 Update Services for SAP
+Solutions.
+
+Red Hat Product Security has rated this update as having a security impact
+of Important. A Common Vulnerability Scoring System (CVSS) base score,
+which gives a detailed severity rating, is available for each vulnerability
+from the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Enterprise Linux Server AUS (v. 7.4) - noarch, x86_64
+Red Hat Enterprise Linux Server E4S (v. 7.4) - noarch, ppc64le, x86_64
+Red Hat Enterprise Linux Server Optional AUS (v. 7.4) - x86_64
+Red Hat Enterprise Linux Server Optional E4S (v. 7.4) - ppc64le, x86_64
+Red Hat Enterprise Linux Server Optional TUS (v. 7.4) - x86_64
+Red Hat Enterprise Linux Server TUS (v. 7.4) - noarch, x86_64
+
+3. Description:
+
+The kernel packages contain the Linux kernel, the core of any Linux
+operating system.
+
+Security Fix(es):
+
+* kernel: double free may be caused by the function allocate_trace_buffer
+in the file kernel/trace/trace.c (CVE-2017-18595)
+
+* kernel: use-after-free in __blk_add_trace in kernel/trace/blktrace.c
+(CVE-2019-19768)
+
+* Kernel: NetLabel: null pointer dereference while receiving CIPSO packet
+with null category may cause kernel panic (CVE-2020-10711)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+The system must be rebooted for this update to take effect.
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1758671 - CVE-2017-18595 kernel: double free may be caused by the function allocate_trace_buffer in the file kernel/trace/trace.c
+1786164 - CVE-2019-19768 kernel: use-after-free in __blk_add_trace in kernel/trace/blktrace.c
+1825116 - CVE-2020-10711 Kernel: NetLabel: null pointer dereference while receiving CIPSO packet with null category may cause kernel panic
+
+6. Package List:
+
+Red Hat Enterprise Linux Server AUS (v. 7.4):
+
+Source:
+kernel-3.10.0-693.67.1.el7.src.rpm
+
+noarch:
+kernel-abi-whitelists-3.10.0-693.67.1.el7.noarch.rpm
+kernel-doc-3.10.0-693.67.1.el7.noarch.rpm
+
+x86_64:
+kernel-3.10.0-693.67.1.el7.x86_64.rpm
+kernel-debug-3.10.0-693.67.1.el7.x86_64.rpm
+kernel-debug-debuginfo-3.10.0-693.67.1.el7.x86_64.rpm
+kernel-debug-devel-3.10.0-693.67.1.el7.x86_64.rpm
+kernel-debuginfo-3.10.0-693.67.1.el7.x86_64.rpm
+kernel-debuginfo-common-x86_64-3.10.0-693.67.1.el7.x86_64.rpm
+kernel-devel-3.10.0-693.67.1.el7.x86_64.rpm
+kernel-headers-3.10.0-693.67.1.el7.x86_64.rpm
+kernel-tools-3.10.0-693.67.1.el7.x86_64.rpm
+kernel-tools-debuginfo-3.10.0-693.67.1.el7.x86_64.rpm
+kernel-tools-libs-3.10.0-693.67.1.el7.x86_64.rpm
+perf-3.10.0-693.67.1.el7.x86_64.rpm
+perf-debuginfo-3.10.0-693.67.1.el7.x86_64.rpm
+python-perf-3.10.0-693.67.1.el7.x86_64.rpm
+python-perf-debuginfo-3.10.0-693.67.1.el7.x86_64.rpm
+
+Red Hat Enterprise Linux Server E4S (v. 7.4):
+
+Source:
+kernel-3.10.0-693.67.1.el7.src.rpm
+
+noarch:
+kernel-abi-whitelists-3.10.0-693.67.1.el7.noarch.rpm
+kernel-doc-3.10.0-693.67.1.el7.noarch.rpm
+
+ppc64le:
+kernel-3.10.0-693.67.1.el7.ppc64le.rpm
+kernel-bootwrapper-3.10.0-693.67.1.el7.ppc64le.rpm
+kernel-debug-3.10.0-693.67.1.el7.ppc64le.rpm
+kernel-debug-debuginfo-3.10.0-693.67.1.el7.ppc64le.rpm
+kernel-debuginfo-3.10.0-693.67.1.el7.ppc64le.rpm
+kernel-debuginfo-common-ppc64le-3.10.0-693.67.1.el7.ppc64le.rpm
+kernel-devel-3.10.0-693.67.1.el7.ppc64le.rpm
+kernel-headers-3.10.0-693.67.1.el7.ppc64le.rpm
+kernel-tools-3.10.0-693.67.1.el7.ppc64le.rpm
+kernel-tools-debuginfo-3.10.0-693.67.1.el7.ppc64le.rpm
+kernel-tools-libs-3.10.0-693.67.1.el7.ppc64le.rpm
+perf-3.10.0-693.67.1.el7.ppc64le.rpm
+perf-debuginfo-3.10.0-693.67.1.el7.ppc64le.rpm
+python-perf-3.10.0-693.67.1.el7.ppc64le.rpm
+python-perf-debuginfo-3.10.0-693.67.1.el7.ppc64le.rpm
+
+x86_64:
+kernel-3.10.0-693.67.1.el7.x86_64.rpm
+kernel-debug-3.10.0-693.67.1.el7.x86_64.rpm
+kernel-debug-debuginfo-3.10.0-693.67.1.el7.x86_64.rpm
+kernel-debug-devel-3.10.0-693.67.1.el7.x86_64.rpm
+kernel-debuginfo-3.10.0-693.67.1.el7.x86_64.rpm
+kernel-debuginfo-common-x86_64-3.10.0-693.67.1.el7.x86_64.rpm
+kernel-devel-3.10.0-693.67.1.el7.x86_64.rpm
+kernel-headers-3.10.0-693.67.1.el7.x86_64.rpm
+kernel-tools-3.10.0-693.67.1.el7.x86_64.rpm
+kernel-tools-debuginfo-3.10.0-693.67.1.el7.x86_64.rpm
+kernel-tools-libs-3.10.0-693.67.1.el7.x86_64.rpm
+perf-3.10.0-693.67.1.el7.x86_64.rpm
+perf-debuginfo-3.10.0-693.67.1.el7.x86_64.rpm
+python-perf-3.10.0-693.67.1.el7.x86_64.rpm
+python-perf-debuginfo-3.10.0-693.67.1.el7.x86_64.rpm
+
+Red Hat Enterprise Linux Server TUS (v. 7.4):
+
+Source:
+kernel-3.10.0-693.67.1.el7.src.rpm
+
+noarch:
+kernel-abi-whitelists-3.10.0-693.67.1.el7.noarch.rpm
+kernel-doc-3.10.0-693.67.1.el7.noarch.rpm
+
+x86_64:
+kernel-3.10.0-693.67.1.el7.x86_64.rpm
+kernel-debug-3.10.0-693.67.1.el7.x86_64.rpm
+kernel-debug-debuginfo-3.10.0-693.67.1.el7.x86_64.rpm
+kernel-debug-devel-3.10.0-693.67.1.el7.x86_64.rpm
+kernel-debuginfo-3.10.0-693.67.1.el7.x86_64.rpm
+kernel-debuginfo-common-x86_64-3.10.0-693.67.1.el7.x86_64.rpm
+kernel-devel-3.10.0-693.67.1.el7.x86_64.rpm
+kernel-headers-3.10.0-693.67.1.el7.x86_64.rpm
+kernel-tools-3.10.0-693.67.1.el7.x86_64.rpm
+kernel-tools-debuginfo-3.10.0-693.67.1.el7.x86_64.rpm
+kernel-tools-libs-3.10.0-693.67.1.el7.x86_64.rpm
+perf-3.10.0-693.67.1.el7.x86_64.rpm
+perf-debuginfo-3.10.0-693.67.1.el7.x86_64.rpm
+python-perf-3.10.0-693.67.1.el7.x86_64.rpm
+python-perf-debuginfo-3.10.0-693.67.1.el7.x86_64.rpm
+
+Red Hat Enterprise Linux Server Optional AUS (v. 7.4):
+
+x86_64:
+kernel-debug-debuginfo-3.10.0-693.67.1.el7.x86_64.rpm
+kernel-debuginfo-3.10.0-693.67.1.el7.x86_64.rpm
+kernel-debuginfo-common-x86_64-3.10.0-693.67.1.el7.x86_64.rpm
+kernel-tools-debuginfo-3.10.0-693.67.1.el7.x86_64.rpm
+kernel-tools-libs-devel-3.10.0-693.67.1.el7.x86_64.rpm
+perf-debuginfo-3.10.0-693.67.1.el7.x86_64.rpm
+python-perf-debuginfo-3.10.0-693.67.1.el7.x86_64.rpm
+
+Red Hat Enterprise Linux Server Optional E4S (v. 7.4):
+
+ppc64le:
+kernel-debug-debuginfo-3.10.0-693.67.1.el7.ppc64le.rpm
+kernel-debug-devel-3.10.0-693.67.1.el7.ppc64le.rpm
+kernel-debuginfo-3.10.0-693.67.1.el7.ppc64le.rpm
+kernel-debuginfo-common-ppc64le-3.10.0-693.67.1.el7.ppc64le.rpm
+kernel-tools-debuginfo-3.10.0-693.67.1.el7.ppc64le.rpm
+kernel-tools-libs-devel-3.10.0-693.67.1.el7.ppc64le.rpm
+perf-debuginfo-3.10.0-693.67.1.el7.ppc64le.rpm
+python-perf-debuginfo-3.10.0-693.67.1.el7.ppc64le.rpm
+
+x86_64:
+kernel-debug-debuginfo-3.10.0-693.67.1.el7.x86_64.rpm
+kernel-debuginfo-3.10.0-693.67.1.el7.x86_64.rpm
+kernel-debuginfo-common-x86_64-3.10.0-693.67.1.el7.x86_64.rpm
+kernel-tools-debuginfo-3.10.0-693.67.1.el7.x86_64.rpm
+kernel-tools-libs-devel-3.10.0-693.67.1.el7.x86_64.rpm
+perf-debuginfo-3.10.0-693.67.1.el7.x86_64.rpm
+python-perf-debuginfo-3.10.0-693.67.1.el7.x86_64.rpm
+
+Red Hat Enterprise Linux Server Optional TUS (v. 7.4):
+
+x86_64:
+kernel-debug-debuginfo-3.10.0-693.67.1.el7.x86_64.rpm
+kernel-debuginfo-3.10.0-693.67.1.el7.x86_64.rpm
+kernel-debuginfo-common-x86_64-3.10.0-693.67.1.el7.x86_64.rpm
+kernel-tools-debuginfo-3.10.0-693.67.1.el7.x86_64.rpm
+kernel-tools-libs-devel-3.10.0-693.67.1.el7.x86_64.rpm
+perf-debuginfo-3.10.0-693.67.1.el7.x86_64.rpm
+python-perf-debuginfo-3.10.0-693.67.1.el7.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2017-18595
+https://access.redhat.com/security/cve/CVE-2019-19768
+https://access.redhat.com/security/cve/CVE-2020-10711
+https://access.redhat.com/security/updates/classification/#important
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXsPwQNzjgjWX9erEAQjrVA/8D9RdiE7wf6RAWKKV/I0HmKuXrGecJhbW
+dDSyURIXi3zPtUHqa7aa64geBTi/Sb3WhxNgKfbVOToMSC5yLkHYW4ecZirDHTmr
+F2SGSmzFq0GSPN6nPVNQJ4CkV3oaFfXGBmeX4jCA8kdnFpW3v2EZgo90ikGQYwIn
+QohESsrwZIKJsWyenapuymk5E6klLIOmVv+mihHsN1rZQIaItwbUBlfCM6HGjzv4
+sfJDXwRMc8+22xdc9KlMkbRyOLqZ5TU9Xm5qENis+612OQ6wEYjyZnlDmnZEfWem
+U3krM03JzycNZXizYIq8vXYb9j+kZ6BbFV7SV700QZzDvKvIk7V3xwHU/aN0P9Da
+2R3Fe7A+yK1wKBQCIgDKILmD+BH4WK4z+RKGTOSzFN7DEdCWAYDS2gyDNH4I+SSJ
+GTpKbwD89YRYZsFuaLJ+3Fmlay1B0zfri0TJuCxjC95Xr5fC6cQ5z/t2eShnY7JB
+/Vd1JGCBDQA0I+K/Gon+Bj2NScP5aXuTfwthAaMqj9bcKOhEhswRhsyXOb2rVddd
+qOBaJrkFnltvQQHl7JdaUWMoefkg3C4/qwCQKPOTUVpjFpLvaxmhmUGW8UCvkY8o
+HnjmV1VEpLPl67D7I5gnzGzuoZVXd576u1qisRwgs05/Pmm0j+f0JNr81D5DUinC
+gt3XbK7EqqA=vE0e
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

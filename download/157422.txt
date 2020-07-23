@@ -1,0 +1,341 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Important: kernel security, bug fix, and enhancement update
+Advisory ID:       RHSA-2020:1769-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:1769
+Issue date:        2020-04-28
+CVE Names:         CVE-2018-16871 CVE-2019-8980 CVE-2019-10639
+                   CVE-2019-15090 CVE-2019-15099 CVE-2019-15221
+                   CVE-2019-17053 CVE-2019-17055 CVE-2019-18805
+                   CVE-2019-19057 CVE-2019-19073 CVE-2019-19074
+                   CVE-2019-19534 CVE-2019-19768 CVE-2019-19922
+                   CVE-2020-1749
+====================================================================
+1. Summary:
+
+An update for kernel is now available for Red Hat Enterprise Linux 8.
+
+Red Hat Product Security has rated this update as having a security impact
+of Important. A Common Vulnerability Scoring System (CVSS) base score,
+which gives a detailed severity rating, is available for each vulnerability
+from the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat CodeReady Linux Builder (v. 8) - aarch64, ppc64le, x86_64
+Red Hat Enterprise Linux BaseOS (v. 8) - aarch64, noarch, ppc64le, s390x, x86_64
+
+3. Description:
+
+The kernel packages contain the Linux kernel, the core of any Linux
+operating system.
+
+Security Fix(es):
+
+* kernel: use-after-free in __blk_add_trace in kernel/trace/blktrace.c
+(CVE-2019-19768)
+
+* kernel: nfs: NULL pointer dereference due to an anomalized NFS message
+sequence (CVE-2018-16871)
+
+* kernel: memory leak in the kernel_read_file function in fs/exec.c allows
+to cause a denial of service (CVE-2019-8980)
+
+* kernel: unprivileged users able to create RAW sockets  in AF_IEEE802154
+network protocol. (CVE-2019-17053)
+
+* kernel: unprivileged users able to create RAW sockets in AF_ISDN  network
+protocol. (CVE-2019-17055)
+
+* kernel: integer overflow in tcp_ack_update_rtt in net/ipv4/tcp_input.c
+(CVE-2019-18805)
+
+* kernel: information leak bug caused  by a malicious USB device in the
+drivers/net/can/usb/peak_usb/pcan_usb_core.c driver (CVE-2019-19534)
+
+* kernel: some ipv6 protocols not encrypted over ipsec tunnel.
+(CVE-2020-1749)
+
+* Kernel: net: using kernel space address bits to derive IP ID may
+potentially break KASLR (CVE-2019-10639)
+
+* kernel: An out-of-bounds read in drivers/scsi/qedi/qedi_dbg.c leading to
+crash or information disclosure (CVE-2019-15090)
+
+* kernel: a NULL pointer dereference in
+drivers/net/wireless/ath/ath10k/usb.c leads to a crash (CVE-2019-15099)
+
+* kernel: Null pointer dereference in the sound/usb/line6/pcm.c
+(CVE-2019-15221)
+
+* kernel: Two memory leaks in the mwifiex_pcie_init_evt_ring() function in
+drivers/net/wireless/marvell/mwifiex/pcie.c allows for a DoS
+(CVE-2019-19057)
+
+* kernel: Memory leaks in drivers/net/wireless/ath/ath9k/htc_hst.c in the
+Linux kernel (DOS) (CVE-2019-19073)
+
+* kernel: a memory leak in the ath9k management function in allows local
+DoS (CVE-2019-19074)
+
+* kernel: when cpu.cfs_quota_us is used allows attackers to cause a denial
+of service against non-cpu-bound applications (CVE-2019-19922)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+Additional Changes:
+
+This update also fixes several bugs and adds various enhancements.
+Documentation for these changes is available from the Release Notes
+document linked to in the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+The system must be rebooted for this update to take effect.
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1655162 - CVE-2018-16871 kernel: nfs: NULL pointer dereference due to an anomalized NFS message sequence
+1679972 - CVE-2019-8980 kernel: memory leak in the kernel_read_file function in fs/exec.c allows to cause a denial of service
+1729933 - CVE-2019-10639 Kernel: net: using kernel space address bits to derive IP ID may potentially break KASLR
+1738741 - L2 guest hit kernel panic when do L1->L1 live migration on PML-enabled intel host
+1743526 - CVE-2019-15090 kernel: An out-of-bounds read in drivers/scsi/qedi/qedi_dbg.c leading to crash or information disclosure
+1743560 - CVE-2019-15099 kernel: a NULL pointer dereference in drivers/net/wireless/ath/ath10k/usb.c leads to a crash
+1749633 - kernel: brk can grow the heap into the area reserved for the stack
+1749974 - CVE-2019-15221 kernel: Null pointer dereference in the sound/usb/line6/pcm.c
+1752765 - conntrack tool delete entry with CIDR crash
+1757902 - fix compat statfs64() returning EOVERFLOW for when _FILE_OFFSET_BITSd
+1758242 - CVE-2019-17053 kernel: unprivileged users able to create RAW sockets  in AF_IEEE802154 network protocol.
+1758248 - CVE-2019-17055 kernel: unprivileged users able to create RAW sockets in AF_ISDN  network protocol.
+1765547 - Fallocate on XFS may discard concurrent AIO write
+1767664 - Backport CIFS stale ESTALE handling and dentry revalidation patches
+1771430 - svcrdma: Increase the default connection credit limit
+1771496 - CVE-2019-18805 kernel: integer overflow in tcp_ack_update_rtt in net/ipv4/tcp_input.c
+1771691 - Process killed while opening a file can result in leaked open handle on the server
+1774933 - CVE-2019-19074 kernel: a memory leak in the ath9k management function in allows local DoS
+1774937 - CVE-2019-19073 kernel: Memory leaks in drivers/net/wireless/ath/ath9k/htc_hst.c in the Linux kernel (DOS)
+1775050 - CVE-2019-19057 kernel: Two memory leaks in the mwifiex_pcie_init_evt_ring() function in drivers/net/wireless/marvell/mwifiex/pcie.c allows for a DoS
+1783540 - CVE-2019-19534 kernel: information leak bug caused  by a malicious USB device in the drivers/net/can/usb/peak_usb/pcan_usb_core.c driver
+1786164 - CVE-2019-19768 kernel: use-after-free in __blk_add_trace in kernel/trace/blktrace.c
+1789594 - kernel: Wrong FE0/FE1 MSR restore in signal handlers on ppc64le
+1792512 - CVE-2019-19922 kernel: when cpu.cfs_quota_us is used allows attackers to cause a denial of service against non-cpu-bound applications
+1795049 - RHEL8: Latency issue on Kubernetes / k8s / OpenShift
+1803162 - [NFS] Dataloss with copy_file_range on NFS-mounted files that is not 4K aligned  on RHEL 8.
+1809833 - CVE-2020-1749 kernel: some ipv6 protocols not encrypted over ipsec tunnel.
+
+6. Package List:
+
+Red Hat Enterprise Linux BaseOS (v. 8):
+
+Source:
+kernel-4.18.0-193.el8.src.rpm
+
+aarch64:
+bpftool-4.18.0-193.el8.aarch64.rpm
+bpftool-debuginfo-4.18.0-193.el8.aarch64.rpm
+kernel-4.18.0-193.el8.aarch64.rpm
+kernel-core-4.18.0-193.el8.aarch64.rpm
+kernel-cross-headers-4.18.0-193.el8.aarch64.rpm
+kernel-debug-4.18.0-193.el8.aarch64.rpm
+kernel-debug-core-4.18.0-193.el8.aarch64.rpm
+kernel-debug-debuginfo-4.18.0-193.el8.aarch64.rpm
+kernel-debug-devel-4.18.0-193.el8.aarch64.rpm
+kernel-debug-modules-4.18.0-193.el8.aarch64.rpm
+kernel-debug-modules-extra-4.18.0-193.el8.aarch64.rpm
+kernel-debuginfo-4.18.0-193.el8.aarch64.rpm
+kernel-debuginfo-common-aarch64-4.18.0-193.el8.aarch64.rpm
+kernel-devel-4.18.0-193.el8.aarch64.rpm
+kernel-headers-4.18.0-193.el8.aarch64.rpm
+kernel-modules-4.18.0-193.el8.aarch64.rpm
+kernel-modules-extra-4.18.0-193.el8.aarch64.rpm
+kernel-tools-4.18.0-193.el8.aarch64.rpm
+kernel-tools-debuginfo-4.18.0-193.el8.aarch64.rpm
+kernel-tools-libs-4.18.0-193.el8.aarch64.rpm
+perf-4.18.0-193.el8.aarch64.rpm
+perf-debuginfo-4.18.0-193.el8.aarch64.rpm
+python3-perf-4.18.0-193.el8.aarch64.rpm
+python3-perf-debuginfo-4.18.0-193.el8.aarch64.rpm
+
+noarch:
+kernel-abi-whitelists-4.18.0-193.el8.noarch.rpm
+kernel-doc-4.18.0-193.el8.noarch.rpm
+
+ppc64le:
+bpftool-4.18.0-193.el8.ppc64le.rpm
+bpftool-debuginfo-4.18.0-193.el8.ppc64le.rpm
+kernel-4.18.0-193.el8.ppc64le.rpm
+kernel-core-4.18.0-193.el8.ppc64le.rpm
+kernel-cross-headers-4.18.0-193.el8.ppc64le.rpm
+kernel-debug-4.18.0-193.el8.ppc64le.rpm
+kernel-debug-core-4.18.0-193.el8.ppc64le.rpm
+kernel-debug-debuginfo-4.18.0-193.el8.ppc64le.rpm
+kernel-debug-devel-4.18.0-193.el8.ppc64le.rpm
+kernel-debug-modules-4.18.0-193.el8.ppc64le.rpm
+kernel-debug-modules-extra-4.18.0-193.el8.ppc64le.rpm
+kernel-debuginfo-4.18.0-193.el8.ppc64le.rpm
+kernel-debuginfo-common-ppc64le-4.18.0-193.el8.ppc64le.rpm
+kernel-devel-4.18.0-193.el8.ppc64le.rpm
+kernel-headers-4.18.0-193.el8.ppc64le.rpm
+kernel-modules-4.18.0-193.el8.ppc64le.rpm
+kernel-modules-extra-4.18.0-193.el8.ppc64le.rpm
+kernel-tools-4.18.0-193.el8.ppc64le.rpm
+kernel-tools-debuginfo-4.18.0-193.el8.ppc64le.rpm
+kernel-tools-libs-4.18.0-193.el8.ppc64le.rpm
+perf-4.18.0-193.el8.ppc64le.rpm
+perf-debuginfo-4.18.0-193.el8.ppc64le.rpm
+python3-perf-4.18.0-193.el8.ppc64le.rpm
+python3-perf-debuginfo-4.18.0-193.el8.ppc64le.rpm
+
+s390x:
+bpftool-4.18.0-193.el8.s390x.rpm
+bpftool-debuginfo-4.18.0-193.el8.s390x.rpm
+kernel-4.18.0-193.el8.s390x.rpm
+kernel-core-4.18.0-193.el8.s390x.rpm
+kernel-cross-headers-4.18.0-193.el8.s390x.rpm
+kernel-debug-4.18.0-193.el8.s390x.rpm
+kernel-debug-core-4.18.0-193.el8.s390x.rpm
+kernel-debug-debuginfo-4.18.0-193.el8.s390x.rpm
+kernel-debug-devel-4.18.0-193.el8.s390x.rpm
+kernel-debug-modules-4.18.0-193.el8.s390x.rpm
+kernel-debug-modules-extra-4.18.0-193.el8.s390x.rpm
+kernel-debuginfo-4.18.0-193.el8.s390x.rpm
+kernel-debuginfo-common-s390x-4.18.0-193.el8.s390x.rpm
+kernel-devel-4.18.0-193.el8.s390x.rpm
+kernel-headers-4.18.0-193.el8.s390x.rpm
+kernel-modules-4.18.0-193.el8.s390x.rpm
+kernel-modules-extra-4.18.0-193.el8.s390x.rpm
+kernel-tools-4.18.0-193.el8.s390x.rpm
+kernel-tools-debuginfo-4.18.0-193.el8.s390x.rpm
+kernel-zfcpdump-4.18.0-193.el8.s390x.rpm
+kernel-zfcpdump-core-4.18.0-193.el8.s390x.rpm
+kernel-zfcpdump-debuginfo-4.18.0-193.el8.s390x.rpm
+kernel-zfcpdump-devel-4.18.0-193.el8.s390x.rpm
+kernel-zfcpdump-modules-4.18.0-193.el8.s390x.rpm
+kernel-zfcpdump-modules-extra-4.18.0-193.el8.s390x.rpm
+perf-4.18.0-193.el8.s390x.rpm
+perf-debuginfo-4.18.0-193.el8.s390x.rpm
+python3-perf-4.18.0-193.el8.s390x.rpm
+python3-perf-debuginfo-4.18.0-193.el8.s390x.rpm
+
+x86_64:
+bpftool-4.18.0-193.el8.x86_64.rpm
+bpftool-debuginfo-4.18.0-193.el8.x86_64.rpm
+kernel-4.18.0-193.el8.x86_64.rpm
+kernel-core-4.18.0-193.el8.x86_64.rpm
+kernel-cross-headers-4.18.0-193.el8.x86_64.rpm
+kernel-debug-4.18.0-193.el8.x86_64.rpm
+kernel-debug-core-4.18.0-193.el8.x86_64.rpm
+kernel-debug-debuginfo-4.18.0-193.el8.x86_64.rpm
+kernel-debug-devel-4.18.0-193.el8.x86_64.rpm
+kernel-debug-modules-4.18.0-193.el8.x86_64.rpm
+kernel-debug-modules-extra-4.18.0-193.el8.x86_64.rpm
+kernel-debuginfo-4.18.0-193.el8.x86_64.rpm
+kernel-debuginfo-common-x86_64-4.18.0-193.el8.x86_64.rpm
+kernel-devel-4.18.0-193.el8.x86_64.rpm
+kernel-headers-4.18.0-193.el8.x86_64.rpm
+kernel-modules-4.18.0-193.el8.x86_64.rpm
+kernel-modules-extra-4.18.0-193.el8.x86_64.rpm
+kernel-tools-4.18.0-193.el8.x86_64.rpm
+kernel-tools-debuginfo-4.18.0-193.el8.x86_64.rpm
+kernel-tools-libs-4.18.0-193.el8.x86_64.rpm
+perf-4.18.0-193.el8.x86_64.rpm
+perf-debuginfo-4.18.0-193.el8.x86_64.rpm
+python3-perf-4.18.0-193.el8.x86_64.rpm
+python3-perf-debuginfo-4.18.0-193.el8.x86_64.rpm
+
+Red Hat CodeReady Linux Builder (v. 8):
+
+aarch64:
+bpftool-debuginfo-4.18.0-193.el8.aarch64.rpm
+kernel-debug-debuginfo-4.18.0-193.el8.aarch64.rpm
+kernel-debuginfo-4.18.0-193.el8.aarch64.rpm
+kernel-debuginfo-common-aarch64-4.18.0-193.el8.aarch64.rpm
+kernel-tools-debuginfo-4.18.0-193.el8.aarch64.rpm
+kernel-tools-libs-devel-4.18.0-193.el8.aarch64.rpm
+perf-debuginfo-4.18.0-193.el8.aarch64.rpm
+python3-perf-debuginfo-4.18.0-193.el8.aarch64.rpm
+
+ppc64le:
+bpftool-debuginfo-4.18.0-193.el8.ppc64le.rpm
+kernel-debug-debuginfo-4.18.0-193.el8.ppc64le.rpm
+kernel-debuginfo-4.18.0-193.el8.ppc64le.rpm
+kernel-debuginfo-common-ppc64le-4.18.0-193.el8.ppc64le.rpm
+kernel-tools-debuginfo-4.18.0-193.el8.ppc64le.rpm
+kernel-tools-libs-devel-4.18.0-193.el8.ppc64le.rpm
+perf-debuginfo-4.18.0-193.el8.ppc64le.rpm
+python3-perf-debuginfo-4.18.0-193.el8.ppc64le.rpm
+
+x86_64:
+bpftool-debuginfo-4.18.0-193.el8.x86_64.rpm
+kernel-debug-debuginfo-4.18.0-193.el8.x86_64.rpm
+kernel-debuginfo-4.18.0-193.el8.x86_64.rpm
+kernel-debuginfo-common-x86_64-4.18.0-193.el8.x86_64.rpm
+kernel-tools-debuginfo-4.18.0-193.el8.x86_64.rpm
+kernel-tools-libs-devel-4.18.0-193.el8.x86_64.rpm
+perf-debuginfo-4.18.0-193.el8.x86_64.rpm
+python3-perf-debuginfo-4.18.0-193.el8.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2018-16871
+https://access.redhat.com/security/cve/CVE-2019-8980
+https://access.redhat.com/security/cve/CVE-2019-10639
+https://access.redhat.com/security/cve/CVE-2019-15090
+https://access.redhat.com/security/cve/CVE-2019-15099
+https://access.redhat.com/security/cve/CVE-2019-15221
+https://access.redhat.com/security/cve/CVE-2019-17053
+https://access.redhat.com/security/cve/CVE-2019-17055
+https://access.redhat.com/security/cve/CVE-2019-18805
+https://access.redhat.com/security/cve/CVE-2019-19057
+https://access.redhat.com/security/cve/CVE-2019-19073
+https://access.redhat.com/security/cve/CVE-2019-19074
+https://access.redhat.com/security/cve/CVE-2019-19534
+https://access.redhat.com/security/cve/CVE-2019-19768
+https://access.redhat.com/security/cve/CVE-2019-19922
+https://access.redhat.com/security/cve/CVE-2020-1749
+https://access.redhat.com/security/updates/classification/#important
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/8.2_release_notes/index
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXqhVdNzjgjWX9erEAQhD/w//dPnDo2yo4d8QrzWDVVkXPNxRzhSCh7Rc
+vCtSYPB6YMydkKglUvdHS+ZGv+N/1xs8CTpAZ59q3NTiw2FdkCPfSuJiTwdCyOwc
+xars8lYLd2yKv/yhHXh5HDOloRRK26cKANvpUXFJCmbOq/muSEyhRTKKG2t+Iijn
+lMzS6BIheasfjupsy3K2JGeZCjKlH7u1yulJVH4BaQZ/K04NxKjOWGnZ9eAoP6gp
+AwPGT9YYT3Eg24NTaUVHBsrWMF7ybDkWuRav8TBHT8Uukoztjmypi/5C925tbVGM
+Ln36s+wfwPuytgos3JcjYVFhAzPwdtay99ZlXukeJlVXBc/AZEqkE3tp1dOUz5o/
+QwjX2TByLMa6XAMWtNjW8AOcx30VuG73EoYNussB/J9+1eeehj7VpdAp/AWQm7q0
+dHe0U6Pzm48vWLvuBzuc1JLC87ssbIC1n4WrfyUm86ECT8WZ4TsF8FZwlrzMB8Au
+wPMo9RHXb4gU9WgSfdikOvZy8DnyUfSIPnlyK71iaa7rqRlPVWM/XqDq7so7KF1o
+3dE9bquitvi5H8/sEsgRGiqA6tb1Lh+mjhbE5FQxAggKnXz83UpJjk9aSL3dj+yY
+W1XxCp5lPPLclygA8lo7sqgD6RCBjWxzyGZBK0SoLzv2qHzrhxBeM0mOmhH7xRb5
+N2G5/HRp5K8=0ugo
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

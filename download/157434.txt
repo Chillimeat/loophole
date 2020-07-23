@@ -1,0 +1,253 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Moderate: rsyslog security, bug fix, and enhancement update
+Advisory ID:       RHSA-2020:1702-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:1702
+Issue date:        2020-04-28
+CVE Names:         CVE-2019-17041 CVE-2019-17042
+====================================================================
+1. Summary:
+
+An update for rsyslog is now available for Red Hat Enterprise Linux 8.
+
+Red Hat Product Security has rated this update as having a security impact
+of Moderate. A Common Vulnerability Scoring System (CVSS) base score, which
+gives a detailed severity rating, is available for each vulnerability from
+the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Enterprise Linux AppStream (v. 8) - aarch64, noarch, ppc64le, s390x, x86_64
+
+3. Description:
+
+The rsyslog packages provide an enhanced, multi-threaded syslog daemon. It
+supports MySQL, syslog/TCP, RFC 3195, permitted sender lists, filtering on
+any message part, and fine-grained control over output format.
+
+The following packages have been upgraded to a later upstream version:
+rsyslog (8.1911.0). (BZ#1740683)
+
+Security Fix(es):
+
+* rsyslog: heap-based overflow in
+contrib/pmaixforwardedfrom/pmaixforwardedfrom.c (CVE-2019-17041)
+
+* rsyslog: heap-based overflow in contrib/pmcisconames/pmcisconames.c
+(CVE-2019-17042)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+Additional Changes:
+
+For detailed information on changes in this release, see the Red Hat
+Enterprise Linux 8.2 Release Notes linked from the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1676559 - [RFE]: support omhttp for REST APIs
+1692072 - [RFE]: mmkubernetes: support cache expiration
+1692073 - [RFE]: omelasticsearch: support rebindinterval
+1692074 - [RFE]: omelasticsearch,mmkubernetes: support skipverifyhost
+1738213 - rsyslog SEGV with disk-assisted queues, possible corruption
+1746876 - Confusing Description of rsyslog-gnutls rpm
+1755218 - (RFE RHEL-7.7 (or later): rsyslogd: imjournal: messages lost due to rate-limiting should also print burst+interva
+1763757 - rsyslog doesn't read lines from imfile after rotation
+1766693 - CVE-2019-17041 rsyslog: heap-based overflow in contrib/pmaixforwardedfrom/pmaixforwardedfrom.c
+1766700 - CVE-2019-17042 rsyslog: heap-based overflow in contrib/pmcisconames/pmcisconames.c
+1782353 - gnutls cerficate validity default changed from deny to warn
+
+6. Package List:
+
+Red Hat Enterprise Linux AppStream (v. 8):
+
+Source:
+rsyslog-8.1911.0-3.el8.src.rpm
+
+aarch64:
+rsyslog-8.1911.0-3.el8.aarch64.rpm
+rsyslog-crypto-8.1911.0-3.el8.aarch64.rpm
+rsyslog-crypto-debuginfo-8.1911.0-3.el8.aarch64.rpm
+rsyslog-debuginfo-8.1911.0-3.el8.aarch64.rpm
+rsyslog-debugsource-8.1911.0-3.el8.aarch64.rpm
+rsyslog-elasticsearch-8.1911.0-3.el8.aarch64.rpm
+rsyslog-elasticsearch-debuginfo-8.1911.0-3.el8.aarch64.rpm
+rsyslog-gnutls-8.1911.0-3.el8.aarch64.rpm
+rsyslog-gnutls-debuginfo-8.1911.0-3.el8.aarch64.rpm
+rsyslog-gssapi-8.1911.0-3.el8.aarch64.rpm
+rsyslog-gssapi-debuginfo-8.1911.0-3.el8.aarch64.rpm
+rsyslog-kafka-8.1911.0-3.el8.aarch64.rpm
+rsyslog-kafka-debuginfo-8.1911.0-3.el8.aarch64.rpm
+rsyslog-mmaudit-8.1911.0-3.el8.aarch64.rpm
+rsyslog-mmaudit-debuginfo-8.1911.0-3.el8.aarch64.rpm
+rsyslog-mmjsonparse-8.1911.0-3.el8.aarch64.rpm
+rsyslog-mmjsonparse-debuginfo-8.1911.0-3.el8.aarch64.rpm
+rsyslog-mmkubernetes-8.1911.0-3.el8.aarch64.rpm
+rsyslog-mmkubernetes-debuginfo-8.1911.0-3.el8.aarch64.rpm
+rsyslog-mmnormalize-8.1911.0-3.el8.aarch64.rpm
+rsyslog-mmnormalize-debuginfo-8.1911.0-3.el8.aarch64.rpm
+rsyslog-mmsnmptrapd-8.1911.0-3.el8.aarch64.rpm
+rsyslog-mmsnmptrapd-debuginfo-8.1911.0-3.el8.aarch64.rpm
+rsyslog-mysql-8.1911.0-3.el8.aarch64.rpm
+rsyslog-mysql-debuginfo-8.1911.0-3.el8.aarch64.rpm
+rsyslog-pgsql-8.1911.0-3.el8.aarch64.rpm
+rsyslog-pgsql-debuginfo-8.1911.0-3.el8.aarch64.rpm
+rsyslog-relp-8.1911.0-3.el8.aarch64.rpm
+rsyslog-relp-debuginfo-8.1911.0-3.el8.aarch64.rpm
+rsyslog-snmp-8.1911.0-3.el8.aarch64.rpm
+rsyslog-snmp-debuginfo-8.1911.0-3.el8.aarch64.rpm
+
+noarch:
+rsyslog-doc-8.1911.0-3.el8.noarch.rpm
+
+ppc64le:
+rsyslog-8.1911.0-3.el8.ppc64le.rpm
+rsyslog-crypto-8.1911.0-3.el8.ppc64le.rpm
+rsyslog-crypto-debuginfo-8.1911.0-3.el8.ppc64le.rpm
+rsyslog-debuginfo-8.1911.0-3.el8.ppc64le.rpm
+rsyslog-debugsource-8.1911.0-3.el8.ppc64le.rpm
+rsyslog-elasticsearch-8.1911.0-3.el8.ppc64le.rpm
+rsyslog-elasticsearch-debuginfo-8.1911.0-3.el8.ppc64le.rpm
+rsyslog-gnutls-8.1911.0-3.el8.ppc64le.rpm
+rsyslog-gnutls-debuginfo-8.1911.0-3.el8.ppc64le.rpm
+rsyslog-gssapi-8.1911.0-3.el8.ppc64le.rpm
+rsyslog-gssapi-debuginfo-8.1911.0-3.el8.ppc64le.rpm
+rsyslog-kafka-8.1911.0-3.el8.ppc64le.rpm
+rsyslog-kafka-debuginfo-8.1911.0-3.el8.ppc64le.rpm
+rsyslog-mmaudit-8.1911.0-3.el8.ppc64le.rpm
+rsyslog-mmaudit-debuginfo-8.1911.0-3.el8.ppc64le.rpm
+rsyslog-mmjsonparse-8.1911.0-3.el8.ppc64le.rpm
+rsyslog-mmjsonparse-debuginfo-8.1911.0-3.el8.ppc64le.rpm
+rsyslog-mmkubernetes-8.1911.0-3.el8.ppc64le.rpm
+rsyslog-mmkubernetes-debuginfo-8.1911.0-3.el8.ppc64le.rpm
+rsyslog-mmnormalize-8.1911.0-3.el8.ppc64le.rpm
+rsyslog-mmnormalize-debuginfo-8.1911.0-3.el8.ppc64le.rpm
+rsyslog-mmsnmptrapd-8.1911.0-3.el8.ppc64le.rpm
+rsyslog-mmsnmptrapd-debuginfo-8.1911.0-3.el8.ppc64le.rpm
+rsyslog-mysql-8.1911.0-3.el8.ppc64le.rpm
+rsyslog-mysql-debuginfo-8.1911.0-3.el8.ppc64le.rpm
+rsyslog-pgsql-8.1911.0-3.el8.ppc64le.rpm
+rsyslog-pgsql-debuginfo-8.1911.0-3.el8.ppc64le.rpm
+rsyslog-relp-8.1911.0-3.el8.ppc64le.rpm
+rsyslog-relp-debuginfo-8.1911.0-3.el8.ppc64le.rpm
+rsyslog-snmp-8.1911.0-3.el8.ppc64le.rpm
+rsyslog-snmp-debuginfo-8.1911.0-3.el8.ppc64le.rpm
+
+s390x:
+rsyslog-8.1911.0-3.el8.s390x.rpm
+rsyslog-crypto-8.1911.0-3.el8.s390x.rpm
+rsyslog-crypto-debuginfo-8.1911.0-3.el8.s390x.rpm
+rsyslog-debuginfo-8.1911.0-3.el8.s390x.rpm
+rsyslog-debugsource-8.1911.0-3.el8.s390x.rpm
+rsyslog-elasticsearch-8.1911.0-3.el8.s390x.rpm
+rsyslog-elasticsearch-debuginfo-8.1911.0-3.el8.s390x.rpm
+rsyslog-gnutls-8.1911.0-3.el8.s390x.rpm
+rsyslog-gnutls-debuginfo-8.1911.0-3.el8.s390x.rpm
+rsyslog-gssapi-8.1911.0-3.el8.s390x.rpm
+rsyslog-gssapi-debuginfo-8.1911.0-3.el8.s390x.rpm
+rsyslog-kafka-8.1911.0-3.el8.s390x.rpm
+rsyslog-kafka-debuginfo-8.1911.0-3.el8.s390x.rpm
+rsyslog-mmaudit-8.1911.0-3.el8.s390x.rpm
+rsyslog-mmaudit-debuginfo-8.1911.0-3.el8.s390x.rpm
+rsyslog-mmjsonparse-8.1911.0-3.el8.s390x.rpm
+rsyslog-mmjsonparse-debuginfo-8.1911.0-3.el8.s390x.rpm
+rsyslog-mmkubernetes-8.1911.0-3.el8.s390x.rpm
+rsyslog-mmkubernetes-debuginfo-8.1911.0-3.el8.s390x.rpm
+rsyslog-mmnormalize-8.1911.0-3.el8.s390x.rpm
+rsyslog-mmnormalize-debuginfo-8.1911.0-3.el8.s390x.rpm
+rsyslog-mmsnmptrapd-8.1911.0-3.el8.s390x.rpm
+rsyslog-mmsnmptrapd-debuginfo-8.1911.0-3.el8.s390x.rpm
+rsyslog-mysql-8.1911.0-3.el8.s390x.rpm
+rsyslog-mysql-debuginfo-8.1911.0-3.el8.s390x.rpm
+rsyslog-pgsql-8.1911.0-3.el8.s390x.rpm
+rsyslog-pgsql-debuginfo-8.1911.0-3.el8.s390x.rpm
+rsyslog-relp-8.1911.0-3.el8.s390x.rpm
+rsyslog-relp-debuginfo-8.1911.0-3.el8.s390x.rpm
+rsyslog-snmp-8.1911.0-3.el8.s390x.rpm
+rsyslog-snmp-debuginfo-8.1911.0-3.el8.s390x.rpm
+
+x86_64:
+rsyslog-8.1911.0-3.el8.x86_64.rpm
+rsyslog-crypto-8.1911.0-3.el8.x86_64.rpm
+rsyslog-crypto-debuginfo-8.1911.0-3.el8.x86_64.rpm
+rsyslog-debuginfo-8.1911.0-3.el8.x86_64.rpm
+rsyslog-debugsource-8.1911.0-3.el8.x86_64.rpm
+rsyslog-elasticsearch-8.1911.0-3.el8.x86_64.rpm
+rsyslog-elasticsearch-debuginfo-8.1911.0-3.el8.x86_64.rpm
+rsyslog-gnutls-8.1911.0-3.el8.x86_64.rpm
+rsyslog-gnutls-debuginfo-8.1911.0-3.el8.x86_64.rpm
+rsyslog-gssapi-8.1911.0-3.el8.x86_64.rpm
+rsyslog-gssapi-debuginfo-8.1911.0-3.el8.x86_64.rpm
+rsyslog-kafka-8.1911.0-3.el8.x86_64.rpm
+rsyslog-kafka-debuginfo-8.1911.0-3.el8.x86_64.rpm
+rsyslog-mmaudit-8.1911.0-3.el8.x86_64.rpm
+rsyslog-mmaudit-debuginfo-8.1911.0-3.el8.x86_64.rpm
+rsyslog-mmjsonparse-8.1911.0-3.el8.x86_64.rpm
+rsyslog-mmjsonparse-debuginfo-8.1911.0-3.el8.x86_64.rpm
+rsyslog-mmkubernetes-8.1911.0-3.el8.x86_64.rpm
+rsyslog-mmkubernetes-debuginfo-8.1911.0-3.el8.x86_64.rpm
+rsyslog-mmnormalize-8.1911.0-3.el8.x86_64.rpm
+rsyslog-mmnormalize-debuginfo-8.1911.0-3.el8.x86_64.rpm
+rsyslog-mmsnmptrapd-8.1911.0-3.el8.x86_64.rpm
+rsyslog-mmsnmptrapd-debuginfo-8.1911.0-3.el8.x86_64.rpm
+rsyslog-mysql-8.1911.0-3.el8.x86_64.rpm
+rsyslog-mysql-debuginfo-8.1911.0-3.el8.x86_64.rpm
+rsyslog-pgsql-8.1911.0-3.el8.x86_64.rpm
+rsyslog-pgsql-debuginfo-8.1911.0-3.el8.x86_64.rpm
+rsyslog-relp-8.1911.0-3.el8.x86_64.rpm
+rsyslog-relp-debuginfo-8.1911.0-3.el8.x86_64.rpm
+rsyslog-snmp-8.1911.0-3.el8.x86_64.rpm
+rsyslog-snmp-debuginfo-8.1911.0-3.el8.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2019-17041
+https://access.redhat.com/security/cve/CVE-2019-17042
+https://access.redhat.com/security/updates/classification/#moderate
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/8.2_release_notes/index
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXqhVuNzjgjWX9erEAQhOYw/9FmH1cQoK1PJKwxjAiyL5nwGPYHgVp83j
+eC/1WRcQ8TbjHW5zVU3t4AWZ7qx5fIgKhEiROfjHLvnbUXvlHd9CD5m1cS0aatHR
+mHhPmiWLZa/rTJOm4auDB+IqGT3CzKu74o+hm+QmcJsIlj06ayVdZsANwpfZjIV9
+2lzuEhnsfxvkjo/S4g3x7AD/CwOdj9qwYyrA/26+iU0m4etKpCvF1lXXYPJ+dHKl
+o1q7V1PqKfy79Xq/CWSnbf1hsVUm4U8wM78S3SXzwscMiQS1XqT472NPLxuNNOFV
+lKs8d3/2ckfEMPZ/jMr8J/HT5fokGbu1K2MdkWriE3viSJ4KOIbfcSsk9jaK9PIb
+PKP0+nNFZdnoRV5sl7n6eoqMcXjvi5TUHUUsuv09YefErg0R+bHr13uMK4xAnleR
+CHJWt1s1HKLeczonFsc2mgJ0PGdk8NgqNOhOeJmJqSmo5O84PAB55EBpMsSZ4wv0
+IWhFRISt7U5rjIBvICkXKxKQILzEDlcKF6Jy/0e+3HwPWDJ/VU3/ou+zmh67UCtw
+VAmyabl+ndTuW+smN0HMSSICibrsC73RbcX5URXWjyITwINe+kb75t1dchzUgYvZ
+2QXdEdlPeZhzXVTMljdgb+FJrkHNta41o/qEx8hfTzvTFlNNgyt9Y1Qy1nGm5N6Q
+Vh05lA0S3uk=4Obp
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

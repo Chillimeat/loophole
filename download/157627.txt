@@ -1,0 +1,129 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+=====================================================================
+                   Red Hat Security Advisory
+
+Synopsis:          Critical: thunderbird security update
+Advisory ID:       RHSA-2020:2048-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:2048
+Issue date:        2020-05-11
+CVE Names:         CVE-2020-6831 CVE-2020-12387 CVE-2020-12392 
+                   CVE-2020-12395 CVE-2020-12397 
+=====================================================================
+
+1. Summary:
+
+An update for thunderbird is now available for Red Hat Enterprise Linux 8.0
+Update Services for SAP Solutions.
+
+Red Hat Product Security has rated this update as having a security impact
+of Critical. A Common Vulnerability Scoring System (CVSS) base score, which
+gives a detailed severity rating, is available for each vulnerability from
+the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Enterprise Linux AppStream E4S (v. 8.0) - ppc64le, x86_64
+
+3. Description:
+
+Mozilla Thunderbird is a standalone mail and newsgroup client.
+
+This update upgrades Thunderbird to version 68.8.0.
+
+Security Fix(es):
+
+* Mozilla: Use-after-free during worker shutdown (CVE-2020-12387)
+
+* Mozilla: Memory safety bugs fixed in Firefox 76 and Firefox ESR 68.8
+(CVE-2020-12395)
+
+* usrsctp: Buffer overflow in AUTH chunk input validation (CVE-2020-6831)
+
+* Mozilla: Arbitrary local file access with 'Copy as cURL' (CVE-2020-12392)
+
+* Mozilla: Sender Email Address Spoofing using encoded Unicode characters
+(CVE-2020-12397)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+All running instances of Thunderbird must be restarted for the update to
+take effect.
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1831761 - CVE-2020-12387 Mozilla: Use-after-free during worker shutdown
+1831763 - CVE-2020-6831 usrsctp: Buffer overflow in AUTH chunk input validation
+1831764 - CVE-2020-12392 Mozilla: Arbitrary local file access with 'Copy as cURL'
+1831765 - CVE-2020-12395 Mozilla: Memory safety bugs fixed in Firefox 76 and Firefox ESR 68.8
+1832565 - CVE-2020-12397 Mozilla: Sender Email Address Spoofing using encoded Unicode characters
+
+6. Package List:
+
+Red Hat Enterprise Linux AppStream E4S (v. 8.0):
+
+Source:
+thunderbird-68.8.0-1.el8_0.src.rpm
+
+ppc64le:
+thunderbird-68.8.0-1.el8_0.ppc64le.rpm
+thunderbird-debuginfo-68.8.0-1.el8_0.ppc64le.rpm
+thunderbird-debugsource-68.8.0-1.el8_0.ppc64le.rpm
+
+x86_64:
+thunderbird-68.8.0-1.el8_0.x86_64.rpm
+thunderbird-debuginfo-68.8.0-1.el8_0.x86_64.rpm
+thunderbird-debugsource-68.8.0-1.el8_0.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2020-6831
+https://access.redhat.com/security/cve/CVE-2020-12387
+https://access.redhat.com/security/cve/CVE-2020-12392
+https://access.redhat.com/security/cve/CVE-2020-12395
+https://access.redhat.com/security/cve/CVE-2020-12397
+https://access.redhat.com/security/updates/classification/#critical
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXrkS59zjgjWX9erEAQi7wA/5AaaqJBzsCzWH3W+QKsBc+ha8eiyLP17m
+M03/6UCGPD3ZekneZDyuVNgasWdsW2v0ApgBgD8JTLBwO4Q8gsC4kPzpLdUJ4D+T
+e6tIf2WFrTfnX3esjd4t73v4Ybrdsbqe0tzZjUx8MfJ6hJ4R7sdoQ0B7h/CsoMtO
+cOSqeS6PAGmJv6B/B1BGuX2ogTcdfSwcQ+VyaSPCrtSMPz/IK4/5UJC1tzEJ/HWM
+CsB//KE9/rc76kJHa80V2/AYnEPxdCO78vv6z9xtOxJ6X5W4phW7qfZgx+eWqxY/
+V155F8U6rnnWP25QS0SYgMa2+e3mVjWPBJBnEd5Uj6nISXsP2HkuO4mTyjU/Rgl5
+Y6NpRKaQsFHU8uvXVp4u8abL2q0FqWhEMCpeh1TVkukJBLB2/ZRog3g05mgryh5p
+MO0qf8WJTSyqkKeIwch3EIe0PON8aBirkMvUNB9ncqXkXy5vHCPjiePlHF/AhWcN
+bPpvoVCnBKBKSegHNwEAZfcDvBi140KPsOo2Wlwz4ngf0cNR/vEPsxj5MxxJbgPQ
+IBDa/dXWONRe5cRf2+tb/ml09dFWuB/mpTSi6rn5NtscMDKrSGtgAH4YFs7XZX/u
+rcRdgIOWRYVuqw1Jxr6Bipndc0SigSI1l7k4AN6CST0y3t8yOGLoZj1V/xWKUI1C
+ukFsLrI4fIU=
+=V2be
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

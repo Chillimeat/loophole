@@ -1,0 +1,186 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Moderate: python3 security and bug fix update
+Advisory ID:       RHSA-2020:1764-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:1764
+Issue date:        2020-04-28
+CVE Names:         CVE-2018-20852 CVE-2019-16056
+====================================================================
+1. Summary:
+
+An update for python3 is now available for Red Hat Enterprise Linux 8.
+
+Red Hat Product Security has rated this update as having a security impact
+of Moderate. A Common Vulnerability Scoring System (CVSS) base score, which
+gives a detailed severity rating, is available for each vulnerability from
+the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Enterprise Linux AppStream (v. 8) - aarch64, ppc64le, s390x, x86_64
+Red Hat Enterprise Linux BaseOS (v. 8) - aarch64, ppc64le, s390x, x86_64
+
+3. Description:
+
+Python is an interpreted, interactive, object-oriented programming
+language, which includes modules, classes, exceptions, very high level
+dynamic data types and dynamic typing. Python supports interfaces to many
+system calls and libraries, as well as to various windowing systems.
+
+Security Fix(es):
+
+* python: Cookie domain check returns incorrect results (CVE-2018-20852)
+
+* python: email.utils.parseaddr wrongly parses email addresses
+(CVE-2019-16056)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+Additional Changes:
+
+For detailed information on changes in this release, see the Red Hat
+Enterprise Linux 8.2 Release Notes linked from the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1712977 - test_gdb: test_gc() fails on s390x with: Unable to locate python frame
+1714733 - test_gdb failures on ppc64le
+1740347 - CVE-2018-20852 python: Cookie domain check returns incorrect results
+1749576 - [Amazon RHEL8.2 FEAT] Python3 - Enable "Expensive" Optimizations
+1749839 - CVE-2019-16056 python: email.utils.parseaddr wrongly parses email addresses
+1756217 - Lower footprint of platform-python
+1761599 - FAIL_RETURN_IN_FIPS_MODE() patch breaks mod_wsgi: ValueError: unsupported hash type blake2b
+1774471 - Python os.urandom() is not FIPS compliant
+
+6. Package List:
+
+Red Hat Enterprise Linux AppStream (v. 8):
+
+aarch64:
+platform-python-debug-3.6.8-23.el8.aarch64.rpm
+platform-python-devel-3.6.8-23.el8.aarch64.rpm
+python3-debuginfo-3.6.8-23.el8.aarch64.rpm
+python3-debugsource-3.6.8-23.el8.aarch64.rpm
+python3-idle-3.6.8-23.el8.aarch64.rpm
+python3-tkinter-3.6.8-23.el8.aarch64.rpm
+
+ppc64le:
+platform-python-debug-3.6.8-23.el8.ppc64le.rpm
+platform-python-devel-3.6.8-23.el8.ppc64le.rpm
+python3-debuginfo-3.6.8-23.el8.ppc64le.rpm
+python3-debugsource-3.6.8-23.el8.ppc64le.rpm
+python3-idle-3.6.8-23.el8.ppc64le.rpm
+python3-tkinter-3.6.8-23.el8.ppc64le.rpm
+
+s390x:
+platform-python-debug-3.6.8-23.el8.s390x.rpm
+platform-python-devel-3.6.8-23.el8.s390x.rpm
+python3-debuginfo-3.6.8-23.el8.s390x.rpm
+python3-debugsource-3.6.8-23.el8.s390x.rpm
+python3-idle-3.6.8-23.el8.s390x.rpm
+python3-tkinter-3.6.8-23.el8.s390x.rpm
+
+x86_64:
+platform-python-3.6.8-23.el8.i686.rpm
+platform-python-debug-3.6.8-23.el8.i686.rpm
+platform-python-debug-3.6.8-23.el8.x86_64.rpm
+platform-python-devel-3.6.8-23.el8.i686.rpm
+platform-python-devel-3.6.8-23.el8.x86_64.rpm
+python3-debuginfo-3.6.8-23.el8.i686.rpm
+python3-debuginfo-3.6.8-23.el8.x86_64.rpm
+python3-debugsource-3.6.8-23.el8.i686.rpm
+python3-debugsource-3.6.8-23.el8.x86_64.rpm
+python3-idle-3.6.8-23.el8.i686.rpm
+python3-idle-3.6.8-23.el8.x86_64.rpm
+python3-test-3.6.8-23.el8.i686.rpm
+python3-tkinter-3.6.8-23.el8.i686.rpm
+python3-tkinter-3.6.8-23.el8.x86_64.rpm
+
+Red Hat Enterprise Linux BaseOS (v. 8):
+
+Source:
+python3-3.6.8-23.el8.src.rpm
+
+aarch64:
+platform-python-3.6.8-23.el8.aarch64.rpm
+python3-debuginfo-3.6.8-23.el8.aarch64.rpm
+python3-debugsource-3.6.8-23.el8.aarch64.rpm
+python3-libs-3.6.8-23.el8.aarch64.rpm
+python3-test-3.6.8-23.el8.aarch64.rpm
+
+ppc64le:
+platform-python-3.6.8-23.el8.ppc64le.rpm
+python3-debuginfo-3.6.8-23.el8.ppc64le.rpm
+python3-debugsource-3.6.8-23.el8.ppc64le.rpm
+python3-libs-3.6.8-23.el8.ppc64le.rpm
+python3-test-3.6.8-23.el8.ppc64le.rpm
+
+s390x:
+platform-python-3.6.8-23.el8.s390x.rpm
+python3-debuginfo-3.6.8-23.el8.s390x.rpm
+python3-debugsource-3.6.8-23.el8.s390x.rpm
+python3-libs-3.6.8-23.el8.s390x.rpm
+python3-test-3.6.8-23.el8.s390x.rpm
+
+x86_64:
+platform-python-3.6.8-23.el8.x86_64.rpm
+python3-debuginfo-3.6.8-23.el8.i686.rpm
+python3-debuginfo-3.6.8-23.el8.x86_64.rpm
+python3-debugsource-3.6.8-23.el8.i686.rpm
+python3-debugsource-3.6.8-23.el8.x86_64.rpm
+python3-libs-3.6.8-23.el8.i686.rpm
+python3-libs-3.6.8-23.el8.x86_64.rpm
+python3-test-3.6.8-23.el8.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2018-20852
+https://access.redhat.com/security/cve/CVE-2019-16056
+https://access.redhat.com/security/updates/classification/#moderate
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/8.2_release_notes/index
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXqhVs9zjgjWX9erEAQjYBRAAhxL6vNe4XlAuiS7UME9RSCeiffTtGINA
+wUXpnMqAV+nYjlTaqid2MIQ0fQLIInE2fjWyshQOj2yZXuaDjgAEdmszRGhUAlOF
+OZ+mve4eS0tZBjxl5X7Iw94aTJNZavJ5fxo7AMDCKzRY+BksvcGfoQDxePNP2HH1
+/0aF4Y/sYi/V6aCOMRGBpe4ACLT2bcJozYlnRtsiJm26vO/eLSHr3QhDRtTPP5DR
+EA5ELrkfS7ZNpuRWDbmnDAsycxsexHfi8qr+UswGheaOa3LIyqAantrHF4rO0WvJ
+zhXsD1gXkV2Pp0MZgtAMMWdeaD+2/F7Vc6B8d05RKbJ7n1X2uP08yK3cmrGEewVC
+1yN4k0Ka43PCPBG4DhfwYo6Yj3x0IswAffQrstYe+yEHeUXmQnTDeD26VjN8lkre
+qu5AvcIM7NgOJOK12SfA9kC8b9IITZy9pnDxzUvUqC519Lwl34+hM6Gy1bzxICQb
+nBkhat1Sd0hRfPpC1zgwShLUTYDrA3TL43r1VVJ3Wk2w8T9mGzMo4mpv+34iIuJj
+jsqaD4G4l/PB/tyhrsn9RW0gpu7UgM/1xDDWw4fdaw1nrkuciO+1OSfJYVoS3Ldj
+MxMZxSfBkrYXWI+VS4YjKzv9IhIiMZo8jitiRkP2VLZlq3WANZaL6GigckFf7O5q
+hkVMgV/baA0=hdCe
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

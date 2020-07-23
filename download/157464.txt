@@ -1,0 +1,133 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Moderate: dpdk security, bug fix, and enhancement update
+Advisory ID:       RHSA-2020:1735-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:1735
+Issue date:        2020-04-28
+CVE Names:         CVE-2019-14818
+====================================================================
+1. Summary:
+
+An update for dpdk is now available for Red Hat Enterprise Linux 8.
+
+Red Hat Product Security has rated this update as having a security impact
+of Moderate. A Common Vulnerability Scoring System (CVSS) base score, which
+gives a detailed severity rating, is available for each vulnerability from
+the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Enterprise Linux AppStream (v. 8) - aarch64, noarch, ppc64le, x86_64
+
+3. Description:
+
+The dpdk packages provide the Data Plane Development Kit, which is a set of
+libraries and drivers for fast packet processing in the user space.
+
+The following packages have been upgraded to a later upstream version: dpdk
+(19.11). (BZ#1773889)
+
+Security Fix(es):
+
+* dpdk: possible memory leak leads to denial of service (CVE-2019-14818)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+Additional Changes:
+
+For detailed information on changes in this release, see the Red Hat
+Enterprise Linux 8.2 Release Notes linked from the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1737327 - CVE-2019-14818 dpdk: possible memory leak leads to denial of service
+1755538 - Use  hardening specs to build dpdk-pmdinfogen
+1773889 - [Rebase] Rebase DPDK to 19.11
+1779229 - Remove dpdk-pdump and dpdk-pmdinfo from dpdk and dpdk-tools packages
+1805140 - Remove mlx{4,5} glue library
+
+6. Package List:
+
+Red Hat Enterprise Linux AppStream (v. 8):
+
+Source:
+dpdk-19.11-4.el8.src.rpm
+
+aarch64:
+dpdk-19.11-4.el8.aarch64.rpm
+dpdk-debuginfo-19.11-4.el8.aarch64.rpm
+dpdk-debugsource-19.11-4.el8.aarch64.rpm
+dpdk-devel-19.11-4.el8.aarch64.rpm
+dpdk-devel-debuginfo-19.11-4.el8.aarch64.rpm
+dpdk-tools-19.11-4.el8.aarch64.rpm
+
+noarch:
+dpdk-doc-19.11-4.el8.noarch.rpm
+
+ppc64le:
+dpdk-19.11-4.el8.ppc64le.rpm
+dpdk-debuginfo-19.11-4.el8.ppc64le.rpm
+dpdk-debugsource-19.11-4.el8.ppc64le.rpm
+dpdk-devel-19.11-4.el8.ppc64le.rpm
+dpdk-devel-debuginfo-19.11-4.el8.ppc64le.rpm
+dpdk-tools-19.11-4.el8.ppc64le.rpm
+
+x86_64:
+dpdk-19.11-4.el8.x86_64.rpm
+dpdk-debuginfo-19.11-4.el8.x86_64.rpm
+dpdk-debugsource-19.11-4.el8.x86_64.rpm
+dpdk-devel-19.11-4.el8.x86_64.rpm
+dpdk-devel-debuginfo-19.11-4.el8.x86_64.rpm
+dpdk-tools-19.11-4.el8.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2019-14818
+https://access.redhat.com/security/updates/classification/#moderate
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/8.2_release_notes/index
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXqhWDdzjgjWX9erEAQh3yhAAoyFQ5qoBstMPdSWvAZSscjjZp2UZomqD
+T9OVTa2xuFPFRkkzKuVoF0ZEaFxyV3RRR8WQi7uYeqPBbu0Ps5tRZFxAoKcKeQ0h
+omEAyspG3V90cYB/6UQEoXfARlZLQ14XQgdGaEA0TpxsqDWdssLUOIg53vE0sOpD
+TcORnoRQ3YN5aYRmXdESCZES3SU3XcaqFOEwWechbjGAJ4qgGJbPwuw7du/Xf6Og
+LJhO0kkiZWAaexRf6a8W459IK8NcDwHvn/Z+OZ4qPBED78Tw9NNtpyLDjN9d+jt4
+PtCrTAev7It2tT2uoXP9yB5R2RrOkYqsS7TkugDc0H88aVPl2LzMeFVC0Qx2wAQY
+fm72JoCTra04x7rQx1Z+qZOczm4Zfi9Le2B3J0RXytEBL8om1kZyguhzJ2TeFOKl
+TdIQ1xFe81+zugcYTeHGJLGoGYPjC5HuwDqsyvwUDrsW2zWsESanUHTSDjxxJrZg
+Co8UCIqYXYXBtaQNSsWxDGTUmjt5+gAWJaObU7g6mxtrcfKXA0Nh2datOVJHhGR9
+qlDVNhTMt7eFR7acYSr7ebrdwV0+MgtSwLNed1wz5Xgsr+g5oYb9pe4NKGIPQzjP
+/Y2mkurO2GT5j8r10W+pbaPu7d5NB5E/NUUAFCrSp2hzZStCwldBmsMymGVJS2SY
+iofayFudKMA=HSBA
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

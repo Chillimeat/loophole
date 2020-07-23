@@ -1,0 +1,253 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+=====================================================================
+                   Red Hat Security Advisory
+
+Synopsis:          Important: Red Hat build of Thorntail 2.5.1 security and bug fix update
+Advisory ID:       RHSA-2020:2067-01
+Product:           Red Hat OpenShift Application Runtimes
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:2067
+Issue date:        2020-05-18
+CVE Names:         CVE-2019-0205 CVE-2019-0210 CVE-2019-3875 
+                   CVE-2019-9511 CVE-2019-9512 CVE-2019-9514 
+                   CVE-2019-9515 CVE-2019-10086 CVE-2019-10199 
+                   CVE-2019-10201 CVE-2019-10219 CVE-2019-12400 
+                   CVE-2019-12406 CVE-2019-12419 CVE-2019-14540 
+                   CVE-2019-14820 CVE-2019-14832 CVE-2019-14838 
+                   CVE-2019-14887 CVE-2019-14888 CVE-2019-14892 
+                   CVE-2019-14893 CVE-2019-16335 CVE-2019-16942 
+                   CVE-2019-16943 CVE-2019-17267 CVE-2019-17531 
+                   CVE-2019-20330 CVE-2020-1729 CVE-2020-7238 
+                   CVE-2020-8840 CVE-2020-9546 CVE-2020-9547 
+                   CVE-2020-9548 CVE-2020-10672 CVE-2020-10673 
+                   CVE-2020-10968 CVE-2020-10969 CVE-2020-11111 
+                   CVE-2020-11112 CVE-2020-11113 CVE-2020-11619 
+                   CVE-2020-11620 
+=====================================================================
+
+1. Summary:
+
+An update is now available for Red Hat build of Thorntail.
+
+Red Hat Product Security has rated this update as having a security impact
+of Important. A Common Vulnerability Scoring System (CVSS) base score,
+which gives a detailed severity rating, is available for each
+vulnerability. For more information, see the CVE links in the References
+section.
+
+2. Description:
+
+This release of Red Hat build of Thorntail 2.5.1 includes security updates,
+bug fixes, and enhancements. For more information, see the release notes
+page listed in the References section.
+
+Security Fix(es):
+
+* apache-commons-beanutils: does not suppresses the class property in
+PropertyUtilsBean by default (CVE-2019-10086)
+
+* cxf: does not restrict the number of message attachments (CVE-2019-12406)
+
+* cxf: OpenId Connect token service does not properly validate the clientId
+(CVE-2019-12419)
+
+* hibernate-validator: safeHTML validator allows XSS (CVE-2019-10219)
+
+* HTTP/2: flood using PING frames results in unbounded memory growth
+(CVE-2019-9512)
+
+* HTTP/2: flood using HEADERS frames results in unbounded memory growth
+(CVE-2019-9514)
+
+* HTTP/2: flood using SETTINGS frames results in unbounded memory growth
+(CVE-2019-9515)
+
+* HTTP/2: large amount of data requests leads to denial of service
+(CVE-2019-9511)
+
+* jackson-databind: Multiple serialization gadgets (CVE-2019-17531,
+CVE-2019-16943, CVE-2019-16942, CVE-2019-17267, CVE-2019-14540,
+CVE-2019-16335, CVE-2019-14893, CVE-2019-14892, CVE-2020-9546,
+CVE-2020-9547, CVE-2020-9548, CVE-2020-10969, CVE-2020-10968,
+CVE-2020-11111, CVE-2020-11112, CVE-2020-11113, CVE-2020-11619,
+CVE-2020-11620, CVE-2019-20330, CVE-2020-8840)
+
+* jackson-databind: mishandles the interaction between serialization
+gadgets and typing which could result in remote command 
+execution (CVE-2020-10672, CVE-2020-10673)
+
+* keycloak: adapter endpoints are exposed via arbitrary URLs
+(CVE-2019-14820)
+
+* keycloak: missing signatures validation on CRL used to verify client
+certificates (CVE-2019-3875)
+
+* keycloak: SAML broker does not check existence of signature on document
+allowing any user impersonation (CVE-2019-10201)
+
+* keycloak: CSRF check missing in My Resources functionality in the Account
+Console (CVE-2019-10199)
+
+* keycloak: cross-realm user access auth bypass (CVE-2019-14832)
+
+* netty: HTTP Request Smuggling due to Transfer-Encoding whitespace
+mishandling (CVE-2020-7238)
+
+* SmallRye: SecuritySupport class is incorrectly public and contains a
+static method to access the current threads context class loader
+(CVE-2020-1729)
+
+* thrift: Out-of-bounds read related to TJSONProtocol or
+TSimpleJSONProtocol (CVE-2019-0210)
+
+* thrift: Endless loop when feed with specific input data (CVE-2019-0205)
+
+* undertow: possible Denial Of Service (DOS) in Undertow HTTP server
+listening on HTTPS (CVE-2019-14888)
+
+* wildfly: The 'enabled-protocols' value in legacy security is not
+respected if OpenSSL security provider is in use (CVE-2019-14887)
+
+* wildfly-core: Incorrect privileges for 'Monitor', 'Auditor' and
+'Deployer' user by default (CVE-2019-14838)
+
+* xml-security: Apache Santuario potentially loads XML parsing code from an
+untrusted source (CVE-2019-12400)
+
+For more details about the security issues and their impact, the CVSS
+score, acknowledgements, and other related information, see the CVE pages
+listed in the References section.
+
+3. Solution:
+
+Before applying the update, back up your existing installation, including
+all applications, configuration files, databases and database settings, and
+so on.
+
+The References section of this erratum contains a download link for the
+update. You must be logged in to download the update.
+
+4. Bugs fixed (https://bugzilla.redhat.com/):
+
+1649870 - CVE-2019-14820 keycloak: adapter endpoints are exposed via arbitrary URLs
+1690628 - CVE-2019-3875 keycloak: missing signatures validation on CRL used to verify client certificates
+1728609 - CVE-2019-10201 keycloak: SAML broker does not check existence of signature on document allowing any user impersonation
+1729261 - CVE-2019-10199 keycloak: CSRF check missing in My Resources functionality in the Account Console
+1735645 - CVE-2019-9512 HTTP/2: flood using PING frames results in unbounded memory growth
+1735744 - CVE-2019-9514 HTTP/2: flood using HEADERS frames results in unbounded memory growth
+1735745 - CVE-2019-9515 HTTP/2: flood using SETTINGS frames results in unbounded memory growth
+1738673 - CVE-2019-10219 hibernate-validator: safeHTML validator allows XSS
+1741860 - CVE-2019-9511 HTTP/2: large amount of data requests leads to denial of service
+1749487 - CVE-2019-14832 keycloak: cross-realm user access auth bypass
+1751227 - CVE-2019-14838 wildfly-core: Incorrect privileges for 'Monitor', 'Auditor' and 'Deployer' user by default
+1755831 - CVE-2019-16335 jackson-databind: Serialization gadgets in com.zaxxer.hikari.HikariDataSource
+1755849 - CVE-2019-14540 jackson-databind: Serialization gadgets in com.zaxxer.hikari.HikariConfig
+1758167 - CVE-2019-17267 jackson-databind: Serialization gadgets in classes of the ehcache package
+1758171 - CVE-2019-14892 jackson-databind: Serialization gadgets in classes of the commons-configuration package
+1758182 - CVE-2019-14893 jackson-databind: Serialization gadgets in classes of the xalan package
+1758187 - CVE-2019-16942 jackson-databind: Serialization gadgets in org.apache.commons.dbcp.datasources.*
+1758191 - CVE-2019-16943 jackson-databind: Serialization gadgets in com.p6spy.engine.spy.P6DataSource
+1764607 - CVE-2019-0210 thrift: Out-of-bounds read related to TJSONProtocol or TSimpleJSONProtocol
+1764612 - CVE-2019-0205 thrift: Endless loop when feed with specific input data
+1764658 - CVE-2019-12400 xml-security: Apache Santuario potentially loads XML parsing code from an untrusted source
+1767483 - CVE-2019-10086 apache-commons-beanutils: does not suppresses the class property in PropertyUtilsBean by default
+1772008 - CVE-2019-14887 wildfly: The 'enabled-protocols' value in legacy security is not respected if OpenSSL security provider is in use
+1772464 - CVE-2019-14888 undertow: possible Denial Of Service (DOS) in Undertow HTTP server listening on HTTPS
+1775293 - CVE-2019-17531 jackson-databind: Serialization gadgets in org.apache.log4j.receivers.db.*
+1793154 - CVE-2019-20330 jackson-databind: lacks certain net.sf.ehcache blocking
+1796225 - CVE-2020-7238 netty: HTTP Request Smuggling due to Transfer-Encoding whitespace mishandling
+1802444 - CVE-2020-1729 SmallRye: SecuritySupport class is incorrectly public and contains a static method to access the current threads context class loader
+1815470 - CVE-2020-10673 jackson-databind: mishandles the interaction between serialization gadgets and typing which could result in remote command execution
+1815495 - CVE-2020-10672 jackson-databind: mishandles the interaction between serialization gadgets and typing which could result in remote command execution
+1816170 - CVE-2019-12406 cxf: does not restrict the number of message attachments
+1816175 - CVE-2019-12419 cxf: OpenId Connect token service does not properly validate the clientId
+1816330 - CVE-2020-8840 jackson-databind: Lacks certain xbean-reflect/JNDI blocking
+1816332 - CVE-2020-9546 jackson-databind: Serialization gadgets in shaded-hikari-config
+1816337 - CVE-2020-9547 jackson-databind: Serialization gadgets in ibatis-sqlmap
+1816340 - CVE-2020-9548 jackson-databind: Serialization gadgets in anteros-core
+1819208 - CVE-2020-10968 jackson-databind: Serialization gadgets in org.aoju.bus.proxy.provider.*.RmiProvider
+1819212 - CVE-2020-10969 jackson-databind: Serialization gadgets in javax.swing.JEditorPane
+1821304 - CVE-2020-11111 jackson-databind: Serialization gadgets in org.apache.activemq.jms.pool.XaPooledConnectionFactory
+1821311 - CVE-2020-11112 jackson-databind: Serialization gadgets in org.apache.commons.proxy.provider.remoting.RmiProvider
+1821315 - CVE-2020-11113 jackson-databind: Serialization gadgets in org.apache.openjpa.ee.WASRegistryManagedRuntime
+1826798 - CVE-2020-11620 jackson-databind: Serialization gadgets in commons-jelly:commons-jelly
+1826805 - CVE-2020-11619 jackson-databind: Serialization gadgets in org.springframework:spring-aop
+
+5. References:
+
+https://access.redhat.com/security/cve/CVE-2019-0205
+https://access.redhat.com/security/cve/CVE-2019-0210
+https://access.redhat.com/security/cve/CVE-2019-3875
+https://access.redhat.com/security/cve/CVE-2019-9511
+https://access.redhat.com/security/cve/CVE-2019-9512
+https://access.redhat.com/security/cve/CVE-2019-9514
+https://access.redhat.com/security/cve/CVE-2019-9515
+https://access.redhat.com/security/cve/CVE-2019-10086
+https://access.redhat.com/security/cve/CVE-2019-10199
+https://access.redhat.com/security/cve/CVE-2019-10201
+https://access.redhat.com/security/cve/CVE-2019-10219
+https://access.redhat.com/security/cve/CVE-2019-12400
+https://access.redhat.com/security/cve/CVE-2019-12406
+https://access.redhat.com/security/cve/CVE-2019-12419
+https://access.redhat.com/security/cve/CVE-2019-14540
+https://access.redhat.com/security/cve/CVE-2019-14820
+https://access.redhat.com/security/cve/CVE-2019-14832
+https://access.redhat.com/security/cve/CVE-2019-14838
+https://access.redhat.com/security/cve/CVE-2019-14887
+https://access.redhat.com/security/cve/CVE-2019-14888
+https://access.redhat.com/security/cve/CVE-2019-14892
+https://access.redhat.com/security/cve/CVE-2019-14893
+https://access.redhat.com/security/cve/CVE-2019-16335
+https://access.redhat.com/security/cve/CVE-2019-16942
+https://access.redhat.com/security/cve/CVE-2019-16943
+https://access.redhat.com/security/cve/CVE-2019-17267
+https://access.redhat.com/security/cve/CVE-2019-17531
+https://access.redhat.com/security/cve/CVE-2019-20330
+https://access.redhat.com/security/cve/CVE-2020-1729
+https://access.redhat.com/security/cve/CVE-2020-7238
+https://access.redhat.com/security/cve/CVE-2020-8840
+https://access.redhat.com/security/cve/CVE-2020-9546
+https://access.redhat.com/security/cve/CVE-2020-9547
+https://access.redhat.com/security/cve/CVE-2020-9548
+https://access.redhat.com/security/cve/CVE-2020-10672
+https://access.redhat.com/security/cve/CVE-2020-10673
+https://access.redhat.com/security/cve/CVE-2020-10968
+https://access.redhat.com/security/cve/CVE-2020-10969
+https://access.redhat.com/security/cve/CVE-2020-11111
+https://access.redhat.com/security/cve/CVE-2020-11112
+https://access.redhat.com/security/cve/CVE-2020-11113
+https://access.redhat.com/security/cve/CVE-2020-11619
+https://access.redhat.com/security/cve/CVE-2020-11620
+https://access.redhat.com/security/updates/classification/#important
+https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?downloadType=distributions&product=catRhoar.thorntail&version=2.5.1
+https://access.redhat.com/documentation/en-us/red_hat_build_of_thorntail/2.5/html/release_notes_for_thorntail_2.5/
+
+6. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXsJiutzjgjWX9erEAQiHow/+K6tzrL47AH0MyHlunM22XouhjDzHimuv
+PMtxx7D7fekEcYh8MV15X8ahMhbPF19AUfVmZeeXOu8NEq55RNc5BnI0fV/7bMIl
+c6E+dsCPj8U2IDTGJRrXthxrHvaDlqG3owBDf3ynseiBXHBtmxK2bY5hWdWo5bo8
+LKXOsrfqCrnFW6sznOAqJtZUZ/8Li3MeN+Ax9RZYajLU6SI+EpKu0ufSL3OW8p9l
+pt2+dQYey4fjG5pJhBqKZpNJGxnrQR66CegCjf475xO1EJ9pYtBdUxdh1Hi2Elog
+fa1H6PR7mCJgXWXZJK1aJ9G4EmcupivwhAR9EzEW/L095NAnSvf5qUuvJc4c1AO+
+UVy+EZaTvCr+bljQWTdqRFJmgHsUeDY5gn7nMma362h6p0hZ96zTaWilLwxrWkR8
+S90OHxT17bE2NdWXprsoQ8T0F32DdakZn4o1auNLiuGmRJdiIr3hNBOgMaUe7IUo
+5KwImgPqnVQ46Uy8OH7vsUInJksR7VRl7bmVZEZj/qfstMRgmFAiMMa84TopoOkO
+0qJHleIRbioRy/cAbF7KTfrs3AfABrjjSVnrpJUzTLZ0pe7IKN+kySL669wwcJo+
+Dwx1XXdRFshRYztuJwe6N/yK5w6k9Li09V+PyT8/FjEQlVZU/BJpWusRgdxL5ZvK
+mvoXWO57ZDY=
+=g6NJ
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

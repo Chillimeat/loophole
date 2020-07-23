@@ -1,0 +1,171 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+=====================================================================
+                   Red Hat Security Advisory
+
+Synopsis:          Critical: firefox security update
+Advisory ID:       RHSA-2020:2037-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:2037
+Issue date:        2020-05-06
+CVE Names:         CVE-2020-6831 CVE-2020-12387 CVE-2020-12392 
+                   CVE-2020-12395 
+=====================================================================
+
+1. Summary:
+
+An update for firefox is now available for Red Hat Enterprise Linux 7.
+
+Red Hat Product Security has rated this update as having a security impact
+of Critical. A Common Vulnerability Scoring System (CVSS) base score, which
+gives a detailed severity rating, is available for each vulnerability from
+the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Enterprise Linux Client (v. 7) - x86_64
+Red Hat Enterprise Linux Client Optional (v. 7) - x86_64
+Red Hat Enterprise Linux Server (v. 7) - ppc64, ppc64le, s390x, x86_64
+Red Hat Enterprise Linux Server Optional (v. 7) - x86_64
+Red Hat Enterprise Linux Workstation (v. 7) - x86_64
+Red Hat Enterprise Linux Workstation Optional (v. 7) - x86_64
+
+3. Description:
+
+Mozilla Firefox is an open-source web browser, designed for standards
+compliance, performance, and portability.
+
+This update upgrades Firefox to version 68.8.0 ESR.
+
+Security Fix(es):
+
+* Mozilla: Use-after-free during worker shutdown (CVE-2020-12387)
+
+* Mozilla: Memory safety bugs fixed in Firefox 76 and Firefox ESR 68.8
+(CVE-2020-12395)
+
+* Mozilla: Buffer overflow in SCTP chunk input validation (CVE-2020-6831)
+
+* Mozilla: Arbitrary local file access with 'Copy as cURL' (CVE-2020-12392)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+After installing the update, Firefox must be restarted for the changes to
+take effect.
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1831761 - CVE-2020-12387 Mozilla: Use-after-free during worker shutdown
+1831763 - CVE-2020-6831 Mozilla: Buffer overflow in SCTP chunk input validation
+1831764 - CVE-2020-12392 Mozilla: Arbitrary local file access with 'Copy as cURL'
+1831765 - CVE-2020-12395 Mozilla: Memory safety bugs fixed in Firefox 76 and Firefox ESR 68.8
+
+6. Package List:
+
+Red Hat Enterprise Linux Client (v. 7):
+
+Source:
+firefox-68.8.0-1.el7_8.src.rpm
+
+x86_64:
+firefox-68.8.0-1.el7_8.x86_64.rpm
+firefox-debuginfo-68.8.0-1.el7_8.x86_64.rpm
+
+Red Hat Enterprise Linux Client Optional (v. 7):
+
+x86_64:
+firefox-68.8.0-1.el7_8.i686.rpm
+firefox-debuginfo-68.8.0-1.el7_8.i686.rpm
+
+Red Hat Enterprise Linux Server (v. 7):
+
+Source:
+firefox-68.8.0-1.el7_8.src.rpm
+
+ppc64:
+firefox-68.8.0-1.el7_8.ppc64.rpm
+firefox-debuginfo-68.8.0-1.el7_8.ppc64.rpm
+
+ppc64le:
+firefox-68.8.0-1.el7_8.ppc64le.rpm
+firefox-debuginfo-68.8.0-1.el7_8.ppc64le.rpm
+
+s390x:
+firefox-68.8.0-1.el7_8.s390x.rpm
+firefox-debuginfo-68.8.0-1.el7_8.s390x.rpm
+
+x86_64:
+firefox-68.8.0-1.el7_8.x86_64.rpm
+firefox-debuginfo-68.8.0-1.el7_8.x86_64.rpm
+
+Red Hat Enterprise Linux Server Optional (v. 7):
+
+x86_64:
+firefox-68.8.0-1.el7_8.i686.rpm
+firefox-debuginfo-68.8.0-1.el7_8.i686.rpm
+
+Red Hat Enterprise Linux Workstation (v. 7):
+
+Source:
+firefox-68.8.0-1.el7_8.src.rpm
+
+x86_64:
+firefox-68.8.0-1.el7_8.x86_64.rpm
+firefox-debuginfo-68.8.0-1.el7_8.x86_64.rpm
+
+Red Hat Enterprise Linux Workstation Optional (v. 7):
+
+x86_64:
+firefox-68.8.0-1.el7_8.i686.rpm
+firefox-debuginfo-68.8.0-1.el7_8.i686.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2020-6831
+https://access.redhat.com/security/cve/CVE-2020-12387
+https://access.redhat.com/security/cve/CVE-2020-12392
+https://access.redhat.com/security/cve/CVE-2020-12395
+https://access.redhat.com/security/updates/classification/#critical
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXrKUt9zjgjWX9erEAQiRdw/+OF/n1a6dSEQegXBgc5Ns2yHWYT/t28Vf
+aF1or5+ljVM17BGJg4M6P8jYj29Sli2ZAFybabeVnF62NzZDNzLYlUr8pkZuJSdb
+A7FqmmfqEaTEI+VVKnPqnazOL/pf4woFogt1HSkj+9BNkLcrMgDyDIfz+RmhzN00
+G5oeVK1JDZq5DAt9Th9+Sk/4T9MKtsCPQyti2DPpCzByuT0U1FzVKPgotfBrSVUC
+ajRjtfbw0dwI8OijpPyQYbaqStTtqbm+iQWayfwh8hYV7jyJXqW/MKuLfUSGZnXb
+YUWHB79yQZ+ZeLgoL38yA6aDeScBCgbWfOte3o8IQ+EXfiIKo/oy+ZlmYlIoBDYZ
+Ct29mhZXvyW8l4/OuAso/8vbRZdOA86ib0FlXE8ywk0ZRdg7LhGBk3hqZpV9/1Hl
+ql6PEkf/7k0JAIMUNua4TWdTdlYNpzuLgbF08a7IyOy+pFDOaRz4kgek04lLtbPx
+znGLrR5ZT+8sCBuq39rCiLbc2OKhit4K4h8MJoljUnPM8wy4PpaAqUnJG+HO3MIx
+cz8myQp/3gwVyymRkfzb99So6yK5MGUF/ITR84xlQRmNyCXiCqOc8Pn2SEB7pq65
+3Adx+voN+eg0yf9i4il8+ooUbTbK+WKC+dZg+JrFMKFiQVxzq8nz+pW42UY844C4
+GatPWTXCYT8=
+=u6Rh
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

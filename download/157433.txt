@@ -1,0 +1,501 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Moderate: gcc security and bug fix update
+Advisory ID:       RHSA-2020:1864-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:1864
+Issue date:        2020-04-28
+CVE Names:         CVE-2019-15847
+====================================================================
+1. Summary:
+
+An update for gcc is now available for Red Hat Enterprise Linux 8.
+
+Red Hat Product Security has rated this update as having a security impact
+of Moderate. A Common Vulnerability Scoring System (CVSS) base score, which
+gives a detailed severity rating, is available for each vulnerability from
+the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat CodeReady Linux Builder (v. 8) - aarch64, ppc64le, s390x, x86_64
+Red Hat Enterprise Linux AppStream (v. 8) - aarch64, ppc64le, s390x, x86_64
+Red Hat Enterprise Linux BaseOS (v. 8) - aarch64, ppc64le, s390x, x86_64
+
+3. Description:
+
+The gcc packages provide compilers for C, C++, Java, Fortran, Objective C,
+and Ada 95 GNU, as well as related support libraries.
+
+Security Fix(es):
+
+* gcc: POWER9 "DARN" RNG intrinsic produces repeated output
+(CVE-2019-15847)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+Additional Changes:
+
+For detailed information on changes in this release, see the Red Hat
+Enterprise Linux 8.2 Release Notes linked from the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1480664 - gcc: Inline expansion of string functions very slow on most x86 CPUs when optimizing for size
+1755523 - CVE-2019-15847 gcc: POWER9 "DARN" RNG intrinsic produces repeated output
+
+6. Package List:
+
+Red Hat Enterprise Linux AppStream (v. 8):
+
+aarch64:
+cpp-8.3.1-5.el8.aarch64.rpm
+cpp-debuginfo-8.3.1-5.el8.aarch64.rpm
+gcc-8.3.1-5.el8.aarch64.rpm
+gcc-c++-8.3.1-5.el8.aarch64.rpm
+gcc-c++-debuginfo-8.3.1-5.el8.aarch64.rpm
+gcc-debuginfo-8.3.1-5.el8.aarch64.rpm
+gcc-debugsource-8.3.1-5.el8.aarch64.rpm
+gcc-gdb-plugin-8.3.1-5.el8.aarch64.rpm
+gcc-gdb-plugin-debuginfo-8.3.1-5.el8.aarch64.rpm
+gcc-gfortran-8.3.1-5.el8.aarch64.rpm
+gcc-gfortran-debuginfo-8.3.1-5.el8.aarch64.rpm
+gcc-plugin-devel-debuginfo-8.3.1-5.el8.aarch64.rpm
+libasan-debuginfo-8.3.1-5.el8.aarch64.rpm
+libatomic-debuginfo-8.3.1-5.el8.aarch64.rpm
+libgcc-debuginfo-8.3.1-5.el8.aarch64.rpm
+libgfortran-debuginfo-8.3.1-5.el8.aarch64.rpm
+libgomp-debuginfo-8.3.1-5.el8.aarch64.rpm
+libitm-debuginfo-8.3.1-5.el8.aarch64.rpm
+libitm-devel-8.3.1-5.el8.aarch64.rpm
+liblsan-debuginfo-8.3.1-5.el8.aarch64.rpm
+libstdc++-debuginfo-8.3.1-5.el8.aarch64.rpm
+libstdc++-devel-8.3.1-5.el8.aarch64.rpm
+libstdc++-docs-8.3.1-5.el8.aarch64.rpm
+libtsan-debuginfo-8.3.1-5.el8.aarch64.rpm
+libubsan-debuginfo-8.3.1-5.el8.aarch64.rpm
+
+ppc64le:
+cpp-8.3.1-5.el8.ppc64le.rpm
+cpp-debuginfo-8.3.1-5.el8.ppc64le.rpm
+gcc-8.3.1-5.el8.ppc64le.rpm
+gcc-c++-8.3.1-5.el8.ppc64le.rpm
+gcc-c++-debuginfo-8.3.1-5.el8.ppc64le.rpm
+gcc-debuginfo-8.3.1-5.el8.ppc64le.rpm
+gcc-debugsource-8.3.1-5.el8.ppc64le.rpm
+gcc-gdb-plugin-8.3.1-5.el8.ppc64le.rpm
+gcc-gdb-plugin-debuginfo-8.3.1-5.el8.ppc64le.rpm
+gcc-gfortran-8.3.1-5.el8.ppc64le.rpm
+gcc-gfortran-debuginfo-8.3.1-5.el8.ppc64le.rpm
+gcc-offload-nvptx-8.3.1-5.el8.ppc64le.rpm
+gcc-offload-nvptx-debuginfo-8.3.1-5.el8.ppc64le.rpm
+gcc-plugin-devel-debuginfo-8.3.1-5.el8.ppc64le.rpm
+libasan-debuginfo-8.3.1-5.el8.ppc64le.rpm
+libatomic-debuginfo-8.3.1-5.el8.ppc64le.rpm
+libgcc-debuginfo-8.3.1-5.el8.ppc64le.rpm
+libgfortran-debuginfo-8.3.1-5.el8.ppc64le.rpm
+libgomp-debuginfo-8.3.1-5.el8.ppc64le.rpm
+libgomp-offload-nvptx-debuginfo-8.3.1-5.el8.ppc64le.rpm
+libitm-debuginfo-8.3.1-5.el8.ppc64le.rpm
+libitm-devel-8.3.1-5.el8.ppc64le.rpm
+liblsan-debuginfo-8.3.1-5.el8.ppc64le.rpm
+libquadmath-debuginfo-8.3.1-5.el8.ppc64le.rpm
+libquadmath-devel-8.3.1-5.el8.ppc64le.rpm
+libstdc++-debuginfo-8.3.1-5.el8.ppc64le.rpm
+libstdc++-devel-8.3.1-5.el8.ppc64le.rpm
+libstdc++-docs-8.3.1-5.el8.ppc64le.rpm
+libtsan-debuginfo-8.3.1-5.el8.ppc64le.rpm
+libubsan-debuginfo-8.3.1-5.el8.ppc64le.rpm
+
+s390x:
+cpp-8.3.1-5.el8.s390x.rpm
+cpp-debuginfo-8.3.1-5.el8.s390x.rpm
+gcc-8.3.1-5.el8.s390x.rpm
+gcc-c++-8.3.1-5.el8.s390x.rpm
+gcc-c++-debuginfo-8.3.1-5.el8.s390x.rpm
+gcc-debuginfo-8.3.1-5.el8.s390x.rpm
+gcc-debugsource-8.3.1-5.el8.s390x.rpm
+gcc-gdb-plugin-8.3.1-5.el8.s390x.rpm
+gcc-gdb-plugin-debuginfo-8.3.1-5.el8.s390x.rpm
+gcc-gfortran-8.3.1-5.el8.s390x.rpm
+gcc-gfortran-debuginfo-8.3.1-5.el8.s390x.rpm
+gcc-plugin-devel-debuginfo-8.3.1-5.el8.s390x.rpm
+libasan-debuginfo-8.3.1-5.el8.s390x.rpm
+libatomic-debuginfo-8.3.1-5.el8.s390x.rpm
+libgcc-debuginfo-8.3.1-5.el8.s390x.rpm
+libgfortran-debuginfo-8.3.1-5.el8.s390x.rpm
+libgomp-debuginfo-8.3.1-5.el8.s390x.rpm
+libitm-debuginfo-8.3.1-5.el8.s390x.rpm
+libitm-devel-8.3.1-5.el8.s390x.rpm
+libstdc++-debuginfo-8.3.1-5.el8.s390x.rpm
+libstdc++-devel-8.3.1-5.el8.s390x.rpm
+libstdc++-docs-8.3.1-5.el8.s390x.rpm
+libubsan-debuginfo-8.3.1-5.el8.s390x.rpm
+
+x86_64:
+cpp-8.3.1-5.el8.x86_64.rpm
+cpp-debuginfo-8.3.1-5.el8.i686.rpm
+cpp-debuginfo-8.3.1-5.el8.x86_64.rpm
+gcc-8.3.1-5.el8.x86_64.rpm
+gcc-c++-8.3.1-5.el8.x86_64.rpm
+gcc-c++-debuginfo-8.3.1-5.el8.i686.rpm
+gcc-c++-debuginfo-8.3.1-5.el8.x86_64.rpm
+gcc-debuginfo-8.3.1-5.el8.i686.rpm
+gcc-debuginfo-8.3.1-5.el8.x86_64.rpm
+gcc-debugsource-8.3.1-5.el8.i686.rpm
+gcc-debugsource-8.3.1-5.el8.x86_64.rpm
+gcc-gdb-plugin-8.3.1-5.el8.i686.rpm
+gcc-gdb-plugin-8.3.1-5.el8.x86_64.rpm
+gcc-gdb-plugin-debuginfo-8.3.1-5.el8.i686.rpm
+gcc-gdb-plugin-debuginfo-8.3.1-5.el8.x86_64.rpm
+gcc-gfortran-8.3.1-5.el8.x86_64.rpm
+gcc-gfortran-debuginfo-8.3.1-5.el8.i686.rpm
+gcc-gfortran-debuginfo-8.3.1-5.el8.x86_64.rpm
+gcc-offload-nvptx-8.3.1-5.el8.x86_64.rpm
+gcc-offload-nvptx-debuginfo-8.3.1-5.el8.x86_64.rpm
+gcc-plugin-devel-debuginfo-8.3.1-5.el8.i686.rpm
+gcc-plugin-devel-debuginfo-8.3.1-5.el8.x86_64.rpm
+libasan-debuginfo-8.3.1-5.el8.i686.rpm
+libasan-debuginfo-8.3.1-5.el8.x86_64.rpm
+libatomic-debuginfo-8.3.1-5.el8.i686.rpm
+libatomic-debuginfo-8.3.1-5.el8.x86_64.rpm
+libgcc-debuginfo-8.3.1-5.el8.i686.rpm
+libgcc-debuginfo-8.3.1-5.el8.x86_64.rpm
+libgfortran-debuginfo-8.3.1-5.el8.i686.rpm
+libgfortran-debuginfo-8.3.1-5.el8.x86_64.rpm
+libgomp-debuginfo-8.3.1-5.el8.i686.rpm
+libgomp-debuginfo-8.3.1-5.el8.x86_64.rpm
+libgomp-offload-nvptx-debuginfo-8.3.1-5.el8.x86_64.rpm
+libitm-debuginfo-8.3.1-5.el8.i686.rpm
+libitm-debuginfo-8.3.1-5.el8.x86_64.rpm
+libitm-devel-8.3.1-5.el8.i686.rpm
+libitm-devel-8.3.1-5.el8.x86_64.rpm
+liblsan-debuginfo-8.3.1-5.el8.x86_64.rpm
+libquadmath-debuginfo-8.3.1-5.el8.i686.rpm
+libquadmath-debuginfo-8.3.1-5.el8.x86_64.rpm
+libquadmath-devel-8.3.1-5.el8.i686.rpm
+libquadmath-devel-8.3.1-5.el8.x86_64.rpm
+libstdc++-debuginfo-8.3.1-5.el8.i686.rpm
+libstdc++-debuginfo-8.3.1-5.el8.x86_64.rpm
+libstdc++-devel-8.3.1-5.el8.i686.rpm
+libstdc++-devel-8.3.1-5.el8.x86_64.rpm
+libstdc++-docs-8.3.1-5.el8.x86_64.rpm
+libtsan-debuginfo-8.3.1-5.el8.x86_64.rpm
+libubsan-debuginfo-8.3.1-5.el8.i686.rpm
+libubsan-debuginfo-8.3.1-5.el8.x86_64.rpm
+
+Red Hat Enterprise Linux BaseOS (v. 8):
+
+Source:
+gcc-8.3.1-5.el8.src.rpm
+
+aarch64:
+cpp-debuginfo-8.3.1-5.el8.aarch64.rpm
+gcc-c++-debuginfo-8.3.1-5.el8.aarch64.rpm
+gcc-debuginfo-8.3.1-5.el8.aarch64.rpm
+gcc-debugsource-8.3.1-5.el8.aarch64.rpm
+gcc-gdb-plugin-debuginfo-8.3.1-5.el8.aarch64.rpm
+gcc-gfortran-debuginfo-8.3.1-5.el8.aarch64.rpm
+gcc-plugin-devel-debuginfo-8.3.1-5.el8.aarch64.rpm
+libasan-8.3.1-5.el8.aarch64.rpm
+libasan-debuginfo-8.3.1-5.el8.aarch64.rpm
+libatomic-8.3.1-5.el8.aarch64.rpm
+libatomic-debuginfo-8.3.1-5.el8.aarch64.rpm
+libatomic-static-8.3.1-5.el8.aarch64.rpm
+libgcc-8.3.1-5.el8.aarch64.rpm
+libgcc-debuginfo-8.3.1-5.el8.aarch64.rpm
+libgfortran-8.3.1-5.el8.aarch64.rpm
+libgfortran-debuginfo-8.3.1-5.el8.aarch64.rpm
+libgomp-8.3.1-5.el8.aarch64.rpm
+libgomp-debuginfo-8.3.1-5.el8.aarch64.rpm
+libitm-8.3.1-5.el8.aarch64.rpm
+libitm-debuginfo-8.3.1-5.el8.aarch64.rpm
+liblsan-8.3.1-5.el8.aarch64.rpm
+liblsan-debuginfo-8.3.1-5.el8.aarch64.rpm
+libstdc++-8.3.1-5.el8.aarch64.rpm
+libstdc++-debuginfo-8.3.1-5.el8.aarch64.rpm
+libtsan-8.3.1-5.el8.aarch64.rpm
+libtsan-debuginfo-8.3.1-5.el8.aarch64.rpm
+libubsan-8.3.1-5.el8.aarch64.rpm
+libubsan-debuginfo-8.3.1-5.el8.aarch64.rpm
+
+ppc64le:
+cpp-debuginfo-8.3.1-5.el8.ppc64le.rpm
+gcc-c++-debuginfo-8.3.1-5.el8.ppc64le.rpm
+gcc-debuginfo-8.3.1-5.el8.ppc64le.rpm
+gcc-debugsource-8.3.1-5.el8.ppc64le.rpm
+gcc-gdb-plugin-debuginfo-8.3.1-5.el8.ppc64le.rpm
+gcc-gfortran-debuginfo-8.3.1-5.el8.ppc64le.rpm
+gcc-offload-nvptx-debuginfo-8.3.1-5.el8.ppc64le.rpm
+gcc-plugin-devel-debuginfo-8.3.1-5.el8.ppc64le.rpm
+libasan-8.3.1-5.el8.ppc64le.rpm
+libasan-debuginfo-8.3.1-5.el8.ppc64le.rpm
+libatomic-8.3.1-5.el8.ppc64le.rpm
+libatomic-debuginfo-8.3.1-5.el8.ppc64le.rpm
+libatomic-static-8.3.1-5.el8.ppc64le.rpm
+libgcc-8.3.1-5.el8.ppc64le.rpm
+libgcc-debuginfo-8.3.1-5.el8.ppc64le.rpm
+libgfortran-8.3.1-5.el8.ppc64le.rpm
+libgfortran-debuginfo-8.3.1-5.el8.ppc64le.rpm
+libgomp-8.3.1-5.el8.ppc64le.rpm
+libgomp-debuginfo-8.3.1-5.el8.ppc64le.rpm
+libgomp-offload-nvptx-8.3.1-5.el8.ppc64le.rpm
+libgomp-offload-nvptx-debuginfo-8.3.1-5.el8.ppc64le.rpm
+libitm-8.3.1-5.el8.ppc64le.rpm
+libitm-debuginfo-8.3.1-5.el8.ppc64le.rpm
+liblsan-8.3.1-5.el8.ppc64le.rpm
+liblsan-debuginfo-8.3.1-5.el8.ppc64le.rpm
+libquadmath-8.3.1-5.el8.ppc64le.rpm
+libquadmath-debuginfo-8.3.1-5.el8.ppc64le.rpm
+libstdc++-8.3.1-5.el8.ppc64le.rpm
+libstdc++-debuginfo-8.3.1-5.el8.ppc64le.rpm
+libtsan-8.3.1-5.el8.ppc64le.rpm
+libtsan-debuginfo-8.3.1-5.el8.ppc64le.rpm
+libubsan-8.3.1-5.el8.ppc64le.rpm
+libubsan-debuginfo-8.3.1-5.el8.ppc64le.rpm
+
+s390x:
+cpp-debuginfo-8.3.1-5.el8.s390x.rpm
+gcc-c++-debuginfo-8.3.1-5.el8.s390x.rpm
+gcc-debuginfo-8.3.1-5.el8.s390x.rpm
+gcc-debugsource-8.3.1-5.el8.s390x.rpm
+gcc-gdb-plugin-debuginfo-8.3.1-5.el8.s390x.rpm
+gcc-gfortran-debuginfo-8.3.1-5.el8.s390x.rpm
+gcc-plugin-devel-debuginfo-8.3.1-5.el8.s390x.rpm
+libasan-8.3.1-5.el8.s390x.rpm
+libasan-debuginfo-8.3.1-5.el8.s390x.rpm
+libatomic-8.3.1-5.el8.s390x.rpm
+libatomic-debuginfo-8.3.1-5.el8.s390x.rpm
+libatomic-static-8.3.1-5.el8.s390x.rpm
+libgcc-8.3.1-5.el8.s390x.rpm
+libgcc-debuginfo-8.3.1-5.el8.s390x.rpm
+libgfortran-8.3.1-5.el8.s390x.rpm
+libgfortran-debuginfo-8.3.1-5.el8.s390x.rpm
+libgomp-8.3.1-5.el8.s390x.rpm
+libgomp-debuginfo-8.3.1-5.el8.s390x.rpm
+libitm-8.3.1-5.el8.s390x.rpm
+libitm-debuginfo-8.3.1-5.el8.s390x.rpm
+libstdc++-8.3.1-5.el8.s390x.rpm
+libstdc++-debuginfo-8.3.1-5.el8.s390x.rpm
+libubsan-8.3.1-5.el8.s390x.rpm
+libubsan-debuginfo-8.3.1-5.el8.s390x.rpm
+
+x86_64:
+cpp-debuginfo-8.3.1-5.el8.i686.rpm
+cpp-debuginfo-8.3.1-5.el8.x86_64.rpm
+gcc-c++-debuginfo-8.3.1-5.el8.i686.rpm
+gcc-c++-debuginfo-8.3.1-5.el8.x86_64.rpm
+gcc-debuginfo-8.3.1-5.el8.i686.rpm
+gcc-debuginfo-8.3.1-5.el8.x86_64.rpm
+gcc-debugsource-8.3.1-5.el8.i686.rpm
+gcc-debugsource-8.3.1-5.el8.x86_64.rpm
+gcc-gdb-plugin-debuginfo-8.3.1-5.el8.i686.rpm
+gcc-gdb-plugin-debuginfo-8.3.1-5.el8.x86_64.rpm
+gcc-gfortran-debuginfo-8.3.1-5.el8.i686.rpm
+gcc-gfortran-debuginfo-8.3.1-5.el8.x86_64.rpm
+gcc-offload-nvptx-debuginfo-8.3.1-5.el8.x86_64.rpm
+gcc-plugin-devel-debuginfo-8.3.1-5.el8.i686.rpm
+gcc-plugin-devel-debuginfo-8.3.1-5.el8.x86_64.rpm
+libasan-8.3.1-5.el8.i686.rpm
+libasan-8.3.1-5.el8.x86_64.rpm
+libasan-debuginfo-8.3.1-5.el8.i686.rpm
+libasan-debuginfo-8.3.1-5.el8.x86_64.rpm
+libatomic-8.3.1-5.el8.i686.rpm
+libatomic-8.3.1-5.el8.x86_64.rpm
+libatomic-debuginfo-8.3.1-5.el8.i686.rpm
+libatomic-debuginfo-8.3.1-5.el8.x86_64.rpm
+libatomic-static-8.3.1-5.el8.i686.rpm
+libatomic-static-8.3.1-5.el8.x86_64.rpm
+libgcc-8.3.1-5.el8.i686.rpm
+libgcc-8.3.1-5.el8.x86_64.rpm
+libgcc-debuginfo-8.3.1-5.el8.i686.rpm
+libgcc-debuginfo-8.3.1-5.el8.x86_64.rpm
+libgfortran-8.3.1-5.el8.i686.rpm
+libgfortran-8.3.1-5.el8.x86_64.rpm
+libgfortran-debuginfo-8.3.1-5.el8.i686.rpm
+libgfortran-debuginfo-8.3.1-5.el8.x86_64.rpm
+libgomp-8.3.1-5.el8.i686.rpm
+libgomp-8.3.1-5.el8.x86_64.rpm
+libgomp-debuginfo-8.3.1-5.el8.i686.rpm
+libgomp-debuginfo-8.3.1-5.el8.x86_64.rpm
+libgomp-offload-nvptx-8.3.1-5.el8.x86_64.rpm
+libgomp-offload-nvptx-debuginfo-8.3.1-5.el8.x86_64.rpm
+libitm-8.3.1-5.el8.i686.rpm
+libitm-8.3.1-5.el8.x86_64.rpm
+libitm-debuginfo-8.3.1-5.el8.i686.rpm
+libitm-debuginfo-8.3.1-5.el8.x86_64.rpm
+liblsan-8.3.1-5.el8.x86_64.rpm
+liblsan-debuginfo-8.3.1-5.el8.x86_64.rpm
+libquadmath-8.3.1-5.el8.i686.rpm
+libquadmath-8.3.1-5.el8.x86_64.rpm
+libquadmath-debuginfo-8.3.1-5.el8.i686.rpm
+libquadmath-debuginfo-8.3.1-5.el8.x86_64.rpm
+libstdc++-8.3.1-5.el8.i686.rpm
+libstdc++-8.3.1-5.el8.x86_64.rpm
+libstdc++-debuginfo-8.3.1-5.el8.i686.rpm
+libstdc++-debuginfo-8.3.1-5.el8.x86_64.rpm
+libtsan-8.3.1-5.el8.x86_64.rpm
+libtsan-debuginfo-8.3.1-5.el8.x86_64.rpm
+libubsan-8.3.1-5.el8.i686.rpm
+libubsan-8.3.1-5.el8.x86_64.rpm
+libubsan-debuginfo-8.3.1-5.el8.i686.rpm
+libubsan-debuginfo-8.3.1-5.el8.x86_64.rpm
+
+Red Hat CodeReady Linux Builder (v. 8):
+
+aarch64:
+cpp-debuginfo-8.3.1-5.el8.aarch64.rpm
+gcc-c++-debuginfo-8.3.1-5.el8.aarch64.rpm
+gcc-debuginfo-8.3.1-5.el8.aarch64.rpm
+gcc-debugsource-8.3.1-5.el8.aarch64.rpm
+gcc-gdb-plugin-debuginfo-8.3.1-5.el8.aarch64.rpm
+gcc-gfortran-debuginfo-8.3.1-5.el8.aarch64.rpm
+gcc-plugin-devel-8.3.1-5.el8.aarch64.rpm
+gcc-plugin-devel-debuginfo-8.3.1-5.el8.aarch64.rpm
+libasan-debuginfo-8.3.1-5.el8.aarch64.rpm
+libatomic-debuginfo-8.3.1-5.el8.aarch64.rpm
+libgcc-debuginfo-8.3.1-5.el8.aarch64.rpm
+libgfortran-debuginfo-8.3.1-5.el8.aarch64.rpm
+libgomp-debuginfo-8.3.1-5.el8.aarch64.rpm
+libitm-debuginfo-8.3.1-5.el8.aarch64.rpm
+liblsan-debuginfo-8.3.1-5.el8.aarch64.rpm
+libstdc++-debuginfo-8.3.1-5.el8.aarch64.rpm
+libstdc++-static-8.3.1-5.el8.aarch64.rpm
+libtsan-debuginfo-8.3.1-5.el8.aarch64.rpm
+libubsan-debuginfo-8.3.1-5.el8.aarch64.rpm
+
+ppc64le:
+cpp-debuginfo-8.3.1-5.el8.ppc64le.rpm
+gcc-c++-debuginfo-8.3.1-5.el8.ppc64le.rpm
+gcc-debuginfo-8.3.1-5.el8.ppc64le.rpm
+gcc-debugsource-8.3.1-5.el8.ppc64le.rpm
+gcc-gdb-plugin-debuginfo-8.3.1-5.el8.ppc64le.rpm
+gcc-gfortran-debuginfo-8.3.1-5.el8.ppc64le.rpm
+gcc-offload-nvptx-debuginfo-8.3.1-5.el8.ppc64le.rpm
+gcc-plugin-devel-8.3.1-5.el8.ppc64le.rpm
+gcc-plugin-devel-debuginfo-8.3.1-5.el8.ppc64le.rpm
+libasan-debuginfo-8.3.1-5.el8.ppc64le.rpm
+libatomic-debuginfo-8.3.1-5.el8.ppc64le.rpm
+libgcc-debuginfo-8.3.1-5.el8.ppc64le.rpm
+libgfortran-debuginfo-8.3.1-5.el8.ppc64le.rpm
+libgomp-debuginfo-8.3.1-5.el8.ppc64le.rpm
+libgomp-offload-nvptx-debuginfo-8.3.1-5.el8.ppc64le.rpm
+libitm-debuginfo-8.3.1-5.el8.ppc64le.rpm
+liblsan-debuginfo-8.3.1-5.el8.ppc64le.rpm
+libquadmath-debuginfo-8.3.1-5.el8.ppc64le.rpm
+libstdc++-debuginfo-8.3.1-5.el8.ppc64le.rpm
+libstdc++-static-8.3.1-5.el8.ppc64le.rpm
+libtsan-debuginfo-8.3.1-5.el8.ppc64le.rpm
+libubsan-debuginfo-8.3.1-5.el8.ppc64le.rpm
+
+s390x:
+cpp-debuginfo-8.3.1-5.el8.s390x.rpm
+gcc-c++-debuginfo-8.3.1-5.el8.s390x.rpm
+gcc-debuginfo-8.3.1-5.el8.s390x.rpm
+gcc-debugsource-8.3.1-5.el8.s390x.rpm
+gcc-gdb-plugin-debuginfo-8.3.1-5.el8.s390x.rpm
+gcc-gfortran-debuginfo-8.3.1-5.el8.s390x.rpm
+gcc-plugin-devel-8.3.1-5.el8.s390x.rpm
+gcc-plugin-devel-debuginfo-8.3.1-5.el8.s390x.rpm
+libasan-debuginfo-8.3.1-5.el8.s390x.rpm
+libatomic-debuginfo-8.3.1-5.el8.s390x.rpm
+libgcc-debuginfo-8.3.1-5.el8.s390x.rpm
+libgfortran-debuginfo-8.3.1-5.el8.s390x.rpm
+libgomp-debuginfo-8.3.1-5.el8.s390x.rpm
+libitm-debuginfo-8.3.1-5.el8.s390x.rpm
+libstdc++-debuginfo-8.3.1-5.el8.s390x.rpm
+libstdc++-static-8.3.1-5.el8.s390x.rpm
+libubsan-debuginfo-8.3.1-5.el8.s390x.rpm
+
+x86_64:
+cpp-debuginfo-8.3.1-5.el8.i686.rpm
+cpp-debuginfo-8.3.1-5.el8.x86_64.rpm
+gcc-c++-debuginfo-8.3.1-5.el8.i686.rpm
+gcc-c++-debuginfo-8.3.1-5.el8.x86_64.rpm
+gcc-debuginfo-8.3.1-5.el8.i686.rpm
+gcc-debuginfo-8.3.1-5.el8.x86_64.rpm
+gcc-debugsource-8.3.1-5.el8.i686.rpm
+gcc-debugsource-8.3.1-5.el8.x86_64.rpm
+gcc-gdb-plugin-debuginfo-8.3.1-5.el8.i686.rpm
+gcc-gdb-plugin-debuginfo-8.3.1-5.el8.x86_64.rpm
+gcc-gfortran-debuginfo-8.3.1-5.el8.i686.rpm
+gcc-gfortran-debuginfo-8.3.1-5.el8.x86_64.rpm
+gcc-offload-nvptx-debuginfo-8.3.1-5.el8.x86_64.rpm
+gcc-plugin-devel-8.3.1-5.el8.i686.rpm
+gcc-plugin-devel-8.3.1-5.el8.x86_64.rpm
+gcc-plugin-devel-debuginfo-8.3.1-5.el8.i686.rpm
+gcc-plugin-devel-debuginfo-8.3.1-5.el8.x86_64.rpm
+libasan-debuginfo-8.3.1-5.el8.i686.rpm
+libasan-debuginfo-8.3.1-5.el8.x86_64.rpm
+libatomic-debuginfo-8.3.1-5.el8.i686.rpm
+libatomic-debuginfo-8.3.1-5.el8.x86_64.rpm
+libgcc-debuginfo-8.3.1-5.el8.i686.rpm
+libgcc-debuginfo-8.3.1-5.el8.x86_64.rpm
+libgfortran-debuginfo-8.3.1-5.el8.i686.rpm
+libgfortran-debuginfo-8.3.1-5.el8.x86_64.rpm
+libgomp-debuginfo-8.3.1-5.el8.i686.rpm
+libgomp-debuginfo-8.3.1-5.el8.x86_64.rpm
+libgomp-offload-nvptx-debuginfo-8.3.1-5.el8.x86_64.rpm
+libitm-debuginfo-8.3.1-5.el8.i686.rpm
+libitm-debuginfo-8.3.1-5.el8.x86_64.rpm
+liblsan-debuginfo-8.3.1-5.el8.x86_64.rpm
+libquadmath-debuginfo-8.3.1-5.el8.i686.rpm
+libquadmath-debuginfo-8.3.1-5.el8.x86_64.rpm
+libstdc++-debuginfo-8.3.1-5.el8.i686.rpm
+libstdc++-debuginfo-8.3.1-5.el8.x86_64.rpm
+libstdc++-static-8.3.1-5.el8.i686.rpm
+libstdc++-static-8.3.1-5.el8.x86_64.rpm
+libtsan-debuginfo-8.3.1-5.el8.x86_64.rpm
+libubsan-debuginfo-8.3.1-5.el8.i686.rpm
+libubsan-debuginfo-8.3.1-5.el8.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2019-15847
+https://access.redhat.com/security/updates/classification/#moderate
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/8.2_release_notes/index
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXqhV0tzjgjWX9erEAQje2g/+M1Le2gobIjiivSx1Flo59NogOy3O3TaN
+3X9XV/fuiasvS3p4ufHD9qdwZnK3vV7GgNucBat5iYPMpX6EM1SoLdqRqAQVWGmo
+A3+dc4/CWqFnjOmjkPsLBpzL5UcoJt+H4nERlsC9KwNlPqOt3u1qXG4BbeY3dYry
+Pj0j/RiE5MpAUuBOLLlGXhNmJSKmBhYrTIK/EKvisDJ9vw8P1YpKrlMrIZywww4Q
+cIQIV2PSiNcrQDsSjLevbuJAtVRP/TfPoq2wYnwufN9U2Q5eXlf9yTNm3J3kjTxD
+vD8rz0K3GdWJfGezKx9uIeHm+hLcpJNtkCV54heh7NXM3CPYUKi208Tt0vf6XsWo
+DS/th+ZtZUOxFoffOfcGFljT2s0OWSvUDDmCvYO0khqya7onzcQR/tRi6qKKz/im
++In8RpI6U46VHw+LYhxYBY5h6hkfJxT2ntFU+3exgwdc2joxamQeRaVQGdqJioUN
+9ZAQdRS2+vOUutnbO0UAxA0PxQvOhNAzNrYoFOCVGtMrqUMc4S5jz4qAnSEzc2or
+9ycOoJv3JySS1RdaUWHCdZNYzfWF0fRP8tm9U9UkgmrBqoKHDtVj/YgoV20nn9+e
+P80GxS3PGkLEh/SS4bwzBIeaScsgBH2Bp1MFNYs3nPF0gwf8yIVRCxJ/ovGocQd4
+GYISbpVPg6Q=PjoM
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

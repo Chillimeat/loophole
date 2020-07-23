@@ -1,0 +1,64 @@
+=========================================================================
+Ubuntu Security Notice USN-4360-1
+May 14, 2020
+
+json-c vulnerability
+=========================================================================
+A security issue affects these releases of Ubuntu and its derivatives:
+
+- Ubuntu 20.04 LTS
+- Ubuntu 19.10
+- Ubuntu 18.04 LTS
+- Ubuntu 16.04 LTS
+- Ubuntu 14.04 ESM
+- Ubuntu 12.04 ESM
+
+Summary:
+
+json-c could be made to execute arbitrary code if it received
+a specially crafted JSON file.
+
+Software Description:
+- json-c: JSON manipulation library
+
+Details:
+
+It was discovered that json-c incorrectly handled certain JSON files.
+An attacker could possibly use this issue to execute arbitrary code.
+
+Update instructions:
+
+The problem can be corrected by updating your system to the following
+package versions:
+
+Ubuntu 20.04 LTS:
+  libjson-c4                      0.13.1+dfsg-7ubuntu0.1
+
+Ubuntu 19.10:
+  libjson-c4                      0.13.1+dfsg-4ubuntu0.1
+
+Ubuntu 18.04 LTS:
+  libjson-c3                      0.12.1-1.3ubuntu0.1
+
+Ubuntu 16.04 LTS:
+  libjson-c2                      0.11-4ubuntu2.1
+  libjson0                        0.11-4ubuntu2.1
+
+Ubuntu 14.04 ESM:
+  libjson-c2                      0.11-3ubuntu1.2+esm1
+  libjson0                        0.11-3ubuntu1.2+esm1
+
+Ubuntu 12.04 ESM:
+  libjson0                        0.9-1ubuntu1.2
+
+In general, a standard system update will make all the necessary changes.
+
+References:
+  https://usn.ubuntu.com/4360-1
+  CVE-2020-12762
+
+Package Information:
+  https://launchpad.net/ubuntu/+source/json-c/0.13.1+dfsg-7ubuntu0.1
+  https://launchpad.net/ubuntu/+source/json-c/0.13.1+dfsg-4ubuntu0.1
+  https://launchpad.net/ubuntu/+source/json-c/0.12.1-1.3ubuntu0.1
+  https://launchpad.net/ubuntu/+source/json-c/0.11-4ubuntu2.1

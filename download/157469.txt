@@ -1,0 +1,163 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Moderate: libtiff security update
+Advisory ID:       RHSA-2020:1688-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:1688
+Issue date:        2020-04-28
+CVE Names:         CVE-2019-14973
+====================================================================
+1. Summary:
+
+An update for libtiff is now available for Red Hat Enterprise Linux 8.
+
+Red Hat Product Security has rated this update as having a security impact
+of Moderate. A Common Vulnerability Scoring System (CVSS) base score, which
+gives a detailed severity rating, is available for each vulnerability from
+the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat CodeReady Linux Builder (v. 8) - aarch64, ppc64le, s390x, x86_64
+Red Hat Enterprise Linux AppStream (v. 8) - aarch64, ppc64le, s390x, x86_64
+
+3. Description:
+
+The libtiff packages contain a library of functions for manipulating Tagged
+Image File Format (TIFF) files.
+
+Security Fix(es):
+
+* libtiff: integer overflow in _TIFFCheckMalloc and _TIFFCheckRealloc in
+tif_aux.c (CVE-2019-14973)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+Additional Changes:
+
+For detailed information on changes in this release, see the Red Hat
+Enterprise Linux 8.2 Release Notes linked from the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+All running applications linked against libtiff must be restarted for this
+update to take effect.
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1745951 - CVE-2019-14973 libtiff: integer overflow in _TIFFCheckMalloc and _TIFFCheckRealloc in tif_aux.c
+
+6. Package List:
+
+Red Hat Enterprise Linux AppStream (v. 8):
+
+Source:
+libtiff-4.0.9-17.el8.src.rpm
+
+aarch64:
+libtiff-4.0.9-17.el8.aarch64.rpm
+libtiff-debuginfo-4.0.9-17.el8.aarch64.rpm
+libtiff-debugsource-4.0.9-17.el8.aarch64.rpm
+libtiff-devel-4.0.9-17.el8.aarch64.rpm
+libtiff-tools-debuginfo-4.0.9-17.el8.aarch64.rpm
+
+ppc64le:
+libtiff-4.0.9-17.el8.ppc64le.rpm
+libtiff-debuginfo-4.0.9-17.el8.ppc64le.rpm
+libtiff-debugsource-4.0.9-17.el8.ppc64le.rpm
+libtiff-devel-4.0.9-17.el8.ppc64le.rpm
+libtiff-tools-debuginfo-4.0.9-17.el8.ppc64le.rpm
+
+s390x:
+libtiff-4.0.9-17.el8.s390x.rpm
+libtiff-debuginfo-4.0.9-17.el8.s390x.rpm
+libtiff-debugsource-4.0.9-17.el8.s390x.rpm
+libtiff-devel-4.0.9-17.el8.s390x.rpm
+libtiff-tools-debuginfo-4.0.9-17.el8.s390x.rpm
+
+x86_64:
+libtiff-4.0.9-17.el8.i686.rpm
+libtiff-4.0.9-17.el8.x86_64.rpm
+libtiff-debuginfo-4.0.9-17.el8.i686.rpm
+libtiff-debuginfo-4.0.9-17.el8.x86_64.rpm
+libtiff-debugsource-4.0.9-17.el8.i686.rpm
+libtiff-debugsource-4.0.9-17.el8.x86_64.rpm
+libtiff-devel-4.0.9-17.el8.i686.rpm
+libtiff-devel-4.0.9-17.el8.x86_64.rpm
+libtiff-tools-debuginfo-4.0.9-17.el8.i686.rpm
+libtiff-tools-debuginfo-4.0.9-17.el8.x86_64.rpm
+
+Red Hat CodeReady Linux Builder (v. 8):
+
+aarch64:
+libtiff-debuginfo-4.0.9-17.el8.aarch64.rpm
+libtiff-debugsource-4.0.9-17.el8.aarch64.rpm
+libtiff-tools-4.0.9-17.el8.aarch64.rpm
+libtiff-tools-debuginfo-4.0.9-17.el8.aarch64.rpm
+
+ppc64le:
+libtiff-debuginfo-4.0.9-17.el8.ppc64le.rpm
+libtiff-debugsource-4.0.9-17.el8.ppc64le.rpm
+libtiff-tools-4.0.9-17.el8.ppc64le.rpm
+libtiff-tools-debuginfo-4.0.9-17.el8.ppc64le.rpm
+
+s390x:
+libtiff-debuginfo-4.0.9-17.el8.s390x.rpm
+libtiff-debugsource-4.0.9-17.el8.s390x.rpm
+libtiff-tools-4.0.9-17.el8.s390x.rpm
+libtiff-tools-debuginfo-4.0.9-17.el8.s390x.rpm
+
+x86_64:
+libtiff-debuginfo-4.0.9-17.el8.x86_64.rpm
+libtiff-debugsource-4.0.9-17.el8.x86_64.rpm
+libtiff-tools-4.0.9-17.el8.x86_64.rpm
+libtiff-tools-debuginfo-4.0.9-17.el8.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2019-14973
+https://access.redhat.com/security/updates/classification/#moderate
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/8.2_release_notes/index
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXqhVyNzjgjWX9erEAQjbKw/+IYGZBnG8AsoIzlG2zt15JcqofYdog+9u
+60Y9ZOZtutN7jfszBtCzhJKjcplWt5CqnX2B6hX08pY/B1pK3jtMn53B2Qqendki
+B+c+HAYSgtY8iG/zdgt92unnhzfmE1mWf7pZ1P5xLh1nuMcXAgwk3Fa4ABrSwkbs
+vajrQbzYi8E44vAWvG4yb2DPDJOu6LNZMfss5VHupQUoSLluHqpSncuIfYLxO56W
+wh/xIwe3RtsX8xNvzKXfGM+ps6XKsbXaB66MF/EfX0OvCAQSUtJ0+Wqr3LGXoSba
+aaNJe3bzeGJ3/YK0EZ1SM5M8nl+zb5jPUWMD7lsEd3Gup/jU/zS7V4E3ijzOcTG0
+3hJI2/hJ7EgMwVE6vhrXr30a9KoSSHGOOqy2fF6zAkcKRh6HuzTT1Ww2XXZ4OCT/
+7lZ1Y+Y3EwgwP78IC8ZVVVf3ijCeVIj/bUyw0Vqb/BfmWxPYfgc45XxLr3oMm/VF
+WxbPljBJvFb0FwOiYX7rjt32w3fSiDTEOPI1k3yVdj3Hc4bRh7jUpGwTVzZI5DpO
+/BmZNRrVy7rkrsl/KSrExDE1oqqFlPd4a5nbYdx2o5PoK7yZLTt5DNoOGOcqq++T
+FVKEMZtzeEWZiaOlnXjeON4MJ1sZvfcimkpkS26VAm0p/Sc2b0XyvOOJLZtE79Gz
+BNKFFEHu0Qo=ynE4
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

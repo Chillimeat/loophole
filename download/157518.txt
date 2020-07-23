@@ -1,0 +1,190 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+=====================================================================
+                   Red Hat Security Advisory
+
+Synopsis:          Moderate: gnutls security update
+Advisory ID:       RHSA-2020:1998-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:1998
+Issue date:        2020-04-30
+CVE Names:         CVE-2020-11501 
+=====================================================================
+
+1. Summary:
+
+An update for gnutls is now available for Red Hat Enterprise Linux 8.
+
+Red Hat Product Security has rated this update as having a security impact
+of Moderate. A Common Vulnerability Scoring System (CVSS) base score, which
+gives a detailed severity rating, is available for each vulnerability from
+the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Enterprise Linux AppStream (v. 8) - aarch64, ppc64le, s390x, x86_64
+Red Hat Enterprise Linux BaseOS (v. 8) - aarch64, ppc64le, s390x, x86_64
+
+3. Description:
+
+The gnutls packages provide the GNU Transport Layer Security (GnuTLS)
+library, which implements cryptographic algorithms and protocols such as
+SSL, TLS, and DTLS.
+
+Security Fix(es):
+
+* gnutls: DTLS client hello contains a random value of all zeroes
+(CVE-2020-11501)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1821896 - CVE-2020-11501 gnutls: DTLS client hello contains a random value of all zeroes
+
+6. Package List:
+
+Red Hat Enterprise Linux AppStream (v. 8):
+
+aarch64:
+gnutls-c++-3.6.8-10.el8_2.aarch64.rpm
+gnutls-c++-debuginfo-3.6.8-10.el8_2.aarch64.rpm
+gnutls-dane-3.6.8-10.el8_2.aarch64.rpm
+gnutls-dane-debuginfo-3.6.8-10.el8_2.aarch64.rpm
+gnutls-debuginfo-3.6.8-10.el8_2.aarch64.rpm
+gnutls-debugsource-3.6.8-10.el8_2.aarch64.rpm
+gnutls-devel-3.6.8-10.el8_2.aarch64.rpm
+gnutls-utils-3.6.8-10.el8_2.aarch64.rpm
+gnutls-utils-debuginfo-3.6.8-10.el8_2.aarch64.rpm
+
+ppc64le:
+gnutls-c++-3.6.8-10.el8_2.ppc64le.rpm
+gnutls-c++-debuginfo-3.6.8-10.el8_2.ppc64le.rpm
+gnutls-dane-3.6.8-10.el8_2.ppc64le.rpm
+gnutls-dane-debuginfo-3.6.8-10.el8_2.ppc64le.rpm
+gnutls-debuginfo-3.6.8-10.el8_2.ppc64le.rpm
+gnutls-debugsource-3.6.8-10.el8_2.ppc64le.rpm
+gnutls-devel-3.6.8-10.el8_2.ppc64le.rpm
+gnutls-utils-3.6.8-10.el8_2.ppc64le.rpm
+gnutls-utils-debuginfo-3.6.8-10.el8_2.ppc64le.rpm
+
+s390x:
+gnutls-c++-3.6.8-10.el8_2.s390x.rpm
+gnutls-c++-debuginfo-3.6.8-10.el8_2.s390x.rpm
+gnutls-dane-3.6.8-10.el8_2.s390x.rpm
+gnutls-dane-debuginfo-3.6.8-10.el8_2.s390x.rpm
+gnutls-debuginfo-3.6.8-10.el8_2.s390x.rpm
+gnutls-debugsource-3.6.8-10.el8_2.s390x.rpm
+gnutls-devel-3.6.8-10.el8_2.s390x.rpm
+gnutls-utils-3.6.8-10.el8_2.s390x.rpm
+gnutls-utils-debuginfo-3.6.8-10.el8_2.s390x.rpm
+
+x86_64:
+gnutls-c++-3.6.8-10.el8_2.i686.rpm
+gnutls-c++-3.6.8-10.el8_2.x86_64.rpm
+gnutls-c++-debuginfo-3.6.8-10.el8_2.i686.rpm
+gnutls-c++-debuginfo-3.6.8-10.el8_2.x86_64.rpm
+gnutls-dane-3.6.8-10.el8_2.i686.rpm
+gnutls-dane-3.6.8-10.el8_2.x86_64.rpm
+gnutls-dane-debuginfo-3.6.8-10.el8_2.i686.rpm
+gnutls-dane-debuginfo-3.6.8-10.el8_2.x86_64.rpm
+gnutls-debuginfo-3.6.8-10.el8_2.i686.rpm
+gnutls-debuginfo-3.6.8-10.el8_2.x86_64.rpm
+gnutls-debugsource-3.6.8-10.el8_2.i686.rpm
+gnutls-debugsource-3.6.8-10.el8_2.x86_64.rpm
+gnutls-devel-3.6.8-10.el8_2.i686.rpm
+gnutls-devel-3.6.8-10.el8_2.x86_64.rpm
+gnutls-utils-3.6.8-10.el8_2.x86_64.rpm
+gnutls-utils-debuginfo-3.6.8-10.el8_2.i686.rpm
+gnutls-utils-debuginfo-3.6.8-10.el8_2.x86_64.rpm
+
+Red Hat Enterprise Linux BaseOS (v. 8):
+
+Source:
+gnutls-3.6.8-10.el8_2.src.rpm
+
+aarch64:
+gnutls-3.6.8-10.el8_2.aarch64.rpm
+gnutls-c++-debuginfo-3.6.8-10.el8_2.aarch64.rpm
+gnutls-dane-debuginfo-3.6.8-10.el8_2.aarch64.rpm
+gnutls-debuginfo-3.6.8-10.el8_2.aarch64.rpm
+gnutls-debugsource-3.6.8-10.el8_2.aarch64.rpm
+gnutls-utils-debuginfo-3.6.8-10.el8_2.aarch64.rpm
+
+ppc64le:
+gnutls-3.6.8-10.el8_2.ppc64le.rpm
+gnutls-c++-debuginfo-3.6.8-10.el8_2.ppc64le.rpm
+gnutls-dane-debuginfo-3.6.8-10.el8_2.ppc64le.rpm
+gnutls-debuginfo-3.6.8-10.el8_2.ppc64le.rpm
+gnutls-debugsource-3.6.8-10.el8_2.ppc64le.rpm
+gnutls-utils-debuginfo-3.6.8-10.el8_2.ppc64le.rpm
+
+s390x:
+gnutls-3.6.8-10.el8_2.s390x.rpm
+gnutls-c++-debuginfo-3.6.8-10.el8_2.s390x.rpm
+gnutls-dane-debuginfo-3.6.8-10.el8_2.s390x.rpm
+gnutls-debuginfo-3.6.8-10.el8_2.s390x.rpm
+gnutls-debugsource-3.6.8-10.el8_2.s390x.rpm
+gnutls-utils-debuginfo-3.6.8-10.el8_2.s390x.rpm
+
+x86_64:
+gnutls-3.6.8-10.el8_2.i686.rpm
+gnutls-3.6.8-10.el8_2.x86_64.rpm
+gnutls-c++-debuginfo-3.6.8-10.el8_2.i686.rpm
+gnutls-c++-debuginfo-3.6.8-10.el8_2.x86_64.rpm
+gnutls-dane-debuginfo-3.6.8-10.el8_2.i686.rpm
+gnutls-dane-debuginfo-3.6.8-10.el8_2.x86_64.rpm
+gnutls-debuginfo-3.6.8-10.el8_2.i686.rpm
+gnutls-debuginfo-3.6.8-10.el8_2.x86_64.rpm
+gnutls-debugsource-3.6.8-10.el8_2.i686.rpm
+gnutls-debugsource-3.6.8-10.el8_2.x86_64.rpm
+gnutls-utils-debuginfo-3.6.8-10.el8_2.i686.rpm
+gnutls-utils-debuginfo-3.6.8-10.el8_2.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2020-11501
+https://access.redhat.com/security/updates/classification/#moderate
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXqsLztzjgjWX9erEAQjPyA/9H0haIX/ude8WdUI1V8KPQ6fNIgfLqQvx
+fUvu3nOKvWfXd7myGsO108RMJjfUyNp6oH0yFXO614oInRUz6KUflCkm6Uux4ZMo
+izOA0STnOka61WamTrOXiYI7JE54On3GaYiH8ygsAVpcheHt4y39spgWbf+AnSUs
+Kf8FEIVm5IlCFj3lRfRpnjkXihcdAvNQhRXtKVc8V7w7PdF51Ig5Azq/TqKPOC2/
+/8S5DeWEezRZwcEyanK95RlPyQapMGER9mC2O+TZ+LO0rb8qbxNFM05/0QDaMYq/
+GWIpc9fEs4wM55FEuW1m09s3FMS0H+nmN+Omr1KqpVUnTXej8SnLoXYCM58wPbBk
+vzJU3zyGAcHhQRLfdmXMLPGZVKLTD32UwObhruxre2IwvF2NX0jJ59cvKtdKWzzs
+07GbKg86fFLgrADzypQujDbc5c1l0p+OEdda7dCSVyvB5s/Xg5f3UkhNjh6we35T
+OSzwB1WMlPFy5DVdMBlVtJgWAkeZiVbRlMezw61nXOSZWQgBL8bLeww4sHFQtIGw
+XZdwh2HUJwBjUIok14oelwqk/BXVNk/fUzP+dBfh8+FPmr61Q1+YKdpbYU4E7VCR
+ARQCtN9nGELJqduXHq3eugWDh2orCH7sT1gh+EuHc6AuBravFw4dkxA64DXI5KUA
+E3ACHrz6GkI=
+=UKop
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

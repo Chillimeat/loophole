@@ -1,0 +1,69 @@
+=========================================================================
+Ubuntu Security Notice USN-4366-1
+May 19, 2020
+
+exim4 vulnerability
+=========================================================================
+A security issue affects these releases of Ubuntu and its derivatives:
+
+- Ubuntu 20.04 LTS
+- Ubuntu 19.10
+- Ubuntu 18.04 LTS
+- Ubuntu 16.04 LTS
+- Ubuntu 14.04 ESM
+
+Summary:
+
+Exim could be made to access sensitive information or bypass
+authentication if it received a specially crafted input.
+
+Software Description:
+- exim4: Exim is a mail transport agent
+
+Details:
+
+It was discovered that Exim incorrectly handled certain inputs.
+An remote attacker could possibly use this issue to access sensitive
+information or authentication bypass.
+
+Update instructions:
+
+The problem can be corrected by updating your system to the following
+package versions:
+
+Ubuntu 20.04 LTS:
+  exim4-base                      4.93-13ubuntu1.1
+  exim4-daemon-heavy              4.93-13ubuntu1.1
+  exim4-daemon-light              4.93-13ubuntu1.1
+
+Ubuntu 19.10:
+  exim4-base                      4.92.1-1ubuntu3.1
+  exim4-daemon-heavy              4.92.1-1ubuntu3.1
+  exim4-daemon-light              4.92.1-1ubuntu3.1
+
+Ubuntu 18.04 LTS:
+  exim4-base                      4.90.1-1ubuntu1.5
+  exim4-daemon-heavy              4.90.1-1ubuntu1.5
+  exim4-daemon-light              4.90.1-1ubuntu1.5
+
+Ubuntu 16.04 LTS:
+  exim4-base                      4.86.2-2ubuntu2.6
+  exim4-daemon-heavy              4.86.2-2ubuntu2.6
+  exim4-daemon-light              4.86.2-2ubuntu2.6
+
+Ubuntu 14.04 ESM:
+  exim4-base                      4.82-3ubuntu2.4+esm2
+  exim4-daemon-heavy              4.82-3ubuntu2.4+esm2
+  exim4-daemon-light              4.82-3ubuntu2.4+esm2
+
+In general, a standard system update will make all the necessary changes.
+
+References:
+  https://usn.ubuntu.com/4366-1
+  CVE-2020-12783
+
+Package Information:
+  https://launchpad.net/ubuntu/+source/exim4/4.93-13ubuntu1.1
+  https://launchpad.net/ubuntu/+source/exim4/4.92.1-1ubuntu3.1
+  https://launchpad.net/ubuntu/+source/exim4/4.90.1-1ubuntu1.5
+  https://launchpad.net/ubuntu/+source/exim4/4.86.2-2ubuntu2.6

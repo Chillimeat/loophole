@@ -1,0 +1,144 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Important: kernel-rt security and bug fix update
+Advisory ID:       RHSA-2020:2171-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:2171
+Issue date:        2020-05-14
+CVE Names:         CVE-2020-2732 CVE-2020-10711
+====================================================================
+1. Summary:
+
+An update for kernel-rt is now available for Red Hat Enterprise Linux 8.
+
+Red Hat Product Security has rated this update as having a security impact
+of Important. A Common Vulnerability Scoring System (CVSS) base score,
+which gives a detailed severity rating, is available for each vulnerability
+from the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Enterprise Linux Real Time (v. 8) - x86_64
+Red Hat Enterprise Linux Real Time for NFV (v. 8) - x86_64
+
+3. Description:
+
+The kernel-rt packages provide the Real Time Linux Kernel, which enables
+fine-tuning for systems with extremely high determinism requirements.
+
+Security Fix(es):
+
+* Kernel: NetLabel: null pointer dereference while receiving CIPSO packet
+with null category may cause kernel panic (CVE-2020-10711)
+
+* Kernel: kvm: nVMX: L2 guest may trick the L0 hypervisor to access
+sensitive L1 resources (CVE-2020-2732)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+Bug Fix(es):
+
+* kernel-rt: update RT source tree to the latest RHEL-8.2.z source tree
+(BZ#1831781)
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+The system must be rebooted for this update to take effect.
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1805135 - CVE-2020-2732 Kernel: kvm: nVMX: L2 guest may trick the L0 hypervisor to access sensitive L1 resources
+1825116 - CVE-2020-10711 Kernel: NetLabel: null pointer dereference while receiving CIPSO packet with null category may cause kernel panic
+
+6. Package List:
+
+Red Hat Enterprise Linux Real Time for NFV (v. 8):
+
+Source:
+kernel-rt-4.18.0-193.1.2.rt13.53.el8_2.src.rpm
+
+x86_64:
+kernel-rt-4.18.0-193.1.2.rt13.53.el8_2.x86_64.rpm
+kernel-rt-core-4.18.0-193.1.2.rt13.53.el8_2.x86_64.rpm
+kernel-rt-debug-4.18.0-193.1.2.rt13.53.el8_2.x86_64.rpm
+kernel-rt-debug-core-4.18.0-193.1.2.rt13.53.el8_2.x86_64.rpm
+kernel-rt-debug-debuginfo-4.18.0-193.1.2.rt13.53.el8_2.x86_64.rpm
+kernel-rt-debug-devel-4.18.0-193.1.2.rt13.53.el8_2.x86_64.rpm
+kernel-rt-debug-kvm-4.18.0-193.1.2.rt13.53.el8_2.x86_64.rpm
+kernel-rt-debug-modules-4.18.0-193.1.2.rt13.53.el8_2.x86_64.rpm
+kernel-rt-debug-modules-extra-4.18.0-193.1.2.rt13.53.el8_2.x86_64.rpm
+kernel-rt-debuginfo-4.18.0-193.1.2.rt13.53.el8_2.x86_64.rpm
+kernel-rt-debuginfo-common-x86_64-4.18.0-193.1.2.rt13.53.el8_2.x86_64.rpm
+kernel-rt-devel-4.18.0-193.1.2.rt13.53.el8_2.x86_64.rpm
+kernel-rt-kvm-4.18.0-193.1.2.rt13.53.el8_2.x86_64.rpm
+kernel-rt-modules-4.18.0-193.1.2.rt13.53.el8_2.x86_64.rpm
+kernel-rt-modules-extra-4.18.0-193.1.2.rt13.53.el8_2.x86_64.rpm
+
+Red Hat Enterprise Linux Real Time (v. 8):
+
+Source:
+kernel-rt-4.18.0-193.1.2.rt13.53.el8_2.src.rpm
+
+x86_64:
+kernel-rt-4.18.0-193.1.2.rt13.53.el8_2.x86_64.rpm
+kernel-rt-core-4.18.0-193.1.2.rt13.53.el8_2.x86_64.rpm
+kernel-rt-debug-4.18.0-193.1.2.rt13.53.el8_2.x86_64.rpm
+kernel-rt-debug-core-4.18.0-193.1.2.rt13.53.el8_2.x86_64.rpm
+kernel-rt-debug-debuginfo-4.18.0-193.1.2.rt13.53.el8_2.x86_64.rpm
+kernel-rt-debug-devel-4.18.0-193.1.2.rt13.53.el8_2.x86_64.rpm
+kernel-rt-debug-modules-4.18.0-193.1.2.rt13.53.el8_2.x86_64.rpm
+kernel-rt-debug-modules-extra-4.18.0-193.1.2.rt13.53.el8_2.x86_64.rpm
+kernel-rt-debuginfo-4.18.0-193.1.2.rt13.53.el8_2.x86_64.rpm
+kernel-rt-debuginfo-common-x86_64-4.18.0-193.1.2.rt13.53.el8_2.x86_64.rpm
+kernel-rt-devel-4.18.0-193.1.2.rt13.53.el8_2.x86_64.rpm
+kernel-rt-modules-4.18.0-193.1.2.rt13.53.el8_2.x86_64.rpm
+kernel-rt-modules-extra-4.18.0-193.1.2.rt13.53.el8_2.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2020-2732
+https://access.redhat.com/security/cve/CVE-2020-10711
+https://access.redhat.com/security/updates/classification/#important
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXr2XE9zjgjWX9erEAQjxDg//SjJycjt5w9mhRNHmQ3I7SMW2EhLd9axr
+IQO2b34OLRmCSZVdp54y1vVILrVHL4W3jUJyntNSvr3P77OXUqLye5mSr5JGMrSK
+4h4Plw47T7rjeBG4rNIvw3mTAG2HRFtihac3Eo6+mlpgtTUqlgGsU1f7xoE2yQqs
+TWT9Ft9Os2RULOP3159pTu97ny8XN+Ht2GTK71gFFBM9HFVbIot2ayBofyUweGRG
+Oczfrr8dJO50W5t8gQckFwFECJhBQchO1KgPQ8RdHidIQnjbj7HLI6ufAm0Ie/ty
+zmooaz17WfdMJic21v9iMXAWSg8innQqJ54vmuUnkUO8sVD9/wcaxH8vbbkN+m6g
+HeM+78jC7lMzB3QgyW64AR548dVLmCvyKv/5xo/ijVLYw3B1+gvFoBCttfqlwzfD
+HIw/kbcfHaERPdys9iTE/e+9t2jwNXe1yuVBC5VlblvR7gOO5NXA/8U2s57b3kyO
+kWuc8ZoJ6bpt1b34k2dwzvBv0o0weF+XYIFDH+N6OQZCOdFP6YBbSccZ+RNGtZb+
+IxzPCe6la75y9lRM1yl7K/Ox0dtuFfLweDEu5EaJYZ/nXkqELLzzUv7AAukkoP9O
+JyP4xbOk9JR1e0pfZVdoIee0U9SL2Q+N0mT9Y6uRE8KMw/T+Gb8M8S+wJPvXVX94
+JeVd54gcRN4=v7gM
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

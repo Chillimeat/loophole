@@ -1,0 +1,113 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+=====================================================================
+                   Red Hat Security Advisory
+
+Synopsis:          Important: .NET Core security update
+Advisory ID:       RHSA-2020:2143-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:2143
+Issue date:        2020-05-13
+CVE Names:         CVE-2020-1108 
+=====================================================================
+
+1. Summary:
+
+An update for .NET Core is now available for Red Hat Enterprise Linux 8.
+
+Red Hat Product Security has rated this update as having a security impact
+of Important. A Common Vulnerability Scoring System (CVSS) base score,
+which gives a detailed severity rating, is available for each vulnerability
+from the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Enterprise Linux AppStream (v. 8) - x86_64
+
+3. Description:
+
+.NET Core is a managed-software framework. It implements a subset of the
+.NET framework APIs and several new APIs, and it includes a CLR
+implementation.
+
+A new version of .NET Core that addresses a security vulnerability is now
+available. The updated version is .NET Core Runtime 2.1.18 and SDK 2.1.514.
+
+Security Fix(es):
+
+* dotnet: Denial of service via untrusted input (CVE-2020-1108)
+
+Default inclusions for applications built with .NET Core have been updated
+to reference the newest versions and their security fixes.
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1827643 - CVE-2020-1108 dotnet: Denial of service via untrusted input
+
+6. Package List:
+
+Red Hat Enterprise Linux AppStream (v. 8):
+
+Source:
+dotnet-2.1.514-2.el8_2.src.rpm
+
+x86_64:
+dotnet-debuginfo-2.1.514-2.el8_2.x86_64.rpm
+dotnet-debugsource-2.1.514-2.el8_2.x86_64.rpm
+dotnet-host-fxr-2.1-2.1.18-2.el8_2.x86_64.rpm
+dotnet-host-fxr-2.1-debuginfo-2.1.18-2.el8_2.x86_64.rpm
+dotnet-runtime-2.1-2.1.18-2.el8_2.x86_64.rpm
+dotnet-runtime-2.1-debuginfo-2.1.18-2.el8_2.x86_64.rpm
+dotnet-sdk-2.1-2.1.514-2.el8_2.x86_64.rpm
+dotnet-sdk-2.1.5xx-2.1.514-2.el8_2.x86_64.rpm
+dotnet-sdk-2.1.5xx-debuginfo-2.1.514-2.el8_2.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2020-1108
+https://access.redhat.com/security/updates/classification/#important
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXrwXqNzjgjWX9erEAQj5rA/+NVZwpycL0g63HExJFpMG04bq0lie46Lk
+wTgmkEuTRRYLm3+txglTktz7IXPB/Zq8sBxuY1CpVQ0AyJ7kEZUwhfM31fBHttVq
+Hxy0CWazyMjp6nMyXUnonoC2C+giw/P7/jRIL7Ycj65QJr9UQ69ndFCT8ffb3TgP
+5NI/bOjrB1nADFhigEZKeEwdh4vX6Y2wmTnWHWTLNiIOzhEohNBFVFh5mfnIxEKP
+kwDH+AorQjoyJECcO2NsgND4RJP05U0YWzgj8jbAaO0p5bAQZ55mzE1SnI/UBMou
+gJ31k8i0NNqq9YmgltKKD0/CndbwuVNFAGUK2whQX2GLwHEGh1c/YXsaIZAP6wbl
+Uv62ZUFDmzKCB8eCqBb+Ur3c8AxJMb1SLfMx+aIRc9i+VC3GdYdmtiYdp4FyctcM
+2ZLDki5F4MZuGnXuO218T125/p563duasQxF58ZKx2RLRCnyjcxVZyhG5PYI7v55
+F0g9kWBL+VJ7eaYyvIh17bbfgNrBEg0ESXyrUqhqTsAvQG4lWBqd9/PceZQLBnVJ
+N/aL9Nx/FrasRALQ1bmICv5QEri1xYjExyzfDZ7vBCOo1zRL15zQcv/OWGgGDIy3
+UVleS/LGyHAQBJeFyKz4cIz8QGy0xI0kNMUB+TchAuAQbP0t8I/Fa+ofAnUB/tMV
+L7tGkadv0XE=
+=cmDP
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

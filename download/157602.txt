@@ -1,0 +1,47 @@
+=========================================================================
+Ubuntu Security Notice USN-4352-2
+May 06, 2020
+
+openldap vulnerability
+=========================================================================
+A security issue affects these releases of Ubuntu and its derivatives:
+
+- Ubuntu 14.04 ESM
+- Ubuntu 12.04 ESM
+
+Summary:
+
+OpenLDAP could be made to crash if it received specially crafted
+network traffic.
+
+Software Description:
+- openldap: Lightweight Directory Access Protocol
+
+Details:
+
+USN-4352-1 fixed a vulnerability in OpenLDAP. This update provides
+the corresponding update for Ubuntu 12.04 ESM and Ubuntu 14.04 ESM.
+
+Original advisory details:
+
+ It was discovered that OpenLDAP incorrectly handled certain queries. A
+ remote attacker could possibly use this issue to cause OpenLDAP to consume
+ resources, resulting in a denial of service.
+
+Update instructions:
+
+The problem can be corrected by updating your system to the following
+package versions:
+
+Ubuntu 14.04 ESM:
+  slapd                           2.4.31-1+nmu2ubuntu8.5+esm2
+
+Ubuntu 12.04 ESM:
+  slapd                           2.4.28-1.1ubuntu4.10
+
+In general, a standard system update will make all the necessary changes.
+
+References:
+  https://usn.ubuntu.com/4352-2
+  https://usn.ubuntu.com/4352-1
+  CVE-2020-12243

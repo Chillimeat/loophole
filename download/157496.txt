@@ -1,0 +1,49 @@
+==========================================================================
+Ubuntu Security Notice USN-4341-3
+April 29, 2020
+
+samba regression
+==========================================================================
+
+A security issue affects these releases of Ubuntu and its derivatives:
+
+- Ubuntu 16.04 LTS
+
+Summary:
+
+USN-4341-1 introduced a regression in Samba.
+
+Software Description:
+- samba: SMB/CIFS file, print, and login server for Unix
+
+Details:
+
+USN-4341-1 fixed vulnerabilities in Samba. The updated packages for
+Ubuntu 16.04 LTS introduced a regression when using LDAP. This update fixes
+the problem.
+
+We apologize for the inconvenience.
+
+Original advisory details:
+
+ It was discovered that Samba incorrectly handled certain LDAP queries. A
+ remote attacker could possibly use this issue to cause Samba to consume
+ resources, resulting in a denial of service. (CVE-2020-10704)
+
+Update instructions:
+
+The problem can be corrected by updating your system to the following
+package versions:
+
+Ubuntu 16.04 LTS:
+  samba                           2:4.3.11+dfsg-0ubuntu0.16.04.27
+
+In general, a standard system update will make all the necessary changes.
+
+References:
+  https://usn.ubuntu.com/4341-3
+  https://usn.ubuntu.com/4341-1
+  https://launchpad.net/bugs/1875798
+
+Package Information:
+  https://launchpad.net/ubuntu/+source/samba/2:4.3.11+dfsg-0ubuntu0.16.04.27

@@ -1,0 +1,127 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Important: ksh security update
+Advisory ID:       RHSA-2020:2210-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:2210
+Issue date:        2020-05-19
+CVE Names:         CVE-2019-14868
+====================================================================
+1. Summary:
+
+An update for ksh is now available for Red Hat Enterprise Linux 7.4
+Advanced Update Support, Red Hat Enterprise Linux 7.4 Telco Extended Update
+Support, and Red Hat Enterprise Linux 7.4 Update Services for SAP
+Solutions.
+
+Red Hat Product Security has rated this update as having a security impact
+of Important. A Common Vulnerability Scoring System (CVSS) base score,
+which gives a detailed severity rating, is available for each vulnerability
+from the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Enterprise Linux Server AUS (v. 7.4) - x86_64
+Red Hat Enterprise Linux Server E4S (v. 7.4) - ppc64le, x86_64
+Red Hat Enterprise Linux Server TUS (v. 7.4) - x86_64
+
+3. Description:
+
+KornShell (ksh) is a Unix shell developed by AT&T Bell Laboratories, which
+is backward-compatible with the Bourne shell (sh) and includes many
+features of the C shell. The most recent version is KSH-93. KornShell
+complies with the POSIX.2 standard (IEEE Std 1003.2-1992).
+
+Security Fix(es):
+
+* ksh: certain environment variables interpreted as arithmetic expressions
+on startup, leading to code injection (CVE-2019-14868)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1757324 - CVE-2019-14868 ksh: certain environment variables interpreted as arithmetic expressions on startup, leading to code injection
+
+6. Package List:
+
+Red Hat Enterprise Linux Server AUS (v. 7.4):
+
+Source:
+ksh-20120801-36.el7_4.src.rpm
+
+x86_64:
+ksh-20120801-36.el7_4.x86_64.rpm
+ksh-debuginfo-20120801-36.el7_4.x86_64.rpm
+
+Red Hat Enterprise Linux Server E4S (v. 7.4):
+
+Source:
+ksh-20120801-36.el7_4.src.rpm
+
+ppc64le:
+ksh-20120801-36.el7_4.ppc64le.rpm
+ksh-debuginfo-20120801-36.el7_4.ppc64le.rpm
+
+x86_64:
+ksh-20120801-36.el7_4.x86_64.rpm
+ksh-debuginfo-20120801-36.el7_4.x86_64.rpm
+
+Red Hat Enterprise Linux Server TUS (v. 7.4):
+
+Source:
+ksh-20120801-36.el7_4.src.rpm
+
+x86_64:
+ksh-20120801-36.el7_4.x86_64.rpm
+ksh-debuginfo-20120801-36.el7_4.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2019-14868
+https://access.redhat.com/security/updates/classification/#important
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXsPwSdzjgjWX9erEAQiB7A//QnnbB99cRNfKLNGJHhZPAm/j25TqEr7A
+ef/cTPqYtMhxQqq/K+WjtL1wgkKGGAbwQz6R9OPXl/Ki1PQ9GZiC9ak9Bo83Mg8y
+rld6b5UDmtKQEsDrvbuf4EsuIpYM8HSa2vqOkXeUILM3Mi6NbCEmm9XFR4Kwi5A7
+TrQ0yLzz7tJDv55b+ZDbHgcQVzSDatenJQV6y26wh71ILo/a//yDiOBc5QaUNqum
+EkjBfuCeeOFrPIrWRE2SLFTPj4tvI0xJSQmwlRsFztUxZte1be+aSlN5Mv4t7lsS
+EwgpNj8IbbxY84QHNm85OmdSRL6Tt01iRCHmh25uKxCy56kIENKIzCBZ5LpCerFL
+GQDMbdD5vsIwcxy15zSM+9LT7b6LBMIHi7lJpLOX8H71djBmlHltk1ejRgmIRe1E
+bPL5SU4XNTsoiQ4QUECNMMuvU6wWS0+4spWVVDCK148Kc4GZFuQhXdJ0M4VES/Bg
+8GP7w4cIrKf+PU0Eb1MHT4t2C42HlU/tnfAGZR/KrgISHkNyd4UVTj6Xs5lGJwpy
+nT5BWyZeCO2P/d2o97h8WqjLKVxHRWmifv+BjXhndLmmawlHxs5BboZcpyn8ONcK
+HsfKyKjAaMrTcvRt4/p6zRRbr85TsqGyMFzw1oufF7dKi9apRfRXGv/xsmL1GnCG
+mnnvTau9gq8=I5Mf
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

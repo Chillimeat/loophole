@@ -1,0 +1,95 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Important: Red Hat JBoss Enterprise Application Platform 7.2 security update
+Advisory ID:       RHSA-2020:2062-01
+Product:           Red Hat JBoss Enterprise Application Platform
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:2062
+Issue date:        2020-05-11
+CVE Names:         CVE-2018-14371 CVE-2019-10174
+====================================================================
+1. Summary:
+
+An update is now available for Red Hat JBoss Enterprise Application
+Platform 7.2.
+
+Red Hat Product Security has rated this update as having a security impact
+of Important. A Common Vulnerability Scoring System (CVSS) base score,
+which gives a detailed severity rating, is available for each vulnerability
+from the CVE link(s) in the References section.
+
+2. Description:
+
+Red Hat JBoss Enterprise Application Platform 7 is a platform for Java
+applications based on the WildFly application runtime.
+
+This asynchronous patch is a security update for the Infinispan package in
+Red Hat JBoss Enterprise Application Platform 7.2.
+
+Security Fix(es):
+
+* infinispan-core: infinispan: invokeAccessibly method from ReflectionUtil
+class allows to invoke private methods (CVE-2019-10174)
+
+* jsf-impl: mojarra: Path traversal in
+ResourceManager.java:getLocalePrefix() via the loc parameter
+(CVE-2018-14371)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, and other related information, see the CVE page(s) listed in the
+References section.
+
+3. Solution:
+
+Before applying this update, back up your existing Red Hat JBoss Enterprise
+Application Platform installation and deployed applications.
+
+You must restart the JBoss server process for the update to take effect.
+
+The References section of this erratum contains a download link (you must
+log in to download the update).
+
+4. Bugs fixed (https://bugzilla.redhat.com/):
+
+1607709 - CVE-2018-14371 mojarra: Path traversal in ResourceManager.java:getLocalePrefix() via the loc parameter
+1703469 - CVE-2019-10174 infinispan: invokeAccessibly method from ReflectionUtil class allows to invoke private methods
+
+5. References:
+
+https://access.redhat.com/security/cve/CVE-2018-14371
+https://access.redhat.com/security/cve/CVE-2019-10174
+https://access.redhat.com/security/updates/classification/#important
+https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?product=appplatform&downloadType=securityPatches&version=7.2
+https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.2/
+https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.2/html-single/installation_guide/
+
+6. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXrmzctzjgjWX9erEAQhECA/+OirIGd8P6w4v1tH5GKGUfR1vKxhSCnPN
+AW6YDg1HyhDUB2b6JCLrF1NmWetlM/zPlLoYsynYGad5VZiAdMGJd8ZRi/7ys0Xv
+nMkzbJ7NUC4cKO63EeIaHIXA6H0nEfAGHrEjE9M+gXEB+QoO15VwjN6x+32BHRqF
+5LUmN+On498LBAaKNXZ6W7x3jdWCDRLpetRPen+yJBYl/PIIu1G099MMUdx636BE
+oPTjIokywe9n0gU/QS6R22uUNitr1ycAGd6A2ZID2bF9D0dgY8QWPYtt97gkBBly
+J0M/SNzkNgUciYE53nK3V/qLExWbCIH73GGqyOKeCeHK9NIu5yQoaJ9TN4UU6+E1
+pRJzUdrYxZ+qqEeXQywWjlI0vErncG8/U0a/xNtJ8PBWfJxMzqHfjyGyrSUPy+eC
+HuPT2Hw6pzPUb1krMrxakXok6esIIJcrNJ2bwQUKzNwo67fTaBa5WirkjnIjYg+s
+XZaHxvfWWm4/f7DikLa4hcKE+y1ZGswhQcsKO6yiGxBHXpE3sxmcG1BIJviXBk3/
+jlzK8/RG24Q5Dz0jtic/jQRLlElZeai+Oo7hvHz2aedYmCOecaqOWQ25BGfEA8S/
+/cBM18vlUjxYpCgO7P5RD/kmN9jEUwstwEC8JcZxmB9w22AtYRmhvvFuW9th1ab6
+WVgtYex7hno=Ncxj
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

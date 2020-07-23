@@ -1,0 +1,241 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Low: bluez security update
+Advisory ID:       RHSA-2020:1912-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:1912
+Issue date:        2020-04-28
+CVE Names:         CVE-2018-10910
+====================================================================
+1. Summary:
+
+An update for bluez is now available for Red Hat Enterprise Linux 8.
+
+Red Hat Product Security has rated this update as having a security impact
+of Low. A Common Vulnerability Scoring System (CVSS) base score, which
+gives a detailed severity rating, is available for each vulnerability from
+the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat CodeReady Linux Builder (v. 8) - aarch64, ppc64le, s390x, x86_64
+Red Hat Enterprise Linux AppStream (v. 8) - aarch64, ppc64le, s390x, x86_64
+Red Hat Enterprise Linux BaseOS (v. 8) - aarch64, ppc64le, s390x, x86_64
+
+3. Description:
+
+The bluez packages contain the following utilities for use in Bluetooth
+applications: hcitool, hciattach, hciconfig, bluetoothd, l2ping, start
+scripts (Red Hat), and pcmcia configuration files.
+
+Security Fix(es):
+
+* bluez: failure in disabling Bluetooth discoverability in certain cases
+may lead to the unauthorized pairing of Bluetooth devices (CVE-2018-10910)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+Additional Changes:
+
+For detailed information on changes in this release, see the Red Hat
+Enterprise Linux 8.2 Release Notes linked from the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1606203 - CVE-2018-10910 bluez: failure in disabling Bluetooth discoverability in certain cases may lead to the unauthorized pairing of Bluetooth devices
+
+6. Package List:
+
+Red Hat Enterprise Linux AppStream (v. 8):
+
+aarch64:
+bluez-cups-5.50-3.el8.aarch64.rpm
+bluez-cups-debuginfo-5.50-3.el8.aarch64.rpm
+bluez-debuginfo-5.50-3.el8.aarch64.rpm
+bluez-debugsource-5.50-3.el8.aarch64.rpm
+bluez-hid2hci-debuginfo-5.50-3.el8.aarch64.rpm
+bluez-libs-debuginfo-5.50-3.el8.aarch64.rpm
+bluez-obexd-debuginfo-5.50-3.el8.aarch64.rpm
+
+ppc64le:
+bluez-cups-5.50-3.el8.ppc64le.rpm
+bluez-cups-debuginfo-5.50-3.el8.ppc64le.rpm
+bluez-debuginfo-5.50-3.el8.ppc64le.rpm
+bluez-debugsource-5.50-3.el8.ppc64le.rpm
+bluez-hid2hci-debuginfo-5.50-3.el8.ppc64le.rpm
+bluez-libs-debuginfo-5.50-3.el8.ppc64le.rpm
+bluez-obexd-debuginfo-5.50-3.el8.ppc64le.rpm
+
+s390x:
+bluez-cups-5.50-3.el8.s390x.rpm
+bluez-cups-debuginfo-5.50-3.el8.s390x.rpm
+bluez-debuginfo-5.50-3.el8.s390x.rpm
+bluez-debugsource-5.50-3.el8.s390x.rpm
+bluez-hid2hci-debuginfo-5.50-3.el8.s390x.rpm
+bluez-libs-debuginfo-5.50-3.el8.s390x.rpm
+bluez-obexd-debuginfo-5.50-3.el8.s390x.rpm
+
+x86_64:
+bluez-cups-5.50-3.el8.x86_64.rpm
+bluez-cups-debuginfo-5.50-3.el8.x86_64.rpm
+bluez-debuginfo-5.50-3.el8.x86_64.rpm
+bluez-debugsource-5.50-3.el8.x86_64.rpm
+bluez-hid2hci-debuginfo-5.50-3.el8.x86_64.rpm
+bluez-libs-debuginfo-5.50-3.el8.x86_64.rpm
+bluez-obexd-debuginfo-5.50-3.el8.x86_64.rpm
+
+Red Hat Enterprise Linux BaseOS (v. 8):
+
+Source:
+bluez-5.50-3.el8.src.rpm
+
+aarch64:
+bluez-5.50-3.el8.aarch64.rpm
+bluez-cups-debuginfo-5.50-3.el8.aarch64.rpm
+bluez-debuginfo-5.50-3.el8.aarch64.rpm
+bluez-debugsource-5.50-3.el8.aarch64.rpm
+bluez-hid2hci-5.50-3.el8.aarch64.rpm
+bluez-hid2hci-debuginfo-5.50-3.el8.aarch64.rpm
+bluez-libs-5.50-3.el8.aarch64.rpm
+bluez-libs-debuginfo-5.50-3.el8.aarch64.rpm
+bluez-obexd-5.50-3.el8.aarch64.rpm
+bluez-obexd-debuginfo-5.50-3.el8.aarch64.rpm
+
+ppc64le:
+bluez-5.50-3.el8.ppc64le.rpm
+bluez-cups-debuginfo-5.50-3.el8.ppc64le.rpm
+bluez-debuginfo-5.50-3.el8.ppc64le.rpm
+bluez-debugsource-5.50-3.el8.ppc64le.rpm
+bluez-hid2hci-5.50-3.el8.ppc64le.rpm
+bluez-hid2hci-debuginfo-5.50-3.el8.ppc64le.rpm
+bluez-libs-5.50-3.el8.ppc64le.rpm
+bluez-libs-debuginfo-5.50-3.el8.ppc64le.rpm
+bluez-obexd-5.50-3.el8.ppc64le.rpm
+bluez-obexd-debuginfo-5.50-3.el8.ppc64le.rpm
+
+s390x:
+bluez-5.50-3.el8.s390x.rpm
+bluez-cups-debuginfo-5.50-3.el8.s390x.rpm
+bluez-debuginfo-5.50-3.el8.s390x.rpm
+bluez-debugsource-5.50-3.el8.s390x.rpm
+bluez-hid2hci-5.50-3.el8.s390x.rpm
+bluez-hid2hci-debuginfo-5.50-3.el8.s390x.rpm
+bluez-libs-5.50-3.el8.s390x.rpm
+bluez-libs-debuginfo-5.50-3.el8.s390x.rpm
+bluez-obexd-5.50-3.el8.s390x.rpm
+bluez-obexd-debuginfo-5.50-3.el8.s390x.rpm
+
+x86_64:
+bluez-5.50-3.el8.x86_64.rpm
+bluez-cups-debuginfo-5.50-3.el8.i686.rpm
+bluez-cups-debuginfo-5.50-3.el8.x86_64.rpm
+bluez-debuginfo-5.50-3.el8.i686.rpm
+bluez-debuginfo-5.50-3.el8.x86_64.rpm
+bluez-debugsource-5.50-3.el8.i686.rpm
+bluez-debugsource-5.50-3.el8.x86_64.rpm
+bluez-hid2hci-5.50-3.el8.x86_64.rpm
+bluez-hid2hci-debuginfo-5.50-3.el8.i686.rpm
+bluez-hid2hci-debuginfo-5.50-3.el8.x86_64.rpm
+bluez-libs-5.50-3.el8.i686.rpm
+bluez-libs-5.50-3.el8.x86_64.rpm
+bluez-libs-debuginfo-5.50-3.el8.i686.rpm
+bluez-libs-debuginfo-5.50-3.el8.x86_64.rpm
+bluez-obexd-5.50-3.el8.x86_64.rpm
+bluez-obexd-debuginfo-5.50-3.el8.i686.rpm
+bluez-obexd-debuginfo-5.50-3.el8.x86_64.rpm
+
+Red Hat CodeReady Linux Builder (v. 8):
+
+aarch64:
+bluez-cups-debuginfo-5.50-3.el8.aarch64.rpm
+bluez-debuginfo-5.50-3.el8.aarch64.rpm
+bluez-debugsource-5.50-3.el8.aarch64.rpm
+bluez-hid2hci-debuginfo-5.50-3.el8.aarch64.rpm
+bluez-libs-debuginfo-5.50-3.el8.aarch64.rpm
+bluez-libs-devel-5.50-3.el8.aarch64.rpm
+bluez-obexd-debuginfo-5.50-3.el8.aarch64.rpm
+
+ppc64le:
+bluez-cups-debuginfo-5.50-3.el8.ppc64le.rpm
+bluez-debuginfo-5.50-3.el8.ppc64le.rpm
+bluez-debugsource-5.50-3.el8.ppc64le.rpm
+bluez-hid2hci-debuginfo-5.50-3.el8.ppc64le.rpm
+bluez-libs-debuginfo-5.50-3.el8.ppc64le.rpm
+bluez-libs-devel-5.50-3.el8.ppc64le.rpm
+bluez-obexd-debuginfo-5.50-3.el8.ppc64le.rpm
+
+s390x:
+bluez-cups-debuginfo-5.50-3.el8.s390x.rpm
+bluez-debuginfo-5.50-3.el8.s390x.rpm
+bluez-debugsource-5.50-3.el8.s390x.rpm
+bluez-hid2hci-debuginfo-5.50-3.el8.s390x.rpm
+bluez-libs-debuginfo-5.50-3.el8.s390x.rpm
+bluez-libs-devel-5.50-3.el8.s390x.rpm
+bluez-obexd-debuginfo-5.50-3.el8.s390x.rpm
+
+x86_64:
+bluez-cups-debuginfo-5.50-3.el8.i686.rpm
+bluez-cups-debuginfo-5.50-3.el8.x86_64.rpm
+bluez-debuginfo-5.50-3.el8.i686.rpm
+bluez-debuginfo-5.50-3.el8.x86_64.rpm
+bluez-debugsource-5.50-3.el8.i686.rpm
+bluez-debugsource-5.50-3.el8.x86_64.rpm
+bluez-hid2hci-debuginfo-5.50-3.el8.i686.rpm
+bluez-hid2hci-debuginfo-5.50-3.el8.x86_64.rpm
+bluez-libs-debuginfo-5.50-3.el8.i686.rpm
+bluez-libs-debuginfo-5.50-3.el8.x86_64.rpm
+bluez-libs-devel-5.50-3.el8.i686.rpm
+bluez-libs-devel-5.50-3.el8.x86_64.rpm
+bluez-obexd-debuginfo-5.50-3.el8.i686.rpm
+bluez-obexd-debuginfo-5.50-3.el8.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2018-10910
+https://access.redhat.com/security/updates/classification/#low
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/8.2_release_notes/index
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXqhWFtzjgjWX9erEAQjAXw/7BcONwkUZ3xLEhWU7OR4AP2TztDZRIxHz
+7TmKzJZdM07mJV/ijPSRjeAcbgms4W1NtuFwixEh3galusz2w/lIltCe/vgzxTfm
+Dk2/zZdW4sd6u1pewkoFgtAqMrJUvGx4NtWuzDJBs2aQ1P8l1W8vm0hcypxDdFwb
+4PwVo15ieclpe3n/r7Yd15cVZO2Stdg1HDA6+W1triMtExOAm7c04Wo7F7tJB6cz
+vbe9+Z0o3H8tTZDqouA24Spp1rKyqfuHj6qx+bClHChC15v7cmoUDwYvQNqtE35f
+TwFbr3TVOOf7uIKYKInexjYnioRzoGziYIAjzIKAwgbrOnprBscM+l3U8YzIsO75
+LQY/rxLjRxPg9WNQwSHNhyGUti5soeUngeCiWzU2j6iOB4Q/el2hcwpOYuDOuL3x
+V3ozWZrUmbzJuIUPGQ/dvzF+/8MdSORvXRcsoMBnD9NmjvZk8WN9iHWbjyNrY12g
+KGvNF8L5JiqPCWgE3Eh0SqjBXVJAqid9RpEs7PnA/UR4x8eGYN3iUcLq7VwiNjVS
+imuId7S8ump/+j4SY9zk3HAfZG3Dh3vuwZcxi4/oJBPTbtb1W8P3Tu5Kvhqy5NPK
+9bAwC+iQLT2gnB4Z1QdakVr1jl9TiTOtKzqVB6JhGwDdb7cu1QJt0+nQYxLPqsvD
+lYl4MsM5ShA=pix5
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

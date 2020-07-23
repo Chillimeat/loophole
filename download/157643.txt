@@ -1,0 +1,161 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Important: Red Hat JBoss Enterprise Application Platform 7.2 security update
+Advisory ID:       RHSA-2020:2063-01
+Product:           Red Hat JBoss Enterprise Application Platform
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:2063
+Issue date:        2020-05-11
+CVE Names:         CVE-2018-14371 CVE-2019-10174
+====================================================================
+1. Summary:
+
+An update is now available for Red Hat JBoss Enterprise Application
+Platform 7.2 for Red Hat Enterprise Linux 6, 7, and 8.
+
+Red Hat Product Security has rated this update as having a security impact
+of Important. A Common Vulnerability Scoring System (CVSS) base score,
+which gives a detailed severity rating, is available for each vulnerability
+from the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat JBoss EAP 7.2 for RHEL 6 Server - noarch
+Red Hat JBoss EAP 7.2 for RHEL 7 Server - noarch
+Red Hat JBoss EAP 7.2 for RHEL 8 - noarch
+
+3. Description:
+
+Red Hat JBoss Enterprise Application Platform 7 is a platform for Java
+applications based on the WildFly application runtime.
+
+This asynchronous patch is a security update for the Infinispan package in
+Red Hat JBoss Enterprise Application Platform 7.2 for Red Hat Enterprise
+Linux 6, 7, and 8.
+
+Security Fix(es):
+
+* infinispan-core: infinispan: invokeAccessibly method from ReflectionUtil
+class allows to invoke private methods (CVE-2019-10174)
+
+* jsf-impl: mojarra: Path traversal in
+ResourceManager.java:getLocalePrefix() via the loc parameter
+(CVE-2018-14371)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, and other related information, see the CVE page(s) listed in the
+References section.
+
+4. Solution:
+
+Before applying this update, back up your existing Red Hat JBoss Enterprise
+Application Platform installation and deployed applications.
+
+You must restart the JBoss server process for the update to take effect.
+
+For details about how to apply this update, see:
+https://access.redhat.com/articles/11258
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1607709 - CVE-2018-14371 mojarra: Path traversal in ResourceManager.java:getLocalePrefix() via the loc parameter
+1703469 - CVE-2019-10174 infinispan: invokeAccessibly method from ReflectionUtil class allows to invoke private methods
+
+6. Package List:
+
+Red Hat JBoss EAP 7.2 for RHEL 6 Server:
+
+Source:
+eap7-glassfish-jsf-2.3.5-11.SP3_redhat_00009.1.el6eap.src.rpm
+eap7-infinispan-9.3.9-1.Final_redhat_00001.1.el6eap.src.rpm
+
+noarch:
+eap7-glassfish-jsf-2.3.5-11.SP3_redhat_00009.1.el6eap.noarch.rpm
+eap7-infinispan-9.3.9-1.Final_redhat_00001.1.el6eap.noarch.rpm
+eap7-infinispan-cachestore-jdbc-9.3.9-1.Final_redhat_00001.1.el6eap.noarch.rpm
+eap7-infinispan-cachestore-remote-9.3.9-1.Final_redhat_00001.1.el6eap.noarch.rpm
+eap7-infinispan-client-hotrod-9.3.9-1.Final_redhat_00001.1.el6eap.noarch.rpm
+eap7-infinispan-commons-9.3.9-1.Final_redhat_00001.1.el6eap.noarch.rpm
+eap7-infinispan-core-9.3.9-1.Final_redhat_00001.1.el6eap.noarch.rpm
+eap7-infinispan-hibernate-cache-commons-9.3.9-1.Final_redhat_00001.1.el6eap.noarch.rpm
+eap7-infinispan-hibernate-cache-spi-9.3.9-1.Final_redhat_00001.1.el6eap.noarch.rpm
+eap7-infinispan-hibernate-cache-v53-9.3.9-1.Final_redhat_00001.1.el6eap.noarch.rpm
+
+Red Hat JBoss EAP 7.2 for RHEL 7 Server:
+
+Source:
+eap7-glassfish-jsf-2.3.5-11.SP3_redhat_00009.1.el7eap.src.rpm
+eap7-infinispan-9.3.9-1.Final_redhat_00001.1.el7eap.src.rpm
+
+noarch:
+eap7-glassfish-jsf-2.3.5-11.SP3_redhat_00009.1.el7eap.noarch.rpm
+eap7-infinispan-9.3.9-1.Final_redhat_00001.1.el7eap.noarch.rpm
+eap7-infinispan-cachestore-jdbc-9.3.9-1.Final_redhat_00001.1.el7eap.noarch.rpm
+eap7-infinispan-cachestore-remote-9.3.9-1.Final_redhat_00001.1.el7eap.noarch.rpm
+eap7-infinispan-client-hotrod-9.3.9-1.Final_redhat_00001.1.el7eap.noarch.rpm
+eap7-infinispan-commons-9.3.9-1.Final_redhat_00001.1.el7eap.noarch.rpm
+eap7-infinispan-core-9.3.9-1.Final_redhat_00001.1.el7eap.noarch.rpm
+eap7-infinispan-hibernate-cache-commons-9.3.9-1.Final_redhat_00001.1.el7eap.noarch.rpm
+eap7-infinispan-hibernate-cache-spi-9.3.9-1.Final_redhat_00001.1.el7eap.noarch.rpm
+eap7-infinispan-hibernate-cache-v53-9.3.9-1.Final_redhat_00001.1.el7eap.noarch.rpm
+
+Red Hat JBoss EAP 7.2 for RHEL 8:
+
+Source:
+eap7-glassfish-jsf-2.3.5-11.SP3_redhat_00009.1.el8eap.src.rpm
+eap7-infinispan-9.3.9-1.Final_redhat_00001.1.el8eap.src.rpm
+
+noarch:
+eap7-glassfish-jsf-2.3.5-11.SP3_redhat_00009.1.el8eap.noarch.rpm
+eap7-infinispan-9.3.9-1.Final_redhat_00001.1.el8eap.noarch.rpm
+eap7-infinispan-cachestore-jdbc-9.3.9-1.Final_redhat_00001.1.el8eap.noarch.rpm
+eap7-infinispan-cachestore-remote-9.3.9-1.Final_redhat_00001.1.el8eap.noarch.rpm
+eap7-infinispan-client-hotrod-9.3.9-1.Final_redhat_00001.1.el8eap.noarch.rpm
+eap7-infinispan-commons-9.3.9-1.Final_redhat_00001.1.el8eap.noarch.rpm
+eap7-infinispan-core-9.3.9-1.Final_redhat_00001.1.el8eap.noarch.rpm
+eap7-infinispan-hibernate-cache-commons-9.3.9-1.Final_redhat_00001.1.el8eap.noarch.rpm
+eap7-infinispan-hibernate-cache-spi-9.3.9-1.Final_redhat_00001.1.el8eap.noarch.rpm
+eap7-infinispan-hibernate-cache-v53-9.3.9-1.Final_redhat_00001.1.el8eap.noarch.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2018-14371
+https://access.redhat.com/security/cve/CVE-2019-10174
+https://access.redhat.com/security/updates/classification/#important
+https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.2/
+https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.2/html-single/installation_guide/
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXrm2utzjgjWX9erEAQhMohAAoW6YbLa5h4dPGbSFSGNIjEkozJQ/4ix0
+2sEpnzURBt5YGCwK3Dg1kl+nSBBrmQIPHnHRLz8HBTG37ALHXVDFryscEGMJPAT+
+QBcTBPZ1XM41WFEpko3TFHzAi5kebbwnUcjGyqkMMlqqdKJwuMRHD2T/K+xihapx
+GwTQxk3j1j1j2bS70sbyleLmw639PzXahjbZuZ+6CGxxkqi1Kv8spxCd3ZYhIktp
+sTaPz6bAc/WWRuBcDXx9ziHORkYRttxh373rYSRi/aywmk7CNgJ+MnN+ZOnrJuIy
+8ekCMzCG7hHbu4mEJsMgH2czf2R99pOcNQ/f6WXjVlw1bYwdrjGEqOaDZD9nROxy
+fevAkVlLhWqi5mq3ju2LiLKn3T9N0LBi/816Aa+0EyX3i2xpxfi+E1Fqw06l58HH
+tMoKqy5C23Hvk9n7iwnuLOTK3ItV1dQLcJwrR65Y33gIZvn0EGy/YXXjbj3Xa/Rz
+Y6Z7fQfuqRnm8LhNvdlLXJwqAjXQ0nKE5M/iXsHJYO9jbKKMV2xzX3DAoGSzzFa3
+sod/jK8EihZJ51RGLSPW0XcXIjjynspfijWiEwslEfm55XH1FTomTiJepoEl2BkZ
+/M2INlEYq3lglyy8BAEYJGqzsC1ryQbqsMdOAG29XXq2DpnLxiJoG+YKI6MAVXgW
+9PVNKg0mZYc=ewdT
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

@@ -1,0 +1,162 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Moderate: zziplib security update
+Advisory ID:       RHSA-2020:1653-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:1653
+Issue date:        2020-04-28
+CVE Names:         CVE-2018-17828
+====================================================================
+1. Summary:
+
+An update for zziplib is now available for Red Hat Enterprise Linux 8.
+
+Red Hat Product Security has rated this update as having a security impact
+of Moderate. A Common Vulnerability Scoring System (CVSS) base score, which
+gives a detailed severity rating, is available for each vulnerability from
+the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat CodeReady Linux Builder (v. 8) - aarch64, ppc64le, s390x, x86_64
+Red Hat Enterprise Linux AppStream (v. 8) - aarch64, ppc64le, s390x, x86_64
+
+3. Description:
+
+The zziplib is a lightweight library to easily extract data from zip files.
+
+Security Fix(es):
+
+* zziplib: directory traversal in unzzip_cat in the bins/unzzipcat-mem.c
+(CVE-2018-17828)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+Additional Changes:
+
+For detailed information on changes in this release, see the Red Hat
+Enterprise Linux 8.2 Release Notes linked from the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1635888 - CVE-2018-17828 zziplib: directory traversal in unzzip_cat in the bins/unzzipcat-mem.c
+
+6. Package List:
+
+Red Hat Enterprise Linux AppStream (v. 8):
+
+Source:
+zziplib-0.13.68-8.el8.src.rpm
+
+aarch64:
+zziplib-0.13.68-8.el8.aarch64.rpm
+zziplib-debuginfo-0.13.68-8.el8.aarch64.rpm
+zziplib-debugsource-0.13.68-8.el8.aarch64.rpm
+zziplib-utils-0.13.68-8.el8.aarch64.rpm
+zziplib-utils-debuginfo-0.13.68-8.el8.aarch64.rpm
+
+ppc64le:
+zziplib-0.13.68-8.el8.ppc64le.rpm
+zziplib-debuginfo-0.13.68-8.el8.ppc64le.rpm
+zziplib-debugsource-0.13.68-8.el8.ppc64le.rpm
+zziplib-utils-0.13.68-8.el8.ppc64le.rpm
+zziplib-utils-debuginfo-0.13.68-8.el8.ppc64le.rpm
+
+s390x:
+zziplib-0.13.68-8.el8.s390x.rpm
+zziplib-debuginfo-0.13.68-8.el8.s390x.rpm
+zziplib-debugsource-0.13.68-8.el8.s390x.rpm
+zziplib-utils-0.13.68-8.el8.s390x.rpm
+zziplib-utils-debuginfo-0.13.68-8.el8.s390x.rpm
+
+x86_64:
+zziplib-0.13.68-8.el8.i686.rpm
+zziplib-0.13.68-8.el8.x86_64.rpm
+zziplib-debuginfo-0.13.68-8.el8.i686.rpm
+zziplib-debuginfo-0.13.68-8.el8.x86_64.rpm
+zziplib-debugsource-0.13.68-8.el8.i686.rpm
+zziplib-debugsource-0.13.68-8.el8.x86_64.rpm
+zziplib-utils-0.13.68-8.el8.x86_64.rpm
+zziplib-utils-debuginfo-0.13.68-8.el8.i686.rpm
+zziplib-utils-debuginfo-0.13.68-8.el8.x86_64.rpm
+
+Red Hat CodeReady Linux Builder (v. 8):
+
+aarch64:
+zziplib-debuginfo-0.13.68-8.el8.aarch64.rpm
+zziplib-debugsource-0.13.68-8.el8.aarch64.rpm
+zziplib-devel-0.13.68-8.el8.aarch64.rpm
+zziplib-utils-debuginfo-0.13.68-8.el8.aarch64.rpm
+
+ppc64le:
+zziplib-debuginfo-0.13.68-8.el8.ppc64le.rpm
+zziplib-debugsource-0.13.68-8.el8.ppc64le.rpm
+zziplib-devel-0.13.68-8.el8.ppc64le.rpm
+zziplib-utils-debuginfo-0.13.68-8.el8.ppc64le.rpm
+
+s390x:
+zziplib-debuginfo-0.13.68-8.el8.s390x.rpm
+zziplib-debugsource-0.13.68-8.el8.s390x.rpm
+zziplib-devel-0.13.68-8.el8.s390x.rpm
+zziplib-utils-debuginfo-0.13.68-8.el8.s390x.rpm
+
+x86_64:
+zziplib-debuginfo-0.13.68-8.el8.i686.rpm
+zziplib-debuginfo-0.13.68-8.el8.x86_64.rpm
+zziplib-debugsource-0.13.68-8.el8.i686.rpm
+zziplib-debugsource-0.13.68-8.el8.x86_64.rpm
+zziplib-devel-0.13.68-8.el8.i686.rpm
+zziplib-devel-0.13.68-8.el8.x86_64.rpm
+zziplib-utils-debuginfo-0.13.68-8.el8.i686.rpm
+zziplib-utils-debuginfo-0.13.68-8.el8.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2018-17828
+https://access.redhat.com/security/updates/classification/#moderate
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/8.2_release_notes/index
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXqhWC9zjgjWX9erEAQhcbg//UCzKcCtD2pOgfVM+NUZbw5NmDwZ2zsVj
+HdTyLIjWaPUVdzkQiRV1QZkswZqeK9ZtQw2TbXT8l7mLwIrl1k92FsRRn+SedAq/
+h0tAp1ZEsNhVO7GSdy7b7WeVrdSkIDndV8Tll2Qdd4I91t/D5z51fla7Uy0L5xxd
+GYzKOT0VCi13se0BuktO3Ba1n9Lg8R4dSljMlz3U/K5U8RxMxjfjkBsvlf6ac4sK
+C+SYCSxBZD5tpI4rN4xuN3ngYfAn3VnBtYSBJBZlauZfT+977VpDL+g+lSzBW8Kn
+Decz9CpUzGH1onaAu5EL85HFzFq3APtj4PNBl0ImGxiJCb+5E5Jl0r7PWrVyeEuk
+jXH4w6dkwwGsq735n4i5VJV/XMr6Yu7EG4StYLObDALd/1CNlaPfD3Io4a0Gj7ex
+KsYuKJaf955nWTJHZwNcMmk//q3iildkKSvYsLxjJ8Mg0usyyDKviBBTkXV28Jvv
+kuTsExvGnXp2+Z2x5d9CGtfP71k4H4xMUd3r0NKCM6ZT/CO99VLCpUKzij1X03wa
+ypr4IaRjp0e0s8kkE7977Ppm1Fu3FNTAxqR147hvh4THQ/BRLSUsEzbBgOB4414+
+UIUfoRkkPwj2R7lavVLu+NkWjUmvBKuyxIcoGzYoeQ3CvPoE83J3n6FxPEhEob5m
+qodBPAMmd9s=q72D
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

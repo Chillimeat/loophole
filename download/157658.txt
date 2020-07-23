@@ -1,0 +1,366 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+=====================================================================
+                   Red Hat Security Advisory
+
+Synopsis:          Important: kernel security update
+Advisory ID:       RHSA-2020:2103-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:2103
+Issue date:        2020-05-12
+CVE Names:         CVE-2020-10711 
+=====================================================================
+
+1. Summary:
+
+An update for kernel is now available for Red Hat Enterprise Linux 6.
+
+Red Hat Product Security has rated this update as having a security impact
+of Important. A Common Vulnerability Scoring System (CVSS) base score,
+which gives a detailed severity rating, is available for each vulnerability
+from the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Enterprise Linux Desktop (v. 6) - i386, noarch, x86_64
+Red Hat Enterprise Linux Desktop Optional (v. 6) - i386, x86_64
+Red Hat Enterprise Linux HPC Node (v. 6) - noarch, x86_64
+Red Hat Enterprise Linux HPC Node Optional (v. 6) - x86_64
+Red Hat Enterprise Linux Server (v. 6) - i386, noarch, ppc64, s390x, x86_64
+Red Hat Enterprise Linux Server Optional (v. 6) - i386, ppc64, s390x, x86_64
+Red Hat Enterprise Linux Workstation (v. 6) - i386, noarch, x86_64
+Red Hat Enterprise Linux Workstation Optional (v. 6) - i386, x86_64
+
+3. Description:
+
+The kernel packages contain the Linux kernel, the core of any Linux
+operating system.
+
+Security Fix(es):
+
+* Kernel: NetLabel: null pointer dereference while receiving CIPSO packet
+with null category may cause kernel panic (CVE-2020-10711)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+The system must be rebooted for this update to take effect.
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1825116 - CVE-2020-10711 Kernel: NetLabel: null pointer dereference while receiving CIPSO packet with null category may cause kernel panic
+
+6. Package List:
+
+Red Hat Enterprise Linux Desktop (v. 6):
+
+Source:
+kernel-2.6.32-754.29.2.el6.src.rpm
+
+i386:
+kernel-2.6.32-754.29.2.el6.i686.rpm
+kernel-debug-2.6.32-754.29.2.el6.i686.rpm
+kernel-debug-debuginfo-2.6.32-754.29.2.el6.i686.rpm
+kernel-debug-devel-2.6.32-754.29.2.el6.i686.rpm
+kernel-debuginfo-2.6.32-754.29.2.el6.i686.rpm
+kernel-debuginfo-common-i686-2.6.32-754.29.2.el6.i686.rpm
+kernel-devel-2.6.32-754.29.2.el6.i686.rpm
+kernel-headers-2.6.32-754.29.2.el6.i686.rpm
+perf-2.6.32-754.29.2.el6.i686.rpm
+perf-debuginfo-2.6.32-754.29.2.el6.i686.rpm
+python-perf-debuginfo-2.6.32-754.29.2.el6.i686.rpm
+
+noarch:
+kernel-abi-whitelists-2.6.32-754.29.2.el6.noarch.rpm
+kernel-doc-2.6.32-754.29.2.el6.noarch.rpm
+kernel-firmware-2.6.32-754.29.2.el6.noarch.rpm
+
+x86_64:
+kernel-2.6.32-754.29.2.el6.x86_64.rpm
+kernel-debug-2.6.32-754.29.2.el6.x86_64.rpm
+kernel-debug-debuginfo-2.6.32-754.29.2.el6.i686.rpm
+kernel-debug-debuginfo-2.6.32-754.29.2.el6.x86_64.rpm
+kernel-debug-devel-2.6.32-754.29.2.el6.i686.rpm
+kernel-debug-devel-2.6.32-754.29.2.el6.x86_64.rpm
+kernel-debuginfo-2.6.32-754.29.2.el6.i686.rpm
+kernel-debuginfo-2.6.32-754.29.2.el6.x86_64.rpm
+kernel-debuginfo-common-i686-2.6.32-754.29.2.el6.i686.rpm
+kernel-debuginfo-common-x86_64-2.6.32-754.29.2.el6.x86_64.rpm
+kernel-devel-2.6.32-754.29.2.el6.x86_64.rpm
+kernel-headers-2.6.32-754.29.2.el6.x86_64.rpm
+perf-2.6.32-754.29.2.el6.x86_64.rpm
+perf-debuginfo-2.6.32-754.29.2.el6.i686.rpm
+perf-debuginfo-2.6.32-754.29.2.el6.x86_64.rpm
+python-perf-debuginfo-2.6.32-754.29.2.el6.i686.rpm
+python-perf-debuginfo-2.6.32-754.29.2.el6.x86_64.rpm
+
+Red Hat Enterprise Linux Desktop Optional (v. 6):
+
+i386:
+kernel-debug-debuginfo-2.6.32-754.29.2.el6.i686.rpm
+kernel-debuginfo-2.6.32-754.29.2.el6.i686.rpm
+kernel-debuginfo-common-i686-2.6.32-754.29.2.el6.i686.rpm
+perf-debuginfo-2.6.32-754.29.2.el6.i686.rpm
+python-perf-2.6.32-754.29.2.el6.i686.rpm
+python-perf-debuginfo-2.6.32-754.29.2.el6.i686.rpm
+
+x86_64:
+kernel-debug-debuginfo-2.6.32-754.29.2.el6.x86_64.rpm
+kernel-debuginfo-2.6.32-754.29.2.el6.x86_64.rpm
+kernel-debuginfo-common-x86_64-2.6.32-754.29.2.el6.x86_64.rpm
+perf-debuginfo-2.6.32-754.29.2.el6.x86_64.rpm
+python-perf-2.6.32-754.29.2.el6.x86_64.rpm
+python-perf-debuginfo-2.6.32-754.29.2.el6.x86_64.rpm
+
+Red Hat Enterprise Linux HPC Node (v. 6):
+
+Source:
+kernel-2.6.32-754.29.2.el6.src.rpm
+
+noarch:
+kernel-abi-whitelists-2.6.32-754.29.2.el6.noarch.rpm
+kernel-doc-2.6.32-754.29.2.el6.noarch.rpm
+kernel-firmware-2.6.32-754.29.2.el6.noarch.rpm
+
+x86_64:
+kernel-2.6.32-754.29.2.el6.x86_64.rpm
+kernel-debug-2.6.32-754.29.2.el6.x86_64.rpm
+kernel-debug-debuginfo-2.6.32-754.29.2.el6.i686.rpm
+kernel-debug-debuginfo-2.6.32-754.29.2.el6.x86_64.rpm
+kernel-debug-devel-2.6.32-754.29.2.el6.i686.rpm
+kernel-debug-devel-2.6.32-754.29.2.el6.x86_64.rpm
+kernel-debuginfo-2.6.32-754.29.2.el6.i686.rpm
+kernel-debuginfo-2.6.32-754.29.2.el6.x86_64.rpm
+kernel-debuginfo-common-i686-2.6.32-754.29.2.el6.i686.rpm
+kernel-debuginfo-common-x86_64-2.6.32-754.29.2.el6.x86_64.rpm
+kernel-devel-2.6.32-754.29.2.el6.x86_64.rpm
+kernel-headers-2.6.32-754.29.2.el6.x86_64.rpm
+perf-2.6.32-754.29.2.el6.x86_64.rpm
+perf-debuginfo-2.6.32-754.29.2.el6.i686.rpm
+perf-debuginfo-2.6.32-754.29.2.el6.x86_64.rpm
+python-perf-debuginfo-2.6.32-754.29.2.el6.i686.rpm
+python-perf-debuginfo-2.6.32-754.29.2.el6.x86_64.rpm
+
+Red Hat Enterprise Linux HPC Node Optional (v. 6):
+
+x86_64:
+kernel-debug-debuginfo-2.6.32-754.29.2.el6.x86_64.rpm
+kernel-debuginfo-2.6.32-754.29.2.el6.x86_64.rpm
+kernel-debuginfo-common-x86_64-2.6.32-754.29.2.el6.x86_64.rpm
+perf-debuginfo-2.6.32-754.29.2.el6.x86_64.rpm
+python-perf-2.6.32-754.29.2.el6.x86_64.rpm
+python-perf-debuginfo-2.6.32-754.29.2.el6.x86_64.rpm
+
+Red Hat Enterprise Linux Server (v. 6):
+
+Source:
+kernel-2.6.32-754.29.2.el6.src.rpm
+
+i386:
+kernel-2.6.32-754.29.2.el6.i686.rpm
+kernel-debug-2.6.32-754.29.2.el6.i686.rpm
+kernel-debug-debuginfo-2.6.32-754.29.2.el6.i686.rpm
+kernel-debug-devel-2.6.32-754.29.2.el6.i686.rpm
+kernel-debuginfo-2.6.32-754.29.2.el6.i686.rpm
+kernel-debuginfo-common-i686-2.6.32-754.29.2.el6.i686.rpm
+kernel-devel-2.6.32-754.29.2.el6.i686.rpm
+kernel-headers-2.6.32-754.29.2.el6.i686.rpm
+perf-2.6.32-754.29.2.el6.i686.rpm
+perf-debuginfo-2.6.32-754.29.2.el6.i686.rpm
+python-perf-debuginfo-2.6.32-754.29.2.el6.i686.rpm
+
+noarch:
+kernel-abi-whitelists-2.6.32-754.29.2.el6.noarch.rpm
+kernel-doc-2.6.32-754.29.2.el6.noarch.rpm
+kernel-firmware-2.6.32-754.29.2.el6.noarch.rpm
+
+ppc64:
+kernel-2.6.32-754.29.2.el6.ppc64.rpm
+kernel-bootwrapper-2.6.32-754.29.2.el6.ppc64.rpm
+kernel-debug-2.6.32-754.29.2.el6.ppc64.rpm
+kernel-debug-debuginfo-2.6.32-754.29.2.el6.ppc64.rpm
+kernel-debug-devel-2.6.32-754.29.2.el6.ppc64.rpm
+kernel-debuginfo-2.6.32-754.29.2.el6.ppc64.rpm
+kernel-debuginfo-common-ppc64-2.6.32-754.29.2.el6.ppc64.rpm
+kernel-devel-2.6.32-754.29.2.el6.ppc64.rpm
+kernel-headers-2.6.32-754.29.2.el6.ppc64.rpm
+perf-2.6.32-754.29.2.el6.ppc64.rpm
+perf-debuginfo-2.6.32-754.29.2.el6.ppc64.rpm
+python-perf-debuginfo-2.6.32-754.29.2.el6.ppc64.rpm
+
+s390x:
+kernel-2.6.32-754.29.2.el6.s390x.rpm
+kernel-debug-2.6.32-754.29.2.el6.s390x.rpm
+kernel-debug-debuginfo-2.6.32-754.29.2.el6.s390x.rpm
+kernel-debug-devel-2.6.32-754.29.2.el6.s390x.rpm
+kernel-debuginfo-2.6.32-754.29.2.el6.s390x.rpm
+kernel-debuginfo-common-s390x-2.6.32-754.29.2.el6.s390x.rpm
+kernel-devel-2.6.32-754.29.2.el6.s390x.rpm
+kernel-headers-2.6.32-754.29.2.el6.s390x.rpm
+kernel-kdump-2.6.32-754.29.2.el6.s390x.rpm
+kernel-kdump-debuginfo-2.6.32-754.29.2.el6.s390x.rpm
+kernel-kdump-devel-2.6.32-754.29.2.el6.s390x.rpm
+perf-2.6.32-754.29.2.el6.s390x.rpm
+perf-debuginfo-2.6.32-754.29.2.el6.s390x.rpm
+python-perf-debuginfo-2.6.32-754.29.2.el6.s390x.rpm
+
+x86_64:
+kernel-2.6.32-754.29.2.el6.x86_64.rpm
+kernel-debug-2.6.32-754.29.2.el6.x86_64.rpm
+kernel-debug-debuginfo-2.6.32-754.29.2.el6.i686.rpm
+kernel-debug-debuginfo-2.6.32-754.29.2.el6.x86_64.rpm
+kernel-debug-devel-2.6.32-754.29.2.el6.i686.rpm
+kernel-debug-devel-2.6.32-754.29.2.el6.x86_64.rpm
+kernel-debuginfo-2.6.32-754.29.2.el6.i686.rpm
+kernel-debuginfo-2.6.32-754.29.2.el6.x86_64.rpm
+kernel-debuginfo-common-i686-2.6.32-754.29.2.el6.i686.rpm
+kernel-debuginfo-common-x86_64-2.6.32-754.29.2.el6.x86_64.rpm
+kernel-devel-2.6.32-754.29.2.el6.x86_64.rpm
+kernel-headers-2.6.32-754.29.2.el6.x86_64.rpm
+perf-2.6.32-754.29.2.el6.x86_64.rpm
+perf-debuginfo-2.6.32-754.29.2.el6.i686.rpm
+perf-debuginfo-2.6.32-754.29.2.el6.x86_64.rpm
+python-perf-debuginfo-2.6.32-754.29.2.el6.i686.rpm
+python-perf-debuginfo-2.6.32-754.29.2.el6.x86_64.rpm
+
+Red Hat Enterprise Linux Server Optional (v. 6):
+
+i386:
+kernel-debug-debuginfo-2.6.32-754.29.2.el6.i686.rpm
+kernel-debuginfo-2.6.32-754.29.2.el6.i686.rpm
+kernel-debuginfo-common-i686-2.6.32-754.29.2.el6.i686.rpm
+perf-debuginfo-2.6.32-754.29.2.el6.i686.rpm
+python-perf-2.6.32-754.29.2.el6.i686.rpm
+python-perf-debuginfo-2.6.32-754.29.2.el6.i686.rpm
+
+ppc64:
+kernel-debug-debuginfo-2.6.32-754.29.2.el6.ppc64.rpm
+kernel-debuginfo-2.6.32-754.29.2.el6.ppc64.rpm
+kernel-debuginfo-common-ppc64-2.6.32-754.29.2.el6.ppc64.rpm
+perf-debuginfo-2.6.32-754.29.2.el6.ppc64.rpm
+python-perf-2.6.32-754.29.2.el6.ppc64.rpm
+python-perf-debuginfo-2.6.32-754.29.2.el6.ppc64.rpm
+
+s390x:
+kernel-debug-debuginfo-2.6.32-754.29.2.el6.s390x.rpm
+kernel-debuginfo-2.6.32-754.29.2.el6.s390x.rpm
+kernel-debuginfo-common-s390x-2.6.32-754.29.2.el6.s390x.rpm
+kernel-kdump-debuginfo-2.6.32-754.29.2.el6.s390x.rpm
+perf-debuginfo-2.6.32-754.29.2.el6.s390x.rpm
+python-perf-2.6.32-754.29.2.el6.s390x.rpm
+python-perf-debuginfo-2.6.32-754.29.2.el6.s390x.rpm
+
+x86_64:
+kernel-debug-debuginfo-2.6.32-754.29.2.el6.x86_64.rpm
+kernel-debuginfo-2.6.32-754.29.2.el6.x86_64.rpm
+kernel-debuginfo-common-x86_64-2.6.32-754.29.2.el6.x86_64.rpm
+perf-debuginfo-2.6.32-754.29.2.el6.x86_64.rpm
+python-perf-2.6.32-754.29.2.el6.x86_64.rpm
+python-perf-debuginfo-2.6.32-754.29.2.el6.x86_64.rpm
+
+Red Hat Enterprise Linux Workstation (v. 6):
+
+Source:
+kernel-2.6.32-754.29.2.el6.src.rpm
+
+i386:
+kernel-2.6.32-754.29.2.el6.i686.rpm
+kernel-debug-2.6.32-754.29.2.el6.i686.rpm
+kernel-debug-debuginfo-2.6.32-754.29.2.el6.i686.rpm
+kernel-debug-devel-2.6.32-754.29.2.el6.i686.rpm
+kernel-debuginfo-2.6.32-754.29.2.el6.i686.rpm
+kernel-debuginfo-common-i686-2.6.32-754.29.2.el6.i686.rpm
+kernel-devel-2.6.32-754.29.2.el6.i686.rpm
+kernel-headers-2.6.32-754.29.2.el6.i686.rpm
+perf-2.6.32-754.29.2.el6.i686.rpm
+perf-debuginfo-2.6.32-754.29.2.el6.i686.rpm
+python-perf-debuginfo-2.6.32-754.29.2.el6.i686.rpm
+
+noarch:
+kernel-abi-whitelists-2.6.32-754.29.2.el6.noarch.rpm
+kernel-doc-2.6.32-754.29.2.el6.noarch.rpm
+kernel-firmware-2.6.32-754.29.2.el6.noarch.rpm
+
+x86_64:
+kernel-2.6.32-754.29.2.el6.x86_64.rpm
+kernel-debug-2.6.32-754.29.2.el6.x86_64.rpm
+kernel-debug-debuginfo-2.6.32-754.29.2.el6.i686.rpm
+kernel-debug-debuginfo-2.6.32-754.29.2.el6.x86_64.rpm
+kernel-debug-devel-2.6.32-754.29.2.el6.i686.rpm
+kernel-debug-devel-2.6.32-754.29.2.el6.x86_64.rpm
+kernel-debuginfo-2.6.32-754.29.2.el6.i686.rpm
+kernel-debuginfo-2.6.32-754.29.2.el6.x86_64.rpm
+kernel-debuginfo-common-i686-2.6.32-754.29.2.el6.i686.rpm
+kernel-debuginfo-common-x86_64-2.6.32-754.29.2.el6.x86_64.rpm
+kernel-devel-2.6.32-754.29.2.el6.x86_64.rpm
+kernel-headers-2.6.32-754.29.2.el6.x86_64.rpm
+perf-2.6.32-754.29.2.el6.x86_64.rpm
+perf-debuginfo-2.6.32-754.29.2.el6.i686.rpm
+perf-debuginfo-2.6.32-754.29.2.el6.x86_64.rpm
+python-perf-debuginfo-2.6.32-754.29.2.el6.i686.rpm
+python-perf-debuginfo-2.6.32-754.29.2.el6.x86_64.rpm
+
+Red Hat Enterprise Linux Workstation Optional (v. 6):
+
+i386:
+kernel-debug-debuginfo-2.6.32-754.29.2.el6.i686.rpm
+kernel-debuginfo-2.6.32-754.29.2.el6.i686.rpm
+kernel-debuginfo-common-i686-2.6.32-754.29.2.el6.i686.rpm
+perf-debuginfo-2.6.32-754.29.2.el6.i686.rpm
+python-perf-2.6.32-754.29.2.el6.i686.rpm
+python-perf-debuginfo-2.6.32-754.29.2.el6.i686.rpm
+
+x86_64:
+kernel-debug-debuginfo-2.6.32-754.29.2.el6.x86_64.rpm
+kernel-debuginfo-2.6.32-754.29.2.el6.x86_64.rpm
+kernel-debuginfo-common-x86_64-2.6.32-754.29.2.el6.x86_64.rpm
+perf-debuginfo-2.6.32-754.29.2.el6.x86_64.rpm
+python-perf-2.6.32-754.29.2.el6.x86_64.rpm
+python-perf-debuginfo-2.6.32-754.29.2.el6.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2020-10711
+https://access.redhat.com/security/updates/classification/#important
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXrrB69zjgjWX9erEAQhGog/+Lnn61rwe1N+rn+GtF4igKEX6jSfoGN6m
+/NaGakMiVyDNEtr8T8H/y/I5/bfsjtgUKRJ5vQ9eUMCEP9nbkIchs5iAlfrNGuIc
+25cJFggtHileop/QsmmLxKtMnxuxq8l3GzqJXkp5j85ec2B8v7gJxY31r+PV3+DA
+UUmlwk0EgypWYUnrg/F63N/ysVEKWG43AJHemXnIqwTXQ/2RffFCQBnLQ5rRa9y4
+Ha9vmu97Tfmz3JdTNCwQOIqnqArEDn3aOqy36nAHxDRUP11qo3LrzUCXd2migavS
+oECl0e4h1FAQYzEmSFchJvRIAWJTLzXjk86R7uRXdf8yxlGHlcHL3K58ElbjGT22
+mVlmeXSlYg7aP1vsguW6XHqb52n97GMqMyvuyF+NLZrozIR/7fLUdC3raU5H7qhp
+xo1//b2Rb/XqUVFmMCI967Pt2SajHnPtPC2TcnnNWciO6f/TCs9LJqE++ET50BJD
+Q7/weA/THW2QTzd4f7DpOBisx9UjUglv7fSM6j8snOb7K5mEcMs4k0SQ3Tc0CI5t
+Rc7PWgvpOMXfUAnoC1bd+a79XhiXn6emwg2Zt8w/zPcqxfH5EXBdpT9RCxyexayd
+IwrATLWEshkkvubCu5oM4K9VruceXUgcypkFnFMZuOT7zAfqnyorTa172dtxu00t
+3JMFfQBMOYs=
+=+OBv
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

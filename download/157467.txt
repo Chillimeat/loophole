@@ -1,0 +1,272 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Moderate: pki-core:10.6 and pki-deps:10.6 security, bug fix, and enhancement update
+Advisory ID:       RHSA-2020:1644-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:1644
+Issue date:        2020-04-28
+CVE Names:         CVE-2019-14540 CVE-2019-16335 CVE-2019-16942
+                   CVE-2019-16943 CVE-2019-17531
+====================================================================
+1. Summary:
+
+An update for the pki-core:10.6 and pki-deps:10.6 modules is now available
+for Red Hat Enterprise Linux 8.
+
+Red Hat Product Security has rated this update as having a security impact
+of Moderate. A Common Vulnerability Scoring System (CVSS) base score, which
+gives a detailed severity rating, is available for each vulnerability from
+the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Enterprise Linux AppStream (v. 8) - aarch64, noarch, ppc64le, s390x, x86_64
+
+3. Description:
+
+The Public Key Infrastructure (PKI) Core contains fundamental packages
+required by Red Hat Certificate System.
+
+Security Fix(es):
+
+* jackson-databind: Serialization gadgets in com.zaxxer.hikari.HikariConfig
+(CVE-2019-14540)
+
+* jackson-databind: Serialization gadgets in
+com.zaxxer.hikari.HikariDataSource (CVE-2019-16335)
+
+* jackson-databind: Serialization gadgets in
+org.apache.commons.dbcp.datasources.* (CVE-2019-16942)
+
+* jackson-databind: Serialization gadgets in
+com.p6spy.engine.spy.P6DataSource (CVE-2019-16943)
+
+* jackson-databind: Serialization gadgets in
+org.apache.log4j.receivers.db.* (CVE-2019-17531)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+Additional Changes:
+
+For detailed information on changes in this release, see the Red Hat
+Enterprise Linux 8.2 Release Notes linked from the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1535313 - Not able to import certificate on secure port.
+1655438 - ECC installation failure with error: SSL: SSLV3_ALERT_HANDSHAKE_FAILURE
+1656786 - FIPS message is displayed while setting up subsystem when actually system is not FIPS enabled.
+1698084 - pkidestroy is not working as expected when used with --force and --remove-logs
+1744095 - CMCResponse is not working as expected
+1755831 - CVE-2019-16335 jackson-databind: Serialization gadgets in com.zaxxer.hikari.HikariDataSource
+1755849 - CVE-2019-14540 jackson-databind: Serialization gadgets in com.zaxxer.hikari.HikariConfig
+1758187 - CVE-2019-16942 jackson-databind: Serialization gadgets in org.apache.commons.dbcp.datasources.*
+1758191 - CVE-2019-16943 jackson-databind: Serialization gadgets in com.p6spy.engine.spy.P6DataSource
+1767125 - Rebase tomcatjss for RHEL 8.2
+1767131 - Rebase pki-core for RHEL 8.2
+1775293 - CVE-2019-17531 jackson-databind: Serialization gadgets in org.apache.log4j.receivers.db.*
+1777032 - pki kra-key-mod help text requires --status
+1782486 - client-cert-import  cli fails with exception java.lang.Error: Certificate database not initialized
+1795215 - pkispawn interactive installation failed.
+1802006 - KRA installation failed to create ECC admin cert
+1806840 - KRA cloning with HSM failed
+1807371 - KRA-HSM : Async and sync key recovery using kra agent web is failing
+1807421 - Subordinate CA installation failed
+1809210 - TPS installation failure on HSM machine
+
+6. Package List:
+
+Red Hat Enterprise Linux AppStream (v. 8):
+
+Source:
+apache-commons-collections-3.2.2-10.module+el8.1.0+3366+6dfb954c.src.rpm
+apache-commons-lang-2.6-21.module+el8.1.0+3366+6dfb954c.src.rpm
+bea-stax-1.2.0-16.module+el8.1.0+3366+6dfb954c.src.rpm
+glassfish-fastinfoset-1.2.13-9.module+el8.1.0+3366+6dfb954c.src.rpm
+glassfish-jaxb-2.2.11-11.module+el8.1.0+3366+6dfb954c.src.rpm
+glassfish-jaxb-api-2.2.12-8.module+el8.1.0+3366+6dfb954c.src.rpm
+jackson-annotations-2.10.0-1.module+el8.2.0+5059+3eb3af25.src.rpm
+jackson-core-2.10.0-1.module+el8.2.0+5059+3eb3af25.src.rpm
+jackson-databind-2.10.0-1.module+el8.2.0+5059+3eb3af25.src.rpm
+jackson-jaxrs-providers-2.9.9-1.module+el8.1.0+3832+9784644d.src.rpm
+jackson-module-jaxb-annotations-2.7.6-4.module+el8.1.0+3366+6dfb954c.src.rpm
+jakarta-commons-httpclient-3.1-28.module+el8.1.0+3366+6dfb954c.src.rpm
+javassist-3.18.1-8.module+el8.1.0+3366+6dfb954c.src.rpm
+jss-4.6.2-4.module+el8.2.0+6123+b4678599.src.rpm
+ldapjdk-4.21.0-2.module+el8.2.0+4573+c3c38c7b.src.rpm
+pki-core-10.8.3-1.module+el8.2.0+5925+bad5981a.src.rpm
+pki-servlet-engine-9.0.7-16.module+el8.1.0+3366+6dfb954c.src.rpm
+python-nss-1.0.1-10.module+el8.1.0+3366+6dfb954c.src.rpm
+relaxngDatatype-2011.1-7.module+el8.1.0+3366+6dfb954c.src.rpm
+resteasy-3.0.26-3.module+el8.1.0+3366+6dfb954c.src.rpm
+slf4j-1.7.25-4.module+el8.1.0+3366+6dfb954c.src.rpm
+stax-ex-1.7.7-8.module+el8.1.0+3366+6dfb954c.src.rpm
+tomcatjss-7.4.1-2.module+el8.2.0+4573+c3c38c7b.src.rpm
+velocity-1.7-24.module+el8.1.0+3366+6dfb954c.src.rpm
+xalan-j2-2.7.1-38.module+el8.1.0+3366+6dfb954c.src.rpm
+xerces-j2-2.11.0-34.module+el8.1.0+3366+6dfb954c.src.rpm
+xml-commons-apis-1.4.01-25.module+el8.1.0+3366+6dfb954c.src.rpm
+xml-commons-resolver-1.2-26.module+el8.1.0+3366+6dfb954c.src.rpm
+xmlstreambuffer-1.5.4-8.module+el8.1.0+3366+6dfb954c.src.rpm
+xsom-0-19.20110809svn.module+el8.1.0+3366+6dfb954c.src.rpm
+
+aarch64:
+jss-4.6.2-4.module+el8.2.0+6123+b4678599.aarch64.rpm
+jss-debuginfo-4.6.2-4.module+el8.2.0+6123+b4678599.aarch64.rpm
+jss-debugsource-4.6.2-4.module+el8.2.0+6123+b4678599.aarch64.rpm
+jss-javadoc-4.6.2-4.module+el8.2.0+6123+b4678599.aarch64.rpm
+pki-core-debuginfo-10.8.3-1.module+el8.2.0+5925+bad5981a.aarch64.rpm
+pki-core-debugsource-10.8.3-1.module+el8.2.0+5925+bad5981a.aarch64.rpm
+pki-symkey-10.8.3-1.module+el8.2.0+5925+bad5981a.aarch64.rpm
+pki-symkey-debuginfo-10.8.3-1.module+el8.2.0+5925+bad5981a.aarch64.rpm
+pki-tools-10.8.3-1.module+el8.2.0+5925+bad5981a.aarch64.rpm
+pki-tools-debuginfo-10.8.3-1.module+el8.2.0+5925+bad5981a.aarch64.rpm
+python-nss-debugsource-1.0.1-10.module+el8.1.0+3366+6dfb954c.aarch64.rpm
+python-nss-doc-1.0.1-10.module+el8.1.0+3366+6dfb954c.aarch64.rpm
+python3-nss-1.0.1-10.module+el8.1.0+3366+6dfb954c.aarch64.rpm
+python3-nss-debuginfo-1.0.1-10.module+el8.1.0+3366+6dfb954c.aarch64.rpm
+
+noarch:
+apache-commons-collections-3.2.2-10.module+el8.1.0+3366+6dfb954c.noarch.rpm
+apache-commons-lang-2.6-21.module+el8.1.0+3366+6dfb954c.noarch.rpm
+bea-stax-api-1.2.0-16.module+el8.1.0+3366+6dfb954c.noarch.rpm
+glassfish-fastinfoset-1.2.13-9.module+el8.1.0+3366+6dfb954c.noarch.rpm
+glassfish-jaxb-api-2.2.12-8.module+el8.1.0+3366+6dfb954c.noarch.rpm
+glassfish-jaxb-core-2.2.11-11.module+el8.1.0+3366+6dfb954c.noarch.rpm
+glassfish-jaxb-runtime-2.2.11-11.module+el8.1.0+3366+6dfb954c.noarch.rpm
+glassfish-jaxb-txw2-2.2.11-11.module+el8.1.0+3366+6dfb954c.noarch.rpm
+jackson-annotations-2.10.0-1.module+el8.2.0+5059+3eb3af25.noarch.rpm
+jackson-core-2.10.0-1.module+el8.2.0+5059+3eb3af25.noarch.rpm
+jackson-databind-2.10.0-1.module+el8.2.0+5059+3eb3af25.noarch.rpm
+jackson-jaxrs-json-provider-2.9.9-1.module+el8.1.0+3832+9784644d.noarch.rpm
+jackson-jaxrs-providers-2.9.9-1.module+el8.1.0+3832+9784644d.noarch.rpm
+jackson-module-jaxb-annotations-2.7.6-4.module+el8.1.0+3366+6dfb954c.noarch.rpm
+jakarta-commons-httpclient-3.1-28.module+el8.1.0+3366+6dfb954c.noarch.rpm
+javassist-3.18.1-8.module+el8.1.0+3366+6dfb954c.noarch.rpm
+javassist-javadoc-3.18.1-8.module+el8.1.0+3366+6dfb954c.noarch.rpm
+ldapjdk-4.21.0-2.module+el8.2.0+4573+c3c38c7b.noarch.rpm
+ldapjdk-javadoc-4.21.0-2.module+el8.2.0+4573+c3c38c7b.noarch.rpm
+pki-base-10.8.3-1.module+el8.2.0+5925+bad5981a.noarch.rpm
+pki-base-java-10.8.3-1.module+el8.2.0+5925+bad5981a.noarch.rpm
+pki-ca-10.8.3-1.module+el8.2.0+5925+bad5981a.noarch.rpm
+pki-kra-10.8.3-1.module+el8.2.0+5925+bad5981a.noarch.rpm
+pki-server-10.8.3-1.module+el8.2.0+5925+bad5981a.noarch.rpm
+pki-servlet-4.0-api-9.0.7-16.module+el8.1.0+3366+6dfb954c.noarch.rpm
+pki-servlet-engine-9.0.7-16.module+el8.1.0+3366+6dfb954c.noarch.rpm
+python3-pki-10.8.3-1.module+el8.2.0+5925+bad5981a.noarch.rpm
+relaxngDatatype-2011.1-7.module+el8.1.0+3366+6dfb954c.noarch.rpm
+resteasy-3.0.26-3.module+el8.1.0+3366+6dfb954c.noarch.rpm
+slf4j-1.7.25-4.module+el8.1.0+3366+6dfb954c.noarch.rpm
+slf4j-jdk14-1.7.25-4.module+el8.1.0+3366+6dfb954c.noarch.rpm
+stax-ex-1.7.7-8.module+el8.1.0+3366+6dfb954c.noarch.rpm
+tomcatjss-7.4.1-2.module+el8.2.0+4573+c3c38c7b.noarch.rpm
+velocity-1.7-24.module+el8.1.0+3366+6dfb954c.noarch.rpm
+xalan-j2-2.7.1-38.module+el8.1.0+3366+6dfb954c.noarch.rpm
+xerces-j2-2.11.0-34.module+el8.1.0+3366+6dfb954c.noarch.rpm
+xml-commons-apis-1.4.01-25.module+el8.1.0+3366+6dfb954c.noarch.rpm
+xml-commons-resolver-1.2-26.module+el8.1.0+3366+6dfb954c.noarch.rpm
+xmlstreambuffer-1.5.4-8.module+el8.1.0+3366+6dfb954c.noarch.rpm
+xsom-0-19.20110809svn.module+el8.1.0+3366+6dfb954c.noarch.rpm
+
+ppc64le:
+jss-4.6.2-4.module+el8.2.0+6123+b4678599.ppc64le.rpm
+jss-debuginfo-4.6.2-4.module+el8.2.0+6123+b4678599.ppc64le.rpm
+jss-debugsource-4.6.2-4.module+el8.2.0+6123+b4678599.ppc64le.rpm
+jss-javadoc-4.6.2-4.module+el8.2.0+6123+b4678599.ppc64le.rpm
+pki-core-debuginfo-10.8.3-1.module+el8.2.0+5925+bad5981a.ppc64le.rpm
+pki-core-debugsource-10.8.3-1.module+el8.2.0+5925+bad5981a.ppc64le.rpm
+pki-symkey-10.8.3-1.module+el8.2.0+5925+bad5981a.ppc64le.rpm
+pki-symkey-debuginfo-10.8.3-1.module+el8.2.0+5925+bad5981a.ppc64le.rpm
+pki-tools-10.8.3-1.module+el8.2.0+5925+bad5981a.ppc64le.rpm
+pki-tools-debuginfo-10.8.3-1.module+el8.2.0+5925+bad5981a.ppc64le.rpm
+python-nss-debugsource-1.0.1-10.module+el8.1.0+3366+6dfb954c.ppc64le.rpm
+python-nss-doc-1.0.1-10.module+el8.1.0+3366+6dfb954c.ppc64le.rpm
+python3-nss-1.0.1-10.module+el8.1.0+3366+6dfb954c.ppc64le.rpm
+python3-nss-debuginfo-1.0.1-10.module+el8.1.0+3366+6dfb954c.ppc64le.rpm
+
+s390x:
+jss-4.6.2-4.module+el8.2.0+6123+b4678599.s390x.rpm
+jss-debuginfo-4.6.2-4.module+el8.2.0+6123+b4678599.s390x.rpm
+jss-debugsource-4.6.2-4.module+el8.2.0+6123+b4678599.s390x.rpm
+jss-javadoc-4.6.2-4.module+el8.2.0+6123+b4678599.s390x.rpm
+pki-core-debuginfo-10.8.3-1.module+el8.2.0+5925+bad5981a.s390x.rpm
+pki-core-debugsource-10.8.3-1.module+el8.2.0+5925+bad5981a.s390x.rpm
+pki-symkey-10.8.3-1.module+el8.2.0+5925+bad5981a.s390x.rpm
+pki-symkey-debuginfo-10.8.3-1.module+el8.2.0+5925+bad5981a.s390x.rpm
+pki-tools-10.8.3-1.module+el8.2.0+5925+bad5981a.s390x.rpm
+pki-tools-debuginfo-10.8.3-1.module+el8.2.0+5925+bad5981a.s390x.rpm
+python-nss-debugsource-1.0.1-10.module+el8.1.0+3366+6dfb954c.s390x.rpm
+python-nss-doc-1.0.1-10.module+el8.1.0+3366+6dfb954c.s390x.rpm
+python3-nss-1.0.1-10.module+el8.1.0+3366+6dfb954c.s390x.rpm
+python3-nss-debuginfo-1.0.1-10.module+el8.1.0+3366+6dfb954c.s390x.rpm
+
+x86_64:
+jss-4.6.2-4.module+el8.2.0+6123+b4678599.x86_64.rpm
+jss-debuginfo-4.6.2-4.module+el8.2.0+6123+b4678599.x86_64.rpm
+jss-debugsource-4.6.2-4.module+el8.2.0+6123+b4678599.x86_64.rpm
+jss-javadoc-4.6.2-4.module+el8.2.0+6123+b4678599.x86_64.rpm
+pki-core-debuginfo-10.8.3-1.module+el8.2.0+5925+bad5981a.x86_64.rpm
+pki-core-debugsource-10.8.3-1.module+el8.2.0+5925+bad5981a.x86_64.rpm
+pki-symkey-10.8.3-1.module+el8.2.0+5925+bad5981a.x86_64.rpm
+pki-symkey-debuginfo-10.8.3-1.module+el8.2.0+5925+bad5981a.x86_64.rpm
+pki-tools-10.8.3-1.module+el8.2.0+5925+bad5981a.x86_64.rpm
+pki-tools-debuginfo-10.8.3-1.module+el8.2.0+5925+bad5981a.x86_64.rpm
+python-nss-debugsource-1.0.1-10.module+el8.1.0+3366+6dfb954c.x86_64.rpm
+python-nss-doc-1.0.1-10.module+el8.1.0+3366+6dfb954c.x86_64.rpm
+python3-nss-1.0.1-10.module+el8.1.0+3366+6dfb954c.x86_64.rpm
+python3-nss-debuginfo-1.0.1-10.module+el8.1.0+3366+6dfb954c.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2019-14540
+https://access.redhat.com/security/cve/CVE-2019-16335
+https://access.redhat.com/security/cve/CVE-2019-16942
+https://access.redhat.com/security/cve/CVE-2019-16943
+https://access.redhat.com/security/cve/CVE-2019-17531
+https://access.redhat.com/security/updates/classification/#moderate
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/8.2_release_notes/index
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXqhVqNzjgjWX9erEAQiQsBAAi+knvVjqimatUHEK5h38GZ+WutBywqnQ
+nt8A62sFBwu1jtgsjvjwIOBHlhTNUMIUmbhLs+m/Jn+LkRsIOT6DO/eXl0NdexPk
+620VjydvRdQxiWtTOyrZbuM9XIUjKIgOCL39cdU075XGz4niOtDmXDfeeRySZNBC
+61NAfjtANhQak6EwmrmlFz0DzTsY+zFjfrIftz+8/AO0wW8fZh0N4Hb+ANBo8Egv
+3SkCTq6rYqZeneq5xz5ZXSnkwl9pOYJVJIC4FP8LBiyuk+7JZz0TWeUBc9Kd2Byk
+z9InVnNPM6AzCBnyDAEyGRM6cCnZE7ErVc2GUgHZSJEAGc1x6bLj5nD52woLEc1o
+yo4Kir0+rJxwGmKyQ33FOXwR7GQ7f9cAN+L2x39rYoYVKAoEMMGBODbJkmnETE8X
+5Xmb9G/H/61yexsTzaAY3Nl8PBwZ2lFnF0UGfC45YlCQquInQrrzXRkN2qk39iXk
+7IpljLvHIUWV3usqDmEapg5DhBgKjMB+yh6jYRDH6SdHOTa0OpBsj8JNVD8ZZ8GY
+SSJu/Y6rXFA9WOFFYIZCmPm6lPXkEnPjCqzUVwofpNBy/36qz7VGtpssDlxgVcGL
+nFYv1EwuaWzRDt5bwGEilAQ/JJi+hRLQnGYQM+xYIzvC8mrXCa8e2risHrDWGkYe
+Ig7Teh6tu2g=wz7o
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

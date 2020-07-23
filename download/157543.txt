@@ -1,0 +1,124 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+=====================================================================
+                   Red Hat Security Advisory
+
+Synopsis:          Moderate: OpenShift Container Platform 4.4.3 cri-o security update
+Advisory ID:       RHSA-2020:1937-01
+Product:           Red Hat OpenShift Enterprise
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:1937
+Issue date:        2020-05-04
+CVE Names:         CVE-2020-1702 CVE-2020-8945 
+=====================================================================
+
+1. Summary:
+
+An update for cri-o is now available for Red Hat OpenShift Container
+Platform 4.4.
+
+Red Hat Product Security has rated this update as having a security impact
+of Moderate. A Common Vulnerability Scoring System (CVSS) base score, which
+gives a detailed severity rating, is available for each vulnerability from
+the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat OpenShift Container Platform 4.4 - x86_64
+
+3. Description:
+
+Red Hat OpenShift Container Platform is Red Hat's cloud computing
+Kubernetes application platform solution designed for on-premise or private
+cloud deployments.
+
+Security Fix(es):
+
+* proglottis/gpgme: Use-after-free in GPGME bindings during container image
+pull (CVE-2020-8945)
+
+* containers/image: Container images read entire image manifest into memory
+(CVE-2020-1702)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+4. Solution:
+
+For OpenShift Container Platform 4.4 see the following documentation, which
+will be updated shortly for release 4.4.3, for important instructions on
+how to upgrade your cluster and fully apply this asynchronous errata
+update:
+
+https://docs.openshift.com/container-platform/4.4/release_notes/ocp-4-4-rel
+ease-notes.html
+
+Details on how to access this content are available at
+https://docs.openshift.com/container-platform/4.4/updating/updating-cluster
+- -cli.html.
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1792796 - CVE-2020-1702 containers/image: Container images read entire image manifest into memory
+1795838 - CVE-2020-8945 proglottis/gpgme: Use-after-free in GPGME bindings during container image pull
+
+6. Package List:
+
+Red Hat OpenShift Container Platform 4.4:
+
+Source:
+cri-o-1.17.4-8.dev.rhaos4.4.git5f5c5e4.el7.src.rpm
+
+x86_64:
+cri-o-1.17.4-8.dev.rhaos4.4.git5f5c5e4.el7.x86_64.rpm
+cri-o-debuginfo-1.17.4-8.dev.rhaos4.4.git5f5c5e4.el7.x86_64.rpm
+
+Red Hat OpenShift Container Platform 4.4:
+
+Source:
+cri-o-1.17.4-8.dev.rhaos4.4.git5f5c5e4.el8.src.rpm
+
+x86_64:
+cri-o-1.17.4-8.dev.rhaos4.4.git5f5c5e4.el8.x86_64.rpm
+cri-o-debuginfo-1.17.4-8.dev.rhaos4.4.git5f5c5e4.el8.x86_64.rpm
+cri-o-debugsource-1.17.4-8.dev.rhaos4.4.git5f5c5e4.el8.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2020-1702
+https://access.redhat.com/security/cve/CVE-2020-8945
+https://access.redhat.com/security/updates/classification/#moderate
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXq/r39zjgjWX9erEAQjNTA//aRkht5cqb5WDjDmziptDUwX/izN8FwR4
+KY8L4XJz5KHwwfWSqiG8K4PU/tMQ1NokChb9xT7hYzwS2ysOEKR6F8X7zq3CQQ7l
+dKRX5oIfX6ob/FZPNc6HLCJeDVxOJqGecuov/f9F6BmSjEw+rMuX5ud8HFY0jhu2
+KiLwvb+I5W1vN61I76uBWPWsl7+bf0QmTesvWKuTPC0kZ1/M9sfmyvsdWt8oLwe3
+QxweNgXUTluNV7ZW+H0CEVm/8sdVkCjpVu9Hd6on2fIDXyPH7CmVIsdsdegHeF5R
+gtNIZCkC6SrXMtfzpfjXzMoIeyp46zXAbCp5VdYCXO3/CTWnpArEz3wCiFWsCOjZ
+H0zXF3u40rGr6khwm03QkhXYJ+i+pREu8iRlxDuZO3YAZZvIEyWTpbbBz+TNZvyp
+I8TLpvgSZQiqhlFGkD1GDl+EJUQ6LMlwvLwKt8vBoUuIP3+Un6LPhzMLjuhoy7DN
+Fikix/RMpuhmoyG+Ihpd9kt05V7zyVLcq3T3AM8gZtGPu8jiWKp3eF8yw227A8nR
+oKkNe4tRjW940GML9mxMUY2BlA7j+9sSlL/wpOexPIIBVj2viQdrdinGsW/CDGWy
+P17IrnKCYftb9pdDrfr+XNJ/kmFjys2qVAZcJVP5c4ZJ85v2URXWqq7f+rhDT1RP
+QQ6vKLumzOw=
+=Y/cu
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

@@ -1,0 +1,170 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Moderate: libxml2 security update
+Advisory ID:       RHSA-2020:1827-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:1827
+Issue date:        2020-04-28
+CVE Names:         CVE-2018-9251 CVE-2018-14404
+====================================================================
+1. Summary:
+
+An update for libxml2 is now available for Red Hat Enterprise Linux 8.
+
+Red Hat Product Security has rated this update as having a security impact
+of Moderate. A Common Vulnerability Scoring System (CVSS) base score, which
+gives a detailed severity rating, is available for each vulnerability from
+the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Enterprise Linux AppStream (v. 8) - aarch64, ppc64le, s390x, x86_64
+Red Hat Enterprise Linux BaseOS (v. 8) - aarch64, ppc64le, s390x, x86_64
+
+3. Description:
+
+The libxml2 library is a development toolbox providing the implementation
+of various XML standards.
+
+Security Fix(es):
+
+* libxml2: NULL pointer dereference in xmlXPathCompOpEval() function in
+xpath.c (CVE-2018-14404)
+
+* libxml2: infinite loop in xz_decomp function in xzlib.c (CVE-2018-9251)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+Additional Changes:
+
+For detailed information on changes in this release, see the Red Hat
+Enterprise Linux 8.2 Release Notes linked from the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+The desktop must be restarted (log out, then log back in) for this update
+to take effect.
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1565318 - CVE-2018-9251 libxml2: infinite loop in xz_decomp function in xzlib.c
+1595985 - CVE-2018-14404 libxml2: NULL pointer dereference in xmlXPathCompOpEval() function in xpath.c
+
+6. Package List:
+
+Red Hat Enterprise Linux AppStream (v. 8):
+
+aarch64:
+libxml2-debuginfo-2.9.7-7.el8.aarch64.rpm
+libxml2-debugsource-2.9.7-7.el8.aarch64.rpm
+libxml2-devel-2.9.7-7.el8.aarch64.rpm
+python3-libxml2-debuginfo-2.9.7-7.el8.aarch64.rpm
+
+ppc64le:
+libxml2-debuginfo-2.9.7-7.el8.ppc64le.rpm
+libxml2-debugsource-2.9.7-7.el8.ppc64le.rpm
+libxml2-devel-2.9.7-7.el8.ppc64le.rpm
+python3-libxml2-debuginfo-2.9.7-7.el8.ppc64le.rpm
+
+s390x:
+libxml2-debuginfo-2.9.7-7.el8.s390x.rpm
+libxml2-debugsource-2.9.7-7.el8.s390x.rpm
+libxml2-devel-2.9.7-7.el8.s390x.rpm
+python3-libxml2-debuginfo-2.9.7-7.el8.s390x.rpm
+
+x86_64:
+libxml2-debuginfo-2.9.7-7.el8.i686.rpm
+libxml2-debuginfo-2.9.7-7.el8.x86_64.rpm
+libxml2-debugsource-2.9.7-7.el8.i686.rpm
+libxml2-debugsource-2.9.7-7.el8.x86_64.rpm
+libxml2-devel-2.9.7-7.el8.i686.rpm
+libxml2-devel-2.9.7-7.el8.x86_64.rpm
+python3-libxml2-debuginfo-2.9.7-7.el8.i686.rpm
+python3-libxml2-debuginfo-2.9.7-7.el8.x86_64.rpm
+
+Red Hat Enterprise Linux BaseOS (v. 8):
+
+Source:
+libxml2-2.9.7-7.el8.src.rpm
+
+aarch64:
+libxml2-2.9.7-7.el8.aarch64.rpm
+libxml2-debuginfo-2.9.7-7.el8.aarch64.rpm
+libxml2-debugsource-2.9.7-7.el8.aarch64.rpm
+python3-libxml2-2.9.7-7.el8.aarch64.rpm
+python3-libxml2-debuginfo-2.9.7-7.el8.aarch64.rpm
+
+ppc64le:
+libxml2-2.9.7-7.el8.ppc64le.rpm
+libxml2-debuginfo-2.9.7-7.el8.ppc64le.rpm
+libxml2-debugsource-2.9.7-7.el8.ppc64le.rpm
+python3-libxml2-2.9.7-7.el8.ppc64le.rpm
+python3-libxml2-debuginfo-2.9.7-7.el8.ppc64le.rpm
+
+s390x:
+libxml2-2.9.7-7.el8.s390x.rpm
+libxml2-debuginfo-2.9.7-7.el8.s390x.rpm
+libxml2-debugsource-2.9.7-7.el8.s390x.rpm
+python3-libxml2-2.9.7-7.el8.s390x.rpm
+python3-libxml2-debuginfo-2.9.7-7.el8.s390x.rpm
+
+x86_64:
+libxml2-2.9.7-7.el8.i686.rpm
+libxml2-2.9.7-7.el8.x86_64.rpm
+libxml2-debuginfo-2.9.7-7.el8.i686.rpm
+libxml2-debuginfo-2.9.7-7.el8.x86_64.rpm
+libxml2-debugsource-2.9.7-7.el8.i686.rpm
+libxml2-debugsource-2.9.7-7.el8.x86_64.rpm
+python3-libxml2-2.9.7-7.el8.x86_64.rpm
+python3-libxml2-debuginfo-2.9.7-7.el8.i686.rpm
+python3-libxml2-debuginfo-2.9.7-7.el8.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2018-9251
+https://access.redhat.com/security/cve/CVE-2018-14404
+https://access.redhat.com/security/updates/classification/#moderate
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/8.2_release_notes/index
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXqhVbNzjgjWX9erEAQieRA//baOiEWX/0DA93qpOGPk3dRKiJ+degtpo
+EUKFDZDLJyaktLn9AO1nts6EEa06hglgWN5v+YKBo2+au323x6kJ3Hj3eDT/y4fe
+/pcruH7lNpDty5YcU/0SgHkufIA6lx2JCHRRVx/wULRywqS9ijuDhCOO/bJ5o6Ol
+G7aOJ2M3W8Kw2L1dyixRfF4RVb1URrxFwL9/G7KpjfinxQp1FJ78GbibBU1gPx4b
+zZz/YIjthXYegyOb9ZJLKONa0Cd16KL48aVUT9DV7upQxxwOw5ZVqeVWfGVgnbec
+dQLaZ4KGsvL0PcEdhxGbWT71epMJYohUNxfnLQ8PttjpV2aM+69u8Tidh9wmD5Ws
+fQ5NjqSCdWbDewR8VTB6eplYDSwWNMYsUzsfYB6MgnPGVf/D4OoBAnvAiZC+7dnX
+7M8StbiuDsEYOT0ZXLkdqEv5VCyBPw2FJG98OM7NlVvWKRB047uN5UnMGBFL4Ltq
+EINckseMlaXHq/ZoGRYJilFh+Pq2bqAYg8adnBrinXr2PJtXYSidJKTOFihde+oO
+KQf/JnGj91BIFgUkwXKiBOx4UNkT8A8JiSZwqRPlSIhvRtNLVtvCKIEXOm1vBvR5
+yVZjNt/f7M5TVwQBb76XhIAVvvg5WR3NSD3CfOgDulQ0aWMLqRUMnNLqo4rCt+Uh
+Ku30u46U98A=ETd7
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

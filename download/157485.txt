@@ -1,0 +1,87 @@
+==========================================================================
+Ubuntu Security Notice USN-4344-1
+April 28, 2020
+
+linux-gke-5.0, linux-oem-osp11 vulnerabilities
+==========================================================================
+
+A security issue affects these releases of Ubuntu and its derivatives:
+
+- Ubuntu 18.04 LTS
+
+Summary:
+
+Several security issues were fixed in the Linux kernel.
+
+Software Description:
+- linux-gke-5.0: Linux kernel for Google Container Engine (GKE) systems
+- linux-oem-osp1: Linux kernel for OEM processors
+
+Details:
+
+It was discovered that the Intel Wi-Fi driver in the Linux kernel did not
+properly check for errors in some situations. A local attacker could
+possibly use this to cause a denial of service (system crash).
+(CVE-2019-16234)
+
+It was discovered that the Intel WiMAX 2400 driver in the Linux kernel did
+not properly deallocate memory in certain situations. A local attacker
+could use this to cause a denial of service (kernel memory exhaustion).
+(CVE-2019-19051)
+
+Tristan Madani discovered that the block I/O tracing implementation in the
+Linux kernel contained a race condition. A local attacker could use this to
+cause a denial of service (system crash) or possibly expose sensitive
+information. (CVE-2019-19768)
+
+It was discovered that the vhost net driver in the Linux kernel contained a
+stack buffer overflow. A local attacker with the ability to perform ioctl()
+calls on /dev/vhost-net could use this to cause a denial of service (system
+crash). (CVE-2020-10942)
+
+It was discovered that the virtual terminal implementation in the Linux
+kernel contained a race condition. A local attacker could possibly use this
+to cause a denial of service (system crash) or expose sensitive
+information. (CVE-2020-8648)
+
+Shijie Luo discovered that the ext4 file system implementation in the Linux
+kernel did not properly check for a too-large journal size. An attacker
+could use this to construct a malicious ext4 image that, when mounted,
+could cause a denial of service (soft lockup). (CVE-2020-8992)
+
+Jordy Zomer discovered that the floppy driver in the Linux kernel did not
+properly check for errors in some situations. A local attacker could
+possibly use this to cause a denial of service (system crash) or possibly
+expose sensitive information. (CVE-2020-9383)
+
+Update instructions:
+
+The problem can be corrected by updating your system to the following
+package versions:
+
+Ubuntu 18.04 LTS:
+  linux-image-5.0.0-1035-gke      5.0.0-1035.36
+  linux-image-5.0.0-1050-oem-osp1  5.0.0-1050.55
+  linux-image-gke-5.0             5.0.0.1035.23
+  linux-image-oem-osp1            5.0.0.1050.53
+
+After a standard system update you need to reboot your computer to make
+all the necessary changes.
+
+ATTENTION: Due to an unavoidable ABI change the kernel updates have
+been given a new version number, which requires you to recompile and
+reinstall all third party kernel modules you might have installed.
+Unless you manually uninstalled the standard kernel metapackages
+(e.g. linux-generic, linux-generic-lts-RELEASE, linux-virtual,
+linux-powerpc), a standard system upgrade will automatically perform
+this as well.
+
+References:
+  https://usn.ubuntu.com/4344-1
+  CVE-2019-16234, CVE-2019-19051, CVE-2019-19768, CVE-2020-10942,
+  CVE-2020-8648, CVE-2020-8992, CVE-2020-9383
+
+Package Information:
+  https://launchpad.net/ubuntu/+source/linux-gke-5.0/5.0.0-1035.36
+  https://launchpad.net/ubuntu/+source/linux-oem-osp1/5.0.0-1050.55
+

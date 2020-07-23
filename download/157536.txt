@@ -1,0 +1,130 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+=====================================================================
+                   Red Hat Security Advisory
+
+Synopsis:          Moderate: OpenShift Container Platform 4.4.3 haproxy security update
+Advisory ID:       RHSA-2020:1936-01
+Product:           Red Hat OpenShift Enterprise
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:1936
+Issue date:        2020-05-04
+CVE Names:         CVE-2019-18277 CVE-2019-19330 CVE-2020-11100 
+=====================================================================
+
+1. Summary:
+
+An update for haproxy is now available for Red Hat OpenShift Container
+Platform 4.4.
+
+Red Hat Product Security has rated this update as having a security impact
+of Moderate. A Common Vulnerability Scoring System (CVSS) base score, which
+gives a detailed severity rating, is available for each vulnerability from
+the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat OpenShift Container Platform 4.4 - x86_64
+
+3. Description:
+
+Red Hat OpenShift Container Platform is Red Hat's cloud computing
+Kubernetes application platform solution designed for on-premise or private
+cloud deployments.
+
+Security Fix(es):
+
+* haproxy: malformed HTTP/2 requests could lead to out-of-bounds writes
+(CVE-2020-11100)
+
+* haproxy: HTTP request smuggling issue with transfer-encoding header
+containing an obfuscated "chunked" value (CVE-2019-18277)
+
+* haproxy: HTTP/2 implementation was vulnerable to intermediary
+encapsulation attacks (CVE-2019-19330)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s)
+listed in the References section.
+
+4. Solution:
+
+For OpenShift Container Platform 4.4 see the following documentation, which
+will be updated shortly for release 4.4.3, for important instructions on
+how to upgrade your cluster and fully apply this asynchronous errata
+update:
+
+https://docs.openshift.com/container-platform/4.4/release_notes/ocp-4-4-rel
+ease-notes.html
+
+Details on how to access this content are available at
+https://docs.openshift.com/container-platform/4.4/updating/updating-cluster
+- -cli.html.
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1759697 - CVE-2019-18277 haproxy: HTTP request smuggling issue with transfer-encoding header containing an obfuscated "chunked" value
+1777584 - CVE-2019-19330 haproxy: HTTP/2 implementation vulnerable to intermediary encapsulation attacks
+1819111 - CVE-2020-11100 haproxy: malformed HTTP/2 requests can lead to out-of-bounds writes
+
+6. Package List:
+
+Red Hat OpenShift Container Platform 4.4:
+
+Source:
+haproxy-2.0.13-3.el7.src.rpm
+
+x86_64:
+haproxy-debuginfo-2.0.13-3.el7.x86_64.rpm
+haproxy20-2.0.13-3.el7.x86_64.rpm
+
+Red Hat OpenShift Container Platform 4.4:
+
+Source:
+haproxy-2.0.13-3.el8.src.rpm
+
+x86_64:
+haproxy-debugsource-2.0.13-3.el8.x86_64.rpm
+haproxy20-2.0.13-3.el8.x86_64.rpm
+haproxy20-debuginfo-2.0.13-3.el8.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2019-18277
+https://access.redhat.com/security/cve/CVE-2019-19330
+https://access.redhat.com/security/cve/CVE-2020-11100
+https://access.redhat.com/security/updates/classification/#moderate
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXq/r2tzjgjWX9erEAQishxAAlaWOIhK2XP5/bAXEa7LQs4SnGI9Zy4Rj
+CyK4cCiaY0YOflzEzVPRkovSf0yxPExvVEgnhMN02QSUwdn2xm99+OjhTrGZBwYV
+GgDelClCrCiigI8KC+OEHD7VBgxY4SdXLmNRY3y77ldk0ADT8v9LGMIuYKMSCV4w
+sfIfbVyugu/ROVo6a1b1OHtdaTQIem9ed++Vsvki48pJ+ViIJlihnzsCdRxCXZAY
+ElILgfS+ERDW0dAocAtOXJhi3S9Wz5PBR2WWzvyj9TkulPj3MFkjZtivT0d3SlU3
+V0Ykou480/p7hfksIzQgB9JAgauoQsWLVu7yPYf2TIWtkYAqFM5wXWxCHtKRiWyc
+DzkBZ1X6vESfmhhbR2mA1jgvPb9cv6qh0E7abm9f8gWGE4ljknfqvHfZY7iAtwMJ
+17Ce9Cxk0PssWeyEDxCSA1LbBPnKV8VdQP5Y9ur+C50buBNhYVuoIizef44zL91g
+fv0xdO5v0iBvT95CqWdCldzhkxcW5hv9Y4AZq/hVvAWIUm/9KT5fUyJwAlhnro4/
+K7kN7hHQbTgpmfrOpmyAn1TxeTVaYZrjncWpmr4ksiBnh8oMtRuCazjZvE2rfBA3
+VYWL00Q1FakEIoz9Z0WRBgaXpw1iGHxS7iPNqJmXL9KXVjdlHCWEfLhV8RE6tN/N
+VC1X0oUTBLU=
+=MQue
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

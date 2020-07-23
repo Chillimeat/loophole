@@ -1,0 +1,57 @@
+=========================================================================
+Ubuntu Security Notice USN-4330-2
+May 06, 2020
+
+php7.4 vulnerabilities
+=========================================================================
+A security issue affects these releases of Ubuntu and its derivatives:
+
+- Ubuntu 20.04 LTS
+
+Summary:
+
+Several security issues were fixed in PHP.
+
+Software Description:
+- php7.4: server-side, HTML-embedded scripting language (metapackage)
+
+Details:
+
+USN-4330-1 fixed vulnerabilities in PHP. This update provides the corresponding
+update for Ubuntu 20.04 LTS.
+
+Original advisory details:
+
+ It was discovered that PHP incorrectly handled certain EXIF files.
+ An attacker could possibly use this issue to access sensitive information
+ or cause a crash. (CVE-2020-7064)
+
+ It was discovered that PHP incorrectly handled certain UTF strings.
+ An attacker could possibly use this issue to cause a crash or execute
+ arbitrary code. (CVE-2020-7065)
+
+ It was discovered that PHP incorrectly handled certain URLs.
+ An attacker could possibly use this issue to expose sensitive information.
+ (CVE-2020-7066)
+
+Update instructions:
+
+The problem can be corrected by updating your system to the following
+package versions:
+
+Ubuntu 20.04 LTS:
+  libapache2-mod-php7.4           7.4.3-4ubuntu1.1
+  php7.4-cgi                      7.4.3-4ubuntu1.1
+  php7.4-cli                      7.4.3-4ubuntu1.1
+  php7.4-fpm                      7.4.3-4ubuntu1.1
+  php7.4-mbstring                 7.4.3-4ubuntu1.1
+
+In general, a standard system update will make all the necessary changes.
+
+References:
+  https://usn.ubuntu.com/4330-2
+  https://usn.ubuntu.com/4330-1
+  CVE-2020-7064, CVE-2020-7065, CVE-2020-7066
+
+Package Information:
+  https://launchpad.net/ubuntu/+source/php7.4/7.4.3-4ubuntu1.1

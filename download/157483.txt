@@ -1,0 +1,260 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+=====================================================================
+                   Red Hat Security Advisory
+
+Synopsis:          Important: container-tools:1.0 security and bug fix update
+Advisory ID:       RHSA-2020:1926-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:1926
+Issue date:        2020-04-28
+CVE Names:         CVE-2020-10696 
+=====================================================================
+
+1. Summary:
+
+An update for the container-tools:1.0 module is now available for Red Hat
+Enterprise Linux 8.
+
+Red Hat Product Security has rated this update as having a security impact
+of Important. A Common Vulnerability Scoring System (CVSS) base score,
+which gives a detailed severity rating, is available for each vulnerability
+from the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Enterprise Linux AppStream (v. 8) - aarch64, noarch, ppc64le, s390x, x86_64
+
+3. Description:
+
+The container-tools module contains tools for working with containers,
+notably podman, buildah, skopeo, and runc.
+
+Security Fix(es):
+
+* buildah: Crafted input tar file may lead to local file overwrite during
+image build process (CVE-2020-10696)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+Bug Fix(es):
+
+* conflicting requests: failed to install container-tools:1.0 (BZ#1813776)
+
+* podman run container error with avc denied (BZ#1816541)
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1776313 - create advisory for container-tools-1.0-8.2.0
+1813776 - conflicting requests: failed to install container-tools:1.0
+1816541 - podman run container error with avc denied
+1817651 - CVE-2020-10696 buildah: Crafted input tar file may lead to local file overwrite during image build process
+
+6. Package List:
+
+Red Hat Enterprise Linux AppStream (v. 8):
+
+Source:
+buildah-1.5-4.gite94b4f9.module+el8.2.0+6370+6fb6c8ca.src.rpm
+container-selinux-2.124.0-1.gitf958d0c.module+el8.2.0+6370+6fb6c8ca.src.rpm
+containernetworking-plugins-0.7.4-3.git9ebe139.module+el8.2.0+6370+6fb6c8ca.src.rpm
+criu-3.12-9.module+el8.2.0+6370+6fb6c8ca.src.rpm
+fuse-overlayfs-0.3-5.module+el8.2.0+6370+6fb6c8ca.src.rpm
+oci-systemd-hook-0.1.15-2.git2d0b8a3.module+el8.2.0+6370+6fb6c8ca.src.rpm
+oci-umount-2.3.4-2.git87f9237.module+el8.2.0+6370+6fb6c8ca.src.rpm
+podman-1.0.0-4.git921f98f.module+el8.2.0+6370+6fb6c8ca.src.rpm
+runc-1.0.0-56.rc5.dev.git2abd837.module+el8.2.0+6370+6fb6c8ca.src.rpm
+skopeo-0.1.32-4.git1715c90.module+el8.2.0+6370+6fb6c8ca.src.rpm
+slirp4netns-0.1-5.dev.gitc4e1bc5.module+el8.2.0+6370+6fb6c8ca.src.rpm
+
+aarch64:
+buildah-1.5-4.gite94b4f9.module+el8.2.0+6370+6fb6c8ca.aarch64.rpm
+buildah-debuginfo-1.5-4.gite94b4f9.module+el8.2.0+6370+6fb6c8ca.aarch64.rpm
+buildah-debugsource-1.5-4.gite94b4f9.module+el8.2.0+6370+6fb6c8ca.aarch64.rpm
+containernetworking-plugins-0.7.4-3.git9ebe139.module+el8.2.0+6370+6fb6c8ca.aarch64.rpm
+containernetworking-plugins-debuginfo-0.7.4-3.git9ebe139.module+el8.2.0+6370+6fb6c8ca.aarch64.rpm
+containernetworking-plugins-debugsource-0.7.4-3.git9ebe139.module+el8.2.0+6370+6fb6c8ca.aarch64.rpm
+containers-common-0.1.32-4.git1715c90.module+el8.2.0+6370+6fb6c8ca.aarch64.rpm
+crit-3.12-9.module+el8.2.0+6370+6fb6c8ca.aarch64.rpm
+criu-3.12-9.module+el8.2.0+6370+6fb6c8ca.aarch64.rpm
+criu-debuginfo-3.12-9.module+el8.2.0+6370+6fb6c8ca.aarch64.rpm
+criu-debugsource-3.12-9.module+el8.2.0+6370+6fb6c8ca.aarch64.rpm
+fuse-overlayfs-0.3-5.module+el8.2.0+6370+6fb6c8ca.aarch64.rpm
+fuse-overlayfs-debuginfo-0.3-5.module+el8.2.0+6370+6fb6c8ca.aarch64.rpm
+fuse-overlayfs-debugsource-0.3-5.module+el8.2.0+6370+6fb6c8ca.aarch64.rpm
+oci-systemd-hook-0.1.15-2.git2d0b8a3.module+el8.2.0+6370+6fb6c8ca.aarch64.rpm
+oci-systemd-hook-debuginfo-0.1.15-2.git2d0b8a3.module+el8.2.0+6370+6fb6c8ca.aarch64.rpm
+oci-systemd-hook-debugsource-0.1.15-2.git2d0b8a3.module+el8.2.0+6370+6fb6c8ca.aarch64.rpm
+oci-umount-2.3.4-2.git87f9237.module+el8.2.0+6370+6fb6c8ca.aarch64.rpm
+oci-umount-debuginfo-2.3.4-2.git87f9237.module+el8.2.0+6370+6fb6c8ca.aarch64.rpm
+oci-umount-debugsource-2.3.4-2.git87f9237.module+el8.2.0+6370+6fb6c8ca.aarch64.rpm
+podman-1.0.0-4.git921f98f.module+el8.2.0+6370+6fb6c8ca.aarch64.rpm
+podman-debuginfo-1.0.0-4.git921f98f.module+el8.2.0+6370+6fb6c8ca.aarch64.rpm
+podman-debugsource-1.0.0-4.git921f98f.module+el8.2.0+6370+6fb6c8ca.aarch64.rpm
+python3-criu-3.12-9.module+el8.2.0+6370+6fb6c8ca.aarch64.rpm
+runc-1.0.0-56.rc5.dev.git2abd837.module+el8.2.0+6370+6fb6c8ca.aarch64.rpm
+runc-debuginfo-1.0.0-56.rc5.dev.git2abd837.module+el8.2.0+6370+6fb6c8ca.aarch64.rpm
+runc-debugsource-1.0.0-56.rc5.dev.git2abd837.module+el8.2.0+6370+6fb6c8ca.aarch64.rpm
+skopeo-0.1.32-4.git1715c90.module+el8.2.0+6370+6fb6c8ca.aarch64.rpm
+skopeo-debuginfo-0.1.32-4.git1715c90.module+el8.2.0+6370+6fb6c8ca.aarch64.rpm
+skopeo-debugsource-0.1.32-4.git1715c90.module+el8.2.0+6370+6fb6c8ca.aarch64.rpm
+slirp4netns-0.1-5.dev.gitc4e1bc5.module+el8.2.0+6370+6fb6c8ca.aarch64.rpm
+slirp4netns-debuginfo-0.1-5.dev.gitc4e1bc5.module+el8.2.0+6370+6fb6c8ca.aarch64.rpm
+slirp4netns-debugsource-0.1-5.dev.gitc4e1bc5.module+el8.2.0+6370+6fb6c8ca.aarch64.rpm
+
+noarch:
+container-selinux-2.124.0-1.gitf958d0c.module+el8.2.0+6370+6fb6c8ca.noarch.rpm
+podman-docker-1.0.0-4.git921f98f.module+el8.2.0+6370+6fb6c8ca.noarch.rpm
+
+ppc64le:
+buildah-1.5-4.gite94b4f9.module+el8.2.0+6370+6fb6c8ca.ppc64le.rpm
+buildah-debuginfo-1.5-4.gite94b4f9.module+el8.2.0+6370+6fb6c8ca.ppc64le.rpm
+buildah-debugsource-1.5-4.gite94b4f9.module+el8.2.0+6370+6fb6c8ca.ppc64le.rpm
+containernetworking-plugins-0.7.4-3.git9ebe139.module+el8.2.0+6370+6fb6c8ca.ppc64le.rpm
+containernetworking-plugins-debuginfo-0.7.4-3.git9ebe139.module+el8.2.0+6370+6fb6c8ca.ppc64le.rpm
+containernetworking-plugins-debugsource-0.7.4-3.git9ebe139.module+el8.2.0+6370+6fb6c8ca.ppc64le.rpm
+containers-common-0.1.32-4.git1715c90.module+el8.2.0+6370+6fb6c8ca.ppc64le.rpm
+crit-3.12-9.module+el8.2.0+6370+6fb6c8ca.ppc64le.rpm
+criu-3.12-9.module+el8.2.0+6370+6fb6c8ca.ppc64le.rpm
+criu-debuginfo-3.12-9.module+el8.2.0+6370+6fb6c8ca.ppc64le.rpm
+criu-debugsource-3.12-9.module+el8.2.0+6370+6fb6c8ca.ppc64le.rpm
+fuse-overlayfs-0.3-5.module+el8.2.0+6370+6fb6c8ca.ppc64le.rpm
+fuse-overlayfs-debuginfo-0.3-5.module+el8.2.0+6370+6fb6c8ca.ppc64le.rpm
+fuse-overlayfs-debugsource-0.3-5.module+el8.2.0+6370+6fb6c8ca.ppc64le.rpm
+oci-systemd-hook-0.1.15-2.git2d0b8a3.module+el8.2.0+6370+6fb6c8ca.ppc64le.rpm
+oci-systemd-hook-debuginfo-0.1.15-2.git2d0b8a3.module+el8.2.0+6370+6fb6c8ca.ppc64le.rpm
+oci-systemd-hook-debugsource-0.1.15-2.git2d0b8a3.module+el8.2.0+6370+6fb6c8ca.ppc64le.rpm
+oci-umount-2.3.4-2.git87f9237.module+el8.2.0+6370+6fb6c8ca.ppc64le.rpm
+oci-umount-debuginfo-2.3.4-2.git87f9237.module+el8.2.0+6370+6fb6c8ca.ppc64le.rpm
+oci-umount-debugsource-2.3.4-2.git87f9237.module+el8.2.0+6370+6fb6c8ca.ppc64le.rpm
+podman-1.0.0-4.git921f98f.module+el8.2.0+6370+6fb6c8ca.ppc64le.rpm
+podman-debuginfo-1.0.0-4.git921f98f.module+el8.2.0+6370+6fb6c8ca.ppc64le.rpm
+podman-debugsource-1.0.0-4.git921f98f.module+el8.2.0+6370+6fb6c8ca.ppc64le.rpm
+python3-criu-3.12-9.module+el8.2.0+6370+6fb6c8ca.ppc64le.rpm
+runc-1.0.0-56.rc5.dev.git2abd837.module+el8.2.0+6370+6fb6c8ca.ppc64le.rpm
+runc-debuginfo-1.0.0-56.rc5.dev.git2abd837.module+el8.2.0+6370+6fb6c8ca.ppc64le.rpm
+runc-debugsource-1.0.0-56.rc5.dev.git2abd837.module+el8.2.0+6370+6fb6c8ca.ppc64le.rpm
+skopeo-0.1.32-4.git1715c90.module+el8.2.0+6370+6fb6c8ca.ppc64le.rpm
+skopeo-debuginfo-0.1.32-4.git1715c90.module+el8.2.0+6370+6fb6c8ca.ppc64le.rpm
+skopeo-debugsource-0.1.32-4.git1715c90.module+el8.2.0+6370+6fb6c8ca.ppc64le.rpm
+slirp4netns-0.1-5.dev.gitc4e1bc5.module+el8.2.0+6370+6fb6c8ca.ppc64le.rpm
+slirp4netns-debuginfo-0.1-5.dev.gitc4e1bc5.module+el8.2.0+6370+6fb6c8ca.ppc64le.rpm
+slirp4netns-debugsource-0.1-5.dev.gitc4e1bc5.module+el8.2.0+6370+6fb6c8ca.ppc64le.rpm
+
+s390x:
+buildah-1.5-4.gite94b4f9.module+el8.2.0+6370+6fb6c8ca.s390x.rpm
+buildah-debuginfo-1.5-4.gite94b4f9.module+el8.2.0+6370+6fb6c8ca.s390x.rpm
+buildah-debugsource-1.5-4.gite94b4f9.module+el8.2.0+6370+6fb6c8ca.s390x.rpm
+containernetworking-plugins-0.7.4-3.git9ebe139.module+el8.2.0+6370+6fb6c8ca.s390x.rpm
+containernetworking-plugins-debuginfo-0.7.4-3.git9ebe139.module+el8.2.0+6370+6fb6c8ca.s390x.rpm
+containernetworking-plugins-debugsource-0.7.4-3.git9ebe139.module+el8.2.0+6370+6fb6c8ca.s390x.rpm
+containers-common-0.1.32-4.git1715c90.module+el8.2.0+6370+6fb6c8ca.s390x.rpm
+crit-3.12-9.module+el8.2.0+6370+6fb6c8ca.s390x.rpm
+criu-3.12-9.module+el8.2.0+6370+6fb6c8ca.s390x.rpm
+criu-debuginfo-3.12-9.module+el8.2.0+6370+6fb6c8ca.s390x.rpm
+criu-debugsource-3.12-9.module+el8.2.0+6370+6fb6c8ca.s390x.rpm
+fuse-overlayfs-0.3-5.module+el8.2.0+6370+6fb6c8ca.s390x.rpm
+fuse-overlayfs-debuginfo-0.3-5.module+el8.2.0+6370+6fb6c8ca.s390x.rpm
+fuse-overlayfs-debugsource-0.3-5.module+el8.2.0+6370+6fb6c8ca.s390x.rpm
+oci-systemd-hook-0.1.15-2.git2d0b8a3.module+el8.2.0+6370+6fb6c8ca.s390x.rpm
+oci-systemd-hook-debuginfo-0.1.15-2.git2d0b8a3.module+el8.2.0+6370+6fb6c8ca.s390x.rpm
+oci-systemd-hook-debugsource-0.1.15-2.git2d0b8a3.module+el8.2.0+6370+6fb6c8ca.s390x.rpm
+oci-umount-2.3.4-2.git87f9237.module+el8.2.0+6370+6fb6c8ca.s390x.rpm
+oci-umount-debuginfo-2.3.4-2.git87f9237.module+el8.2.0+6370+6fb6c8ca.s390x.rpm
+oci-umount-debugsource-2.3.4-2.git87f9237.module+el8.2.0+6370+6fb6c8ca.s390x.rpm
+podman-1.0.0-4.git921f98f.module+el8.2.0+6370+6fb6c8ca.s390x.rpm
+podman-debuginfo-1.0.0-4.git921f98f.module+el8.2.0+6370+6fb6c8ca.s390x.rpm
+podman-debugsource-1.0.0-4.git921f98f.module+el8.2.0+6370+6fb6c8ca.s390x.rpm
+python3-criu-3.12-9.module+el8.2.0+6370+6fb6c8ca.s390x.rpm
+runc-1.0.0-56.rc5.dev.git2abd837.module+el8.2.0+6370+6fb6c8ca.s390x.rpm
+runc-debuginfo-1.0.0-56.rc5.dev.git2abd837.module+el8.2.0+6370+6fb6c8ca.s390x.rpm
+runc-debugsource-1.0.0-56.rc5.dev.git2abd837.module+el8.2.0+6370+6fb6c8ca.s390x.rpm
+skopeo-0.1.32-4.git1715c90.module+el8.2.0+6370+6fb6c8ca.s390x.rpm
+skopeo-debuginfo-0.1.32-4.git1715c90.module+el8.2.0+6370+6fb6c8ca.s390x.rpm
+skopeo-debugsource-0.1.32-4.git1715c90.module+el8.2.0+6370+6fb6c8ca.s390x.rpm
+slirp4netns-0.1-5.dev.gitc4e1bc5.module+el8.2.0+6370+6fb6c8ca.s390x.rpm
+slirp4netns-debuginfo-0.1-5.dev.gitc4e1bc5.module+el8.2.0+6370+6fb6c8ca.s390x.rpm
+slirp4netns-debugsource-0.1-5.dev.gitc4e1bc5.module+el8.2.0+6370+6fb6c8ca.s390x.rpm
+
+x86_64:
+buildah-1.5-4.gite94b4f9.module+el8.2.0+6370+6fb6c8ca.x86_64.rpm
+buildah-debuginfo-1.5-4.gite94b4f9.module+el8.2.0+6370+6fb6c8ca.x86_64.rpm
+buildah-debugsource-1.5-4.gite94b4f9.module+el8.2.0+6370+6fb6c8ca.x86_64.rpm
+containernetworking-plugins-0.7.4-3.git9ebe139.module+el8.2.0+6370+6fb6c8ca.x86_64.rpm
+containernetworking-plugins-debuginfo-0.7.4-3.git9ebe139.module+el8.2.0+6370+6fb6c8ca.x86_64.rpm
+containernetworking-plugins-debugsource-0.7.4-3.git9ebe139.module+el8.2.0+6370+6fb6c8ca.x86_64.rpm
+containers-common-0.1.32-4.git1715c90.module+el8.2.0+6370+6fb6c8ca.x86_64.rpm
+crit-3.12-9.module+el8.2.0+6370+6fb6c8ca.x86_64.rpm
+criu-3.12-9.module+el8.2.0+6370+6fb6c8ca.x86_64.rpm
+criu-debuginfo-3.12-9.module+el8.2.0+6370+6fb6c8ca.x86_64.rpm
+criu-debugsource-3.12-9.module+el8.2.0+6370+6fb6c8ca.x86_64.rpm
+fuse-overlayfs-0.3-5.module+el8.2.0+6370+6fb6c8ca.x86_64.rpm
+fuse-overlayfs-debuginfo-0.3-5.module+el8.2.0+6370+6fb6c8ca.x86_64.rpm
+fuse-overlayfs-debugsource-0.3-5.module+el8.2.0+6370+6fb6c8ca.x86_64.rpm
+oci-systemd-hook-0.1.15-2.git2d0b8a3.module+el8.2.0+6370+6fb6c8ca.x86_64.rpm
+oci-systemd-hook-debuginfo-0.1.15-2.git2d0b8a3.module+el8.2.0+6370+6fb6c8ca.x86_64.rpm
+oci-systemd-hook-debugsource-0.1.15-2.git2d0b8a3.module+el8.2.0+6370+6fb6c8ca.x86_64.rpm
+oci-umount-2.3.4-2.git87f9237.module+el8.2.0+6370+6fb6c8ca.x86_64.rpm
+oci-umount-debuginfo-2.3.4-2.git87f9237.module+el8.2.0+6370+6fb6c8ca.x86_64.rpm
+oci-umount-debugsource-2.3.4-2.git87f9237.module+el8.2.0+6370+6fb6c8ca.x86_64.rpm
+podman-1.0.0-4.git921f98f.module+el8.2.0+6370+6fb6c8ca.x86_64.rpm
+podman-debuginfo-1.0.0-4.git921f98f.module+el8.2.0+6370+6fb6c8ca.x86_64.rpm
+podman-debugsource-1.0.0-4.git921f98f.module+el8.2.0+6370+6fb6c8ca.x86_64.rpm
+python3-criu-3.12-9.module+el8.2.0+6370+6fb6c8ca.x86_64.rpm
+runc-1.0.0-56.rc5.dev.git2abd837.module+el8.2.0+6370+6fb6c8ca.x86_64.rpm
+runc-debuginfo-1.0.0-56.rc5.dev.git2abd837.module+el8.2.0+6370+6fb6c8ca.x86_64.rpm
+runc-debugsource-1.0.0-56.rc5.dev.git2abd837.module+el8.2.0+6370+6fb6c8ca.x86_64.rpm
+skopeo-0.1.32-4.git1715c90.module+el8.2.0+6370+6fb6c8ca.x86_64.rpm
+skopeo-debuginfo-0.1.32-4.git1715c90.module+el8.2.0+6370+6fb6c8ca.x86_64.rpm
+skopeo-debugsource-0.1.32-4.git1715c90.module+el8.2.0+6370+6fb6c8ca.x86_64.rpm
+slirp4netns-0.1-5.dev.gitc4e1bc5.module+el8.2.0+6370+6fb6c8ca.x86_64.rpm
+slirp4netns-debuginfo-0.1-5.dev.gitc4e1bc5.module+el8.2.0+6370+6fb6c8ca.x86_64.rpm
+slirp4netns-debugsource-0.1-5.dev.gitc4e1bc5.module+el8.2.0+6370+6fb6c8ca.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2020-10696
+https://access.redhat.com/security/updates/classification/#important
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXqiYbdzjgjWX9erEAQiX6Q//XAcN8Mxb59x6oBAW++pZssgKGyp2Vq1r
+/D5af9bhf5fDqqIoy2Y7fcJGurb66EeuZuwcwv3bB9bjsKd1vc48Ds+lJ+G8tNrZ
+2B8WyApxox0xWCFAianKZD0EfGUTMUzK/d3WJ4RJyzuS45HoUZU9btlkiBOSMzFH
+rz1tusbQE5HQR/lgnwxyfBxJnokdNvK8QHN44H7Du2EQ+1j8VELvS6OKnfsMSbk5
+yO0BpzBmt1wzdXmjtEynKMZQERbJNIlJUkI2c/IrePUvE303enNUrEl1c6WH1J8z
+h46ZxoNN7/AIywsz4cxAgxEe4pcd7SYJP6bT9epwqd4DO2zF0pSHvcbfwFCwQoPD
+BkWhmuPXmkFzO6au/PmflQp5yW6fcLsR8+ZmBCaNGOdfkmxMlueCFgDGGxGjA171
+x1XLHMkpd3lLQHHycNb+7lDKPYlQq0PA64KHvkagaG+Y4yPbxDiGRI3iNeMHALnI
+w0A90AJLmL+rIQG9ypTSVPxnOxnF5x0v0irtTjucGdkxLQ2WJDCj4UiWbJO/Ig3V
+ghX9at4i94cEvJQPRnw9A0qiVqut+ynLucw3o4Lfz1/nLr+xn0psKHAC1rjIzq3Y
+FSiaHh7X7WoetPrO+ajs/1D2dewqvkzkET9vDFOZpj6m7K901GbLXs8xQigbwiok
+QXdz5UabWLM=
+=mme8
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

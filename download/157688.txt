@@ -1,0 +1,97 @@
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Gentoo Linux Security Advisory                           GLSA 202005-05
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+                                           https://security.gentoo.org/
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ Severity: High
+    Title: Squid: Multiple vulnerabilities
+     Date: May 12, 2020
+     Bugs: #719046
+       ID: 202005-05
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Synopsis
+========
+
+Multiple vulnerabilities have been found in Squid, the worst of which
+could result in the arbitrary execution of code.
+
+Background
+==========
+
+Squid is a full-featured Web proxy cache designed to run on Unix
+systems. It supports proxying and caching of HTTP, FTP, and other URLs,
+as well as SSL support, cache hierarchies, transparent caching, access
+control lists and many other features.
+
+Affected packages
+=================
+
+    -------------------------------------------------------------------
+     Package              /     Vulnerable     /            Unaffected
+    -------------------------------------------------------------------
+  1  net-proxy/squid               < 4.11                     >= 4.11
+
+Description
+===========
+
+Multiple vulnerabilities have been discovered in Squid. Please review
+the CVE identifiers referenced below for details.
+
+Impact
+======
+
+Please review the referenced CVE identifiers for details.
+
+Workaround
+==========
+
+There is no known workaround at this time.
+
+Resolution
+==========
+
+All Squid users should upgrade to the latest version:
+
+  # emerge --sync
+  # emerge --ask --oneshot --verbose ">=net-proxy/squid-4.11"
+
+References
+==========
+
+[ 1 ] CVE-2019-12519
+      https://nvd.nist.gov/vuln/detail/CVE-2019-12519
+[ 2 ] CVE-2019-12521
+      https://nvd.nist.gov/vuln/detail/CVE-2019-12521
+[ 3 ] CVE-2020-11945
+      https://nvd.nist.gov/vuln/detail/CVE-2020-11945
+
+Availability
+============
+
+This GLSA and any updates to it are available for viewing at
+the Gentoo Security Website:
+
+ https://security.gentoo.org/glsa/202005-05
+
+Concerns?
+=========
+
+Security is a primary focus of Gentoo Linux and ensuring the
+confidentiality and security of our users' machines is of utmost
+importance to us. Any security concerns should be addressed to
+security@gentoo.org or alternatively, you may file a bug at
+https://bugs.gentoo.org.
+
+License
+=======
+
+Copyright 2020 Gentoo Foundation, Inc; referenced text
+belongs to its owner(s).
+
+The contents of this document are licensed under the
+Creative Commons - Attribution / Share Alike license.
+
+https://creativecommons.org/licenses/by-sa/2.5

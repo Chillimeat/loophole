@@ -1,0 +1,168 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Moderate: e2fsprogs security, bug fix, and enhancement update
+Advisory ID:       RHSA-2020:1913-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:1913
+Issue date:        2020-04-28
+CVE Names:         CVE-2019-5094
+====================================================================
+1. Summary:
+
+An update for e2fsprogs is now available for Red Hat Enterprise Linux 8.
+
+Red Hat Product Security has rated this update as having a security impact
+of Moderate. A Common Vulnerability Scoring System (CVSS) base score, which
+gives a detailed severity rating, is available for each vulnerability from
+the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Enterprise Linux BaseOS (v. 8) - aarch64, ppc64le, s390x, x86_64
+
+3. Description:
+
+The e2fsprogs packages provide a number of utilities for creating,
+checking, modifying, and correcting the ext2, ext3, and ext4 file systems.
+
+The following packages have been upgraded to a later upstream version:
+e2fsprogs (1.45.4). (BZ#1783777)
+
+Security Fix(es):
+
+* e2fsprogs: crafted ext4 partition leads to out-of-bounds write
+(CVE-2019-5094)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+Additional Changes:
+
+For detailed information on changes in this release, see the Red Hat
+Enterprise Linux 8.2 Release Notes linked from the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1768555 - CVE-2019-5094 e2fsprogs: crafted ext4 partition leads to out-of-bounds write
+1780279 - RFE: Update mke2fs.conf to provide easy method of making RHEL6/7-compatible filesystems
+1783777 - [Rebase] Rebase e2fsprogs to 1.45.4
+1788573 - e2fsprogs: Document supported features/options in ext4 man page
+
+6. Package List:
+
+Red Hat Enterprise Linux BaseOS (v. 8):
+
+Source:
+e2fsprogs-1.45.4-3.el8.src.rpm
+
+aarch64:
+e2fsprogs-1.45.4-3.el8.aarch64.rpm
+e2fsprogs-debuginfo-1.45.4-3.el8.aarch64.rpm
+e2fsprogs-debugsource-1.45.4-3.el8.aarch64.rpm
+e2fsprogs-devel-1.45.4-3.el8.aarch64.rpm
+e2fsprogs-libs-1.45.4-3.el8.aarch64.rpm
+e2fsprogs-libs-debuginfo-1.45.4-3.el8.aarch64.rpm
+libcom_err-1.45.4-3.el8.aarch64.rpm
+libcom_err-debuginfo-1.45.4-3.el8.aarch64.rpm
+libcom_err-devel-1.45.4-3.el8.aarch64.rpm
+libss-1.45.4-3.el8.aarch64.rpm
+libss-debuginfo-1.45.4-3.el8.aarch64.rpm
+
+ppc64le:
+e2fsprogs-1.45.4-3.el8.ppc64le.rpm
+e2fsprogs-debuginfo-1.45.4-3.el8.ppc64le.rpm
+e2fsprogs-debugsource-1.45.4-3.el8.ppc64le.rpm
+e2fsprogs-devel-1.45.4-3.el8.ppc64le.rpm
+e2fsprogs-libs-1.45.4-3.el8.ppc64le.rpm
+e2fsprogs-libs-debuginfo-1.45.4-3.el8.ppc64le.rpm
+libcom_err-1.45.4-3.el8.ppc64le.rpm
+libcom_err-debuginfo-1.45.4-3.el8.ppc64le.rpm
+libcom_err-devel-1.45.4-3.el8.ppc64le.rpm
+libss-1.45.4-3.el8.ppc64le.rpm
+libss-debuginfo-1.45.4-3.el8.ppc64le.rpm
+
+s390x:
+e2fsprogs-1.45.4-3.el8.s390x.rpm
+e2fsprogs-debuginfo-1.45.4-3.el8.s390x.rpm
+e2fsprogs-debugsource-1.45.4-3.el8.s390x.rpm
+e2fsprogs-devel-1.45.4-3.el8.s390x.rpm
+e2fsprogs-libs-1.45.4-3.el8.s390x.rpm
+e2fsprogs-libs-debuginfo-1.45.4-3.el8.s390x.rpm
+libcom_err-1.45.4-3.el8.s390x.rpm
+libcom_err-debuginfo-1.45.4-3.el8.s390x.rpm
+libcom_err-devel-1.45.4-3.el8.s390x.rpm
+libss-1.45.4-3.el8.s390x.rpm
+libss-debuginfo-1.45.4-3.el8.s390x.rpm
+
+x86_64:
+e2fsprogs-1.45.4-3.el8.x86_64.rpm
+e2fsprogs-debuginfo-1.45.4-3.el8.i686.rpm
+e2fsprogs-debuginfo-1.45.4-3.el8.x86_64.rpm
+e2fsprogs-debugsource-1.45.4-3.el8.i686.rpm
+e2fsprogs-debugsource-1.45.4-3.el8.x86_64.rpm
+e2fsprogs-devel-1.45.4-3.el8.i686.rpm
+e2fsprogs-devel-1.45.4-3.el8.x86_64.rpm
+e2fsprogs-libs-1.45.4-3.el8.i686.rpm
+e2fsprogs-libs-1.45.4-3.el8.x86_64.rpm
+e2fsprogs-libs-debuginfo-1.45.4-3.el8.i686.rpm
+e2fsprogs-libs-debuginfo-1.45.4-3.el8.x86_64.rpm
+libcom_err-1.45.4-3.el8.i686.rpm
+libcom_err-1.45.4-3.el8.x86_64.rpm
+libcom_err-debuginfo-1.45.4-3.el8.i686.rpm
+libcom_err-debuginfo-1.45.4-3.el8.x86_64.rpm
+libcom_err-devel-1.45.4-3.el8.i686.rpm
+libcom_err-devel-1.45.4-3.el8.x86_64.rpm
+libss-1.45.4-3.el8.i686.rpm
+libss-1.45.4-3.el8.x86_64.rpm
+libss-debuginfo-1.45.4-3.el8.i686.rpm
+libss-debuginfo-1.45.4-3.el8.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2019-5094
+https://access.redhat.com/security/updates/classification/#moderate
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/8.2_release_notes/index
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXqhV6tzjgjWX9erEAQh3PQ//ZqbNKdz+yO9b6VsZoDDyPraRQSrLlkuN
+LNE0bLZR8YsfE8b4J03XtEkxzngfHLienDC/jV/REWT6DrzJDBV17SBtIXX1UaAy
++0FNDIVWmu3g0IQw1+PRLDhw5Zsemt2lY6JCPh9y4yztNJuUXWNDJzLK/KqEeF/n
+Auiy0kaWgs8qinfrkJxSmFRh5bRQmIDHkAmevTggP9zjdhOhZBl0aUPIlm4TTlIV
+yfJICfXVCjkZinSvWr5Ts9hiu3/rHQpoViND4ZOqgudNK5xytdATOCiNXVcM0uZo
+Mkz3nQMhT13UhIY5Tb495fuo8uTd1EPef1dPS0a7J3asPxe2hK7nWPmAPZzku5Gr
+mEL04JgYtejOCCCSoO+aAomb+1C+rWtJkfiZa/4jkrQkZh5sdJBhmcg4xdvpl2jD
+GHsEKR4mQLyLqiT9cJdhtJ/gZYIBHegbUm+PBOmxtbDehTCzcPmE6VDRtrLR0YWv
+ZVETt+PfMzWPJvLeO1rLArA36sPmEd1oYoO+QaHmvWbd9z5/G1/Z/tj1tRdO9sn0
+OczFYeuspWNISUSaRfWYHCeInVjNby4myJPXWGcL14J2tprlxPhhhd2N8HiP75LD
+m/wwzomXGQmTmPrVYzH8VMpv+nP2cf6HuSMu8ACrhslSSIMvijlHz7rzwZ7uVhie
+rwLb5kuTLIY=ApRT
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

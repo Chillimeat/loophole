@@ -1,0 +1,45 @@
+=========================================================================
+Ubuntu Security Notice USN-4338-2
+April 28, 2020
+
+re2c vulnerability
+=========================================================================
+A security issue affects these releases of Ubuntu and its derivatives:
+
+- Ubuntu 20.04 LTS
+
+Summary:
+
+re2c could be made to execute arbitrary code if it received
+a specially crafted file.
+
+Software Description:
+- re2c: tool for generating fast C-based recognizers
+
+Details:
+
+USN-4338-1 fixed vulnerabilities in re2c. This update provides
+the corresponding update for Ubuntu 20.04 LTS.
+
+Original advisory details:
+
+ Agostino Sarubbo discovered that re2c incorrectly handled certain files.
+ An attacker could possibly use this issue to execute arbitrary code.
+
+Update instructions:
+
+The problem can be corrected by updating your system to the following
+package versions:
+
+Ubuntu 20.04 LTS:
+  re2c                            1.3-1ubuntu0.1
+
+In general, a standard system update will make all the necessary changes.
+
+References:
+  https://usn.ubuntu.com/4338-2
+  https://usn.ubuntu.com/4338-1
+  CVE-2020-11958
+
+Package Information:
+  https://launchpad.net/ubuntu/+source/re2c/1.3-1ubuntu0.1

@@ -1,0 +1,162 @@
+2020-05-11 11:28:08 [scrapy.utils.log] INFO: Scrapy 1.7.3 started (bot: loophole)
+2020-05-11 11:28:08 [scrapy.utils.log] INFO: Versions: lxml 4.4.1.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.7.0, Python 3.7.6 (tags/v3.7.6:43364a7ae0, Dec 19 2019, 00:42:30) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1c  28 May 2019), cryptography 2.7, Platform Windows-10-10.0.18362-SP0
+2020-05-11 11:28:08 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'loophole', 'CONCURRENT_REQUESTS_PER_DOMAIN': 16, 'LOG_FILE': 'log.txt', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'loophole.spiders', 'SPIDER_MODULES': ['loophole.spiders'], 'URLLENGTH_LIMIT': 5000, 'USER_AGENT': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36'}
+2020-05-11 11:28:08 [scrapy.extensions.telnet] INFO: Telnet Password: 475f70995f117977
+2020-05-11 11:28:08 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2020-05-11 11:28:08 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'loophole.middlewares.RandomUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'loophole.middlewares.SeleniumMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-05-11 11:28:08 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-05-11 11:28:08 [scrapy.middleware] INFO: Enabled item pipelines:
+['loophole.pipelines.MysqlPipeline']
+2020-05-11 11:28:08 [scrapy.core.engine] INFO: Spider opened
+2020-05-11 11:28:08 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-05-11 11:28:08 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-05-11 11:28:09 [py.warnings] WARNING: d:\virtualenvs\env37-loophole\lib\site-packages\pymysql\cursors.py:170: Warning: (1050, "Table 'vul_info' already exists")
+  result = self._query(query)
+
+2020-05-11 11:29:08 [scrapy.extensions.logstats] INFO: Crawled 429 pages (at 429 pages/min), scraped 380 items (at 380 items/min)
+2020-05-11 11:30:09 [scrapy.extensions.logstats] INFO: Crawled 859 pages (at 430 pages/min), scraped 780 items (at 400 items/min)
+2020-05-11 11:30:42 [scrapy.core.engine] INFO: Closing spider (finished)
+2020-05-11 11:30:42 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 452205,
+ 'downloader/request_count': 1100,
+ 'downloader/request_method_count/GET': 1100,
+ 'downloader/response_bytes': 9685567,
+ 'downloader/response_count': 1100,
+ 'downloader/response_status_count/200': 1100,
+ 'elapsed_time_seconds': 153.382498,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 5, 11, 3, 30, 42, 8986),
+ 'item_scraped_count': 1000,
+ 'log_count/INFO': 12,
+ 'log_count/WARNING': 1,
+ 'request_depth_max': 100,
+ 'response_received_count': 1100,
+ 'scheduler/dequeued': 1100,
+ 'scheduler/dequeued/memory': 1100,
+ 'scheduler/enqueued': 1100,
+ 'scheduler/enqueued/memory': 1100,
+ 'start_time': datetime.datetime(2020, 5, 11, 3, 28, 8, 626488)}
+2020-05-11 11:30:42 [scrapy.core.engine] INFO: Spider closed (finished)
+2020-05-11 11:30:42 [scrapy.utils.log] INFO: Scrapy 1.7.3 started (bot: loophole)
+2020-05-11 11:30:42 [scrapy.utils.log] INFO: Versions: lxml 4.4.1.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.7.0, Python 3.7.6 (tags/v3.7.6:43364a7ae0, Dec 19 2019, 00:42:30) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1c  28 May 2019), cryptography 2.7, Platform Windows-10-10.0.18362-SP0
+2020-05-11 11:30:42 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'loophole', 'CONCURRENT_REQUESTS_PER_DOMAIN': 16, 'LOG_FILE': 'log.txt', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'loophole.spiders', 'SPIDER_MODULES': ['loophole.spiders'], 'URLLENGTH_LIMIT': 5000, 'USER_AGENT': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36'}
+2020-05-11 11:30:42 [scrapy.extensions.telnet] INFO: Telnet Password: d0ea923b5f2dbf92
+2020-05-11 11:30:42 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2020-05-11 11:30:43 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'loophole.middlewares.RandomUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'loophole.middlewares.SeleniumMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-05-11 11:30:43 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-05-11 11:30:43 [scrapy.middleware] INFO: Enabled item pipelines:
+['loophole.pipelines.MysqlPipeline']
+2020-05-11 11:30:43 [scrapy.core.engine] INFO: Spider opened
+2020-05-11 11:30:43 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-05-11 11:30:43 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-05-11 11:30:53 [py.warnings] WARNING: d:\virtualenvs\env37-loophole\lib\site-packages\pymysql\cursors.py:170: Warning: (1050, "Table 'vul_info' already exists")
+  result = self._query(query)
+
+2020-05-11 11:30:57 [scrapy.core.engine] INFO: Closing spider (finished)
+2020-05-11 11:30:57 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 294,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 4013,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 14.264981,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 5, 11, 3, 30, 57, 755013),
+ 'item_scraped_count': 29,
+ 'log_count/INFO': 10,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2020, 5, 11, 3, 30, 43, 490032)}
+2020-05-11 11:30:57 [scrapy.core.engine] INFO: Spider closed (finished)
+2020-05-11 11:30:58 [scrapy.utils.log] INFO: Scrapy 1.7.3 started (bot: loophole)
+2020-05-11 11:30:58 [scrapy.utils.log] INFO: Versions: lxml 4.4.1.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.7.0, Python 3.7.6 (tags/v3.7.6:43364a7ae0, Dec 19 2019, 00:42:30) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1c  28 May 2019), cryptography 2.7, Platform Windows-10-10.0.18362-SP0
+2020-05-11 11:30:58 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'loophole', 'CONCURRENT_REQUESTS_PER_DOMAIN': 16, 'LOG_FILE': 'log.txt', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'loophole.spiders', 'SPIDER_MODULES': ['loophole.spiders'], 'URLLENGTH_LIMIT': 5000, 'USER_AGENT': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36'}
+2020-05-11 11:30:58 [scrapy.extensions.telnet] INFO: Telnet Password: 9314a559b184f406
+2020-05-11 11:30:58 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2020-05-11 11:30:59 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'loophole.middlewares.RandomUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'loophole.middlewares.SeleniumMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-05-11 11:30:59 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-05-11 11:30:59 [scrapy.middleware] INFO: Enabled item pipelines:
+['loophole.pipelines.MysqlPipeline']
+2020-05-11 11:30:59 [scrapy.core.engine] INFO: Spider opened
+2020-05-11 11:30:59 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-05-11 11:30:59 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-05-11 11:31:03 [py.warnings] WARNING: d:\virtualenvs\env37-loophole\lib\site-packages\pymysql\cursors.py:170: Warning: (1050, "Table 'vul_info' already exists")
+  result = self._query(query)
+
+2020-05-11 11:31:59 [scrapy.extensions.logstats] INFO: Crawled 22 pages (at 22 pages/min), scraped 19 items (at 19 items/min)
+2020-05-11 11:32:59 [scrapy.extensions.logstats] INFO: Crawled 52 pages (at 30 pages/min), scraped 46 items (at 27 items/min)
+2020-05-11 11:33:59 [scrapy.extensions.logstats] INFO: Crawled 68 pages (at 16 pages/min), scraped 62 items (at 16 items/min)
+2020-05-11 11:34:59 [scrapy.extensions.logstats] INFO: Crawled 75 pages (at 7 pages/min), scraped 69 items (at 7 items/min)
+2020-05-11 11:35:41 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://www.0daybank.org/?p=15143. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-11 11:35:59 [scrapy.extensions.logstats] INFO: Crawled 77 pages (at 2 pages/min), scraped 71 items (at 2 items/min)
+2020-05-11 11:36:02 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://www.0daybank.org/?p=15151. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-11 11:36:02 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://www.0daybank.org/?p=15149. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-11 11:36:11 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://www.0daybank.org/?p=15163. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests

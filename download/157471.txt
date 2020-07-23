@@ -1,0 +1,60 @@
+==========================================================================
+Ubuntu Security Notice USN-4341-1
+April 28, 2020
+
+samba vulnerabilities
+==========================================================================
+
+A security issue affects these releases of Ubuntu and its derivatives:
+
+- Ubuntu 20.04 LTS
+- Ubuntu 19.10
+- Ubuntu 18.04 LTS
+- Ubuntu 16.04 LTS
+
+Summary:
+
+Several security issues were fixed in Samba.
+
+Software Description:
+- samba: SMB/CIFS file, print, and login server for Unix
+
+Details:
+
+Andrei Popa discovered that Samba incorrectly handled certain LDAP queries.
+A remote attacker could use this issue to cause Samba to crash, resulting
+in a denial of service, or possibly execute arbitrary code. This issue only
+affected Ubuntu 19.10 and Ubuntu 20.04 LTS. (CVE-2020-10700)
+
+It was discovered that Samba incorrectly handled certain LDAP queries. A
+remote attacker could possibly use this issue to cause Samba to consume
+resources, resulting in a denial of service. (CVE-2020-10704)
+
+Update instructions:
+
+The problem can be corrected by updating your system to the following
+package versions:
+
+Ubuntu 20.04 LTS:
+  samba                           2:4.11.6+dfsg-0ubuntu1.1
+
+Ubuntu 19.10:
+  samba                           2:4.10.7+dfsg-0ubuntu2.5
+
+Ubuntu 18.04 LTS:
+  samba                           2:4.7.6+dfsg~ubuntu-0ubuntu2.16
+
+Ubuntu 16.04 LTS:
+  samba                           2:4.3.11+dfsg-0ubuntu0.16.04.26
+
+In general, a standard system update will make all the necessary changes.
+
+References:
+  https://usn.ubuntu.com/4341-1
+  CVE-2020-10700, CVE-2020-10704
+
+Package Information:
+  https://launchpad.net/ubuntu/+source/samba/2:4.11.6+dfsg-0ubuntu1.1
+  https://launchpad.net/ubuntu/+source/samba/2:4.10.7+dfsg-0ubuntu2.5
+  https://launchpad.net/ubuntu/+source/samba/2:4.7.6+dfsg~ubuntu-0ubuntu2.16
+  https://launchpad.net/ubuntu/+source/samba/2:4.3.11+dfsg-0ubuntu0.16.04.26

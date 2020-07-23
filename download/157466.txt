@@ -1,0 +1,122 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Low: tcpdump security update
+Advisory ID:       RHSA-2020:1604-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:1604
+Issue date:        2020-04-28
+CVE Names:         CVE-2018-19519
+====================================================================
+1. Summary:
+
+An update for tcpdump is now available for Red Hat Enterprise Linux 8.
+
+Red Hat Product Security has rated this update as having a security impact
+of Low. A Common Vulnerability Scoring System (CVSS) base score, which
+gives a detailed severity rating, is available for each vulnerability from
+the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Enterprise Linux AppStream (v. 8) - aarch64, ppc64le, s390x, x86_64
+
+3. Description:
+
+The tcpdump packages contain the tcpdump utility for monitoring network
+traffic. The tcpdump utility can capture and display the packet headers on
+a particular network interface or on all interfaces.
+
+Security Fix(es):
+
+* tcpdump: Stack-based buffer over-read in print-hncp.c:print_prefix() via
+crafted pcap (CVE-2018-19519)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+Additional Changes:
+
+For detailed information on changes in this release, see the Red Hat
+Enterprise Linux 8.2 Release Notes linked from the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1655374 - CVE-2018-19519 tcpdump: Stack-based buffer over-read in print-hncp.c:print_prefix() via crafted pcap
+1715423 - tcpdump %pre creates user and groups unconditionally, raising alerts in corporate environment
+
+6. Package List:
+
+Red Hat Enterprise Linux AppStream (v. 8):
+
+Source:
+tcpdump-4.9.2-6.el8.src.rpm
+
+aarch64:
+tcpdump-4.9.2-6.el8.aarch64.rpm
+tcpdump-debuginfo-4.9.2-6.el8.aarch64.rpm
+tcpdump-debugsource-4.9.2-6.el8.aarch64.rpm
+
+ppc64le:
+tcpdump-4.9.2-6.el8.ppc64le.rpm
+tcpdump-debuginfo-4.9.2-6.el8.ppc64le.rpm
+tcpdump-debugsource-4.9.2-6.el8.ppc64le.rpm
+
+s390x:
+tcpdump-4.9.2-6.el8.s390x.rpm
+tcpdump-debuginfo-4.9.2-6.el8.s390x.rpm
+tcpdump-debugsource-4.9.2-6.el8.s390x.rpm
+
+x86_64:
+tcpdump-4.9.2-6.el8.x86_64.rpm
+tcpdump-debuginfo-4.9.2-6.el8.x86_64.rpm
+tcpdump-debugsource-4.9.2-6.el8.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2018-19519
+https://access.redhat.com/security/updates/classification/#low
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/8.2_release_notes/index
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXqhWONzjgjWX9erEAQjRpw//d4kTACqMGKOtrzsGBCdO3msitrt7xvaL
+7gGxm5gBSjRkcB7w8mVBAor5s5EKhIzx1Nee5vqsI4vdQ9aGC5gvcEdwvUWMdPMH
+wJxdZFdW/MsVyQ/HsBkjxQuSQWgkJOuGNVLE3gUypOLhhaZaXxoG3wBpwzxqGAm6
+OHH0Z01k4Kd9kpPW1BG7dA1b9T55WQWiRfK/KCJOCU9uXS58PMEDyOB6ytUk34GD
+207REQzAjtUebnUOH8LndYWgI7lAuhc/ztZx0P4Kv3hpUtbc7FLwnKkfrdujCZrb
+PzvqSAJD10kAkFFNv3iA38zX6+AbIC9Sd77GqxIV1Wa0obBerAiryr5jvtecwFc1
+S3iSjUNPI1v9LYFxfClBD9t81ExxF/KJzFy1Y6htrIInAeuPQbvoQLKguz1D/uQZ
+M4n6Rd2IrgiuOLEw23G8Lk+aDGDNu1XSSXPP31h8HN+/1evqJR0R9AAKut7O1NfB
+A4xOtREjmFBjq8+/zal9i9TQSRTDF+b7yExSEtJ6D+ylwl/AXYDq2cPJdSS+2USr
+FAuULx6RF5k1qBFleu7Dx/3zJezH7gSQy5VYKfTp+abve21HRtgk5KQ/ExXKXisn
+l53s08OdSrB2Mwj9XNQjFX0uCkVQCJy/Krpes+Q+Ix/byIUX0Ngu1AVUJxTEqmg/
+ldLeGXsYH6Q=J1ZH
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

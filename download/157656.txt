@@ -1,0 +1,263 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+=====================================================================
+                   Red Hat Security Advisory
+
+Synopsis:          Important: kernel security and bug fix update
+Advisory ID:       RHSA-2020:2102-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:2102
+Issue date:        2020-05-12
+CVE Names:         CVE-2020-2732 CVE-2020-10711 CVE-2020-11884 
+=====================================================================
+
+1. Summary:
+
+An update for kernel is now available for Red Hat Enterprise Linux 8.
+
+Red Hat Product Security has rated this update as having a security impact
+of Important. A Common Vulnerability Scoring System (CVSS) base score,
+which gives a detailed severity rating, is available for each vulnerability
+from the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat CodeReady Linux Builder (v. 8) - aarch64, ppc64le, x86_64
+Red Hat Enterprise Linux BaseOS (v. 8) - aarch64, noarch, ppc64le, s390x, x86_64
+
+3. Description:
+
+The kernel packages contain the Linux kernel, the core of any Linux
+operating system.
+
+Security Fix(es):
+
+* Kernel: NetLabel: null pointer dereference while receiving CIPSO packet
+with null category may cause kernel panic (CVE-2020-10711)
+
+* Kernel: s390: page table upgrade in secondary address mode may lead to
+privilege escalation (CVE-2020-11884)
+
+* Kernel: kvm: nVMX: L2 guest may trick the L0 hypervisor to access
+sensitive L1 resources (CVE-2020-2732)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+Bug Fix(es):
+
+* [RHEL8.2][Azure]Commits to resolve high network latency (BZ#1817945)
+
+* cpu.share scheduling performance issue (BZ#1819909)
+
+* [DELL 8.2 BUG] [WD 19 SC/DC/TBT] ALSA:  Microphone can't record via front
+port after suspend (BZ#1821376)
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+The system must be rebooted for this update to take effect.
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1805135 - CVE-2020-2732 Kernel: kvm: nVMX: L2 guest may trick the L0 hypervisor to access sensitive L1 resources
+1825116 - CVE-2020-10711 Kernel: NetLabel: null pointer dereference while receiving CIPSO packet with null category may cause kernel panic
+1828149 - CVE-2020-11884 Kernel: s390: page table upgrade in secondary address mode may lead to privilege escalation
+
+6. Package List:
+
+Red Hat Enterprise Linux BaseOS (v. 8):
+
+Source:
+kernel-4.18.0-193.1.2.el8_2.src.rpm
+
+aarch64:
+bpftool-4.18.0-193.1.2.el8_2.aarch64.rpm
+bpftool-debuginfo-4.18.0-193.1.2.el8_2.aarch64.rpm
+kernel-4.18.0-193.1.2.el8_2.aarch64.rpm
+kernel-core-4.18.0-193.1.2.el8_2.aarch64.rpm
+kernel-cross-headers-4.18.0-193.1.2.el8_2.aarch64.rpm
+kernel-debug-4.18.0-193.1.2.el8_2.aarch64.rpm
+kernel-debug-core-4.18.0-193.1.2.el8_2.aarch64.rpm
+kernel-debug-debuginfo-4.18.0-193.1.2.el8_2.aarch64.rpm
+kernel-debug-devel-4.18.0-193.1.2.el8_2.aarch64.rpm
+kernel-debug-modules-4.18.0-193.1.2.el8_2.aarch64.rpm
+kernel-debug-modules-extra-4.18.0-193.1.2.el8_2.aarch64.rpm
+kernel-debuginfo-4.18.0-193.1.2.el8_2.aarch64.rpm
+kernel-debuginfo-common-aarch64-4.18.0-193.1.2.el8_2.aarch64.rpm
+kernel-devel-4.18.0-193.1.2.el8_2.aarch64.rpm
+kernel-headers-4.18.0-193.1.2.el8_2.aarch64.rpm
+kernel-modules-4.18.0-193.1.2.el8_2.aarch64.rpm
+kernel-modules-extra-4.18.0-193.1.2.el8_2.aarch64.rpm
+kernel-tools-4.18.0-193.1.2.el8_2.aarch64.rpm
+kernel-tools-debuginfo-4.18.0-193.1.2.el8_2.aarch64.rpm
+kernel-tools-libs-4.18.0-193.1.2.el8_2.aarch64.rpm
+perf-4.18.0-193.1.2.el8_2.aarch64.rpm
+perf-debuginfo-4.18.0-193.1.2.el8_2.aarch64.rpm
+python3-perf-4.18.0-193.1.2.el8_2.aarch64.rpm
+python3-perf-debuginfo-4.18.0-193.1.2.el8_2.aarch64.rpm
+
+noarch:
+kernel-abi-whitelists-4.18.0-193.1.2.el8_2.noarch.rpm
+kernel-doc-4.18.0-193.1.2.el8_2.noarch.rpm
+
+ppc64le:
+bpftool-4.18.0-193.1.2.el8_2.ppc64le.rpm
+bpftool-debuginfo-4.18.0-193.1.2.el8_2.ppc64le.rpm
+kernel-4.18.0-193.1.2.el8_2.ppc64le.rpm
+kernel-core-4.18.0-193.1.2.el8_2.ppc64le.rpm
+kernel-cross-headers-4.18.0-193.1.2.el8_2.ppc64le.rpm
+kernel-debug-4.18.0-193.1.2.el8_2.ppc64le.rpm
+kernel-debug-core-4.18.0-193.1.2.el8_2.ppc64le.rpm
+kernel-debug-debuginfo-4.18.0-193.1.2.el8_2.ppc64le.rpm
+kernel-debug-devel-4.18.0-193.1.2.el8_2.ppc64le.rpm
+kernel-debug-modules-4.18.0-193.1.2.el8_2.ppc64le.rpm
+kernel-debug-modules-extra-4.18.0-193.1.2.el8_2.ppc64le.rpm
+kernel-debuginfo-4.18.0-193.1.2.el8_2.ppc64le.rpm
+kernel-debuginfo-common-ppc64le-4.18.0-193.1.2.el8_2.ppc64le.rpm
+kernel-devel-4.18.0-193.1.2.el8_2.ppc64le.rpm
+kernel-headers-4.18.0-193.1.2.el8_2.ppc64le.rpm
+kernel-modules-4.18.0-193.1.2.el8_2.ppc64le.rpm
+kernel-modules-extra-4.18.0-193.1.2.el8_2.ppc64le.rpm
+kernel-tools-4.18.0-193.1.2.el8_2.ppc64le.rpm
+kernel-tools-debuginfo-4.18.0-193.1.2.el8_2.ppc64le.rpm
+kernel-tools-libs-4.18.0-193.1.2.el8_2.ppc64le.rpm
+perf-4.18.0-193.1.2.el8_2.ppc64le.rpm
+perf-debuginfo-4.18.0-193.1.2.el8_2.ppc64le.rpm
+python3-perf-4.18.0-193.1.2.el8_2.ppc64le.rpm
+python3-perf-debuginfo-4.18.0-193.1.2.el8_2.ppc64le.rpm
+
+s390x:
+bpftool-4.18.0-193.1.2.el8_2.s390x.rpm
+bpftool-debuginfo-4.18.0-193.1.2.el8_2.s390x.rpm
+kernel-4.18.0-193.1.2.el8_2.s390x.rpm
+kernel-core-4.18.0-193.1.2.el8_2.s390x.rpm
+kernel-cross-headers-4.18.0-193.1.2.el8_2.s390x.rpm
+kernel-debug-4.18.0-193.1.2.el8_2.s390x.rpm
+kernel-debug-core-4.18.0-193.1.2.el8_2.s390x.rpm
+kernel-debug-debuginfo-4.18.0-193.1.2.el8_2.s390x.rpm
+kernel-debug-devel-4.18.0-193.1.2.el8_2.s390x.rpm
+kernel-debug-modules-4.18.0-193.1.2.el8_2.s390x.rpm
+kernel-debug-modules-extra-4.18.0-193.1.2.el8_2.s390x.rpm
+kernel-debuginfo-4.18.0-193.1.2.el8_2.s390x.rpm
+kernel-debuginfo-common-s390x-4.18.0-193.1.2.el8_2.s390x.rpm
+kernel-devel-4.18.0-193.1.2.el8_2.s390x.rpm
+kernel-headers-4.18.0-193.1.2.el8_2.s390x.rpm
+kernel-modules-4.18.0-193.1.2.el8_2.s390x.rpm
+kernel-modules-extra-4.18.0-193.1.2.el8_2.s390x.rpm
+kernel-tools-4.18.0-193.1.2.el8_2.s390x.rpm
+kernel-tools-debuginfo-4.18.0-193.1.2.el8_2.s390x.rpm
+kernel-zfcpdump-4.18.0-193.1.2.el8_2.s390x.rpm
+kernel-zfcpdump-core-4.18.0-193.1.2.el8_2.s390x.rpm
+kernel-zfcpdump-debuginfo-4.18.0-193.1.2.el8_2.s390x.rpm
+kernel-zfcpdump-devel-4.18.0-193.1.2.el8_2.s390x.rpm
+kernel-zfcpdump-modules-4.18.0-193.1.2.el8_2.s390x.rpm
+kernel-zfcpdump-modules-extra-4.18.0-193.1.2.el8_2.s390x.rpm
+perf-4.18.0-193.1.2.el8_2.s390x.rpm
+perf-debuginfo-4.18.0-193.1.2.el8_2.s390x.rpm
+python3-perf-4.18.0-193.1.2.el8_2.s390x.rpm
+python3-perf-debuginfo-4.18.0-193.1.2.el8_2.s390x.rpm
+
+x86_64:
+bpftool-4.18.0-193.1.2.el8_2.x86_64.rpm
+bpftool-debuginfo-4.18.0-193.1.2.el8_2.x86_64.rpm
+kernel-4.18.0-193.1.2.el8_2.x86_64.rpm
+kernel-core-4.18.0-193.1.2.el8_2.x86_64.rpm
+kernel-cross-headers-4.18.0-193.1.2.el8_2.x86_64.rpm
+kernel-debug-4.18.0-193.1.2.el8_2.x86_64.rpm
+kernel-debug-core-4.18.0-193.1.2.el8_2.x86_64.rpm
+kernel-debug-debuginfo-4.18.0-193.1.2.el8_2.x86_64.rpm
+kernel-debug-devel-4.18.0-193.1.2.el8_2.x86_64.rpm
+kernel-debug-modules-4.18.0-193.1.2.el8_2.x86_64.rpm
+kernel-debug-modules-extra-4.18.0-193.1.2.el8_2.x86_64.rpm
+kernel-debuginfo-4.18.0-193.1.2.el8_2.x86_64.rpm
+kernel-debuginfo-common-x86_64-4.18.0-193.1.2.el8_2.x86_64.rpm
+kernel-devel-4.18.0-193.1.2.el8_2.x86_64.rpm
+kernel-headers-4.18.0-193.1.2.el8_2.x86_64.rpm
+kernel-modules-4.18.0-193.1.2.el8_2.x86_64.rpm
+kernel-modules-extra-4.18.0-193.1.2.el8_2.x86_64.rpm
+kernel-tools-4.18.0-193.1.2.el8_2.x86_64.rpm
+kernel-tools-debuginfo-4.18.0-193.1.2.el8_2.x86_64.rpm
+kernel-tools-libs-4.18.0-193.1.2.el8_2.x86_64.rpm
+perf-4.18.0-193.1.2.el8_2.x86_64.rpm
+perf-debuginfo-4.18.0-193.1.2.el8_2.x86_64.rpm
+python3-perf-4.18.0-193.1.2.el8_2.x86_64.rpm
+python3-perf-debuginfo-4.18.0-193.1.2.el8_2.x86_64.rpm
+
+Red Hat CodeReady Linux Builder (v. 8):
+
+aarch64:
+bpftool-debuginfo-4.18.0-193.1.2.el8_2.aarch64.rpm
+kernel-debug-debuginfo-4.18.0-193.1.2.el8_2.aarch64.rpm
+kernel-debuginfo-4.18.0-193.1.2.el8_2.aarch64.rpm
+kernel-debuginfo-common-aarch64-4.18.0-193.1.2.el8_2.aarch64.rpm
+kernel-tools-debuginfo-4.18.0-193.1.2.el8_2.aarch64.rpm
+kernel-tools-libs-devel-4.18.0-193.1.2.el8_2.aarch64.rpm
+perf-debuginfo-4.18.0-193.1.2.el8_2.aarch64.rpm
+python3-perf-debuginfo-4.18.0-193.1.2.el8_2.aarch64.rpm
+
+ppc64le:
+bpftool-debuginfo-4.18.0-193.1.2.el8_2.ppc64le.rpm
+kernel-debug-debuginfo-4.18.0-193.1.2.el8_2.ppc64le.rpm
+kernel-debuginfo-4.18.0-193.1.2.el8_2.ppc64le.rpm
+kernel-debuginfo-common-ppc64le-4.18.0-193.1.2.el8_2.ppc64le.rpm
+kernel-tools-debuginfo-4.18.0-193.1.2.el8_2.ppc64le.rpm
+kernel-tools-libs-devel-4.18.0-193.1.2.el8_2.ppc64le.rpm
+perf-debuginfo-4.18.0-193.1.2.el8_2.ppc64le.rpm
+python3-perf-debuginfo-4.18.0-193.1.2.el8_2.ppc64le.rpm
+
+x86_64:
+bpftool-debuginfo-4.18.0-193.1.2.el8_2.x86_64.rpm
+kernel-debug-debuginfo-4.18.0-193.1.2.el8_2.x86_64.rpm
+kernel-debuginfo-4.18.0-193.1.2.el8_2.x86_64.rpm
+kernel-debuginfo-common-x86_64-4.18.0-193.1.2.el8_2.x86_64.rpm
+kernel-tools-debuginfo-4.18.0-193.1.2.el8_2.x86_64.rpm
+kernel-tools-libs-devel-4.18.0-193.1.2.el8_2.x86_64.rpm
+perf-debuginfo-4.18.0-193.1.2.el8_2.x86_64.rpm
+python3-perf-debuginfo-4.18.0-193.1.2.el8_2.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2020-2732
+https://access.redhat.com/security/cve/CVE-2020-10711
+https://access.redhat.com/security/cve/CVE-2020-11884
+https://access.redhat.com/security/updates/classification/#important
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXrrAg9zjgjWX9erEAQiiCw/9HHEiNoe98nzGyRc6BZHtMfMhoOPhsYOI
+VuDRSLyWTMI0q6jKdOkvEmmhN8rMa+a9+QHPY/9SkzGgDEiRydNqyV/Tp6wlvCL0
+DmqcBE8OBV4UWwoslroNyT6HemcQ41EgDBstIQpJitP0+4xkrK4xBZR76QXbYAsG
+mIjViWYsi3VqIWBcT51m/hBEqnGyGUF8ENvy47ADKjixhg5exeD8zg5L6BlFpBkP
+SRsCApmLpwkyWFnNixGonAxkXHAJw+HWRusZOrz8QdjXWRlqNdorsKbvU67wv1MD
+rTLDzYvYHs9F3mOLZVqINQscR8jGoHqxhHCnBruR/rcUkbicBJFTX9hgyakzsoXf
+TUt6FnUBYNtcYJyzz2OAzbsq/QVIqeVvMRICXd8AiEWFQx9tUr4h3OnSSiEoGARb
+JAsuLbrAGxyKVreWg5Io/yT/yTae2P48/1Z0MRqYuhMAJBmRL1t5zxlgJXktBUeA
+gveMIG7XxVgfPbCm4JUmc1B/5HpIYWcFtcoSURvaIHLZGjKE5hPDVrDWOMfmgdlS
+7G94TqVixIAR8t2K+rP7iNJuWY5AVHRXDXIrt3nBc5aZWQ+j9CkE3DiIpLbfwnGs
+kxTTdmcruLFiIq+Yz2iM6yMq4pSs9TvIimcPbT1eZAkgqgWodl+VZzl8s1IDJlHX
+SaiIPXQhJa8=
+=GqIN
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

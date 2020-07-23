@@ -1,0 +1,99 @@
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Gentoo Linux Security Advisory                           GLSA 202005-02
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+                                           https://security.gentoo.org/
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ Severity: Normal
+    Title: QEMU: Multiple vulnerabilities
+     Date: May 12, 2020
+     Bugs: #716518, #717154, #717770
+       ID: 202005-02
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Synopsis
+========
+
+Multiple vulnerabilities have been found in QEMU, the worst of which
+could result in the arbitrary execution of code.
+
+Background
+==========
+
+QEMU is a generic and open source machine emulator and virtualizer.
+
+Affected packages
+=================
+
+    -------------------------------------------------------------------
+     Package              /     Vulnerable     /            Unaffected
+    -------------------------------------------------------------------
+  1  app-emulation/qemu          < 4.2.0-r5               >= 4.2.0-r5
+
+Description
+===========
+
+Multiple vulnerabilities have been discovered in QEMU. Please review
+the CVE identifiers referenced below for details.
+
+Impact
+======
+
+Please review the referenced CVE identifiers for details.
+
+Workaround
+==========
+
+There is no known workaround at this time.
+
+Resolution
+==========
+
+All QEMU users should upgrade to the latest version:
+
+  # emerge --sync
+  # emerge --ask --oneshot --verbose ">=app-emulation/qemu-4.2.0-r5"
+
+References
+==========
+
+[ 1 ] CVE-2020-11102
+      https://nvd.nist.gov/vuln/detail/CVE-2020-11102
+[ 2 ] CVE-2020-1711
+      https://nvd.nist.gov/vuln/detail/CVE-2020-1711
+[ 3 ] CVE-2020-7039
+      https://nvd.nist.gov/vuln/detail/CVE-2020-7039
+
+Availability
+============
+
+This GLSA and any updates to it are available for viewing at
+the Gentoo Security Website:
+
+ https://security.gentoo.org/glsa/202005-02
+
+Concerns?
+=========
+
+Security is a primary focus of Gentoo Linux and ensuring the
+confidentiality and security of our users' machines is of utmost
+importance to us. Any security concerns should be addressed to
+security@gentoo.org or alternatively, you may file a bug at
+https://bugs.gentoo.org.
+
+License
+=======
+
+Copyright 2020 Gentoo Foundation, Inc; referenced text
+belongs to its owner(s).
+
+The contents of this document are licensed under the
+Creative Commons - Attribution / Share Alike license.
+
+https://creativecommons.org/licenses/by-sa/2.5
+
+-- 
+Regards,
+Thomas Deutschmann / Gentoo Linux Developer
+C4DD 695F A713 8F24 2AA1 5638 5849 7EE5 1D5D 74A5

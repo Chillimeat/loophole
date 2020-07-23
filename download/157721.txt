@@ -1,0 +1,101 @@
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Gentoo Linux Security Advisory                           GLSA 202005-08
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+                                           https://security.gentoo.org/
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ Severity: Normal
+    Title: Xen: Multiple vulnerabilities
+     Date: May 14, 2020
+     Bugs: #717446
+       ID: 202005-08
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Synopsis
+========
+
+Multiple vulnerabilities have been found in Xen, the worst of which
+could allow privilege escalation.
+
+Background
+==========
+
+Xen is a bare-metal hypervisor.
+
+Affected packages
+=================
+
+    -------------------------------------------------------------------
+     Package              /     Vulnerable     /            Unaffected
+    -------------------------------------------------------------------
+  1  app-emulation/xen          < 4.12.2-r2              >= 4.12.2-r2
+  2  app-emulation/xen-tools    < 4.12.2-r2              >= 4.12.2-r2
+    -------------------------------------------------------------------
+     2 affected packages
+
+Description
+===========
+
+Multiple vulnerabilities have been discovered in Xen. Please review the
+CVE identifiers referenced below for details.
+
+Impact
+======
+
+Please review the referenced CVE identifiers for details.
+
+Workaround
+==========
+
+There is no known workaround at this time.
+
+Resolution
+==========
+
+All Xen users should upgrade to the latest version:
+
+  # emerge --sync
+  # emerge --ask --oneshot --verbose ">=app-emulation/xen-4.12.2-r2"
+
+References
+==========
+
+[ 1 ] CVE-2020-11739
+      https://nvd.nist.gov/vuln/detail/CVE-2020-11739
+[ 2 ] CVE-2020-11740
+      https://nvd.nist.gov/vuln/detail/CVE-2020-11740
+[ 3 ] CVE-2020-11741
+      https://nvd.nist.gov/vuln/detail/CVE-2020-11741
+[ 4 ] CVE-2020-11742
+      https://nvd.nist.gov/vuln/detail/CVE-2020-11742
+[ 5 ] CVE-2020-11743
+      https://nvd.nist.gov/vuln/detail/CVE-2020-11743
+
+Availability
+============
+
+This GLSA and any updates to it are available for viewing at
+the Gentoo Security Website:
+
+ https://security.gentoo.org/glsa/202005-08
+
+Concerns?
+=========
+
+Security is a primary focus of Gentoo Linux and ensuring the
+confidentiality and security of our users' machines is of utmost
+importance to us. Any security concerns should be addressed to
+security@gentoo.org or alternatively, you may file a bug at
+https://bugs.gentoo.org.
+
+License
+=======
+
+Copyright 2020 Gentoo Foundation, Inc; referenced text
+belongs to its owner(s).
+
+The contents of this document are licensed under the
+Creative Commons - Attribution / Share Alike license.
+
+https://creativecommons.org/licenses/by-sa/2.5

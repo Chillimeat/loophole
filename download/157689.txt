@@ -1,0 +1,104 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Important: kpatch-patch security update
+Advisory ID:       RHSA-2020:2125-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:2125
+Issue date:        2020-05-13
+CVE Names:         CVE-2020-10711
+====================================================================
+1. Summary:
+
+An update for kpatch-patch is now available for Red Hat Enterprise Linux 8.
+
+Red Hat Product Security has rated this update as having a security impact
+of Important. A Common Vulnerability Scoring System (CVSS) base score,
+which gives a detailed severity rating, is available for each vulnerability
+from the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Enterprise Linux BaseOS (v. 8) - ppc64le, x86_64
+
+3. Description:
+
+This is a kernel live patch module which is automatically loaded by the RPM
+post-install script to modify the code of a running kernel.
+
+Security Fix(es):
+
+* Kernel: NetLabel: null pointer dereference while receiving CIPSO packet
+with null category may cause kernel panic (CVE-2020-10711)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1825116 - CVE-2020-10711 Kernel: NetLabel: null pointer dereference while receiving CIPSO packet with null category may cause kernel panic
+
+6. Package List:
+
+Red Hat Enterprise Linux BaseOS (v. 8):
+
+Source:
+kpatch-patch-4_18_0-193-1-2.el8.src.rpm
+
+ppc64le:
+kpatch-patch-4_18_0-193-1-2.el8.ppc64le.rpm
+kpatch-patch-4_18_0-193-debuginfo-1-2.el8.ppc64le.rpm
+kpatch-patch-4_18_0-193-debugsource-1-2.el8.ppc64le.rpm
+
+x86_64:
+kpatch-patch-4_18_0-193-1-2.el8.x86_64.rpm
+kpatch-patch-4_18_0-193-debuginfo-1-2.el8.x86_64.rpm
+kpatch-patch-4_18_0-193-debugsource-1-2.el8.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2020-10711
+https://access.redhat.com/security/updates/classification/#important
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXrulftzjgjWX9erEAQigSQ//Qv3yEwTeHIbapr2t/5rkB3WnDN8/AfUA
+i9iRIGOrGxIQLcK7DSy75jiPIAvltCv8GKYQGomn2ZZ0q9V+ZkKAfPtNHCwuQxgB
+4F4F+8xrEkLlitsBM/ECdxoa3t+wKcoDPIXBch2ZPuyFgoNqltrwLDUaONFjub4Z
+Izcm9nzV18sgz4VE3FTT7iocFhB/4/N/fyOKLjFuOwUToyw8zbFx91wx3FcVFn7g
+BLQaLVLFarg/ht+nIn7LJtcyTxjXFpTxxIDek/WSlmgEkVinyvaC6DnwVobxQvN9
+lu7LbdLMCiv0Y2u5rEHibgedehIGxumUCfBKqVQCi4AuJSWi+oF77zZjLXeOjVQe
+nleFxzO6l/h0zgqd3MWhEuwdecwpVR7+C5Gn7VEAXeRxd/jIW0CB/k6hEhe8y0so
+lJR+ax5xzAa+R3osKhr75UFH18r5U/J+f+horVl6DXZQxWboftnyeAICcSiJcjPy
+FGxBpz6BQ11MpWvLNfCWSCuGKEzOvZpOYapHCtT3CanXZBhbEaFkmETFLFY0wOja
++guOs6sZIfBH67QeslqQKer5r+zlDgt1H/KEdnS2WhO7NhQ4neuETrqmXAQLS+kg
+3qfskLHgW+wInPj5zZgUUEn7BonqfFuzdppNuIJITCvFZGYyxPZq1QNErmI6RYhr
+qrgNNoO4RRs=EGln
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

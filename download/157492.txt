@@ -1,0 +1,134 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+=====================================================================
+                   Red Hat Security Advisory
+
+Synopsis:          Important: python-twisted-web security update
+Advisory ID:       RHSA-2020:1962-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:1962
+Issue date:        2020-04-29
+CVE Names:         CVE-2020-10108 
+=====================================================================
+
+1. Summary:
+
+An update for python-twisted-web is now available for Red Hat Enterprise
+Linux 6.
+
+Red Hat Product Security has rated this update as having a security impact
+of Important. A Common Vulnerability Scoring System (CVSS) base score,
+which gives a detailed severity rating, is available for each vulnerability
+from the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Enterprise Linux Desktop (v. 6) - i386, x86_64
+Red Hat Enterprise Linux Server (v. 6) - i386, ppc64, s390x, x86_64
+Red Hat Enterprise Linux Workstation (v. 6) - i386, x86_64
+
+3. Description:
+
+Twisted is an event-based framework for internet applications. Twisted Web
+is a complete web server, aimed at hosting web applications using Twisted
+and Python, but fully able to serve static pages too.
+
+Security Fix(es):
+
+* python-twisted: HTTP request smuggling when presented with two
+Content-Length headers (CVE-2020-10108)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1813439 - CVE-2020-10108 python-twisted: HTTP request smuggling when presented with two Content-Length headers
+
+6. Package List:
+
+Red Hat Enterprise Linux Desktop (v. 6):
+
+Source:
+python-twisted-web-8.2.0-6.el6_10.src.rpm
+
+i386:
+python-twisted-web-8.2.0-6.el6_10.i686.rpm
+
+x86_64:
+python-twisted-web-8.2.0-6.el6_10.x86_64.rpm
+
+Red Hat Enterprise Linux Server (v. 6):
+
+Source:
+python-twisted-web-8.2.0-6.el6_10.src.rpm
+
+i386:
+python-twisted-web-8.2.0-6.el6_10.i686.rpm
+
+ppc64:
+python-twisted-web-8.2.0-6.el6_10.ppc64.rpm
+
+s390x:
+python-twisted-web-8.2.0-6.el6_10.s390x.rpm
+
+x86_64:
+python-twisted-web-8.2.0-6.el6_10.x86_64.rpm
+
+Red Hat Enterprise Linux Workstation (v. 6):
+
+Source:
+python-twisted-web-8.2.0-6.el6_10.src.rpm
+
+i386:
+python-twisted-web-8.2.0-6.el6_10.i686.rpm
+
+x86_64:
+python-twisted-web-8.2.0-6.el6_10.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2020-10108
+https://access.redhat.com/security/updates/classification/#important
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXqlNFtzjgjWX9erEAQghTQ/9GJ8WbunUfKMsQrvtjvkgKXBcX1oE2JMV
+UzCyFiOMuffl2i5/TI+lc3Jy+JMVjOMLrRAX7a1sBpinyFUaqoSR+19+MKov1e6m
+J480HITRwjX+/F2GdJjiVB1JkJzJRZxMUsQ3Ydpxkpy+sCVDRIo4/z1ZNJJ/WH4w
+ore9xO79Qv7cvg9e9ZFGWcG/QFN1XiQFGzQ30WcYORXiUgfDhybJDwoW6BbcIAhQ
+E0htiWPOqZgF01u7yShUXOJrF8PQDyg4dSmL62K9BxIrHcU++XSAVCKygB7LLpc6
+vNpjNPzZx2LoR7/HJe7VAxDbrxh/GmcHUIaVScsf1kGtABEAGsFVJ/R5qR8N9FRM
+K8WlvtRubpSe5vruIFvAHA36Gc2O8METsp93Dgw09HGyvcbdURS4HAkRj+tbdmle
+iMdnd9TkJjRf7qGbS7xGhccLqeFV+6P1LkzPklZq/m0pWMk2wjQepOAyAlWJJbjA
+j8lGkhZHfI52B3ii/Yz+ZU3f5B6zkv/u2EtzApbVRl0g/UDRrmUK+PUsv3wAzC+a
+u6dCUAdC3LSDPZhS7msgmb+vOkK4xKFPGH7g9WMt46gzMZM3wfIOZOhx0S99TtnR
+qWdtQtg8DIzvv6aqTN5vKNYb23plhCjOsfxb6YiuwgcQoFlsf2Y9eVK4QRCSRXKr
+ju0RTArHAco=
+=Ypo6
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

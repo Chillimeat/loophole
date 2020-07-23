@@ -1,0 +1,63 @@
+==========================================================================
+Ubuntu Security Notice USN-4365-1
+May 19, 2020
+
+bind9 vulnerabilities
+==========================================================================
+
+A security issue affects these releases of Ubuntu and its derivatives:
+
+- Ubuntu 20.04 LTS
+- Ubuntu 19.10
+- Ubuntu 18.04 LTS
+- Ubuntu 16.04 LTS
+
+Summary:
+
+Several security issues were fixed in Bind.
+
+Software Description:
+- bind9: Internet Domain Name Server
+
+Details:
+
+Lior Shafir, Yehuda Afek, and Anat Bremler-Barr discovered that Bind
+incorrectly limited certain fetches. A remote attacker could possibly use
+this issue to cause Bind to consume resources, leading to a denial of
+service, or possibly use Bind to perform a reflection attack.
+(CVE-2020-8616)
+
+Tobias Klein discovered that Bind incorrectly handled checking TSIG
+validity. A remote attacker could use this issue to cause Bind to crash,
+resulting in a denial of service, or possibly perform other attacks.
+(CVE-2020-8617)
+
+Update instructions:
+
+The problem can be corrected by updating your system to the following
+package versions:
+
+Ubuntu 20.04 LTS:
+  bind9                           1:9.16.1-0ubuntu2.1
+
+Ubuntu 19.10:
+  bind9                           1:9.11.5.P4+dfsg-5.1ubuntu2.2
+
+Ubuntu 18.04 LTS:
+  bind9                           1:9.11.3+dfsg-1ubuntu1.12
+
+Ubuntu 16.04 LTS:
+  bind9                           1:9.10.3.dfsg.P4-8ubuntu1.16
+
+In general, a standard system update will make all the necessary changes.
+
+References:
+  https://usn.ubuntu.com/4365-1
+  CVE-2020-8616, CVE-2020-8617
+
+Package Information:
+  https://launchpad.net/ubuntu/+source/bind9/1:9.16.1-0ubuntu2.1
+  https://launchpad.net/ubuntu/+source/bind9/1:9.11.5.P4+dfsg-5.1ubuntu2.2
+  https://launchpad.net/ubuntu/+source/bind9/1:9.11.3+dfsg-1ubuntu1.12
+  https://launchpad.net/ubuntu/+source/bind9/1:9.10.3.dfsg.P4-8ubuntu1.16
+

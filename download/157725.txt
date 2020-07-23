@@ -1,0 +1,102 @@
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Gentoo Linux Security Advisory                           GLSA 202005-12
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+                                           https://security.gentoo.org/
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ Severity: Normal
+    Title: OpenSLP: Multiple vulnerabilities
+     Date: May 14, 2020
+     Bugs: #662878
+       ID: 202005-12
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Synopsis
+========
+
+Multiple vulnerabilities have been found in OpenSLP, the worst of which
+could result in the arbitrary execution of code.
+
+Background
+==========
+
+OpenSLP is an open-source implementation of Service Location Protocol
+(SLP).
+
+Affected packages
+=================
+
+    -------------------------------------------------------------------
+     Package              /     Vulnerable     /            Unaffected
+    -------------------------------------------------------------------
+  1  net-misc/openslp           <= 2.0.0-r5                Vulnerable!
+    -------------------------------------------------------------------
+     NOTE: Certain packages are still vulnerable. Users should migrate
+           to another package if one is available or wait for the
+           existing packages to be marked stable by their
+           architecture maintainers.
+
+Description
+===========
+
+Multiple vulnerabilities have been discovered in OpenSLP. Please review
+the CVE identifiers referenced below for details.
+
+Impact
+======
+
+Please review the referenced CVE identifiers for details.
+
+Workaround
+==========
+
+There is no known workaround at this time.
+
+Resolution
+==========
+
+Gentoo has discontinued support for OpenSLP. We recommend that users
+unmerge OpenSLP:
+  # emerge --unmerge "net-libs/openslp"
+
+NOTE: The Gentoo developer(s) maintaining OpenSLP have discontinued
+support at this time. It may be possible that a new Gentoo developer
+will update OpenSLP at a later date. No known alternatives to OpenSLP
+are in the tree at this time.
+
+References
+==========
+
+[ 1 ] CVE-2017-17833
+      https://nvd.nist.gov/vuln/detail/CVE-2017-17833
+[ 2 ] CVE-2019-5544
+      https://nvd.nist.gov/vuln/detail/CVE-2019-5544
+
+Availability
+============
+
+This GLSA and any updates to it are available for viewing at
+the Gentoo Security Website:
+
+ https://security.gentoo.org/glsa/202005-12
+
+Concerns?
+=========
+
+Security is a primary focus of Gentoo Linux and ensuring the
+confidentiality and security of our users' machines is of utmost
+importance to us. Any security concerns should be addressed to
+security@gentoo.org or alternatively, you may file a bug at
+https://bugs.gentoo.org.
+
+License
+=======
+
+Copyright 2020 Gentoo Foundation, Inc; referenced text
+belongs to its owner(s).
+
+The contents of this document are licensed under the
+Creative Commons - Attribution / Share Alike license.
+
+https://creativecommons.org/licenses/by-sa/2.5

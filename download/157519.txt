@@ -1,0 +1,96 @@
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Gentoo Linux Security Advisory                           GLSA 202004-14
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+                                           https://security.gentoo.org/
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ Severity: Normal
+    Title: FontForge: Multiple vulnerabilities
+     Date: April 30, 2020
+     Bugs: #706778, #715808
+       ID: 202004-14
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Synopsis
+========
+
+Multiple vulnerabilities have been found in FontForge, the worst of
+which could result in the arbitrary execution of code.
+
+Background
+==========
+
+FontForge is a PostScript font editor and converter.
+
+Affected packages
+=================
+
+    -------------------------------------------------------------------
+     Package              /     Vulnerable     /            Unaffected
+    -------------------------------------------------------------------
+  1  media-gfx/fontforge         < 20200314               >= 20200314
+
+Description
+===========
+
+Multiple vulnerabilities have been discovered in FontForge. Please
+review the CVE identifiers referenced below for details.
+
+Impact
+======
+
+A remote attacker could entice a user to open a specially crafted font
+using FontForge, possibly resulting in execution of arbitrary code with
+the privileges of the process or a Denial of Service condition.
+
+Workaround
+==========
+
+There is no known workaround at this time.
+
+Resolution
+==========
+
+All FontForge users should upgrade to the latest version:
+
+  # emerge --sync
+  # emerge --ask --oneshot --verbose ">=media-gfx/fontforge-20200314"
+
+References
+==========
+
+[ 1 ] CVE-2019-15785
+      https://nvd.nist.gov/vuln/detail/CVE-2019-15785
+[ 2 ] CVE-2020-5395
+      https://nvd.nist.gov/vuln/detail/CVE-2020-5395
+[ 3 ] CVE-2020-5496
+      https://nvd.nist.gov/vuln/detail/CVE-2020-5496
+
+Availability
+============
+
+This GLSA and any updates to it are available for viewing at
+the Gentoo Security Website:
+
+ https://security.gentoo.org/glsa/202004-14
+
+Concerns?
+=========
+
+Security is a primary focus of Gentoo Linux and ensuring the
+confidentiality and security of our users' machines is of utmost
+importance to us. Any security concerns should be addressed to
+security@gentoo.org or alternatively, you may file a bug at
+https://bugs.gentoo.org.
+
+License
+=======
+
+Copyright 2020 Gentoo Foundation, Inc; referenced text
+belongs to its owner(s).
+
+The contents of this document are licensed under the
+Creative Commons - Attribution / Share Alike license.
+
+https://creativecommons.org/licenses/by-sa/2.5

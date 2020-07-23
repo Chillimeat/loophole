@@ -1,0 +1,110 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Moderate: OpenShift Container Platform 4.2.33 openshift-clients security update
+Advisory ID:       RHSA-2020:2027-01
+Product:           Red Hat OpenShift Enterprise
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:2027
+Issue date:        2020-05-13
+CVE Names:         CVE-2020-8945
+====================================================================
+1. Summary:
+
+An update for openshift-clients is now available for Red Hat OpenShift
+Container Platform 4.2.
+
+Red Hat Product Security has rated this update as having a security impact
+of Moderate. A Common Vulnerability Scoring System (CVSS) base score, which
+gives a detailed severity rating, is available for each vulnerability from
+the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat OpenShift Container Platform 4.2 - s390x, x86_64
+
+3. Description:
+
+Red Hat OpenShift Container Platform is Red Hat's cloud computing
+Kubernetes application platform solution designed for on-premise or private
+cloud deployments.
+
+Security Fix(es):
+
+* proglottis/gpgme: Use-after-free in GPGME bindings during container image
+pull (CVE-2020-8945)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+4. Solution:
+
+For OpenShift Container Platform 4.2 see the following documentation, which
+will be updated shortly for release 4.2.33, for important instructions on
+how to upgrade your cluster and fully apply this asynchronous errata
+update:
+
+https://docs.openshift.com/container-platform/4.2/release_notes/ocp-4-2-rel
+ease-notes.html
+
+Details on how to access this content are available at
+https://docs.openshift.com/container-platform/4.2/updating/updating-cluster
+- -cli.html.
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1795838 - CVE-2020-8945 proglottis/gpgme: Use-after-free in GPGME bindings during container image pull
+
+6. Package List:
+
+Red Hat OpenShift Container Platform 4.2:
+
+Source:
+openshift-clients-4.2.32-202005020632.git.1.1b0fab9.el8.src.rpm
+
+s390x:
+openshift-clients-4.2.32-202005020632.git.1.1b0fab9.el8.s390x.rpm
+
+x86_64:
+openshift-clients-4.2.32-202005020632.git.1.1b0fab9.el8.x86_64.rpm
+openshift-clients-redistributable-4.2.32-202005020632.git.1.1b0fab9.el8.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2020-8945
+https://access.redhat.com/security/updates/classification/#moderate
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXrvWttzjgjWX9erEAQgUbhAAoKmZx9M2MEixqB9hUGmniILX0OnNxvnI
+dsoqod0jMPM4+v1Dey2RApSMTeEcFrFdcauNt13sLajs7cuO9OyGGm7hruNOVVdZ
+AFMx6TIDqYjay4FsbszmaqmziEqFW4QDwvi6VdaVqv4XbCiA8Vx4b0BrBz0qRGPq
+hgxf6NxvdFGt7Cze65KC0aphqhGQFhvKPQ83zR3ldiI6WwvG1qvK7qTmFtelqVfx
+f/ESrbUHNp8qM31PqkCfg4CIeC4qduaRMLld0htGBAOPlWkbtw+7yc3gE7T2Dzko
+Qx+3KfZdH64lVO8k6ZBtLYdD25woYcNUetforDTnjBVZvF/t7TLmqMow52dud2KD
+ssO/vheO+MCJAU/9is/D3vb5TqsWyu6cQcUnUjAC2awbHhqUDwOPGcjbuCF1wcQg
+/ynDJJYI7FUYqIT+IHbyxxmI3Spw6Jsgt4Z9ezu/Wm+MGj6kIBhywyKZYjPICiTW
+1B6OvG0YU5sZ5W/YHk1/mEbAYSKlqHWLifUjriQuNYKbXycI75oaRAq2A5KiCSFY
+eXb9xcBNYCe9qkaogaE4TOcJQQgLIdI32L+sYVm0SnTo2j/V8X617rWByn0oIMDS
+UDOpu0oMc3hJraGSPwyf6KFVAR39/EL8k7fNjkOXd7ZQjT6qgDxg5s/hhiAqSmJ3
+/wgWZITc09g=N/1D
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

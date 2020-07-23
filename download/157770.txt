@@ -1,0 +1,826 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Important: Red Hat Ceph Storage 4.1 security, bug fix, and enhancement update
+Advisory ID:       RHSA-2020:2231-01
+Product:           Red Hat Ceph Storage
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:2231
+Issue date:        2020-05-19
+CVE Names:         CVE-2020-1716
+====================================================================
+1. Summary:
+
+Red Hat Ceph Storage 4.1 is now available.
+
+Red Hat Product Security has rated this update as having a security impact
+of Important. A Common Vulnerability Scoring System (CVSS) base score,
+which gives a detailed severity rating, is available for each vulnerability
+from the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Ceph Storage 4.0 MON - noarch, ppc64le, x86_64
+Red Hat Ceph Storage 4.1 MON - noarch, ppc64le, x86_64
+Red Hat Ceph Storage 4.1 OSD - ppc64le, x86_64
+Red Hat Ceph Storage 4.1 Tools - noarch, ppc64le, x86_64
+
+3. Description:
+
+Red Hat Ceph Storage is a scalable, open, software-defined storage platform
+that combines the most stable version of the Ceph storage system with a
+Ceph management platform, deployment utilities, and support services.
+
+Security Fix(es):
+
+* ceph-ansible: hard coded credential in ceph-ansible playbook
+(CVE-2020-1716)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgements, and other related information refer to the CVE
+page(s) listed in the References section.
+
+Bug Fix(es) and Enhancement(s):
+
+For detailed information on changes in this release, see the Red Hat Ceph
+Storage 4.1 Release Notes available at:
+
+https://access.redhat.com/documentation/en-us/red_hat_ceph_storage/4.1/html
+/release_notes/index
+
+4. Solution:
+
+Before applying this update, make sure all previously released errata
+relevant to your system have been applied.
+
+For details on how to apply this update, refer to:
+
+https://access.redhat.com/articles/11258
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1274084 - [RFE] Support for AWS Secure Token Service (STS) with RGW
+1553202 - [RFE] Support user creation on secondary zone in multisite environment
+1581421 - [RFE] If the nodeep-scrub/noscrub flags are set in pools instead of global cluster. List the pool names in the ceph status
+1625951 - [GSS] Recursive move from a directory with double underscore fails
+1639817 - RFE: S3 v2 RESTBucketGet
+1656512 - [RFE] Single Sign-On (SAML 2.0)
+1658491 - [iscsi] add mixed iscsi (ipv4+ipv6) gateways on a ipv4 ceph cluster
+1665683 - RGW: presigned URL for PUT with metadata fails with: SignatureDoesNotMatch
+1678701 - rgw: org.apache.hadoop.fs.contract.s3a.ITestS3AContractGetFileStatus#testComplexDirActions
+1679924 - Add Bluestore compression stats in dashboard
+1687971 - [RFE] Bucket Check Commands Should Only Display Error/Orphaned Objects
+1716815 - [RFE] Supportability of VMware ESX  6.7 on using  Ceph iSCSI gateway
+1716972 - bucket listing may repeat some unicode names
+1719446 - facing rgw error - "/builddir/build/BUILD/ceph-12.2.8/src/rgw/rgw_sync.cc: In function 'virtual int PurgePeriodLogsCR::operate()' thread 7efe125d1700 .. .../rgw_sync.cc: 2387: FAILED assert(cursor) "
+1724428 - The "host" signature in "ceph osd status" remains unchanged on moving an OSD disk from failed node to a new node (workaround: mgr restart)
+1731148 - multisite pg_num on site2 pools should use site1/source values
+1731554 - multisite: radosgw-admin bucket sync status incorrectly reports "caught up" during full sync
+1734583 - [RFE] Improve upmap change reporting in logs
+1738334 - [RFE] RGW Garbage collection - offloading omap to RADOS data objects
+1741677 - Utilizing upmap for manual data rebalance to selected OSD's
+1743388 - Multisite sync should not stuck if the bucket names have : and $
+1744276 - sync status reports complete while bucket status does not
+1746491 - rgw: avoid calling check_bucket_shards() in the write path (perf, dynamic resharding)
+1747206 - [ RFE ]  ceph-ansible needs expanded options for multi-site deployments
+1747516 - if user doesnt exist then bucket list should give error/info message (saying user doesnt exist) rather than showing empty list
+1759700 - MDS should have configurable limit on number of snapshots per directory
+1759716 - standby-replay MDS assertion when removing inode
+1759725 - [RFE] modify session timeout of individual clients to increase gracetime before blacklisting
+1759727 - client requests on snapshotted inode may hang
+1760126 - [RFE] Allow mount.ceph to consume keyrings and ceph.conf
+1760129 - MDS may hit infinite loop in its Lock management module
+1760219 - mgr/volumes: retry spawning purge threads on failure
+1761474 - HEALTH_OK is reported with no managers (or OSDs) in the cluster
+1761743 - mgr/volumes: allow resizing of FS subvolumes
+1762170 - [ceph-dashboard] : Dashboard CLI: sso status command errors with "Error EPERM: Required library not found: `python3-saml`"
+1762197 - [ceph-dashboard] Pools - Overall Performance :  grafana errors out with TypeError: l.c[t.type] is undefined true
+1762852 - When listing of bucket entries, entries following an entry for which check_disk_state() = -ENOENT may not get listed
+1764431 - [Ceph-Dashboard] Trash : With no RBD images moved to Trash, Purge Trash execution succeeds
+1765517 - [ceph-dashboard] Configuration: Unable to edit the configuration parameter listed as editable
+1765530 - [ceph-dashboard] Fix Typo/UI  in Dashboard pages
+1765536 - [ceph-dashboard] Pools - Performance Details ; grafana icon is available
+1767144 - mgr/volumes: support cloning subvolumes from snapshot
+1771206 - MDS should not assert on frozen directory during scrubbing
+1771208 - Client assert failure when importing caps after trimming
+1775218 - mgr/volumes: allow setting uid, gid of subvolume and subvolume group during creation
+1775266 - mgr/volumes: extend the `fs volume rm` protection to include MDS tear down
+1775404 - osd: add osd_fast_shutdown option
+1777064 - [RFE] rgw: support Hashcorp Vault as secrets store for S3 SSE-KMS
+1777380 - ceph-mgr may drop metadata sent during session open by daemons
+1779186 - [ceph-dashboard] Grafana : Error displayed on refresh or change of time
+1782253 - [RFE] Support Deployment with Autoscaler Enabled
+1783223 - [ceph-ansible] : switch from rpm to containerized - default osd health check retry needs to be higher
+1784011 - ceph-ansible should be able to configure multiple grafana instances when ceph dashboard is deployed
+1784405 - [ceph-dashboard] PG scrub: exception 'deque mutated during iteration' hit  with scrub Auto Repair enabled.
+1784729 - [ceph-dashboard Dashboard CLI : command SSO Status fails `python-saml`" on rhel 7.7
+1784746 - [ceph-mgr] 'ceph mgr module ls' command does not have the always_on_modules listed in enabled modules
+1784895 - RBD block devices remained mapped after concurrent "rbd unmap" failures
+1785363 - [ceph-mgr] ceph balancer status taking a long time to return
+1785472 - MDS may assert due to creating too many openfiletable objects
+1785474 - ceph-fuse client is blacklisted because it fails to respond to MDS cap revoke
+1785475 - MDS may crash if no snaprealm is is encoded on root inode
+1785476 - linkages injected by cephfs-data-scan have first == head
+1785477 - MDS reports unrecognized message for mgrclient messages
+1785478 - ceph-mgr volumes plugin connection trimming is not functioning
+1785580 - [ceph-dashboard][User Management] Pool:: login with pool user lists Manager modules
+1785646 - [ceph-dashboard]RGW-User: User details for  system is blank always, should reflect the status
+1785736 - Purging storage clusters fail " registry.redhat.io/openshift4/ose-prometheus-node-exporter:v4.1   msg: '[Errno 2] No such file or directory'"
+1786107 - [[ceph-ansible] Grafana version v5.4.3, required in downstream compose
+1786173 - On a non-existent bucket, a get and put versioning returns HTTP Response 200
+1786287 - [ceph-dashboard]UI : RGW: Add capability modal window should not appear when all the capabilities are added
+1786457 - [ceph-dashboard]iSCSI: Edit target of more than one parameter causes  exception dashboard.rest_client.RequestException: iscsi REST API failed request with status code 400
+1786684 - [ceph-ansible][ceph-dashboard]Purge-cluster.yml on cluster with dashboard fails at "remove node-exporter image"  with error 'it is being used by 1 containers'
+1788347 - reduce min_alloc_size to improve space usage for small objects
+1788917 - [ceph-dashboard]Crush map viewer: color on destroyed osd not visible until its highlighted
+1789357 - [Ceph-Dashboard] Host -> of selected osd performance details -> no changes in Raw capacity and OSD Disk Performance Statistics
+1790472 - [RFE] [ceph-ansible] FS to BS migration - fail playbook if all OSDs in hosts are already bluestore OSDs
+1790479 - [RFE] [ceph-ansible] : FS to BS migration - reuse journal partition / journal vm for bluestore OSDs for db/wal
+1791174 - [Ceph-dashboard] User Management : User with Custom Role getting 403 redirection error and gets access denied
+1792222 - unable to disable the dashboard redirect mechanism
+1792225 - prometheus cluster is not configured correctly when deploying multiple instances
+1792230 - missing settings to configure the mgr dashboard module binding port/address
+1792320 - "ceph-handler : unset noup flag attempts to use container not on host
+1793542 - ceph-volume lvm batch errors on OSD systems w/HDDs and multiple NVMe devices
+1793564 - [ceph-ansible] : rolling_update : norebalance flag is to be unset when playbook completes
+1794351 - [RFE]: Rolling_update fails on Dashboard role trying to create radosgw system user on Multiste secondary
+1794713 - [ceph-dashboard] read-only user can display RGW API keys
+1794715 - [RGW]  Slow lc processing resulting in too much backlog
+1795406 - Misleading error message during realm pull
+1795592 - CVE-2020-1716 ceph-ansible: hard coded credential in ceph-ansible playbook
+1796160 - [ceph-ansible] nfs deployment in rhcs4 fails in selinux enforcing mode
+1796453 - [ceph-ansible]: ansible-playbook shrink-osd.yml -e osd_to_kill=osd_id  fails on upgraded 4.x cluster
+1796853 - Need the logic to intelligently enable ceph 4 repos on RHEL 7.7 from CDN
+1797161 - [RHCS 4.x] Deprecate radosgw-admin orphan * commands as radoslist will be available from bug 1770955
+1797817 - API/ABI break in rgw_lookup
+1798153 - Dashboard does not allow you to set norebalance OSD flag
+1798718 - openfiletable max omap k/v pairs should be same as osd_deep_scrub_large_omap_object_key_threshold
+1798719 - mount.ceph fails with ERANGE if name= option is longer than 37 characters
+1798781 - The ceph client role does not support --limit
+1802199 - perf regression due to bluefs_buffered_io=true
+1805347 - [RFE] ceph upmap balancer module to provide expected number of moves required to get to a specific deviation
+1805391 - rgw: fix bug with (un)ordered bucket listing and marker w/ namespace
+1805643 - [RFE] purge-container-cluster: support OSDs with 3 digits
+1807085 - ceph-ansible 4.0.x does not work with ansible 2.9
+1807184 - Slow Requests/OP's types not getting logged in cluster log
+1808046 - Fix Grafana dashboard wrong Pool capacity
+1808345 - [Ceph-dashboard] Not able to login to dashboard
+1808495 - ceph-ansible sets expected_num_objects unexpectedly when creating pools
+1809242 - MDS SIGSEGV in Migrator::export_sessions_flushed
+1810121 - rgw: cls/queue: fix data corruption in urgent data
+1810551 - Update branding to 4.1
+1810610 - Multisite not fully syncing all buckets
+1810884 - [Ceph-dashboard] Object Gateway : Daemons Overall Performance has no reflection in Average GET/PUT Latencies
+1810948 - Pool read/write OPS shows too many decimal places
+1811547 - remove steps asking users to copy playbooks from infrastructure-playbooks to /usr/share/ceph-ansible
+1813349 - rgw: raise default bucket-index sharding to 11 (OCS, Perf)
+1814082 - Disk failure prediction features does not work on RHEL8.1 with smartmontools 6.6
+1814380 - notification: topic actions fail with "MethodNotAllowed"
+1814542 - purge-docker-cluster.yml doesn't disable stopped osd service
+1814806 - [Ceph-dashboard] Error when enabling SSO with certificate file
+1814942 - Internal Ganesha with external Ceph fails with /etc/ceph/ceph.manila.keyring not found
+1815211 - [RFE] rgw: provide a subcommand under radosgw-admin to list rados objects for a given bucket
+1815239 - Incorrect number of entries returned during delimiter based bucket listing
+1815261 - 'swift stat' command causes apparent infinite osd_op loop
+1815390 - [ceph-dashboard] SSO signout error " 500 Internal server error"  is seen when using Python SAML v 1.8.0-1 pkg
+1815579 - pg_autoscaler: treat target ratios as weights
+1816713 - [Ceph-Ansible] more than 1 bluestore_wal_devices being processed as single device in playbook run
+1816989 - [Device Classes] Make "default: true" option valid for new pools even though osd_crush_location is not defined
+1817069 - radosgw are not committing dynamic resharding
+1817586 - Failing to deploy HCI setup, ceph-ansible failing, osd_pool_default_crush_rule is not defined
+1817985 - [RGW] RGW daemon crashes on delete an object and a service restart
+1819302 - python3-saml cannot be installed on el8
+1819681 - ceph osd migration to systemd fails on undefined variable
+1820233 - [ceph-dashboard] SAML pkgs are not getting installed with the latest composes on container setup
+1820272 - Add python-saml dependency to ceph.spec
+1820560 - [ceph-dashboard] standby mgr redirects to a IP address instead of a FQDN URL
+1821784 - rgw: handle "BucketAlreadyExists" error in cloud sync module
+1822153 - [ceph-volume]  Volume group name has invalid characters ,playbook fails at osd creation task
+1822328 - Standalone Ganesha deployment with external Ceph fails as some tasks shouldn't be delegated to MONs
+1822482 - [RGW) radosgw-admin crash observed upon lc process command execution
+1822599 - ceph-ansible fails adding a new odd when crush_rule_config is enabled
+1822902 - [RGW]: SElinux denials observed on teuthology multisite run
+1822905 - [RGW]: multiple new SElinux denials on NFS v3
+1823975 - msgr: EventCenter-related fixes
+1824263 - [Storage Workload DFG] [RHCS 4.1] Release-based Workload Testing
+1825104 - STS assume_role: S3 operations like get and put bucket versioning are denied
+1825149 - STS assume_role_web_Identity: Error 403 on doing a AssumeRoleWithWebIdentity call
+1825288 - RGW asserts on a delete_bucket operation.
+1825827 - [rgw]RGW daemon crash on rgwlc- lifecycle_thr_
+1825988 - [ceph-dashboard] sometimes an error occurs when performing actions on RBD images
+1826884 - rolling_upgrade.yaml is failing with error  "fail on unregistered red hat rhcs linux"
+1827299 - [ceph-ansible][ceph-dashboard] ceph containerized deployment in ipv6 format leads to health error and not able to login to dashboard
+1827781 - [RGW][nfs-ganesha]: nfs-ganesha daemon crash on listing a bucket over 1M objects
+1827785 - [rgw] RGW daemon crash on thread lifecycle_thr_ : RGWSI_Zone::need_to_log_data
+1827789 - [rgw]: radogw-admin lc list command, always returns empty list
+1827799 - [rgw][nfs-ganesha]: objects deleted via lc are listing after a while
+1829804 - [ceph-ansible] nfs deployment fails in selinux enforcing on rhel8.2
+1831119 - [BAREMETAL] rook-ceph-mgr pod restarted with assert message
+1831285 - OSP 16/RHCS 4.1 external Ceph with internal ganesha fails - /var/lib/ceph/bootstrap-rgw/ceph.keyring must exist.
+1831342 - standalone nfs fails with "error while evaluating conditional (not item.get('skipped', False)): 'list object' has no attribute 'get'"
+1833063 - OSDs are crashing with segmentation fault in thread_name:tp_osd_tp'
+1834790 - RGW: Objects in GC queue are not drained out.
+
+6. Package List:
+
+Red Hat Ceph Storage 4.0 MON:
+
+Source:
+ceph-14.2.8-47.el7cp.src.rpm
+
+noarch:
+ceph-grafana-dashboards-14.2.8-47.el7cp.noarch.rpm
+ceph-mgr-dashboard-14.2.8-47.el7cp.noarch.rpm
+ceph-mgr-diskprediction-local-14.2.8-47.el7cp.noarch.rpm
+ceph-mgr-k8sevents-14.2.8-47.el7cp.noarch.rpm
+ceph-mgr-rook-14.2.8-47.el7cp.noarch.rpm
+
+ppc64le:
+ceph-base-14.2.8-47.el7cp.ppc64le.rpm
+ceph-common-14.2.8-47.el7cp.ppc64le.rpm
+ceph-debuginfo-14.2.8-47.el7cp.ppc64le.rpm
+ceph-mgr-14.2.8-47.el7cp.ppc64le.rpm
+ceph-mon-14.2.8-47.el7cp.ppc64le.rpm
+ceph-selinux-14.2.8-47.el7cp.ppc64le.rpm
+ceph-test-14.2.8-47.el7cp.ppc64le.rpm
+libcephfs-devel-14.2.8-47.el7cp.ppc64le.rpm
+libcephfs2-14.2.8-47.el7cp.ppc64le.rpm
+librados-devel-14.2.8-47.el7cp.ppc64le.rpm
+librados2-14.2.8-47.el7cp.ppc64le.rpm
+libradospp-devel-14.2.8-47.el7cp.ppc64le.rpm
+libradosstriper1-14.2.8-47.el7cp.ppc64le.rpm
+librbd-devel-14.2.8-47.el7cp.ppc64le.rpm
+librbd1-14.2.8-47.el7cp.ppc64le.rpm
+librgw-devel-14.2.8-47.el7cp.ppc64le.rpm
+librgw2-14.2.8-47.el7cp.ppc64le.rpm
+python-ceph-argparse-14.2.8-47.el7cp.ppc64le.rpm
+python-cephfs-14.2.8-47.el7cp.ppc64le.rpm
+python-rados-14.2.8-47.el7cp.ppc64le.rpm
+python-rbd-14.2.8-47.el7cp.ppc64le.rpm
+python-rgw-14.2.8-47.el7cp.ppc64le.rpm
+
+x86_64:
+ceph-base-14.2.8-47.el7cp.x86_64.rpm
+ceph-common-14.2.8-47.el7cp.x86_64.rpm
+ceph-debuginfo-14.2.8-47.el7cp.x86_64.rpm
+ceph-mgr-14.2.8-47.el7cp.x86_64.rpm
+ceph-mon-14.2.8-47.el7cp.x86_64.rpm
+ceph-selinux-14.2.8-47.el7cp.x86_64.rpm
+ceph-test-14.2.8-47.el7cp.x86_64.rpm
+libcephfs-devel-14.2.8-47.el7cp.x86_64.rpm
+libcephfs2-14.2.8-47.el7cp.x86_64.rpm
+librados-devel-14.2.8-47.el7cp.x86_64.rpm
+librados2-14.2.8-47.el7cp.x86_64.rpm
+libradospp-devel-14.2.8-47.el7cp.x86_64.rpm
+libradosstriper1-14.2.8-47.el7cp.x86_64.rpm
+librbd-devel-14.2.8-47.el7cp.x86_64.rpm
+librbd1-14.2.8-47.el7cp.x86_64.rpm
+librgw-devel-14.2.8-47.el7cp.x86_64.rpm
+librgw2-14.2.8-47.el7cp.x86_64.rpm
+python-ceph-argparse-14.2.8-47.el7cp.x86_64.rpm
+python-cephfs-14.2.8-47.el7cp.x86_64.rpm
+python-rados-14.2.8-47.el7cp.x86_64.rpm
+python-rbd-14.2.8-47.el7cp.x86_64.rpm
+python-rgw-14.2.8-47.el7cp.x86_64.rpm
+
+Red Hat Ceph Storage 4.1 OSD:
+
+Source:
+ceph-14.2.8-47.el7cp.src.rpm
+
+ppc64le:
+ceph-base-14.2.8-47.el7cp.ppc64le.rpm
+ceph-common-14.2.8-47.el7cp.ppc64le.rpm
+ceph-debuginfo-14.2.8-47.el7cp.ppc64le.rpm
+ceph-osd-14.2.8-47.el7cp.ppc64le.rpm
+ceph-selinux-14.2.8-47.el7cp.ppc64le.rpm
+ceph-test-14.2.8-47.el7cp.ppc64le.rpm
+libcephfs-devel-14.2.8-47.el7cp.ppc64le.rpm
+libcephfs2-14.2.8-47.el7cp.ppc64le.rpm
+librados-devel-14.2.8-47.el7cp.ppc64le.rpm
+librados2-14.2.8-47.el7cp.ppc64le.rpm
+libradospp-devel-14.2.8-47.el7cp.ppc64le.rpm
+libradosstriper1-14.2.8-47.el7cp.ppc64le.rpm
+librbd-devel-14.2.8-47.el7cp.ppc64le.rpm
+librbd1-14.2.8-47.el7cp.ppc64le.rpm
+librgw-devel-14.2.8-47.el7cp.ppc64le.rpm
+librgw2-14.2.8-47.el7cp.ppc64le.rpm
+python-ceph-argparse-14.2.8-47.el7cp.ppc64le.rpm
+python-cephfs-14.2.8-47.el7cp.ppc64le.rpm
+python-rados-14.2.8-47.el7cp.ppc64le.rpm
+python-rbd-14.2.8-47.el7cp.ppc64le.rpm
+python-rgw-14.2.8-47.el7cp.ppc64le.rpm
+
+x86_64:
+ceph-base-14.2.8-47.el7cp.x86_64.rpm
+ceph-common-14.2.8-47.el7cp.x86_64.rpm
+ceph-debuginfo-14.2.8-47.el7cp.x86_64.rpm
+ceph-osd-14.2.8-47.el7cp.x86_64.rpm
+ceph-selinux-14.2.8-47.el7cp.x86_64.rpm
+ceph-test-14.2.8-47.el7cp.x86_64.rpm
+libcephfs-devel-14.2.8-47.el7cp.x86_64.rpm
+libcephfs2-14.2.8-47.el7cp.x86_64.rpm
+librados-devel-14.2.8-47.el7cp.x86_64.rpm
+librados2-14.2.8-47.el7cp.x86_64.rpm
+libradospp-devel-14.2.8-47.el7cp.x86_64.rpm
+libradosstriper1-14.2.8-47.el7cp.x86_64.rpm
+librbd-devel-14.2.8-47.el7cp.x86_64.rpm
+librbd1-14.2.8-47.el7cp.x86_64.rpm
+librgw-devel-14.2.8-47.el7cp.x86_64.rpm
+librgw2-14.2.8-47.el7cp.x86_64.rpm
+python-ceph-argparse-14.2.8-47.el7cp.x86_64.rpm
+python-cephfs-14.2.8-47.el7cp.x86_64.rpm
+python-rados-14.2.8-47.el7cp.x86_64.rpm
+python-rbd-14.2.8-47.el7cp.x86_64.rpm
+python-rgw-14.2.8-47.el7cp.x86_64.rpm
+
+Red Hat Ceph Storage 4.1 Tools:
+
+Source:
+ceph-14.2.8-47.el7cp.src.rpm
+ceph-ansible-4.0.23-1.el7cp.src.rpm
+nfs-ganesha-2.8.3-7.el7cp.src.rpm
+python-defusedxml-0.5.0-1.el7ost.src.rpm
+python-isodate-0.5.4-8.el7.src.rpm
+python-saml-1.8.0-2.el7cp.src.rpm
+python-xmlsec-1.3.3-9.el7cp.src.rpm
+s3cmd-2.0.2-1.el7cp.src.rpm
+
+noarch:
+ceph-ansible-4.0.23-1.el7cp.noarch.rpm
+ceph-grafana-dashboards-14.2.8-47.el7cp.noarch.rpm
+nfs-ganesha-selinux-2.8.3-7.el7cp.noarch.rpm
+python-defusedxml-0.5.0-1.el7ost.noarch.rpm
+python-isodate-0.5.4-8.el7.noarch.rpm
+python-saml-1.8.0-2.el7cp.noarch.rpm
+s3cmd-2.0.2-1.el7cp.noarch.rpm
+
+ppc64le:
+ceph-base-14.2.8-47.el7cp.ppc64le.rpm
+ceph-common-14.2.8-47.el7cp.ppc64le.rpm
+ceph-debuginfo-14.2.8-47.el7cp.ppc64le.rpm
+ceph-fuse-14.2.8-47.el7cp.ppc64le.rpm
+ceph-mds-14.2.8-47.el7cp.ppc64le.rpm
+ceph-radosgw-14.2.8-47.el7cp.ppc64le.rpm
+ceph-selinux-14.2.8-47.el7cp.ppc64le.rpm
+libcephfs-devel-14.2.8-47.el7cp.ppc64le.rpm
+libcephfs2-14.2.8-47.el7cp.ppc64le.rpm
+librados-devel-14.2.8-47.el7cp.ppc64le.rpm
+librados2-14.2.8-47.el7cp.ppc64le.rpm
+libradospp-devel-14.2.8-47.el7cp.ppc64le.rpm
+libradosstriper1-14.2.8-47.el7cp.ppc64le.rpm
+librbd-devel-14.2.8-47.el7cp.ppc64le.rpm
+librbd1-14.2.8-47.el7cp.ppc64le.rpm
+librgw-devel-14.2.8-47.el7cp.ppc64le.rpm
+librgw2-14.2.8-47.el7cp.ppc64le.rpm
+nfs-ganesha-2.8.3-7.el7cp.ppc64le.rpm
+nfs-ganesha-ceph-2.8.3-7.el7cp.ppc64le.rpm
+nfs-ganesha-debuginfo-2.8.3-7.el7cp.ppc64le.rpm
+nfs-ganesha-proxy-2.8.3-7.el7cp.ppc64le.rpm
+nfs-ganesha-rados-grace-2.8.3-7.el7cp.ppc64le.rpm
+nfs-ganesha-rados-urls-2.8.3-7.el7cp.ppc64le.rpm
+nfs-ganesha-rgw-2.8.3-7.el7cp.ppc64le.rpm
+nfs-ganesha-vfs-2.8.3-7.el7cp.ppc64le.rpm
+python-ceph-argparse-14.2.8-47.el7cp.ppc64le.rpm
+python-cephfs-14.2.8-47.el7cp.ppc64le.rpm
+python-rados-14.2.8-47.el7cp.ppc64le.rpm
+python-rbd-14.2.8-47.el7cp.ppc64le.rpm
+python-rgw-14.2.8-47.el7cp.ppc64le.rpm
+python-xmlsec-1.3.3-9.el7cp.ppc64le.rpm
+python-xmlsec-debuginfo-1.3.3-9.el7cp.ppc64le.rpm
+rbd-mirror-14.2.8-47.el7cp.ppc64le.rpm
+rbd-nbd-14.2.8-47.el7cp.ppc64le.rpm
+
+x86_64:
+ceph-base-14.2.8-47.el7cp.x86_64.rpm
+ceph-common-14.2.8-47.el7cp.x86_64.rpm
+ceph-debuginfo-14.2.8-47.el7cp.x86_64.rpm
+ceph-fuse-14.2.8-47.el7cp.x86_64.rpm
+ceph-mds-14.2.8-47.el7cp.x86_64.rpm
+ceph-radosgw-14.2.8-47.el7cp.x86_64.rpm
+ceph-selinux-14.2.8-47.el7cp.x86_64.rpm
+libcephfs-devel-14.2.8-47.el7cp.x86_64.rpm
+libcephfs2-14.2.8-47.el7cp.x86_64.rpm
+librados-devel-14.2.8-47.el7cp.x86_64.rpm
+librados2-14.2.8-47.el7cp.x86_64.rpm
+libradospp-devel-14.2.8-47.el7cp.x86_64.rpm
+libradosstriper1-14.2.8-47.el7cp.x86_64.rpm
+librbd-devel-14.2.8-47.el7cp.x86_64.rpm
+librbd1-14.2.8-47.el7cp.x86_64.rpm
+librgw-devel-14.2.8-47.el7cp.x86_64.rpm
+librgw2-14.2.8-47.el7cp.x86_64.rpm
+nfs-ganesha-2.8.3-7.el7cp.x86_64.rpm
+nfs-ganesha-ceph-2.8.3-7.el7cp.x86_64.rpm
+nfs-ganesha-debuginfo-2.8.3-7.el7cp.x86_64.rpm
+nfs-ganesha-proxy-2.8.3-7.el7cp.x86_64.rpm
+nfs-ganesha-rados-grace-2.8.3-7.el7cp.x86_64.rpm
+nfs-ganesha-rados-urls-2.8.3-7.el7cp.x86_64.rpm
+nfs-ganesha-rgw-2.8.3-7.el7cp.x86_64.rpm
+nfs-ganesha-vfs-2.8.3-7.el7cp.x86_64.rpm
+python-ceph-argparse-14.2.8-47.el7cp.x86_64.rpm
+python-cephfs-14.2.8-47.el7cp.x86_64.rpm
+python-rados-14.2.8-47.el7cp.x86_64.rpm
+python-rbd-14.2.8-47.el7cp.x86_64.rpm
+python-rgw-14.2.8-47.el7cp.x86_64.rpm
+python-xmlsec-1.3.3-9.el7cp.x86_64.rpm
+python-xmlsec-debuginfo-1.3.3-9.el7cp.x86_64.rpm
+rbd-mirror-14.2.8-47.el7cp.x86_64.rpm
+rbd-nbd-14.2.8-47.el7cp.x86_64.rpm
+
+Red Hat Ceph Storage 4.1 MON:
+
+Source:
+ceph-14.2.8-56.el8cp.src.rpm
+
+noarch:
+ceph-grafana-dashboards-14.2.8-56.el8cp.noarch.rpm
+ceph-mgr-dashboard-14.2.8-56.el8cp.noarch.rpm
+ceph-mgr-diskprediction-local-14.2.8-56.el8cp.noarch.rpm
+ceph-mgr-k8sevents-14.2.8-56.el8cp.noarch.rpm
+ceph-mgr-rook-14.2.8-56.el8cp.noarch.rpm
+
+ppc64le:
+ceph-base-14.2.8-56.el8cp.ppc64le.rpm
+ceph-base-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+ceph-common-14.2.8-56.el8cp.ppc64le.rpm
+ceph-common-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+ceph-debugsource-14.2.8-56.el8cp.ppc64le.rpm
+ceph-fuse-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+ceph-mds-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+ceph-mgr-14.2.8-56.el8cp.ppc64le.rpm
+ceph-mgr-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+ceph-mon-14.2.8-56.el8cp.ppc64le.rpm
+ceph-mon-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+ceph-osd-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+ceph-radosgw-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+ceph-selinux-14.2.8-56.el8cp.ppc64le.rpm
+ceph-test-14.2.8-56.el8cp.ppc64le.rpm
+ceph-test-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+libcephfs-devel-14.2.8-56.el8cp.ppc64le.rpm
+libcephfs2-14.2.8-56.el8cp.ppc64le.rpm
+libcephfs2-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+librados-devel-14.2.8-56.el8cp.ppc64le.rpm
+librados-devel-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+librados2-14.2.8-56.el8cp.ppc64le.rpm
+librados2-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+libradospp-devel-14.2.8-56.el8cp.ppc64le.rpm
+libradosstriper1-14.2.8-56.el8cp.ppc64le.rpm
+libradosstriper1-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+librbd-devel-14.2.8-56.el8cp.ppc64le.rpm
+librbd1-14.2.8-56.el8cp.ppc64le.rpm
+librbd1-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+librgw-devel-14.2.8-56.el8cp.ppc64le.rpm
+librgw2-14.2.8-56.el8cp.ppc64le.rpm
+librgw2-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+python3-ceph-argparse-14.2.8-56.el8cp.ppc64le.rpm
+python3-cephfs-14.2.8-56.el8cp.ppc64le.rpm
+python3-cephfs-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+python3-rados-14.2.8-56.el8cp.ppc64le.rpm
+python3-rados-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+python3-rbd-14.2.8-56.el8cp.ppc64le.rpm
+python3-rbd-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+python3-rgw-14.2.8-56.el8cp.ppc64le.rpm
+python3-rgw-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+rbd-fuse-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+rbd-mirror-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+rbd-nbd-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+
+x86_64:
+ceph-base-14.2.8-56.el8cp.x86_64.rpm
+ceph-base-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+ceph-common-14.2.8-56.el8cp.x86_64.rpm
+ceph-common-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+ceph-debugsource-14.2.8-56.el8cp.x86_64.rpm
+ceph-fuse-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+ceph-mds-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+ceph-mgr-14.2.8-56.el8cp.x86_64.rpm
+ceph-mgr-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+ceph-mon-14.2.8-56.el8cp.x86_64.rpm
+ceph-mon-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+ceph-osd-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+ceph-radosgw-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+ceph-selinux-14.2.8-56.el8cp.x86_64.rpm
+ceph-test-14.2.8-56.el8cp.x86_64.rpm
+ceph-test-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+libcephfs-devel-14.2.8-56.el8cp.x86_64.rpm
+libcephfs2-14.2.8-56.el8cp.x86_64.rpm
+libcephfs2-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+librados-devel-14.2.8-56.el8cp.x86_64.rpm
+librados-devel-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+librados2-14.2.8-56.el8cp.x86_64.rpm
+librados2-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+libradospp-devel-14.2.8-56.el8cp.x86_64.rpm
+libradosstriper1-14.2.8-56.el8cp.x86_64.rpm
+libradosstriper1-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+librbd-devel-14.2.8-56.el8cp.x86_64.rpm
+librbd1-14.2.8-56.el8cp.x86_64.rpm
+librbd1-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+librgw-devel-14.2.8-56.el8cp.x86_64.rpm
+librgw2-14.2.8-56.el8cp.x86_64.rpm
+librgw2-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+python3-ceph-argparse-14.2.8-56.el8cp.x86_64.rpm
+python3-cephfs-14.2.8-56.el8cp.x86_64.rpm
+python3-cephfs-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+python3-rados-14.2.8-56.el8cp.x86_64.rpm
+python3-rados-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+python3-rbd-14.2.8-56.el8cp.x86_64.rpm
+python3-rbd-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+python3-rgw-14.2.8-56.el8cp.x86_64.rpm
+python3-rgw-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+rbd-fuse-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+rbd-mirror-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+rbd-nbd-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+
+Red Hat Ceph Storage 4.1 OSD:
+
+Source:
+ceph-14.2.8-56.el8cp.src.rpm
+smartmontools-7.1-1.el8.src.rpm
+
+ppc64le:
+ceph-base-14.2.8-56.el8cp.ppc64le.rpm
+ceph-base-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+ceph-common-14.2.8-56.el8cp.ppc64le.rpm
+ceph-common-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+ceph-debugsource-14.2.8-56.el8cp.ppc64le.rpm
+ceph-fuse-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+ceph-mds-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+ceph-mgr-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+ceph-mon-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+ceph-osd-14.2.8-56.el8cp.ppc64le.rpm
+ceph-osd-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+ceph-radosgw-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+ceph-selinux-14.2.8-56.el8cp.ppc64le.rpm
+ceph-test-14.2.8-56.el8cp.ppc64le.rpm
+ceph-test-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+libcephfs-devel-14.2.8-56.el8cp.ppc64le.rpm
+libcephfs2-14.2.8-56.el8cp.ppc64le.rpm
+libcephfs2-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+librados-devel-14.2.8-56.el8cp.ppc64le.rpm
+librados-devel-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+librados2-14.2.8-56.el8cp.ppc64le.rpm
+librados2-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+libradospp-devel-14.2.8-56.el8cp.ppc64le.rpm
+libradosstriper1-14.2.8-56.el8cp.ppc64le.rpm
+libradosstriper1-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+librbd-devel-14.2.8-56.el8cp.ppc64le.rpm
+librbd1-14.2.8-56.el8cp.ppc64le.rpm
+librbd1-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+librgw-devel-14.2.8-56.el8cp.ppc64le.rpm
+librgw2-14.2.8-56.el8cp.ppc64le.rpm
+librgw2-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+python3-ceph-argparse-14.2.8-56.el8cp.ppc64le.rpm
+python3-cephfs-14.2.8-56.el8cp.ppc64le.rpm
+python3-cephfs-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+python3-rados-14.2.8-56.el8cp.ppc64le.rpm
+python3-rados-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+python3-rbd-14.2.8-56.el8cp.ppc64le.rpm
+python3-rbd-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+python3-rgw-14.2.8-56.el8cp.ppc64le.rpm
+python3-rgw-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+rbd-fuse-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+rbd-mirror-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+rbd-nbd-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+smartmontools-7.1-1.el8.ppc64le.rpm
+smartmontools-debuginfo-7.1-1.el8.ppc64le.rpm
+smartmontools-debugsource-7.1-1.el8.ppc64le.rpm
+
+x86_64:
+ceph-base-14.2.8-56.el8cp.x86_64.rpm
+ceph-base-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+ceph-common-14.2.8-56.el8cp.x86_64.rpm
+ceph-common-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+ceph-debugsource-14.2.8-56.el8cp.x86_64.rpm
+ceph-fuse-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+ceph-mds-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+ceph-mgr-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+ceph-mon-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+ceph-osd-14.2.8-56.el8cp.x86_64.rpm
+ceph-osd-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+ceph-radosgw-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+ceph-selinux-14.2.8-56.el8cp.x86_64.rpm
+ceph-test-14.2.8-56.el8cp.x86_64.rpm
+ceph-test-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+libcephfs-devel-14.2.8-56.el8cp.x86_64.rpm
+libcephfs2-14.2.8-56.el8cp.x86_64.rpm
+libcephfs2-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+librados-devel-14.2.8-56.el8cp.x86_64.rpm
+librados-devel-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+librados2-14.2.8-56.el8cp.x86_64.rpm
+librados2-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+libradospp-devel-14.2.8-56.el8cp.x86_64.rpm
+libradosstriper1-14.2.8-56.el8cp.x86_64.rpm
+libradosstriper1-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+librbd-devel-14.2.8-56.el8cp.x86_64.rpm
+librbd1-14.2.8-56.el8cp.x86_64.rpm
+librbd1-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+librgw-devel-14.2.8-56.el8cp.x86_64.rpm
+librgw2-14.2.8-56.el8cp.x86_64.rpm
+librgw2-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+python3-ceph-argparse-14.2.8-56.el8cp.x86_64.rpm
+python3-cephfs-14.2.8-56.el8cp.x86_64.rpm
+python3-cephfs-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+python3-rados-14.2.8-56.el8cp.x86_64.rpm
+python3-rados-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+python3-rbd-14.2.8-56.el8cp.x86_64.rpm
+python3-rbd-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+python3-rgw-14.2.8-56.el8cp.x86_64.rpm
+python3-rgw-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+rbd-fuse-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+rbd-mirror-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+rbd-nbd-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+smartmontools-7.1-1.el8.x86_64.rpm
+smartmontools-debuginfo-7.1-1.el8.x86_64.rpm
+smartmontools-debugsource-7.1-1.el8.x86_64.rpm
+
+Red Hat Ceph Storage 4.1 Tools:
+
+Source:
+ceph-14.2.8-56.el8cp.src.rpm
+ceph-ansible-4.0.23-1.el8cp.src.rpm
+nfs-ganesha-2.8.3-7.el8cp.src.rpm
+python-defusedxml-0.5.0-2.el8ost.src.rpm
+python-isodate-0.5.4-10.el8ost.src.rpm
+python-xmlsec-1.3.3-9.el8cp.src.rpm
+python3-saml-1.8.0-3.el8cp.src.rpm
+s3cmd-2.0.2-1.el8cp.src.rpm
+
+noarch:
+ceph-ansible-4.0.23-1.el8cp.noarch.rpm
+ceph-grafana-dashboards-14.2.8-56.el8cp.noarch.rpm
+nfs-ganesha-selinux-2.8.3-7.el8cp.noarch.rpm
+python3-defusedxml-0.5.0-2.el8ost.noarch.rpm
+python3-isodate-0.5.4-10.el8ost.noarch.rpm
+python3-saml-1.8.0-3.el8cp.noarch.rpm
+s3cmd-2.0.2-1.el8cp.noarch.rpm
+
+ppc64le:
+ceph-base-14.2.8-56.el8cp.ppc64le.rpm
+ceph-base-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+ceph-common-14.2.8-56.el8cp.ppc64le.rpm
+ceph-common-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+ceph-debugsource-14.2.8-56.el8cp.ppc64le.rpm
+ceph-fuse-14.2.8-56.el8cp.ppc64le.rpm
+ceph-fuse-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+ceph-mds-14.2.8-56.el8cp.ppc64le.rpm
+ceph-mds-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+ceph-mgr-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+ceph-mon-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+ceph-osd-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+ceph-radosgw-14.2.8-56.el8cp.ppc64le.rpm
+ceph-radosgw-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+ceph-selinux-14.2.8-56.el8cp.ppc64le.rpm
+ceph-test-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+libcephfs-devel-14.2.8-56.el8cp.ppc64le.rpm
+libcephfs2-14.2.8-56.el8cp.ppc64le.rpm
+libcephfs2-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+librados-devel-14.2.8-56.el8cp.ppc64le.rpm
+librados-devel-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+librados2-14.2.8-56.el8cp.ppc64le.rpm
+librados2-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+libradospp-devel-14.2.8-56.el8cp.ppc64le.rpm
+libradosstriper1-14.2.8-56.el8cp.ppc64le.rpm
+libradosstriper1-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+librbd-devel-14.2.8-56.el8cp.ppc64le.rpm
+librbd1-14.2.8-56.el8cp.ppc64le.rpm
+librbd1-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+librgw-devel-14.2.8-56.el8cp.ppc64le.rpm
+librgw2-14.2.8-56.el8cp.ppc64le.rpm
+librgw2-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+nfs-ganesha-2.8.3-7.el8cp.ppc64le.rpm
+nfs-ganesha-ceph-2.8.3-7.el8cp.ppc64le.rpm
+nfs-ganesha-ceph-debuginfo-2.8.3-7.el8cp.ppc64le.rpm
+nfs-ganesha-debuginfo-2.8.3-7.el8cp.ppc64le.rpm
+nfs-ganesha-debugsource-2.8.3-7.el8cp.ppc64le.rpm
+nfs-ganesha-proxy-2.8.3-7.el8cp.ppc64le.rpm
+nfs-ganesha-proxy-debuginfo-2.8.3-7.el8cp.ppc64le.rpm
+nfs-ganesha-rados-grace-2.8.3-7.el8cp.ppc64le.rpm
+nfs-ganesha-rados-grace-debuginfo-2.8.3-7.el8cp.ppc64le.rpm
+nfs-ganesha-rados-urls-2.8.3-7.el8cp.ppc64le.rpm
+nfs-ganesha-rados-urls-debuginfo-2.8.3-7.el8cp.ppc64le.rpm
+nfs-ganesha-rgw-2.8.3-7.el8cp.ppc64le.rpm
+nfs-ganesha-rgw-debuginfo-2.8.3-7.el8cp.ppc64le.rpm
+nfs-ganesha-vfs-2.8.3-7.el8cp.ppc64le.rpm
+nfs-ganesha-vfs-debuginfo-2.8.3-7.el8cp.ppc64le.rpm
+python-xmlsec-debugsource-1.3.3-9.el8cp.ppc64le.rpm
+python3-ceph-argparse-14.2.8-56.el8cp.ppc64le.rpm
+python3-cephfs-14.2.8-56.el8cp.ppc64le.rpm
+python3-cephfs-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+python3-rados-14.2.8-56.el8cp.ppc64le.rpm
+python3-rados-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+python3-rbd-14.2.8-56.el8cp.ppc64le.rpm
+python3-rbd-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+python3-rgw-14.2.8-56.el8cp.ppc64le.rpm
+python3-rgw-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+python3-xmlsec-1.3.3-9.el8cp.ppc64le.rpm
+python3-xmlsec-debuginfo-1.3.3-9.el8cp.ppc64le.rpm
+rbd-fuse-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+rbd-mirror-14.2.8-56.el8cp.ppc64le.rpm
+rbd-mirror-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+rbd-nbd-14.2.8-56.el8cp.ppc64le.rpm
+rbd-nbd-debuginfo-14.2.8-56.el8cp.ppc64le.rpm
+
+x86_64:
+ceph-base-14.2.8-56.el8cp.x86_64.rpm
+ceph-base-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+ceph-common-14.2.8-56.el8cp.x86_64.rpm
+ceph-common-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+ceph-debugsource-14.2.8-56.el8cp.x86_64.rpm
+ceph-fuse-14.2.8-56.el8cp.x86_64.rpm
+ceph-fuse-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+ceph-mds-14.2.8-56.el8cp.x86_64.rpm
+ceph-mds-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+ceph-mgr-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+ceph-mon-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+ceph-osd-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+ceph-radosgw-14.2.8-56.el8cp.x86_64.rpm
+ceph-radosgw-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+ceph-selinux-14.2.8-56.el8cp.x86_64.rpm
+ceph-test-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+libcephfs-devel-14.2.8-56.el8cp.x86_64.rpm
+libcephfs2-14.2.8-56.el8cp.x86_64.rpm
+libcephfs2-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+librados-devel-14.2.8-56.el8cp.x86_64.rpm
+librados-devel-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+librados2-14.2.8-56.el8cp.x86_64.rpm
+librados2-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+libradospp-devel-14.2.8-56.el8cp.x86_64.rpm
+libradosstriper1-14.2.8-56.el8cp.x86_64.rpm
+libradosstriper1-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+librbd-devel-14.2.8-56.el8cp.x86_64.rpm
+librbd1-14.2.8-56.el8cp.x86_64.rpm
+librbd1-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+librgw-devel-14.2.8-56.el8cp.x86_64.rpm
+librgw2-14.2.8-56.el8cp.x86_64.rpm
+librgw2-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+nfs-ganesha-2.8.3-7.el8cp.x86_64.rpm
+nfs-ganesha-ceph-2.8.3-7.el8cp.x86_64.rpm
+nfs-ganesha-ceph-debuginfo-2.8.3-7.el8cp.x86_64.rpm
+nfs-ganesha-debuginfo-2.8.3-7.el8cp.x86_64.rpm
+nfs-ganesha-debugsource-2.8.3-7.el8cp.x86_64.rpm
+nfs-ganesha-proxy-2.8.3-7.el8cp.x86_64.rpm
+nfs-ganesha-proxy-debuginfo-2.8.3-7.el8cp.x86_64.rpm
+nfs-ganesha-rados-grace-2.8.3-7.el8cp.x86_64.rpm
+nfs-ganesha-rados-grace-debuginfo-2.8.3-7.el8cp.x86_64.rpm
+nfs-ganesha-rados-urls-2.8.3-7.el8cp.x86_64.rpm
+nfs-ganesha-rados-urls-debuginfo-2.8.3-7.el8cp.x86_64.rpm
+nfs-ganesha-rgw-2.8.3-7.el8cp.x86_64.rpm
+nfs-ganesha-rgw-debuginfo-2.8.3-7.el8cp.x86_64.rpm
+nfs-ganesha-vfs-2.8.3-7.el8cp.x86_64.rpm
+nfs-ganesha-vfs-debuginfo-2.8.3-7.el8cp.x86_64.rpm
+python-xmlsec-debugsource-1.3.3-9.el8cp.x86_64.rpm
+python3-ceph-argparse-14.2.8-56.el8cp.x86_64.rpm
+python3-cephfs-14.2.8-56.el8cp.x86_64.rpm
+python3-cephfs-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+python3-rados-14.2.8-56.el8cp.x86_64.rpm
+python3-rados-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+python3-rbd-14.2.8-56.el8cp.x86_64.rpm
+python3-rbd-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+python3-rgw-14.2.8-56.el8cp.x86_64.rpm
+python3-rgw-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+python3-xmlsec-1.3.3-9.el8cp.x86_64.rpm
+python3-xmlsec-debuginfo-1.3.3-9.el8cp.x86_64.rpm
+rbd-fuse-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+rbd-mirror-14.2.8-56.el8cp.x86_64.rpm
+rbd-mirror-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+rbd-nbd-14.2.8-56.el8cp.x86_64.rpm
+rbd-nbd-debuginfo-14.2.8-56.el8cp.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2020-1716
+https://access.redhat.com/security/updates/classification/#important
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXsQYFNzjgjWX9erEAQh0CxAAodk1iHk8nMetsvpqlqmTK19IzAW2iuJx
+qTo+LKsYmi35JCbhLd15SPcJyrnlYo5k5eDGiNEbCZGR5fFlh7PTBc5ehAcvYJQj
+g9Dq/1InQDiWIq2pP11B4BIoInnu75D3cFFpYyKWMI3LPYdHgy6n/sZYtK/vR7qT
+DwkRm0q8O9xX3lPdNbvXTRe8reqbMpKNg00eaPw5vkgBj9zpBFY3jqSos7JOEXAm
+CTVImnDBfeVYFjlBOR6IqFt4qLftz7Oam4Yu88oqsUn/R7kEx0gMnwWIWCNda/kf
+N7VYxJ1heQbjBMoRyZ++mSNUyzlIabkfhUyTo5vfPNHIbneOaOW9gia2Nl9HOd4O
+mfFX2+XK1cYfERRwK4m8AYZOxAQ+dGCsEJ3LB+pmhrgixenAmS3wH7+ydmAaT4hp
+giLW7Xd+vX6fXVXz17HURx6bLAcJjKoXxzmffwEXOXDJwYH0JFa3Aq9CqBll8Dd0
+8EslCxCgQ8eIUR7DvricBxGTMy9AuU4dq14tRHt3Yz6zRwBZoH5uGZ5bWwSALiS7
+mfi1NO/Vp0TT+ooZ1djvqq1fy4F9yVTrqgv8EyoqMCcawV96vOPjpiETmrD6r32t
+aLKW3MWjpnZB5n3wsu4WpEdrCM1ZC7WE/SSTytdU4/3tK/7QNWsVRd8aItoQdoSt
+Uwx5QyHCoiw=UNjs
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

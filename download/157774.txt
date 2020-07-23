@@ -1,0 +1,89 @@
+=========================================================================
+Ubuntu Security Notice USN-4368-1
+May 19, 2020
+
+linux-gke-5.0, linux-oem-osp1 vulnerabilities
+=========================================================================
+A security issue affects these releases of Ubuntu and its derivatives:
+
+- Ubuntu 18.04 LTS
+
+Summary:
+
+Several security issues were fixed in the Linux kernel.
+
+Software Description:
+- linux-gke-5.0: Linux kernel for Google Container Engine (GKE) systems
+- linux-oem-osp1: Linux kernel for OEM systems
+
+Details:
+
+Tristan Madani discovered that the file locking implementation in the Linux
+kernel contained a race condition. A local attacker could possibly use this
+to cause a denial of service or expose sensitive information.
+(CVE-2019-19769)
+
+It was discovered that the Serial CAN interface driver in the Linux kernel
+did not properly initialize data. A local attacker could use this to expose
+sensitive information (kernel memory). (CVE-2020-11494)
+
+It was discovered that the linux kernel did not properly validate certain
+mount options to the tmpfs virtual memory file system. A local attacker
+with the ability to specify mount options could use this to cause a denial
+of service (system crash). (CVE-2020-11565)
+
+It was discovered that the OV51x USB Camera device driver in the Linux
+kernel did not properly validate device metadata. A physically proximate
+attacker could use this to cause a denial of service (system crash).
+(CVE-2020-11608)
+
+It was discovered that the STV06XX USB Camera device driver in the Linux
+kernel did not properly validate device metadata. A physically proximate
+attacker could use this to cause a denial of service (system crash).
+(CVE-2020-11609)
+
+It was discovered that the Xirlink C-It USB Camera device driver in the
+Linux kernel did not properly validate device metadata. A physically
+proximate attacker could use this to cause a denial of service (system
+crash). (CVE-2020-11668)
+
+David Gibson discovered that the Linux kernel on Power9 CPUs did not
+properly save and restore Authority Mask registers state in some
+situations. A local attacker in a guest VM could use this to cause a denial
+of service (host system crash). (CVE-2020-11669)
+
+It was discovered that the block layer in the Linux kernel contained a race
+condition leading to a use-after-free vulnerability. A local attacker could
+possibly use this to cause a denial of service (system crash) or execute
+arbitrary code. (CVE-2020-12657)
+
+Update instructions:
+
+The problem can be corrected by updating your system to the following
+package versions:
+
+Ubuntu 18.04 LTS:
+  linux-image-5.0.0-1037-gke      5.0.0-1037.38
+  linux-image-5.0.0-1052-oem-osp1  5.0.0-1052.57
+  linux-image-gke-5.0             5.0.0.1037.25
+  linux-image-oem-osp1            5.0.0.1052.55
+
+After a standard system update you need to reboot your computer to make
+all the necessary changes.
+
+ATTENTION: Due to an unavoidable ABI change the kernel updates have
+been given a new version number, which requires you to recompile and
+reinstall all third party kernel modules you might have installed.
+Unless you manually uninstalled the standard kernel metapackages
+(e.g. linux-generic, linux-generic-lts-RELEASE, linux-virtual,
+linux-powerpc), a standard system upgrade will automatically perform
+this as well.
+
+References:
+  https://usn.ubuntu.com/4368-1
+  CVE-2019-19769, CVE-2020-11494, CVE-2020-11565, CVE-2020-11608,
+  CVE-2020-11609, CVE-2020-11668, CVE-2020-11669, CVE-2020-12657
+
+Package Information:
+  https://launchpad.net/ubuntu/+source/linux-gke-5.0/5.0.0-1037.38
+  https://launchpad.net/ubuntu/+source/linux-oem-osp1/5.0.0-1052.57

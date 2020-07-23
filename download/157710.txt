@@ -1,0 +1,100 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Important: Red Hat OpenShift Service Mesh 1.1.2 Service Mesh Proxy security update
+Advisory ID:       RHSA-2020:2148-01
+Product:           Red Hat OpenShift Service Mesh
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:2148
+Issue date:        2020-05-13
+CVE Names:         CVE-2020-10739
+====================================================================
+1. Summary:
+
+An update for servicemesh-proxy is now available for OpenShift Service Mesh
+1.1.
+
+Red Hat Product Security has rated this update as having a security impact
+of Important. A Common Vulnerability Scoring System (CVSS) base score,
+which gives a detailed severity rating, is available for each vulnerability
+from the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+OpenShift Service Mesh 1.1 - x86_64
+
+3. Description:
+
+Red Hat OpenShift Service Mesh is Red Hat's distribution of the Istio
+service mesh project, tailored for installation into an on-premise
+OpenShift Container Platform installation.
+
+Security Fix(es):
+
+* istio/envoy: crafted packet allows remote attacker to cause denial of
+service (CVE-2020-10739)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+4. Solution:
+
+The OpenShift Service Mesh release notes provide information on the
+features and known issues:
+
+https://docs.openshift.com/container-platform/latest/service_mesh/serviceme
+sh-release-notes.html
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1833184 - CVE-2020-10739 istio/envoy: crafted packet allows remote attacker to cause denial of service
+
+6. Package List:
+
+OpenShift Service Mesh 1.1:
+
+Source:
+servicemesh-proxy-1.1.2-2.el8.src.rpm
+
+x86_64:
+servicemesh-proxy-1.1.2-2.el8.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2020-10739
+https://access.redhat.com/security/updates/classification/#important
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXrxrJNzjgjWX9erEAQgczg//SeDzawoCS5hFwSZ0FAhKFC36Fl/NKSCs
+VsKA6VwuolQdvVx8q/c6d7VzUA+J4pk85GZNUdL5qKlEcZeG15y8QNWn6crS1/nZ
+unIl5QFpbeENPzg+X3feEIOY60bMZaNMX82IWBnl1rf2eGSM+r5/5XFNAaR0KHmk
+0L6bPPxy9LxRP6b52zlfSc9Nc99k1JiUmrQNzjTObBw8e5/zbjVGyT0Ejbf3XS0E
+AbxOFVuopEjETukoQe+Mbbg2/qHpKYrA0j+taEJeOqcbg4QGeYcBdwmNC12pv+ea
+6TkQvuhoPKofZHAQU4VW2S2D6pskwnB0KJ1X+1f09SDAT9nQ3Ym+EnCm2ZGDlR/c
+OUi4EZsmqkoNr5m6TyOv5xSC6MYPRh3nyiFzW7nyRQB+brUEa/oxB92cIk74DAvI
+EpUtEpRod74UoUoeecr3aLLLkgNnc5l/caZh3imKJGJrh9yuGQ+A0yqKqXMmy94c
+EEw3cr5sOpwYkkW+Dk2mB4dZvVR8+/JDClktivqWgdfxuf8444/lER1I7MNf1TO5
+NYCaTq5C3Vry1JCT0j/f0PgFQRUY4ehJ+GWg1H2JyQzFH4xgDNTxVBetMmqQNx9s
+z04GE+RO8FcnuC8Lgqu21L2eACg3gbh49WbcIGKSX2jh11tZvG9rZSgzxso2n7Er
+Ta4YAhBtHCQ=nee4
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

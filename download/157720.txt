@@ -1,0 +1,102 @@
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Gentoo Linux Security Advisory                           GLSA 202005-07
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+                                           https://security.gentoo.org/
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ Severity: Normal
+    Title: FreeRDP: Multiple vulnerabilities
+     Date: May 14, 2020
+     Bugs: #716830
+       ID: 202005-07
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Synopsis
+========
+
+Multiple vulnerabilities have been found in FreeRDP, the worst of which
+could result in a Denial of Service condition.
+
+Background
+==========
+
+FreeRDP is a free implementation of the Remote Desktop Protocol.
+
+Affected packages
+=================
+
+    -------------------------------------------------------------------
+     Package              /     Vulnerable     /            Unaffected
+    -------------------------------------------------------------------
+  1  net-misc/freerdp             < 2.1.0                    >= 2.1.0
+
+Description
+===========
+
+Multiple vulnerabilities have been discovered in FreeRDP. Please review
+the CVE identifiers referenced below for details.
+
+Impact
+======
+
+An attacker could possibly cause a Denial of Service condition.
+
+Workaround
+==========
+
+There is no known workaround at this time.
+
+Resolution
+==========
+
+All FreeRDP users should upgrade to the latest version:
+
+  # emerge --sync
+  # emerge --ask --oneshot --verbose ">=net-misc/freerdp-2.1.0"
+
+References
+==========
+
+[ 1 ] CVE-2019-17177
+      https://nvd.nist.gov/vuln/detail/CVE-2019-17177
+[ 2 ] CVE-2020-11521
+      https://nvd.nist.gov/vuln/detail/CVE-2020-11521
+[ 3 ] CVE-2020-11522
+      https://nvd.nist.gov/vuln/detail/CVE-2020-11522
+[ 4 ] CVE-2020-11523
+      https://nvd.nist.gov/vuln/detail/CVE-2020-11523
+[ 5 ] CVE-2020-11524
+      https://nvd.nist.gov/vuln/detail/CVE-2020-11524
+[ 6 ] CVE-2020-11525
+      https://nvd.nist.gov/vuln/detail/CVE-2020-11525
+[ 7 ] CVE-2020-11526
+      https://nvd.nist.gov/vuln/detail/CVE-2020-11526
+
+Availability
+============
+
+This GLSA and any updates to it are available for viewing at
+the Gentoo Security Website:
+
+ https://security.gentoo.org/glsa/202005-07
+
+Concerns?
+=========
+
+Security is a primary focus of Gentoo Linux and ensuring the
+confidentiality and security of our users' machines is of utmost
+importance to us. Any security concerns should be addressed to
+security@gentoo.org or alternatively, you may file a bug at
+https://bugs.gentoo.org.
+
+License
+=======
+
+Copyright 2020 Gentoo Foundation, Inc; referenced text
+belongs to its owner(s).
+
+The contents of this document are licensed under the
+Creative Commons - Attribution / Share Alike license.
+
+https://creativecommons.org/licenses/by-sa/2.5

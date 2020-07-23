@@ -1,0 +1,89 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Important: OpenShift Container Platform 4.3.19 ose-cluster-image-registry-operator-container security update
+Advisory ID:       RHSA-2020:2009-01
+Product:           Red Hat OpenShift Enterprise
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:2009
+Issue date:        2020-05-12
+CVE Names:         CVE-2020-10712
+====================================================================
+1. Summary:
+
+Red Hat OpenShift Container Platform release 4.3.19 is now available with
+updates to packages and images that fix several bugs and add enhancements.
+
+Red Hat Product Security has rated this update as having a security impact
+of Important. A Common Vulnerability Scoring System (CVSS) base score,
+which gives a detailed severity rating, is available for each vulnerability
+from the CVE link(s) in the References section.
+
+2. Description:
+
+Red Hat OpenShift Container Platform is Red Hat's cloud computing
+Kubernetes application platform solution designed for on-premise or private
+cloud deployments.
+
+Security Fix(es):
+
+* openshift/cluster-image-registry-operator: Sensitive information was
+disclosed in logs (CVE-2020-10712)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s)
+listed in the References section.
+
+3. Solution:
+
+For OpenShift Container Platform 4.3 see the following documentation, which
+will be updated shortly for release 4.3.19, for important instructions on
+how to upgrade your cluster and fully apply this asynchronous errata
+update:
+
+https://docs.openshift.com/container-platform/4.3/release_notes/ocp-4-3-rel
+ease-notes.html
+
+Details on how to access this content are available at
+https://docs.openshift.com/container-platform/4.3/updating/updating-cluster
+- -cli.html.
+
+4. Bugs fixed (https://bugzilla.redhat.com/):
+
+1825161 - CVE-2020-10712 openshift/cluster-image-registry-operator: secrets disclosed in logs
+
+5. References:
+
+https://access.redhat.com/security/cve/CVE-2020-10712
+https://access.redhat.com/security/updates/classification/#important
+
+6. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXrowItzjgjWX9erEAQjLmA/6Aq6/mJV8bfaCLzr4IY2aK+fOdDRVd39Q
+StD6Mg4mzIUIb/Gi2/MO5t8n9XhD/M8tCL3znRoeJTXxT8t64fgrmrGRx0hyETum
+G168yKWCrKRwsInGK+egqIvcA9QDGjA0OD/J2nph7OpoDl8L6w+tQ3tL+5XVSPAt
+Pg5j9R7FaMRNQLexPHfoI/Nepx7AtdYP2yxSaeOV7jTQ2/eSVo12RMWEz9Nz5CEP
+t29T8itbTC12TOlO1LgM1nhSNf+bVLehyUTOB+fVc3PCJe+ExlrI6cfMNPpMlpKL
+CkNy0Hzci0ASRk96D1btyAh9Qb36hESzU6yE4QObxO32vHdT+G0IB+Yl6BGV0Bdx
+oRsSDgZTZE65/jIJxiWKaUMKwKw8fAqcPBdfz8feqyoIZBY7EEypd7QxBzh3Y4yd
+rpLxv9UIKa7woaoi/uLIgmnhxlMh6manyHKQY9dtgkdWLKItXwWtG8FzwkxVmhTl
+6ZGzgBXO85mY68HMc7l1shZZJAMY2FR5noV0ELY/fsPnIFvBxoMsaOOIflRYPkdK
+Go+ypdBqEaO7qxqDk8WF21VxCL1pAryG1b1Af/KGfrdhGX9CjfVXswBlW2E/CQOd
+mOtbUkNWHIqiRtSfjfQ+J25yWJoLCAYIrdoaHcx0IWLiKSRk6rTZGSZkw/R0P+2p
+fY4QwCtVtlU=/X/t
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

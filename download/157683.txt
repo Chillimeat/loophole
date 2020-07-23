@@ -1,0 +1,79 @@
+==========================================================================
+Ubuntu Security Notice USN-4353-2
+May 12, 2020
+
+firefox regression
+==========================================================================
+
+A security issue affects these releases of Ubuntu and its derivatives:
+
+- Ubuntu 20.04 LTS
+- Ubuntu 19.10
+- Ubuntu 18.04 LTS
+- Ubuntu 16.04 LTS
+
+Summary:
+
+USN-4353-1 caused a regression in Firefox.
+
+Software Description:
+- firefox: Mozilla Open Source web browser
+
+Details:
+
+USN-4353-1 fixed vulnerabilities in Firefox. The update caused a
+regression that impaired the functionality of some addons. This update
+fixes the problem.
+
+We apologize for the inconvenience.
+
+Original advisory details:
+
+ Multiple security issues were discovered in Firefox. If a user were
+ tricked in to opening a specially crafted website, an attacker could
+ potentially exploit these to cause a denial of service, bypass security
+ restrictions, spoof the URL bar, or execute arbitrary code.
+ (CVE-2020-6831, CVE-2020-12387, CVE-2020-12390, CVE-2020-12391,
+ CVE-2020-12394, CVE-2020-12395, CVE-2020-12396)
+  It was discovered that the Devtools’ ‘Copy as cURL’ feature did not
+ properly HTTP POST data of a request. If a user were tricked in to using
+ the ‘Copy as cURL’ feature to copy and paste a command with specially
+ crafted data in to a terminal, an attacker could potentially exploit this
+ to obtain sensitive information from local files.
+ (CVE-2020-12392)
+
+Update instructions:
+
+The problem can be corrected by updating your system to the following
+package versions:
+
+Ubuntu 20.04 LTS:
+  firefox                         76.0.1+build1-0ubuntu0.20.04.1
+
+Ubuntu 19.10:
+  firefox                         76.0.1+build1-0ubuntu0.19.10.1
+
+Ubuntu 18.04 LTS:
+  firefox                         76.0.1+build1-0ubuntu0.18.04.1
+
+Ubuntu 16.04 LTS:
+  firefox                         76.0.1+build1-0ubuntu0.16.04.1
+
+After a standard system update you need to restart Firefox to make
+all the necessary changes.
+
+References:
+  https://usn.ubuntu.com/4353-2
+  https://usn.ubuntu.com/4353-1
+  https://launchpad.net/bugs/1878251
+
+Package Information:
+
+https://launchpad.net/ubuntu/+source/firefox/76.0.1+build1-0ubuntu0.20.04.1
+
+https://launchpad.net/ubuntu/+source/firefox/76.0.1+build1-0ubuntu0.19.10.1
+
+https://launchpad.net/ubuntu/+source/firefox/76.0.1+build1-0ubuntu0.18.04.1
+
+https://launchpad.net/ubuntu/+source/firefox/76.0.1+build1-0ubuntu0.16.04.1
+

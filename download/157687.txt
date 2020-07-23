@@ -1,0 +1,114 @@
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Gentoo Linux Security Advisory                           GLSA 202005-04
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+                                           https://security.gentoo.org/
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ Severity: Normal
+    Title: Mozilla Firefox: Multiple vulnerabilities
+     Date: May 12, 2020
+     Bugs: #721090
+       ID: 202005-04
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Synopsis
+========
+
+Multiple vulnerabilities have been found in Mozilla Firefox, the worst
+of which could result in the arbitrary execution of code.
+
+Background
+==========
+
+Mozilla Firefox is a popular open-source web browser from the Mozilla
+Project.
+
+Affected packages
+=================
+
+    -------------------------------------------------------------------
+     Package              /     Vulnerable     /            Unaffected
+    -------------------------------------------------------------------
+  1  www-client/firefox           < 68.8.0                  >= 68.8.0
+  2  www-client/firefox-bin       < 68.8.0                  >= 68.8.0
+    -------------------------------------------------------------------
+     2 affected packages
+
+Description
+===========
+
+Multiple vulnerabilities have been discovered in Mozilla Firefox.
+Please review the CVE identifiers referenced below for details.
+
+Impact
+======
+
+A remote attacker could entice a user to view a specially crafted web
+page, possibly resulting in the execution of arbitrary code with the
+privileges of the process, an information leak or a Denial of Service
+condition.
+
+Workaround
+==========
+
+There is no known workaround at this time.
+
+Resolution
+==========
+
+All Mozilla Firefox users should upgrade to the latest version:
+
+  # emerge --sync
+  # emerge --ask --oneshot --verbose ">=www-client/firefox-68.8.0"
+
+All Mozilla Firefox binary users should upgrade to the latest version:
+
+  # emerge --sync
+  # emerge --ask --oneshot --verbose ">=www-client/firefox-bin-68.8.0"
+
+References
+==========
+
+[ 1 ] CVE-2020-12387
+      https://nvd.nist.gov/vuln/detail/CVE-2020-12387
+[ 2 ] CVE-2020-12392
+      https://nvd.nist.gov/vuln/detail/CVE-2020-12392
+[ 3 ] CVE-2020-12394
+      https://nvd.nist.gov/vuln/detail/CVE-2020-12394
+[ 4 ] CVE-2020-12395
+      https://nvd.nist.gov/vuln/detail/CVE-2020-12395
+[ 5 ] CVE-2020-12396
+      https://nvd.nist.gov/vuln/detail/CVE-2020-12396
+[ 6 ] CVE-2020-6831
+      https://nvd.nist.gov/vuln/detail/CVE-2020-6831
+[ 7 ] MFSA-2020-17
+      https://www.mozilla.org/en-US/security/advisories/mfsa2020-17/
+
+Availability
+============
+
+This GLSA and any updates to it are available for viewing at
+the Gentoo Security Website:
+
+ https://security.gentoo.org/glsa/202005-04
+
+Concerns?
+=========
+
+Security is a primary focus of Gentoo Linux and ensuring the
+confidentiality and security of our users' machines is of utmost
+importance to us. Any security concerns should be addressed to
+security@gentoo.org or alternatively, you may file a bug at
+https://bugs.gentoo.org.
+
+License
+=======
+
+Copyright 2020 Gentoo Foundation, Inc; referenced text
+belongs to its owner(s).
+
+The contents of this document are licensed under the
+Creative Commons - Attribution / Share Alike license.
+
+https://creativecommons.org/licenses/by-sa/2.5

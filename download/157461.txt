@@ -1,0 +1,121 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Moderate: memcached security update
+Advisory ID:       RHSA-2020:1576-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:1576
+Issue date:        2020-04-28
+CVE Names:         CVE-2019-11596
+====================================================================
+1. Summary:
+
+An update for memcached is now available for Red Hat Enterprise Linux 8.
+
+Red Hat Product Security has rated this update as having a security impact
+of Moderate. A Common Vulnerability Scoring System (CVSS) base score, which
+gives a detailed severity rating, is available for each vulnerability from
+the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Enterprise Linux AppStream (v. 8) - aarch64, ppc64le, s390x, x86_64
+
+3. Description:
+
+memcached is a high-performance, distributed memory object caching system,
+generic in nature, but intended for use in speeding up dynamic web
+applications by alleviating database load.
+
+Security Fix(es):
+
+* memcached: null-pointer dereference in "lru mode" and "lru temp_ttl"
+causing denial of service (CVE-2019-11596)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+Additional Changes:
+
+For detailed information on changes in this release, see the Red Hat
+Enterprise Linux 8.2 Release Notes linked from the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1706001 - CVE-2019-11596 memcached: null-pointer dereference in "lru mode" and "lru temp_ttl" causing denial of service
+
+6. Package List:
+
+Red Hat Enterprise Linux AppStream (v. 8):
+
+Source:
+memcached-1.5.9-3.el8.src.rpm
+
+aarch64:
+memcached-1.5.9-3.el8.aarch64.rpm
+memcached-debuginfo-1.5.9-3.el8.aarch64.rpm
+memcached-debugsource-1.5.9-3.el8.aarch64.rpm
+
+ppc64le:
+memcached-1.5.9-3.el8.ppc64le.rpm
+memcached-debuginfo-1.5.9-3.el8.ppc64le.rpm
+memcached-debugsource-1.5.9-3.el8.ppc64le.rpm
+
+s390x:
+memcached-1.5.9-3.el8.s390x.rpm
+memcached-debuginfo-1.5.9-3.el8.s390x.rpm
+memcached-debugsource-1.5.9-3.el8.s390x.rpm
+
+x86_64:
+memcached-1.5.9-3.el8.x86_64.rpm
+memcached-debuginfo-1.5.9-3.el8.x86_64.rpm
+memcached-debugsource-1.5.9-3.el8.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2019-11596
+https://access.redhat.com/security/updates/classification/#moderate
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/8.2_release_notes/index
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXqhVpdzjgjWX9erEAQgW0BAAkIpMrTNHZ7sndBsmeetu9yiAGVoa0tqO
+hz3DzK8npQ/1xnjbT4wOSaZ2SbLO5EE84zwHe5l9fPbWDJrCFtlXbNlC2B9kPraT
+qpZw7NMRgSIOb//T2AUe6rlubG34lgALXGRoO9UHa1gKet8KiPyTifSxPf4Tn2XU
+i0LqWmR4Ov1KXurGibI8Jtrn82v29HdpCAjUAXw55j3SBnrec1YYZHJ9mJqZaqul
+x5rR3dVhBz+l3ZxX8awO+vOKfU6t2xO0YMnJ79hD4ZprL59fgrqnV22YPhoJkpDd
+uWMZmDijiDm2ozwAZHcXcTJ2uU7ckQ+F/aQsB4iAemuHQWt+367VA3G8ytTtsmqV
+G2Gddg6YIXGntbP5l4Hhykvw2s4sXpGkl5q+uUWMQ3f2ZCMEVxEO3EiFYRng036p
+mPQjRGeUSZ+iF8XQ9GMzzs1bnvEGSQDuV6HagJdG9y7SQ56NkYWLlzEvkaP5JDj3
+H6/iRPOc8LwfELP7S+8GWFxY2/yPOYaqXWL/vjqMGBfFLTj4071UoJdfb4yv0WFc
+qxCYNeB4JYkM7XaMtvsm7foN7Uip1jedkqqnANhsvI88KX1zBXjWY038akXU4YYJ
+JEqaZxJ4YYd7L/IasX/XHNkUiMk0APapQecNMNwhG/bT6gQFJAFhPS1+S9lobANC
+Kjv4lmElu/4=gA/v
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

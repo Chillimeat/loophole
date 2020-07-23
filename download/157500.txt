@@ -1,0 +1,43 @@
+=========================================================================
+Ubuntu Security Notice USN-4341-2
+April 29, 2020
+
+samba vulnerability
+=========================================================================
+A security issue affects these releases of Ubuntu and its derivatives:
+
+- Ubuntu 14.04 ESM
+
+Summary:
+
+Samba could be made to consume resources if it received a specially
+crafted LDAP query.
+
+Software Description:
+- samba: SMB/CIFS file, print, and login server for Unix
+
+Details:
+
+USN-4341-1 fixed a vulnerability in Samba. This update provides
+the corresponding update for Ubuntu 14.04 ESM.
+
+Original advisory details:
+
+ It was discovered that Samba incorrectly handled certain LDAP queries. A
+ remote attacker could possibly use this issue to cause Samba to consume
+ resources, resulting in a denial of service. (CVE-2020-10704)
+
+Update instructions:
+
+The problem can be corrected by updating your system to the following
+package versions:
+
+Ubuntu 14.04 ESM:
+  samba                           2:4.3.11+dfsg-0ubuntu0.14.04.20+esm6
+
+In general, a standard system update will make all the necessary changes.
+
+References:
+  https://usn.ubuntu.com/4341-2
+  https://usn.ubuntu.com/4341-1
+  CVE-2020-10704

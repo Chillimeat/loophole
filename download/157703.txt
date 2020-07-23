@@ -1,0 +1,105 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+=====================================================================
+                   Red Hat Security Advisory
+
+Synopsis:          Moderate: Ansible security and bug fix update (2.7.18)
+Advisory ID:       RHSA-2020:2142-01
+Product:           Red Hat Ansible Engine
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:2142
+Issue date:        2020-05-13
+CVE Names:         CVE-2020-1753 
+=====================================================================
+
+1. Summary:
+
+An update for ansible is now available for Ansible Engine 2.7
+
+Red Hat Product Security has rated this update as having a security impact
+of Moderate. A Common Vulnerability Scoring System (CVSS) base score, which
+gives a detailed severity rating, is available for each vulnerability from
+the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Ansible Engine 2.7 for RHEL 7 Server - noarch
+
+3. Description:
+
+Ansible is a simple model-driven configuration management, multi-node
+deployment, and remote-task execution system. Ansible works over SSH and
+does not require any software or daemons to be installed on remote nodes.
+Extension modules can be written in any language and are transferred to
+managed machines automatically.
+
+The following packages have been upgraded to a newer upstream version:
+ansible (2.7.18)
+
+Bug Fix(es):
+* CVE-2020-1753 Ansible: kubectl connection plugin leaks sensitive
+information
+
+See:
+https://github.com/ansible/ansible/blob/v2.7.18/changelogs/CHANGELOG-v2.7.r
+st
+for details on bug fixes in this release.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1811008 - CVE-2020-1753 Ansible: kubectl connection plugin leaks sensitive information
+
+6. Package List:
+
+Red Hat Ansible Engine 2.7 for RHEL 7 Server:
+
+Source:
+ansible-2.7.18-1.el7ae.src.rpm
+
+noarch:
+ansible-2.7.18-1.el7ae.noarch.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2020-1753
+https://access.redhat.com/security/updates/classification/#moderate
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXrwcXdzjgjWX9erEAQh24Q/9GznrNR+1tcd4Mc786RsoOyoUoMGo39pv
+n5EMWzUOmbzRYF70lXxY1S2LauLdTI3BcxLkhKPpwfP/MmQ5HBDDA05EwyZgSNY0
+jXSR94CTk7VdNHCFu4NeO2a+gGmvb9KKw9oS4JImzjw7G/7oFI4AYAHe5ptgFcIZ
+qfXI3yCmXC5ZKvjba3UXOrNrVqpIqUO/k9Q/mRUjQO4sCZJS/K3eSewRpxw03xw6
++Zbyrgo8FpSQoOX2nsOFB+8WMsszSiBJ5wL4TFhharqn7Obj5rBmULRA/pX307bF
+jxxVmG0rQYBXWpiAEK8xGLuw6BiPufKmXWqEkvoUmsUF0/2vmDA/5I0RDxCktoOi
+N7ANrJcxcGAiVRSpX6hnGvE1QtX69podDiOGdErKxx8DbxqOVDFSufzxlsRPmhP2
+GgJl1Q5H19jn/P9KeGCPdXibWkhU89m727ToJGseDdx6UzOJCUq2pssxVwEzUmfE
+FXti4jYVd9hyRJQR+iDp49U/FQ1t2CzJvQeGVr8ktgn/a5edEr72St98+yVDxb31
+Jqo7IMwHVk+TeqRGCqbKKqiij1yJs2ZqMYf/blLNVEsA4QLATikfPg3FtRJoqiFG
+1MM4uhvhcrTsCLlKEuv9XzKmTYNA3KNzAdGnCXd6v23/HVb4ullOKvzpTTy9etn1
+GFsUxtL17jA=
+=yRgr
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

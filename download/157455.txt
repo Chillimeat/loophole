@@ -1,0 +1,304 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Moderate: bind security, bug fix, and enhancement update
+Advisory ID:       RHSA-2020:1845-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:1845
+Issue date:        2020-04-28
+CVE Names:         CVE-2019-6477
+====================================================================
+1. Summary:
+
+An update for bind is now available for Red Hat Enterprise Linux 8.
+
+Red Hat Product Security has rated this update as having a security impact
+of Moderate. A Common Vulnerability Scoring System (CVSS) base score, which
+gives a detailed severity rating, is available for each vulnerability from
+the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Enterprise Linux AppStream (v. 8) - aarch64, noarch, ppc64le, s390x, x86_64
+Red Hat Enterprise Linux BaseOS (v. 8) - aarch64, ppc64le, s390x, x86_64
+
+3. Description:
+
+The Berkeley Internet Name Domain (BIND) is an implementation of the Domain
+Name System (DNS) protocols. BIND includes a DNS server (named); a resolver
+library (routines for applications to use when interfacing with DNS); and
+tools for verifying that the DNS server is operating correctly.
+
+The following packages have been upgraded to a later upstream version: bind
+(9.11.13). (BZ#1704328)
+
+Security Fix(es):
+
+* bind: TCP Pipelining doesn't limit TCP clients on a single connection
+(CVE-2019-6477)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+Additional Changes:
+
+For detailed information on changes in this release, see the Red Hat
+Enterprise Linux 8.2 Release Notes linked from the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+After installing the update, the BIND daemon (named) will be restarted
+automatically.
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1664863 - [RFE] named: stale-answer support
+1679766 - system test dnssec: Bind algorithm ED448 is broken
+1704328 - Rebase bind to latest minor release 9.11.13
+1759845 - python-bind's isc.parsetab must be regenerated after python-ply has been updated
+1773617 - CVE-2019-6477 bind: TCP Pipelining doesn't limit TCP clients on a single connection
+1790879 - named allocates new memory on each reload
+
+6. Package List:
+
+Red Hat Enterprise Linux AppStream (v. 8):
+
+aarch64:
+bind-9.11.13-3.el8.aarch64.rpm
+bind-chroot-9.11.13-3.el8.aarch64.rpm
+bind-debuginfo-9.11.13-3.el8.aarch64.rpm
+bind-debugsource-9.11.13-3.el8.aarch64.rpm
+bind-devel-9.11.13-3.el8.aarch64.rpm
+bind-export-libs-debuginfo-9.11.13-3.el8.aarch64.rpm
+bind-libs-9.11.13-3.el8.aarch64.rpm
+bind-libs-debuginfo-9.11.13-3.el8.aarch64.rpm
+bind-libs-lite-9.11.13-3.el8.aarch64.rpm
+bind-libs-lite-debuginfo-9.11.13-3.el8.aarch64.rpm
+bind-lite-devel-9.11.13-3.el8.aarch64.rpm
+bind-pkcs11-9.11.13-3.el8.aarch64.rpm
+bind-pkcs11-debuginfo-9.11.13-3.el8.aarch64.rpm
+bind-pkcs11-devel-9.11.13-3.el8.aarch64.rpm
+bind-pkcs11-libs-9.11.13-3.el8.aarch64.rpm
+bind-pkcs11-libs-debuginfo-9.11.13-3.el8.aarch64.rpm
+bind-pkcs11-utils-9.11.13-3.el8.aarch64.rpm
+bind-pkcs11-utils-debuginfo-9.11.13-3.el8.aarch64.rpm
+bind-sdb-9.11.13-3.el8.aarch64.rpm
+bind-sdb-chroot-9.11.13-3.el8.aarch64.rpm
+bind-sdb-debuginfo-9.11.13-3.el8.aarch64.rpm
+bind-utils-9.11.13-3.el8.aarch64.rpm
+bind-utils-debuginfo-9.11.13-3.el8.aarch64.rpm
+
+noarch:
+bind-license-9.11.13-3.el8.noarch.rpm
+python3-bind-9.11.13-3.el8.noarch.rpm
+
+ppc64le:
+bind-9.11.13-3.el8.ppc64le.rpm
+bind-chroot-9.11.13-3.el8.ppc64le.rpm
+bind-debuginfo-9.11.13-3.el8.ppc64le.rpm
+bind-debugsource-9.11.13-3.el8.ppc64le.rpm
+bind-devel-9.11.13-3.el8.ppc64le.rpm
+bind-export-libs-debuginfo-9.11.13-3.el8.ppc64le.rpm
+bind-libs-9.11.13-3.el8.ppc64le.rpm
+bind-libs-debuginfo-9.11.13-3.el8.ppc64le.rpm
+bind-libs-lite-9.11.13-3.el8.ppc64le.rpm
+bind-libs-lite-debuginfo-9.11.13-3.el8.ppc64le.rpm
+bind-lite-devel-9.11.13-3.el8.ppc64le.rpm
+bind-pkcs11-9.11.13-3.el8.ppc64le.rpm
+bind-pkcs11-debuginfo-9.11.13-3.el8.ppc64le.rpm
+bind-pkcs11-devel-9.11.13-3.el8.ppc64le.rpm
+bind-pkcs11-libs-9.11.13-3.el8.ppc64le.rpm
+bind-pkcs11-libs-debuginfo-9.11.13-3.el8.ppc64le.rpm
+bind-pkcs11-utils-9.11.13-3.el8.ppc64le.rpm
+bind-pkcs11-utils-debuginfo-9.11.13-3.el8.ppc64le.rpm
+bind-sdb-9.11.13-3.el8.ppc64le.rpm
+bind-sdb-chroot-9.11.13-3.el8.ppc64le.rpm
+bind-sdb-debuginfo-9.11.13-3.el8.ppc64le.rpm
+bind-utils-9.11.13-3.el8.ppc64le.rpm
+bind-utils-debuginfo-9.11.13-3.el8.ppc64le.rpm
+
+s390x:
+bind-9.11.13-3.el8.s390x.rpm
+bind-chroot-9.11.13-3.el8.s390x.rpm
+bind-debuginfo-9.11.13-3.el8.s390x.rpm
+bind-debugsource-9.11.13-3.el8.s390x.rpm
+bind-devel-9.11.13-3.el8.s390x.rpm
+bind-export-libs-debuginfo-9.11.13-3.el8.s390x.rpm
+bind-libs-9.11.13-3.el8.s390x.rpm
+bind-libs-debuginfo-9.11.13-3.el8.s390x.rpm
+bind-libs-lite-9.11.13-3.el8.s390x.rpm
+bind-libs-lite-debuginfo-9.11.13-3.el8.s390x.rpm
+bind-lite-devel-9.11.13-3.el8.s390x.rpm
+bind-pkcs11-9.11.13-3.el8.s390x.rpm
+bind-pkcs11-debuginfo-9.11.13-3.el8.s390x.rpm
+bind-pkcs11-devel-9.11.13-3.el8.s390x.rpm
+bind-pkcs11-libs-9.11.13-3.el8.s390x.rpm
+bind-pkcs11-libs-debuginfo-9.11.13-3.el8.s390x.rpm
+bind-pkcs11-utils-9.11.13-3.el8.s390x.rpm
+bind-pkcs11-utils-debuginfo-9.11.13-3.el8.s390x.rpm
+bind-sdb-9.11.13-3.el8.s390x.rpm
+bind-sdb-chroot-9.11.13-3.el8.s390x.rpm
+bind-sdb-debuginfo-9.11.13-3.el8.s390x.rpm
+bind-utils-9.11.13-3.el8.s390x.rpm
+bind-utils-debuginfo-9.11.13-3.el8.s390x.rpm
+
+x86_64:
+bind-9.11.13-3.el8.x86_64.rpm
+bind-chroot-9.11.13-3.el8.x86_64.rpm
+bind-debuginfo-9.11.13-3.el8.i686.rpm
+bind-debuginfo-9.11.13-3.el8.x86_64.rpm
+bind-debugsource-9.11.13-3.el8.i686.rpm
+bind-debugsource-9.11.13-3.el8.x86_64.rpm
+bind-devel-9.11.13-3.el8.i686.rpm
+bind-devel-9.11.13-3.el8.x86_64.rpm
+bind-export-libs-debuginfo-9.11.13-3.el8.i686.rpm
+bind-export-libs-debuginfo-9.11.13-3.el8.x86_64.rpm
+bind-libs-9.11.13-3.el8.i686.rpm
+bind-libs-9.11.13-3.el8.x86_64.rpm
+bind-libs-debuginfo-9.11.13-3.el8.i686.rpm
+bind-libs-debuginfo-9.11.13-3.el8.x86_64.rpm
+bind-libs-lite-9.11.13-3.el8.i686.rpm
+bind-libs-lite-9.11.13-3.el8.x86_64.rpm
+bind-libs-lite-debuginfo-9.11.13-3.el8.i686.rpm
+bind-libs-lite-debuginfo-9.11.13-3.el8.x86_64.rpm
+bind-lite-devel-9.11.13-3.el8.i686.rpm
+bind-lite-devel-9.11.13-3.el8.x86_64.rpm
+bind-pkcs11-9.11.13-3.el8.x86_64.rpm
+bind-pkcs11-debuginfo-9.11.13-3.el8.i686.rpm
+bind-pkcs11-debuginfo-9.11.13-3.el8.x86_64.rpm
+bind-pkcs11-devel-9.11.13-3.el8.i686.rpm
+bind-pkcs11-devel-9.11.13-3.el8.x86_64.rpm
+bind-pkcs11-libs-9.11.13-3.el8.i686.rpm
+bind-pkcs11-libs-9.11.13-3.el8.x86_64.rpm
+bind-pkcs11-libs-debuginfo-9.11.13-3.el8.i686.rpm
+bind-pkcs11-libs-debuginfo-9.11.13-3.el8.x86_64.rpm
+bind-pkcs11-utils-9.11.13-3.el8.x86_64.rpm
+bind-pkcs11-utils-debuginfo-9.11.13-3.el8.i686.rpm
+bind-pkcs11-utils-debuginfo-9.11.13-3.el8.x86_64.rpm
+bind-sdb-9.11.13-3.el8.x86_64.rpm
+bind-sdb-chroot-9.11.13-3.el8.x86_64.rpm
+bind-sdb-debuginfo-9.11.13-3.el8.i686.rpm
+bind-sdb-debuginfo-9.11.13-3.el8.x86_64.rpm
+bind-utils-9.11.13-3.el8.x86_64.rpm
+bind-utils-debuginfo-9.11.13-3.el8.i686.rpm
+bind-utils-debuginfo-9.11.13-3.el8.x86_64.rpm
+
+Red Hat Enterprise Linux BaseOS (v. 8):
+
+Source:
+bind-9.11.13-3.el8.src.rpm
+
+aarch64:
+bind-debuginfo-9.11.13-3.el8.aarch64.rpm
+bind-debugsource-9.11.13-3.el8.aarch64.rpm
+bind-export-devel-9.11.13-3.el8.aarch64.rpm
+bind-export-libs-9.11.13-3.el8.aarch64.rpm
+bind-export-libs-debuginfo-9.11.13-3.el8.aarch64.rpm
+bind-libs-debuginfo-9.11.13-3.el8.aarch64.rpm
+bind-libs-lite-debuginfo-9.11.13-3.el8.aarch64.rpm
+bind-pkcs11-debuginfo-9.11.13-3.el8.aarch64.rpm
+bind-pkcs11-libs-debuginfo-9.11.13-3.el8.aarch64.rpm
+bind-pkcs11-utils-debuginfo-9.11.13-3.el8.aarch64.rpm
+bind-sdb-debuginfo-9.11.13-3.el8.aarch64.rpm
+bind-utils-debuginfo-9.11.13-3.el8.aarch64.rpm
+
+ppc64le:
+bind-debuginfo-9.11.13-3.el8.ppc64le.rpm
+bind-debugsource-9.11.13-3.el8.ppc64le.rpm
+bind-export-devel-9.11.13-3.el8.ppc64le.rpm
+bind-export-libs-9.11.13-3.el8.ppc64le.rpm
+bind-export-libs-debuginfo-9.11.13-3.el8.ppc64le.rpm
+bind-libs-debuginfo-9.11.13-3.el8.ppc64le.rpm
+bind-libs-lite-debuginfo-9.11.13-3.el8.ppc64le.rpm
+bind-pkcs11-debuginfo-9.11.13-3.el8.ppc64le.rpm
+bind-pkcs11-libs-debuginfo-9.11.13-3.el8.ppc64le.rpm
+bind-pkcs11-utils-debuginfo-9.11.13-3.el8.ppc64le.rpm
+bind-sdb-debuginfo-9.11.13-3.el8.ppc64le.rpm
+bind-utils-debuginfo-9.11.13-3.el8.ppc64le.rpm
+
+s390x:
+bind-debuginfo-9.11.13-3.el8.s390x.rpm
+bind-debugsource-9.11.13-3.el8.s390x.rpm
+bind-export-devel-9.11.13-3.el8.s390x.rpm
+bind-export-libs-9.11.13-3.el8.s390x.rpm
+bind-export-libs-debuginfo-9.11.13-3.el8.s390x.rpm
+bind-libs-debuginfo-9.11.13-3.el8.s390x.rpm
+bind-libs-lite-debuginfo-9.11.13-3.el8.s390x.rpm
+bind-pkcs11-debuginfo-9.11.13-3.el8.s390x.rpm
+bind-pkcs11-libs-debuginfo-9.11.13-3.el8.s390x.rpm
+bind-pkcs11-utils-debuginfo-9.11.13-3.el8.s390x.rpm
+bind-sdb-debuginfo-9.11.13-3.el8.s390x.rpm
+bind-utils-debuginfo-9.11.13-3.el8.s390x.rpm
+
+x86_64:
+bind-debuginfo-9.11.13-3.el8.i686.rpm
+bind-debuginfo-9.11.13-3.el8.x86_64.rpm
+bind-debugsource-9.11.13-3.el8.i686.rpm
+bind-debugsource-9.11.13-3.el8.x86_64.rpm
+bind-export-devel-9.11.13-3.el8.i686.rpm
+bind-export-devel-9.11.13-3.el8.x86_64.rpm
+bind-export-libs-9.11.13-3.el8.i686.rpm
+bind-export-libs-9.11.13-3.el8.x86_64.rpm
+bind-export-libs-debuginfo-9.11.13-3.el8.i686.rpm
+bind-export-libs-debuginfo-9.11.13-3.el8.x86_64.rpm
+bind-libs-debuginfo-9.11.13-3.el8.i686.rpm
+bind-libs-debuginfo-9.11.13-3.el8.x86_64.rpm
+bind-libs-lite-debuginfo-9.11.13-3.el8.i686.rpm
+bind-libs-lite-debuginfo-9.11.13-3.el8.x86_64.rpm
+bind-pkcs11-debuginfo-9.11.13-3.el8.i686.rpm
+bind-pkcs11-debuginfo-9.11.13-3.el8.x86_64.rpm
+bind-pkcs11-libs-debuginfo-9.11.13-3.el8.i686.rpm
+bind-pkcs11-libs-debuginfo-9.11.13-3.el8.x86_64.rpm
+bind-pkcs11-utils-debuginfo-9.11.13-3.el8.i686.rpm
+bind-pkcs11-utils-debuginfo-9.11.13-3.el8.x86_64.rpm
+bind-sdb-debuginfo-9.11.13-3.el8.i686.rpm
+bind-sdb-debuginfo-9.11.13-3.el8.x86_64.rpm
+bind-utils-debuginfo-9.11.13-3.el8.i686.rpm
+bind-utils-debuginfo-9.11.13-3.el8.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2019-6477
+https://access.redhat.com/security/updates/classification/#moderate
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/8.2_release_notes/index
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXqhWVNzjgjWX9erEAQgR1Q//RjXW2iql7AkR/NuHmVIDGQ8+hCIyXZgT
+1SgvYkBUDQaosnMWo7WH3W88FH35BFOZN9VZBTZDHgqS6kvHYDoV7pcFZ1h3I2/H
+816IHlKGZuLBQvMZg4uqBhsOpzVhEDeFl/3+ogCD8lnxwQYGsWMHlSuU4IPJJ3H0
+C97LVcEn5/hVI2lgyBd+NP569RW0chd3XirT3Y6Mxblaw81Lr8zGnugcTXxkl6eS
+ouZYYfd+wL+zVhIkB4CAUuVap8GTDgJ+ZySuLXY06RQbeCYqEz0QdWaspptpqUnp
+Ol4hpehUEVcyKeHlUh5tfJKNjudVg5rPQStC8icnGQyx8D6KD6kJFsv95Sw+B+fA
+3u5pz0dZdt++SZOejOsAfyMEe/aW5Tr45gBJilWVafI6n901cgZeY1CoYZK3dj/F
+UZYs5ExXbmkukAnIq/WvDljTnLLRgmLV1YyNAg8QGbfirFibQfylOGrLqj5hY4nv
+rYmzj+ckCvNbj/dXY/YBgZnhnF4StvyUv5YYmjJphOKaKco9dmKTnSwAowuxqYBA
+oAiyu4Bu25gAKcuSRsNbQyxLsjRlDGsAcwHUgSWez5QPYI8VqipBkbeZNxrUAY22
+wYw3cVvTlDQNxo6DZEmOfactEjuBnLxzJkasEJVboV6flaGnYKXy/5pET5kdQFV6
+5E0kHa44suk=CzFA
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

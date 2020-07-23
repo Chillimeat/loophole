@@ -1,0 +1,49 @@
+=========================================================================
+Ubuntu Security Notice USN-4360-3
+May 15, 2020
+
+json-c regression
+=========================================================================
+A security issue affects these releases of Ubuntu and its derivatives:
+
+- Ubuntu 14.04 ESM
+- Ubuntu 12.04 ESM
+
+Summary:
+
+USN-4360-1 introduced a regression in json-c.
+
+Software Description:
+- json-c: JSON manipulation library
+
+Details:
+
+USN-4360-1 fixed a vulnerability in json-c. The security fix introduced
+a memory leak in some scenarios. This update reverts the security fix
+pending further investigation.
+
+We apologize for the inconvenience.
+
+Original advisory details:
+
+ It was discovered that json-c incorrectly handled certain JSON files.
+ An attacker could possibly use this issue to execute arbitrary code.
+
+Update instructions:
+
+The problem can be corrected by updating your system to the following
+package versions:
+
+Ubuntu 14.04 ESM:
+  libjson-c2                      0.11-3ubuntu1.2+esm2
+  libjson0                        0.11-3ubuntu1.2+esm2
+
+Ubuntu 12.04 ESM:
+  libjson0                        0.9-1ubuntu1.3
+
+In general, a standard system update will make all the necessary changes.
+
+References:
+  https://usn.ubuntu.com/4360-3
+  https://usn.ubuntu.com/4360-1
+  https://launchpad.net/bugs/1878723

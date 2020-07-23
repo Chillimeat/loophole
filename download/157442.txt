@@ -1,0 +1,508 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Moderate: libreoffice security and bug fix update
+Advisory ID:       RHSA-2020:1598-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:1598
+Issue date:        2020-04-28
+CVE Names:         CVE-2019-9849 CVE-2019-9850 CVE-2019-9851
+                   CVE-2019-9852 CVE-2019-9853 CVE-2019-9854
+====================================================================
+1. Summary:
+
+An update for libreoffice is now available for Red Hat Enterprise Linux 8.
+
+Red Hat Product Security has rated this update as having a security impact
+of Moderate. A Common Vulnerability Scoring System (CVSS) base score, which
+gives a detailed severity rating, is available for each vulnerability from
+the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat CodeReady Linux Builder (v. 8) - aarch64, noarch, ppc64le, x86_64
+Red Hat Enterprise Linux AppStream (v. 8) - noarch, ppc64le, x86_64
+
+3. Description:
+
+LibreOffice is an open source, community-developed office productivity
+suite. It includes key desktop applications, such as a word processor, a
+spreadsheet, a presentation manager, a formula editor, and a drawing
+program. LibreOffice replaces OpenOffice and provides a similar but
+enhanced and extended office suite.
+
+Security Fix(es):
+
+* libreoffice: Insufficient URL validation allowing LibreLogo script
+execution (CVE-2019-9850)
+
+* libreoffice: LibreLogo global-event script execution (CVE-2019-9851)
+
+* libreoffice: Insufficient URL encoding flaw in allowed script location
+check (CVE-2019-9852)
+
+* libreoffice: Insufficient URL decoding flaw in categorizing macro
+location (CVE-2019-9853)
+
+* libreoffice: Unsafe URL assembly flaw in allowed script location check
+(CVE-2019-9854)
+
+* libreoffice: Remote resources protection module not applied to bullet
+graphics (CVE-2019-9849)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+Additional Changes:
+
+For detailed information on changes in this release, see the Red Hat
+Enterprise Linux 8.2 Release Notes linked from the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+All running instances of LibreOffice applications must be restarted for
+this update to take effect.
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1648281 - [libreoffice][fix available] Junk character gets added when some emojis are inserted.
+1737421 - CVE-2019-9849 libreoffice: Remote resources protection module not applied to bullet graphics
+1744862 - CVE-2019-9850 libreoffice: Insufficient URL validation allowing LibreLogo script execution
+1744866 - CVE-2019-9851 libreoffice: LibreLogo global-event script execution
+1744868 - CVE-2019-9852 libreoffice: Insufficient URL encoding flaw in allowed script location check
+1769907 - CVE-2019-9854 libreoffice: Unsafe URL assembly flaw in allowed script location check
+1797466 - CVE-2019-9853 libreoffice: Insufficient URL decoding flaw in categorizing macro location
+
+6. Package List:
+
+Red Hat Enterprise Linux AppStream (v. 8):
+
+Source:
+libreoffice-6.0.6.1-20.el8.src.rpm
+
+noarch:
+autocorr-af-6.0.6.1-20.el8.noarch.rpm
+autocorr-bg-6.0.6.1-20.el8.noarch.rpm
+autocorr-ca-6.0.6.1-20.el8.noarch.rpm
+autocorr-cs-6.0.6.1-20.el8.noarch.rpm
+autocorr-da-6.0.6.1-20.el8.noarch.rpm
+autocorr-de-6.0.6.1-20.el8.noarch.rpm
+autocorr-en-6.0.6.1-20.el8.noarch.rpm
+autocorr-es-6.0.6.1-20.el8.noarch.rpm
+autocorr-fa-6.0.6.1-20.el8.noarch.rpm
+autocorr-fi-6.0.6.1-20.el8.noarch.rpm
+autocorr-fr-6.0.6.1-20.el8.noarch.rpm
+autocorr-ga-6.0.6.1-20.el8.noarch.rpm
+autocorr-hr-6.0.6.1-20.el8.noarch.rpm
+autocorr-hu-6.0.6.1-20.el8.noarch.rpm
+autocorr-is-6.0.6.1-20.el8.noarch.rpm
+autocorr-it-6.0.6.1-20.el8.noarch.rpm
+autocorr-ja-6.0.6.1-20.el8.noarch.rpm
+autocorr-ko-6.0.6.1-20.el8.noarch.rpm
+autocorr-lb-6.0.6.1-20.el8.noarch.rpm
+autocorr-lt-6.0.6.1-20.el8.noarch.rpm
+autocorr-mn-6.0.6.1-20.el8.noarch.rpm
+autocorr-nl-6.0.6.1-20.el8.noarch.rpm
+autocorr-pl-6.0.6.1-20.el8.noarch.rpm
+autocorr-pt-6.0.6.1-20.el8.noarch.rpm
+autocorr-ro-6.0.6.1-20.el8.noarch.rpm
+autocorr-ru-6.0.6.1-20.el8.noarch.rpm
+autocorr-sk-6.0.6.1-20.el8.noarch.rpm
+autocorr-sl-6.0.6.1-20.el8.noarch.rpm
+autocorr-sr-6.0.6.1-20.el8.noarch.rpm
+autocorr-sv-6.0.6.1-20.el8.noarch.rpm
+autocorr-tr-6.0.6.1-20.el8.noarch.rpm
+autocorr-vi-6.0.6.1-20.el8.noarch.rpm
+autocorr-zh-6.0.6.1-20.el8.noarch.rpm
+libreoffice-data-6.0.6.1-20.el8.noarch.rpm
+libreoffice-opensymbol-fonts-6.0.6.1-20.el8.noarch.rpm
+libreoffice-ure-common-6.0.6.1-20.el8.noarch.rpm
+
+ppc64le:
+libreoffice-base-debuginfo-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-calc-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-calc-debuginfo-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-core-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-core-debuginfo-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-debuginfo-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-debugsource-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-draw-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-emailmerge-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-filters-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-gdb-debug-support-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-glade-debuginfo-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-graphicfilter-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-graphicfilter-debuginfo-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-gtk2-debuginfo-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-gtk3-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-gtk3-debuginfo-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-help-ar-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-help-bg-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-help-bn-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-help-ca-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-help-cs-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-help-da-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-help-de-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-help-dz-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-help-el-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-help-en-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-help-es-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-help-et-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-help-eu-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-help-fi-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-help-fr-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-help-gl-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-help-gu-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-help-he-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-help-hi-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-help-hr-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-help-hu-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-help-id-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-help-it-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-help-ja-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-help-ko-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-help-lt-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-help-lv-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-help-nb-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-help-nl-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-help-nn-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-help-pl-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-help-pt-BR-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-help-pt-PT-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-help-ro-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-help-ru-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-help-si-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-help-sk-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-help-sl-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-help-sv-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-help-ta-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-help-tr-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-help-uk-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-help-zh-Hans-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-help-zh-Hant-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-impress-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-impress-debuginfo-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-langpack-en-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-math-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-math-debuginfo-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-officebean-debuginfo-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-ogltrans-debuginfo-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-pdfimport-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-pdfimport-debuginfo-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-postgresql-debuginfo-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-pyuno-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-pyuno-debuginfo-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-sdk-debuginfo-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-ure-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-ure-debuginfo-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-writer-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-writer-debuginfo-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-x11-debuginfo-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-xsltfilter-6.0.6.1-20.el8.ppc64le.rpm
+libreofficekit-6.0.6.1-20.el8.ppc64le.rpm
+libreofficekit-debuginfo-6.0.6.1-20.el8.ppc64le.rpm
+
+x86_64:
+libreoffice-base-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-base-debuginfo-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-calc-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-calc-debuginfo-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-core-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-core-debuginfo-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-debuginfo-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-debugsource-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-draw-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-emailmerge-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-filters-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-gdb-debug-support-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-glade-debuginfo-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-graphicfilter-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-graphicfilter-debuginfo-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-gtk2-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-gtk2-debuginfo-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-gtk3-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-gtk3-debuginfo-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-help-ar-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-help-bg-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-help-bn-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-help-ca-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-help-cs-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-help-da-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-help-de-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-help-dz-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-help-el-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-help-en-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-help-es-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-help-et-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-help-eu-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-help-fi-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-help-fr-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-help-gl-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-help-gu-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-help-he-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-help-hi-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-help-hr-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-help-hu-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-help-id-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-help-it-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-help-ja-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-help-ko-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-help-lt-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-help-lv-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-help-nb-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-help-nl-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-help-nn-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-help-pl-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-help-pt-BR-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-help-pt-PT-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-help-ro-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-help-ru-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-help-si-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-help-sk-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-help-sl-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-help-sv-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-help-ta-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-help-tr-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-help-uk-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-help-zh-Hans-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-help-zh-Hant-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-impress-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-impress-debuginfo-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-af-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-ar-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-as-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-bg-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-bn-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-br-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-ca-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-cs-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-cy-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-da-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-de-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-dz-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-el-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-en-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-es-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-et-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-eu-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-fa-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-fi-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-fr-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-ga-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-gl-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-gu-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-he-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-hi-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-hr-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-hu-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-id-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-it-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-ja-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-kk-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-kn-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-ko-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-lt-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-lv-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-mai-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-ml-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-mr-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-nb-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-nl-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-nn-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-nr-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-nso-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-or-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-pa-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-pl-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-pt-BR-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-pt-PT-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-ro-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-ru-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-si-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-sk-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-sl-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-sr-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-ss-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-st-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-sv-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-ta-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-te-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-th-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-tn-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-tr-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-ts-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-uk-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-ve-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-xh-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-zh-Hans-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-zh-Hant-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-langpack-zu-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-math-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-math-debuginfo-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-officebean-debuginfo-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-ogltrans-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-ogltrans-debuginfo-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-pdfimport-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-pdfimport-debuginfo-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-postgresql-debuginfo-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-pyuno-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-pyuno-debuginfo-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-sdk-debuginfo-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-ure-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-ure-debuginfo-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-wiki-publisher-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-writer-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-writer-debuginfo-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-x11-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-x11-debuginfo-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-xsltfilter-6.0.6.1-20.el8.x86_64.rpm
+libreofficekit-6.0.6.1-20.el8.x86_64.rpm
+libreofficekit-debuginfo-6.0.6.1-20.el8.x86_64.rpm
+
+Red Hat CodeReady Linux Builder (v. 8):
+
+Source:
+libreoffice-6.0.6.1-20.el8.src.rpm
+
+aarch64:
+libreoffice-base-debuginfo-6.0.6.1-20.el8.aarch64.rpm
+libreoffice-calc-debuginfo-6.0.6.1-20.el8.aarch64.rpm
+libreoffice-core-6.0.6.1-20.el8.aarch64.rpm
+libreoffice-core-debuginfo-6.0.6.1-20.el8.aarch64.rpm
+libreoffice-debuginfo-6.0.6.1-20.el8.aarch64.rpm
+libreoffice-debugsource-6.0.6.1-20.el8.aarch64.rpm
+libreoffice-gdb-debug-support-6.0.6.1-20.el8.aarch64.rpm
+libreoffice-glade-debuginfo-6.0.6.1-20.el8.aarch64.rpm
+libreoffice-graphicfilter-debuginfo-6.0.6.1-20.el8.aarch64.rpm
+libreoffice-gtk2-6.0.6.1-20.el8.aarch64.rpm
+libreoffice-gtk2-debuginfo-6.0.6.1-20.el8.aarch64.rpm
+libreoffice-gtk3-6.0.6.1-20.el8.aarch64.rpm
+libreoffice-gtk3-debuginfo-6.0.6.1-20.el8.aarch64.rpm
+libreoffice-help-en-6.0.6.1-20.el8.aarch64.rpm
+libreoffice-impress-debuginfo-6.0.6.1-20.el8.aarch64.rpm
+libreoffice-langpack-en-6.0.6.1-20.el8.aarch64.rpm
+libreoffice-math-debuginfo-6.0.6.1-20.el8.aarch64.rpm
+libreoffice-officebean-debuginfo-6.0.6.1-20.el8.aarch64.rpm
+libreoffice-ogltrans-debuginfo-6.0.6.1-20.el8.aarch64.rpm
+libreoffice-pdfimport-debuginfo-6.0.6.1-20.el8.aarch64.rpm
+libreoffice-postgresql-debuginfo-6.0.6.1-20.el8.aarch64.rpm
+libreoffice-pyuno-debuginfo-6.0.6.1-20.el8.aarch64.rpm
+libreoffice-sdk-6.0.6.1-20.el8.aarch64.rpm
+libreoffice-sdk-debuginfo-6.0.6.1-20.el8.aarch64.rpm
+libreoffice-sdk-doc-6.0.6.1-20.el8.aarch64.rpm
+libreoffice-ure-6.0.6.1-20.el8.aarch64.rpm
+libreoffice-ure-debuginfo-6.0.6.1-20.el8.aarch64.rpm
+libreoffice-writer-debuginfo-6.0.6.1-20.el8.aarch64.rpm
+libreoffice-x11-6.0.6.1-20.el8.aarch64.rpm
+libreoffice-x11-debuginfo-6.0.6.1-20.el8.aarch64.rpm
+libreofficekit-debuginfo-6.0.6.1-20.el8.aarch64.rpm
+
+noarch:
+autocorr-en-6.0.6.1-20.el8.noarch.rpm
+libreoffice-data-6.0.6.1-20.el8.noarch.rpm
+libreoffice-opensymbol-fonts-6.0.6.1-20.el8.noarch.rpm
+libreoffice-ure-common-6.0.6.1-20.el8.noarch.rpm
+
+ppc64le:
+libreoffice-base-debuginfo-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-calc-debuginfo-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-core-debuginfo-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-debuginfo-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-debugsource-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-glade-debuginfo-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-graphicfilter-debuginfo-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-gtk2-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-gtk2-debuginfo-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-gtk3-debuginfo-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-impress-debuginfo-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-math-debuginfo-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-officebean-debuginfo-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-ogltrans-debuginfo-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-pdfimport-debuginfo-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-postgresql-debuginfo-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-pyuno-debuginfo-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-sdk-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-sdk-debuginfo-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-sdk-doc-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-ure-debuginfo-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-writer-debuginfo-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-x11-6.0.6.1-20.el8.ppc64le.rpm
+libreoffice-x11-debuginfo-6.0.6.1-20.el8.ppc64le.rpm
+libreofficekit-debuginfo-6.0.6.1-20.el8.ppc64le.rpm
+
+x86_64:
+libreoffice-base-debuginfo-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-calc-debuginfo-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-core-debuginfo-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-debuginfo-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-debugsource-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-glade-debuginfo-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-graphicfilter-debuginfo-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-gtk2-debuginfo-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-gtk3-debuginfo-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-impress-debuginfo-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-math-debuginfo-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-officebean-debuginfo-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-ogltrans-debuginfo-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-pdfimport-debuginfo-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-postgresql-debuginfo-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-pyuno-debuginfo-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-sdk-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-sdk-debuginfo-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-sdk-doc-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-ure-debuginfo-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-writer-debuginfo-6.0.6.1-20.el8.x86_64.rpm
+libreoffice-x11-debuginfo-6.0.6.1-20.el8.x86_64.rpm
+libreofficekit-debuginfo-6.0.6.1-20.el8.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2019-9849
+https://access.redhat.com/security/cve/CVE-2019-9850
+https://access.redhat.com/security/cve/CVE-2019-9851
+https://access.redhat.com/security/cve/CVE-2019-9852
+https://access.redhat.com/security/cve/CVE-2019-9853
+https://access.redhat.com/security/cve/CVE-2019-9854
+https://access.redhat.com/security/updates/classification/#moderate
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/8.2_release_notes/index
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXqhWBNzjgjWX9erEAQjPRBAAqP0aIu0/7FcRGp0QSoS2G4vSVvY6pqxX
+GDNRUieyksqZvLKeWW5pGg0hhGwMQ+RZpq/1yBi6hLbWh7lFHtrNxTCjdwLtD/as
+x0iBDrkorYfz8/I5gPISkNQUdM3flpTs9gFas126GdJs2T1nieJsNG0/eES1JlQB
+TIoRuCmtpDGQnuLlaHUPHSIRRp9wY2Q5yYQWFheJr0UY7lpMuzUW04H2sNF4PwZ6
+fUHqXqMLSn+FC1hWz/qCwOnjWR2YFDX+fu92MWnczbRO4rWFjIpz1gE1ntEjLGw5
+mW+hwfiYJ5D3jyIzzOF9pA3FFMy8bOtoe4FozrQ9oEmsL1tcfUTyXG5bubb8sYyl
+FMPofL6MIEArE4jPSUIqOsckSIdiHARpgpS8UWxKsoHWI5c58Yz62RjOpwBOCWUl
+cOaBdDo8NmeRQW3fpkT3Z0k4851FHccbcZtN/+z3lFfTLBRgkoKzUeL1oXKd5nt9
+3Kqk9jdjnABnlKaRJ7ffGwgoghrihCJV/ClDA0k33XOuji7zrxYq9muuMLj9Hudn
+WwjIoYJ61ogY3or7gdLtG1/iUkirCT5QMwWMi7jw66clvE8obAIlTC0jxQAwxUaa
+8CRsKHxtC4l4YdaLIXA+Z9PKZ1m+wgTpjWBGjqOzoVGnhLON6gJvGzD2LeriabN4
+FxEVkPndq8k=QDpV
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

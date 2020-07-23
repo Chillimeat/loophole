@@ -1,0 +1,56 @@
+==========================================================================
+Ubuntu Security Notice USN-3911-2
+May 13, 2020
+
+file regression
+==========================================================================
+
+A security issue affects these releases of Ubuntu and its derivatives:
+
+- Ubuntu 18.04 LTS
+- Ubuntu 16.04 LTS
+
+Summary:
+
+USN-3911-1 introduced a regression in file.
+
+Software Description:
+- file: Tool to determine file types
+
+Details:
+
+USN-3911-1 fixed vulnerabilities in file. One of the backported security
+fixes introduced a regression that caused the interpreter string to be
+truncated. This update fixes the problem.
+
+We apologize for the inconvenience.
+
+Original advisory details:
+
+ It was discovered that file incorrectly handled certain malformed ELF
+ files. An attacker could use this issue to cause a denial of service, or
+ possibly execute arbitrary code.
+
+Update instructions:
+
+The problem can be corrected by updating your system to the following
+package versions:
+
+Ubuntu 18.04 LTS:
+  file                            1:5.32-2ubuntu0.4
+  libmagic1                       1:5.32-2ubuntu0.4
+
+Ubuntu 16.04 LTS:
+  file                            1:5.25-2ubuntu1.4
+  libmagic1                       1:5.25-2ubuntu1.4
+
+In general, a standard system update will make all the necessary changes.
+
+References:
+  https://usn.ubuntu.com/3911-2
+  https://usn.ubuntu.com/3911-1
+  https://launchpad.net/bugs/1835596
+
+Package Information:
+  https://launchpad.net/ubuntu/+source/file/1:5.32-2ubuntu0.4
+  https://launchpad.net/ubuntu/+source/file/1:5.25-2ubuntu1.4

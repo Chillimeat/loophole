@@ -1,0 +1,90 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+=====================================================================
+                   Red Hat Security Advisory
+
+Synopsis:          Moderate: OpenShift Container Platform 4.4.3 ose-cluster-policy-controller-container security update
+Advisory ID:       RHSA-2020:1940-01
+Product:           Red Hat OpenShift Enterprise
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:1940
+Issue date:        2020-05-04
+CVE Names:         CVE-2020-8945 
+=====================================================================
+
+1. Summary:
+
+An update for ose-cluster-policy-controller-container is now available for
+Red Hat OpenShift Container Platform 4.4.
+
+Red Hat Product Security has rated this update as having a security impact
+of Moderate. A Common Vulnerability Scoring System (CVSS) base score, which
+gives a detailed severity rating, is available for each vulnerability from
+the CVE link(s) in the References section.
+
+2. Description:
+
+Red Hat OpenShift Container Platform is Red Hat's cloud computing
+Kubernetes application platform solution designed for on-premise or private
+cloud deployments.
+
+Security Fix(es):
+
+* proglottis/gpgme: Use-after-free in GPGME bindings during container image
+pull (CVE-2020-8945)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+3. Solution:
+
+For OpenShift Container Platform 4.4 see the following documentation, which
+will be updated shortly for release 4.4.3, for important instructions on
+how to upgrade your cluster and fully apply this asynchronous errata
+update:
+
+https://docs.openshift.com/container-platform/4.4/release_notes/ocp-4-4-rel
+ease-notes.html
+
+Details on how to access this content are available at
+https://docs.openshift.com/container-platform/4.4/updating/updating-cluster
+- -cli.html.
+
+4. Bugs fixed (https://bugzilla.redhat.com/):
+
+1795838 - CVE-2020-8945 proglottis/gpgme: Use-after-free in GPGME bindings during container image pull
+
+5. References:
+
+https://access.redhat.com/security/cve/CVE-2020-8945
+https://access.redhat.com/security/updates/classification/#moderate
+
+6. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXq/0DtzjgjWX9erEAQjIUxAAjKEELq0RzMYro2XCO9D0toTuJ5ukt7Hf
+ahUDpD4jRVAdwSt1zkvYmsvftIoFQWZ+2dhyeqz6tCQ8y5fUZof6WtLes1x30Gsk
+hgPcxrQFbefY1w8TMUYVWICeC2hR8T9Bef6pESQVEuIi3+BJk0xdU4xIWUZRLPxg
+0SsMoynWJSavmM2omHJEfyw2HZP8mwNb8yA1o+c6/XJTq58/ym98M1FTXV4oeZxw
++zFTbkS4QQjJlSRqnxzV7JeH7jFU1Ptqsw+2ttWY8c/kJStioybI6rNmENDLPgNc
+bZNbuQ/sCVE1eBfh6TDFdKuLODzJNdHZY5+fWLzTq/I39EX0h8w00hLr8xs3eutp
+g7ijivPeHRlIdHMxktBIeA5JmrcmsG4cdz6t/uC8Mp9sp0UsrKLgfwc0IKIFG18i
+/2tuM80XslWVCK7hc2xueCsfcVzJKrD7H5imz+bEL5PdCPvV1cTX8EEqXANdRYIy
+ak8wVRYcPSbxe4c1VcM7HEpX/pdpLmLouMAtXdnJg0LzEIe4k1j0dF4Uwp1MuUOv
+EILb44+8y0nczlNn5PtwaRz7gc8ilXP2ZzHg/vCgvOr50ijXHGA1x1HMG77muHk+
++FQP3KuVqmWzn/7PMbpcBdmPOSi3pi1M+ojGa4Ccw9lluXGyfrog6KlJ5N9YEIhS
+dW30S/CNF2M=
+=b8Dy
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

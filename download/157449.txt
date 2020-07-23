@@ -1,0 +1,175 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Low: wavpack security update
+Advisory ID:       RHSA-2020:1581-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:1581
+Issue date:        2020-04-28
+CVE Names:         CVE-2018-19840 CVE-2018-19841 CVE-2019-11498
+                   CVE-2019-1010315 CVE-2019-1010317 CVE-2019-1010319
+====================================================================
+1. Summary:
+
+An update for wavpack is now available for Red Hat Enterprise Linux 8.
+
+Red Hat Product Security has rated this update as having a security impact
+of Low. A Common Vulnerability Scoring System (CVSS) base score, which
+gives a detailed severity rating, is available for each vulnerability from
+the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat CodeReady Linux Builder (v. 8) - aarch64, ppc64le, s390x, x86_64
+Red Hat Enterprise Linux AppStream (v. 8) - aarch64, ppc64le, s390x, x86_64
+
+3. Description:
+
+WavPack is a completely open audio compression format providing lossless,
+high-quality lossy, and a unique hybrid compression mode.
+
+Security Fix(es):
+
+* wawpack: Infinite loop in WavpackPackInit function lead to DoS
+(CVE-2018-19840)
+
+* wawpack: Out-of-bounds read in WavpackVerifySingleBlock function leads to
+DoS (CVE-2018-19841)
+
+* wavpack: Use of uninitialized variable in WavpackSetConfiguration64 leads
+to DoS (CVE-2019-11498)
+
+* wavpack: Divide by zero in ParseDsdiffHeaderConfig leads to crash
+(CVE-2019-1010315)
+
+* wavpack: Use of uninitialized variable in ParseCaffHeaderConfig leads to
+DoS (CVE-2019-1010317)
+
+* wavpack: Use of uninitialized variable in ParseWave64HeaderConfig leads
+to DoS (CVE-2019-1010319)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+Additional Changes:
+
+For detailed information on changes in this release, see the Red Hat
+Enterprise Linux 8.2 Release Notes linked from the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1661448 - CVE-2018-19840 wawpack: Infinite loop in WavpackPackInit function lead to DoS
+1661449 - CVE-2018-19841 wawpack: Out-of-bounds read in WavpackVerifySingleBlock function leads to DoS
+1704633 - CVE-2019-11498 wavpack: Use of uninitialized variable in WavpackSetConfiguration64 leads to DoS
+1729418 - CVE-2019-1010315 wavpack: Divide by zero in ParseDsdiffHeaderConfig leads to crash
+1737740 - CVE-2019-1010319 wavpack: Use of uninitialized variable in ParseWave64HeaderConfig leads to DoS
+1737747 - CVE-2019-1010317 wavpack: Use of uninitialized variable in ParseCaffHeaderConfig leads to DoS
+
+6. Package List:
+
+Red Hat Enterprise Linux AppStream (v. 8):
+
+Source:
+wavpack-5.1.0-15.el8.src.rpm
+
+aarch64:
+wavpack-5.1.0-15.el8.aarch64.rpm
+wavpack-debuginfo-5.1.0-15.el8.aarch64.rpm
+wavpack-debugsource-5.1.0-15.el8.aarch64.rpm
+
+ppc64le:
+wavpack-5.1.0-15.el8.ppc64le.rpm
+wavpack-debuginfo-5.1.0-15.el8.ppc64le.rpm
+wavpack-debugsource-5.1.0-15.el8.ppc64le.rpm
+
+s390x:
+wavpack-5.1.0-15.el8.s390x.rpm
+wavpack-debuginfo-5.1.0-15.el8.s390x.rpm
+wavpack-debugsource-5.1.0-15.el8.s390x.rpm
+
+x86_64:
+wavpack-5.1.0-15.el8.i686.rpm
+wavpack-5.1.0-15.el8.x86_64.rpm
+wavpack-debuginfo-5.1.0-15.el8.i686.rpm
+wavpack-debuginfo-5.1.0-15.el8.x86_64.rpm
+wavpack-debugsource-5.1.0-15.el8.i686.rpm
+wavpack-debugsource-5.1.0-15.el8.x86_64.rpm
+
+Red Hat CodeReady Linux Builder (v. 8):
+
+aarch64:
+wavpack-debuginfo-5.1.0-15.el8.aarch64.rpm
+wavpack-debugsource-5.1.0-15.el8.aarch64.rpm
+wavpack-devel-5.1.0-15.el8.aarch64.rpm
+
+ppc64le:
+wavpack-debuginfo-5.1.0-15.el8.ppc64le.rpm
+wavpack-debugsource-5.1.0-15.el8.ppc64le.rpm
+wavpack-devel-5.1.0-15.el8.ppc64le.rpm
+
+s390x:
+wavpack-debuginfo-5.1.0-15.el8.s390x.rpm
+wavpack-debugsource-5.1.0-15.el8.s390x.rpm
+wavpack-devel-5.1.0-15.el8.s390x.rpm
+
+x86_64:
+wavpack-debuginfo-5.1.0-15.el8.i686.rpm
+wavpack-debuginfo-5.1.0-15.el8.x86_64.rpm
+wavpack-debugsource-5.1.0-15.el8.i686.rpm
+wavpack-debugsource-5.1.0-15.el8.x86_64.rpm
+wavpack-devel-5.1.0-15.el8.i686.rpm
+wavpack-devel-5.1.0-15.el8.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2018-19840
+https://access.redhat.com/security/cve/CVE-2018-19841
+https://access.redhat.com/security/cve/CVE-2019-11498
+https://access.redhat.com/security/cve/CVE-2019-1010315
+https://access.redhat.com/security/cve/CVE-2019-1010317
+https://access.redhat.com/security/cve/CVE-2019-1010319
+https://access.redhat.com/security/updates/classification/#low
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/8.2_release_notes/index
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXqhVkNzjgjWX9erEAQjdGg//f/LM4FpgiAVJXinGvTvR+1gB/YDl7ky+
+swFpzn1L+cWgebfVUKkMrSsT2N0SN7O5K/bGnzN/tuTysUqWwvIAjpZ6arqKqUuY
+E/Oktn1b6AL5jzxGwBEJFryT3cfapGC4eZUCdcCX0qNiC8IIoJLWciWBRcjjnSqx
+olRQGzgOeXiQNAZh4zfcimSWKUM+Jg1ijGwFWAeHgecCoHnviGgYmcWM7neBPvip
+b3SvIqmY99lg99uYXn9crT9hoE02mLFrhZ1adGHixpWn2p28Ae+IyMxruv4Oeamg
+/nGQhiJIyEX+8BRdjmGW89lMes3AZ143lSAYpmE2d2lTnwHqRelzd4+2Z/OlZJsB
+HzLHJE5Sr/ncdlqIFvLC83kViavexQ1896Y6DaxDVXqYtzWmSX5+3pEDdKpV0BfE
+SUP64tg/YP+uuDABLpwN+Qp4zgsWhCRGwocsZ3rEFB6Ebx1EpUSDu5WXbIfrPWi2
+lRP1H4Q6Ry8kKaWtK9C+ITyNDUFVylSBCUq4/6+xcNxdWAdLzhCYlO/dLZIkDhm8
+c2xh92pBGe9OQPIGQiF+4MevG26XIYnMS+nVFig8PBldGn2izWl/1LLeQ0HGJYYW
+sSi98osL30ZO9BmAydnDGReFpZxW3yQTyhdfX9pDLkiKBz3pCJMeblD6ZpNYQ9uw
+g7qfgrkjZjA=WmsA
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

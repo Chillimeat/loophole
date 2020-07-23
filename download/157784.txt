@@ -1,0 +1,52 @@
+=========================================================================
+Ubuntu Security Notice USN-4365-2
+May 20, 2020
+
+bind9 vulnerabilities
+=========================================================================
+A security issue affects these releases of Ubuntu and its derivatives:
+
+- Ubuntu 14.04 ESM
+- Ubuntu 12.04 ESM
+
+Summary:
+
+Several security issues were fixed in Bind.
+
+Software Description:
+- bind9: Internet Domain Name Server
+
+Details:
+
+USN-4365-1 fixed several vulnerabilities in Bind. This update provides
+the corresponding update for Ubuntu 12.04 ESM and 14.04 ESM.
+Original advisory details:
+
+ Lior Shafir, Yehuda Afek, and Anat Bremler-Barr discovered that Bind
+ incorrectly limited certain fetches. A remote attacker could possibly use
+ this issue to cause Bind to consume resources, leading to a denial of
+ service, or possibly use Bind to perform a reflection attack.
+ (CVE-2020-8616)
+
+ Tobias Klein discovered that Bind incorrectly handled checking TSIG
+ validity. A remote attacker could use this issue to cause Bind to crash,
+ resulting in a denial of service, or possibly perform other attacks.
+ (CVE-2020-8617)
+
+Update instructions:
+
+The problem can be corrected by updating your system to the following
+package versions:
+
+Ubuntu 14.04 ESM:
+  bind9                           1:9.9.5.dfsg-3ubuntu0.19+esm2
+
+Ubuntu 12.04 ESM:
+  bind9                           1:9.8.1.dfsg.P1-4ubuntu0.30
+
+In general, a standard system update will make all the necessary changes.
+
+References:
+  https://usn.ubuntu.com/4365-2
+  https://usn.ubuntu.com/4365-1
+  CVE-2020-8616, CVE-2020-8617

@@ -1,0 +1,152 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Important: chromium-browser security update
+Advisory ID:       RHSA-2020:2064-01
+Product:           Red Hat Enterprise Linux Supplementary
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:2064
+Issue date:        2020-05-11
+CVE Names:         CVE-2020-6464 CVE-2020-6831
+====================================================================
+1. Summary:
+
+An update for chromium-browser is now available for Red Hat Enterprise
+Linux 6 Supplementary.
+
+Red Hat Product Security has rated this update as having a security impact
+of Important. A Common Vulnerability Scoring System (CVSS) base score,
+which gives a detailed severity rating, is available for each vulnerability
+from the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Enterprise Linux Desktop Supplementary (v. 6) - i386, i686, x86_64
+Red Hat Enterprise Linux HPC Node Supplementary (v. 6) - i686, x86_64
+Red Hat Enterprise Linux Server Supplementary (v. 6) - i386, i686, x86_64
+Red Hat Enterprise Linux Workstation Supplementary (v. 6) - i386, i686, x86_64
+
+3. Description:
+
+Chromium is an open-source web browser, powered by WebKit (Blink).
+
+This update upgrades Chromium to version 81.0.4044.138.
+
+Security Fix(es):
+
+* chromium-browser: Type Confusion in Blink (CVE-2020-6464)
+
+* usrsctp: Buffer overflow in AUTH chunk input validation (CVE-2020-6831)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+After installing the update, Chromium must be restarted for the changes to
+take effect.
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1831763 - CVE-2020-6831 usrsctp: Buffer overflow in AUTH chunk input validation
+1832488 - CVE-2020-6464 chromium-browser: Type Confusion in Blink
+
+6. Package List:
+
+Red Hat Enterprise Linux Desktop Supplementary (v. 6):
+
+i386:
+chromium-browser-81.0.4044.138-1.el6_10.i686.rpm
+chromium-browser-debuginfo-81.0.4044.138-1.el6_10.i686.rpm
+
+i686:
+chromium-browser-81.0.4044.138-1.el6_10.i686.rpm
+chromium-browser-debuginfo-81.0.4044.138-1.el6_10.i686.rpm
+
+x86_64:
+chromium-browser-81.0.4044.138-1.el6_10.x86_64.rpm
+chromium-browser-debuginfo-81.0.4044.138-1.el6_10.x86_64.rpm
+
+Red Hat Enterprise Linux HPC Node Supplementary (v. 6):
+
+i686:
+chromium-browser-81.0.4044.138-1.el6_10.i686.rpm
+chromium-browser-debuginfo-81.0.4044.138-1.el6_10.i686.rpm
+
+x86_64:
+chromium-browser-81.0.4044.138-1.el6_10.x86_64.rpm
+chromium-browser-debuginfo-81.0.4044.138-1.el6_10.x86_64.rpm
+
+Red Hat Enterprise Linux Server Supplementary (v. 6):
+
+i386:
+chromium-browser-81.0.4044.138-1.el6_10.i686.rpm
+chromium-browser-debuginfo-81.0.4044.138-1.el6_10.i686.rpm
+
+i686:
+chromium-browser-81.0.4044.138-1.el6_10.i686.rpm
+chromium-browser-debuginfo-81.0.4044.138-1.el6_10.i686.rpm
+
+x86_64:
+chromium-browser-81.0.4044.138-1.el6_10.x86_64.rpm
+chromium-browser-debuginfo-81.0.4044.138-1.el6_10.x86_64.rpm
+
+Red Hat Enterprise Linux Workstation Supplementary (v. 6):
+
+i386:
+chromium-browser-81.0.4044.138-1.el6_10.i686.rpm
+chromium-browser-debuginfo-81.0.4044.138-1.el6_10.i686.rpm
+
+i686:
+chromium-browser-81.0.4044.138-1.el6_10.i686.rpm
+chromium-browser-debuginfo-81.0.4044.138-1.el6_10.i686.rpm
+
+x86_64:
+chromium-browser-81.0.4044.138-1.el6_10.x86_64.rpm
+chromium-browser-debuginfo-81.0.4044.138-1.el6_10.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2020-6464
+https://access.redhat.com/security/cve/CVE-2020-6831
+https://access.redhat.com/security/updates/classification/#important
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXrnCrtzjgjWX9erEAQh5AA/+PNBXTV18tvKRVaijh1KENrsVY4UcPorO
+Aj7LhJwOseq/3CjGBYj0M1jjv7benrX26aRKU8eWUynSbI4JfxJGtlFmrFw3S57e
+IRCbvM78vHwuOCQNl7OS3hnK+lqrEGnC4W5KHEEuqxiSZhxYBNc6beF+31aZ+6TM
+IVttVoUvP455CMaK0BgUuFAkP2QWbZK2UVuTrOxYlOczUgBGPjNdtMnl0mNyd61Z
+0MryNa9c0NRog19hX1hdDC8/Y4vGiZKTV70wzaETL/n/oRPVyyj6lm4n47/q8p1c
+a5p3vS1m9s8F95ZSDx1CI3Mce4C4hgzukv+IwvAB+jeZtXLj3TpCn7ym30lkFXJh
+Pp8uFhBmQJd/356Oz9zJGPqmVQxmqPFqmxF5SsUzHaBuONm3cycBkJhdGNjwg3Yg
+jv98bjU1F1p/0KEtfAciY772OhOqhoFdP4i9UFwTSjQiepotxGg+TLD00GObBbVm
+cPfREZF5XWAJW3BKg5b0ESGDkwhFlwvqtIhJS0qnV+CCwSM/sNVn3X77UVCJzbla
+f3Wx353cawXnlxs14J8r0OXXMoVU5DMgX8sCuYfKuYkfJKIYeIlu4Owlgvtx7AWz
+1qtmH93BDYkHUkK25z1VGcbLHGCpoaSFOB8iz0ibQfZN/LAItWn7GwKMTq3/zBc4
+tTCrbIKv+Zw=8PWZ
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

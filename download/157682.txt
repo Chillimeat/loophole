@@ -1,0 +1,128 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Important: podman security update
+Advisory ID:       RHSA-2020:2117-01
+Product:           Red Hat Enterprise Linux Extras
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:2117
+Issue date:        2020-05-12
+CVE Names:         CVE-2020-8945 CVE-2020-10696
+====================================================================
+1. Summary:
+
+An update for podman is now available for Red Hat Enterprise Linux 7
+Extras.
+
+Red Hat Product Security has rated this update as having a security impact
+of Important. A Common Vulnerability Scoring System (CVSS) base score,
+which gives a detailed severity rating, is available for each vulnerability
+from the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Enterprise Linux 7 Extras - noarch, ppc64le, s390x, x86_64
+
+3. Description:
+
+The podman tool manages pods, container images, and containers. It is part
+of the libpod library, which is for applications that use container pods.
+Container pods is a concept in Kubernetes.
+
+Security Fix(es):
+
+* buildah: Crafted input tar file may lead to local file overwrite during
+image build process (CVE-2020-10696)
+
+* proglottis/gpgme: Use-after-free in GPGME bindings during container image
+pull (CVE-2020-8945)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1795838 - CVE-2020-8945 proglottis/gpgme: Use-after-free in GPGME bindings during container image pull
+1817651 - CVE-2020-10696 buildah: Crafted input tar file may lead to local file overwrite during image build process
+
+6. Package List:
+
+Red Hat Enterprise Linux 7 Extras:
+
+Source:
+podman-1.6.4-18.el7_8.src.rpm
+
+noarch:
+podman-docker-1.6.4-18.el7_8.noarch.rpm
+
+ppc64le:
+podman-1.6.4-18.el7_8.ppc64le.rpm
+podman-debuginfo-1.6.4-18.el7_8.ppc64le.rpm
+
+s390x:
+podman-1.6.4-18.el7_8.s390x.rpm
+podman-debuginfo-1.6.4-18.el7_8.s390x.rpm
+
+x86_64:
+podman-1.6.4-18.el7_8.x86_64.rpm
+podman-debuginfo-1.6.4-18.el7_8.x86_64.rpm
+
+Red Hat Enterprise Linux 7 Extras:
+
+Source:
+podman-1.6.4-18.el7_8.src.rpm
+
+noarch:
+podman-docker-1.6.4-18.el7_8.noarch.rpm
+
+x86_64:
+podman-1.6.4-18.el7_8.x86_64.rpm
+podman-debuginfo-1.6.4-18.el7_8.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2020-8945
+https://access.redhat.com/security/cve/CVE-2020-10696
+https://access.redhat.com/security/updates/classification/#important
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXrr+ZNzjgjWX9erEAQiSqhAAlYqZcvuO01y9wZxbsnZBwZYOurO01tOZ
+vz2T/5C5qilCkwamf6+Rn5MOKlhRlMhE2BiASs9OMvbsGzD86nOVI1/uBZ9LcIaQ
+flnSQ/p2RT6C67YL97Ne1hucXDJBue6pHBgtcUt8vRB1flVRUI1DU1dK2CnuTs9Z
+Mp14DJSY2HNIKYWyDJ6FovSozPTc2z3BtZQM5wa/suSdRKmrpJzC0Xky1u7tfk6W
+l9HhDypUqS7h901xtE91aom/KxXnVoG3B2Notc0II3aq97kShakrICFK0CK80cNV
+vMCMbXsItEekNyP+wXlfyOY1ef8XV45Tjpm6Nmx8o/oCLcjF/56FslykbZKCDOUA
+Qch+FMVRJV0vFcv9cIXNNmkCFxF+s3RY7VmgBTbNJE8rmMJb5KAtJ/DJZf4li8XC
+WytedOlgZrpPiHWl4Zy8AhasleXGVJP9oxfdBu7uBFclF2lQIWgjBQaQwuRU2NO2
+IQ7fETbdVEkFnLVGn7F0vxtlp1F7va0NxXwHQAIMQknyfxmuhNX+rPI6Cl2id5Yb
+Rs/GEFTI+qbtfWJSGKAEPFvPvfiucRCRpSG8S6aKKNYvRhLxmVFkWp6n8iMSpJrr
+qjnxko7/hoR+azWLB/1uKlrcav7/Lew72iKQXOf7GelLmM2DA1ixdMpVn+ck1N13
+1mdoJoJHKykCFw
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

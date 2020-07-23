@@ -1,0 +1,122 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+=====================================================================
+                   Red Hat Security Advisory
+
+Synopsis:          Important: Red Hat Single Sign-On 7.3.8 security update on RHEL 7
+Advisory ID:       RHSA-2020:2107-01
+Product:           Red Hat Single Sign-On
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:2107
+Issue date:        2020-05-12
+CVE Names:         CVE-2020-1718 CVE-2020-1724 CVE-2020-1758 
+=====================================================================
+
+1. Summary:
+
+New Red Hat Single Sign-On 7.3.8 packages are now available for Red Hat
+Enterprise Linux 7.
+
+Red Hat Product Security has rated this update as having a security impact
+of Important. A Common Vulnerability Scoring System (CVSS) base score,
+which gives a detailed severity rating, is available for each vulnerability
+from the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Single Sign-On 7.3 for RHEL 7 Server - noarch
+
+3. Description:
+
+Red Hat Single Sign-On 7.3 is a standalone server, based on the Keycloak
+project, that provides authentication and standards-based single sign-on
+capabilities for web and mobile applications.
+
+This release of Red Hat Single Sign-On 7.3.8 on RHEL 7 serves as a
+replacement for Red Hat Single Sign-On 7.3.7, and includes bug fixes and
+enhancements, which are documented in the Release Notes document linked to
+in the References.
+
+Security Fix(es):
+
+* keycloak: security issue on reset credential flow (CVE-2020-1718)
+
+* keycloak: improper verification of certificate with host mismatch could
+result in information disclosure (CVE-2020-1758)
+
+* keycloak: problem with privacy after user logout (CVE-2020-1724)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+4. Solution:
+
+Before applying this update, make sure all previously released errata
+relevant to your system have been applied.
+
+For details on how to apply this update, refer to:
+
+https://access.redhat.com/articles/11258
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1796756 - CVE-2020-1718 keycloak: security issue on reset credential flow
+1800527 - CVE-2020-1724 keycloak: problem with privacy after user logout
+1812514 - CVE-2020-1758 keycloak: improper verification of certificate with host mismatch could result in information disclosure
+
+6. JIRA issues fixed (https://issues.jboss.org/):
+
+KEYCLOAK-13798 - Create RPMs for the RH-SSO 7.3.8 release for RHEL7
+
+7. Package List:
+
+Red Hat Single Sign-On 7.3 for RHEL 7 Server:
+
+Source:
+rh-sso7-keycloak-4.8.20-1.Final_redhat_00001.1.el7sso.src.rpm
+
+noarch:
+rh-sso7-keycloak-4.8.20-1.Final_redhat_00001.1.el7sso.noarch.rpm
+rh-sso7-keycloak-server-4.8.20-1.Final_redhat_00001.1.el7sso.noarch.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+8. References:
+
+https://access.redhat.com/security/cve/CVE-2020-1718
+https://access.redhat.com/security/cve/CVE-2020-1724
+https://access.redhat.com/security/cve/CVE-2020-1758
+https://access.redhat.com/security/updates/classification/#important
+https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.3/
+
+9. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXrrRYtzjgjWX9erEAQiirQ/9GFUny3eLV+Yi1D9VIc7qHuXT0gnF377Y
+n6zEyAwFEdla3xuabaTzWnhZsuSZiyMk4gyX2JFDZ9Ta0yCCERh4hk/RMuPqyasL
+zChISSBacpSOTq4kn7o1HxfeMv8KaUvBboB2+PZE3yjtIAkYt5dySoSyxfrQ3epr
+oLmTZ0pAI777/qEAfr0iFrAP2dCcudGKpb8wz67HqI4s2vxUy9Vdrmyr/ThSrcP7
+KAz/WO6PElyp94oc14eKrrPO1YyUnY05FHTQzuii1f4TnuUpF2E/w7XmrXR4YBUy
+2be5oQlFAjjPmEfKMofl85Xrz2nvTOgEitfgX+YVZcV8kYcBJdX/sTYPFFP3D5eX
+3JcT7mzFIjI8F0vBgPKjsrVHJYcgAVsfTWetNbvYe/zE5oJc1qh1va0xoibYvON+
+3XtmaYn/R2XC9PXRTKwHTBxDfRbVsPaBDiBUnsvKL47sMUkkoSB0LfSMHtwCrkWJ
+48yzU2Np/S6ka/Xo8r/V+JRrSJLhQJoOySMutsGI9y+nv6+wBu/6Jdryade2sX+Z
+BkBad3qtUIdyC8l9JxmIT0R5BJmF4+7zm60ctxsfgUldPoREP+wN4GH4EiKrA4Kn
+msUA649dPkaEs3T7ejgP8ahp8USUS3rZGUZpiQZZESqbNhCX9p2jV1jNVFsdECWG
+zOlhRFuo2V0=
+=NGWE
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

@@ -1,0 +1,210 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Moderate: ruby security update
+Advisory ID:       RHSA-2020:1963-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:1963
+Issue date:        2020-04-29
+CVE Names:         CVE-2017-17742 CVE-2018-8778
+====================================================================
+1. Summary:
+
+An update for ruby is now available for Red Hat Enterprise Linux 7.5
+Extended Update Support.
+
+Red Hat Product Security has rated this update as having a security impact
+of Moderate. A Common Vulnerability Scoring System (CVSS) base score, which
+gives a detailed severity rating, is available for each vulnerability from
+the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Enterprise Linux ComputeNode EUS (v. 7.5) - noarch, x86_64
+Red Hat Enterprise Linux ComputeNode Optional EUS (v. 7.5) - noarch, x86_64
+Red Hat Enterprise Linux Server EUS (v. 7.5) - noarch, ppc64, ppc64le, s390x, x86_64
+Red Hat Enterprise Linux Server Optional EUS (v. 7.5) - noarch, ppc64, ppc64le, s390x, x86_64
+
+3. Description:
+
+Ruby is an extensible, interpreted, object-oriented, scripting language. It
+has features to process text files and to perform system management tasks.
+
+Security Fix(es):
+
+* ruby: HTTP response splitting in WEBrick (CVE-2017-17742)
+
+* ruby: Buffer under-read in String#unpack (CVE-2018-8778)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1561952 - CVE-2017-17742 ruby: HTTP response splitting in WEBrick
+1561953 - CVE-2018-8778 ruby: Buffer under-read in String#unpack
+
+6. Package List:
+
+Red Hat Enterprise Linux ComputeNode EUS (v. 7.5):
+
+Source:
+ruby-2.0.0.648-36.el7_5.src.rpm
+
+noarch:
+ruby-irb-2.0.0.648-36.el7_5.noarch.rpm
+rubygem-rdoc-4.0.0-36.el7_5.noarch.rpm
+rubygems-2.0.14.1-36.el7_5.noarch.rpm
+
+x86_64:
+ruby-2.0.0.648-36.el7_5.x86_64.rpm
+ruby-debuginfo-2.0.0.648-36.el7_5.i686.rpm
+ruby-debuginfo-2.0.0.648-36.el7_5.x86_64.rpm
+ruby-libs-2.0.0.648-36.el7_5.i686.rpm
+ruby-libs-2.0.0.648-36.el7_5.x86_64.rpm
+rubygem-bigdecimal-1.2.0-36.el7_5.x86_64.rpm
+rubygem-io-console-0.4.2-36.el7_5.x86_64.rpm
+rubygem-json-1.7.7-36.el7_5.x86_64.rpm
+rubygem-psych-2.0.0-36.el7_5.x86_64.rpm
+
+Red Hat Enterprise Linux ComputeNode Optional EUS (v. 7.5):
+
+noarch:
+ruby-doc-2.0.0.648-36.el7_5.noarch.rpm
+rubygem-minitest-4.3.2-36.el7_5.noarch.rpm
+rubygem-rake-0.9.6-36.el7_5.noarch.rpm
+rubygems-devel-2.0.14.1-36.el7_5.noarch.rpm
+
+x86_64:
+ruby-debuginfo-2.0.0.648-36.el7_5.x86_64.rpm
+ruby-devel-2.0.0.648-36.el7_5.x86_64.rpm
+ruby-tcltk-2.0.0.648-36.el7_5.x86_64.rpm
+
+Red Hat Enterprise Linux Server EUS (v. 7.5):
+
+Source:
+ruby-2.0.0.648-36.el7_5.src.rpm
+
+noarch:
+ruby-irb-2.0.0.648-36.el7_5.noarch.rpm
+rubygem-rdoc-4.0.0-36.el7_5.noarch.rpm
+rubygems-2.0.14.1-36.el7_5.noarch.rpm
+
+ppc64:
+ruby-2.0.0.648-36.el7_5.ppc64.rpm
+ruby-debuginfo-2.0.0.648-36.el7_5.ppc.rpm
+ruby-debuginfo-2.0.0.648-36.el7_5.ppc64.rpm
+ruby-libs-2.0.0.648-36.el7_5.ppc.rpm
+ruby-libs-2.0.0.648-36.el7_5.ppc64.rpm
+rubygem-bigdecimal-1.2.0-36.el7_5.ppc64.rpm
+rubygem-io-console-0.4.2-36.el7_5.ppc64.rpm
+rubygem-json-1.7.7-36.el7_5.ppc64.rpm
+rubygem-psych-2.0.0-36.el7_5.ppc64.rpm
+
+ppc64le:
+ruby-2.0.0.648-36.el7_5.ppc64le.rpm
+ruby-debuginfo-2.0.0.648-36.el7_5.ppc64le.rpm
+ruby-libs-2.0.0.648-36.el7_5.ppc64le.rpm
+rubygem-bigdecimal-1.2.0-36.el7_5.ppc64le.rpm
+rubygem-io-console-0.4.2-36.el7_5.ppc64le.rpm
+rubygem-json-1.7.7-36.el7_5.ppc64le.rpm
+rubygem-psych-2.0.0-36.el7_5.ppc64le.rpm
+
+s390x:
+ruby-2.0.0.648-36.el7_5.s390x.rpm
+ruby-debuginfo-2.0.0.648-36.el7_5.s390.rpm
+ruby-debuginfo-2.0.0.648-36.el7_5.s390x.rpm
+ruby-libs-2.0.0.648-36.el7_5.s390.rpm
+ruby-libs-2.0.0.648-36.el7_5.s390x.rpm
+rubygem-bigdecimal-1.2.0-36.el7_5.s390x.rpm
+rubygem-io-console-0.4.2-36.el7_5.s390x.rpm
+rubygem-json-1.7.7-36.el7_5.s390x.rpm
+rubygem-psych-2.0.0-36.el7_5.s390x.rpm
+
+x86_64:
+ruby-2.0.0.648-36.el7_5.x86_64.rpm
+ruby-debuginfo-2.0.0.648-36.el7_5.i686.rpm
+ruby-debuginfo-2.0.0.648-36.el7_5.x86_64.rpm
+ruby-libs-2.0.0.648-36.el7_5.i686.rpm
+ruby-libs-2.0.0.648-36.el7_5.x86_64.rpm
+rubygem-bigdecimal-1.2.0-36.el7_5.x86_64.rpm
+rubygem-io-console-0.4.2-36.el7_5.x86_64.rpm
+rubygem-json-1.7.7-36.el7_5.x86_64.rpm
+rubygem-psych-2.0.0-36.el7_5.x86_64.rpm
+
+Red Hat Enterprise Linux Server Optional EUS (v. 7.5):
+
+noarch:
+ruby-doc-2.0.0.648-36.el7_5.noarch.rpm
+rubygem-minitest-4.3.2-36.el7_5.noarch.rpm
+rubygem-rake-0.9.6-36.el7_5.noarch.rpm
+rubygems-devel-2.0.14.1-36.el7_5.noarch.rpm
+
+ppc64:
+ruby-debuginfo-2.0.0.648-36.el7_5.ppc64.rpm
+ruby-devel-2.0.0.648-36.el7_5.ppc64.rpm
+ruby-tcltk-2.0.0.648-36.el7_5.ppc64.rpm
+
+ppc64le:
+ruby-debuginfo-2.0.0.648-36.el7_5.ppc64le.rpm
+ruby-devel-2.0.0.648-36.el7_5.ppc64le.rpm
+ruby-tcltk-2.0.0.648-36.el7_5.ppc64le.rpm
+
+s390x:
+ruby-debuginfo-2.0.0.648-36.el7_5.s390x.rpm
+ruby-devel-2.0.0.648-36.el7_5.s390x.rpm
+ruby-tcltk-2.0.0.648-36.el7_5.s390x.rpm
+
+x86_64:
+ruby-debuginfo-2.0.0.648-36.el7_5.x86_64.rpm
+ruby-devel-2.0.0.648-36.el7_5.x86_64.rpm
+ruby-tcltk-2.0.0.648-36.el7_5.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2017-17742
+https://access.redhat.com/security/cve/CVE-2018-8778
+https://access.redhat.com/security/updates/classification/#moderate
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXqlSAtzjgjWX9erEAQiq5RAAmz/4Ht+RnNPOT5IVzzQFs3ASODNl6PEf
+bQCySnx6224EuC8rDWn99dVIPfdAsmK56HUxMkPgcZrBULjwkXgbIQJflziwpgYa
+ZuzfhuALRROGtkIzTwdtk/pOncIx/rP9CeD71pG+0zFVjZdIxiSNNe3U4ARu9mSp
+6HaYY9Gy1CrbZnglA4+MM8J1z8U+KTLseJx1ugSnFGPUITMzUMaOOGXCIPDHf1iC
+H8+hvIiDQONsy+DIzQpkQKIoyqN9fE7ecdsEMhDOwe5n8adPG+YwRgjKgjEy5AR3
+5z0p+bIK1tYxUtYzqOXPtenoCIqLYqf9jq6sabSSHs5gjffguAbAHrdKRSu6chv6
+DaE6Hl+2W/q2ifmHRW6rk5FlaJyJol8SV9OzuegPJ3Vk6xzydCXuqG+NP0lD1imp
+p+RBAjsydbJ7ddNU2J5q2ct8fSFp4BRKQTBdhoOIjdoiWXC/pmKX6FTzGNndbm52
+/zQAGxrTatoAgxPsN2BpH/yuhFof5diDZgzxKhhObSmKTUQA/oyw+Va/174z3zyG
+IS8/hUStLU5RJLx3mCPVQflGGM78Jeg7UGBGC8sDcU6BE4zcIEGJR7+D4VwS8Iu0
++bJn+rG3H0dtm4LoAeU7eCHGZTrph7dHOHjcnNnf6AsuOKweSUNYPeazHtoaFS8i
+h2qbRSZcW68=sJoc
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

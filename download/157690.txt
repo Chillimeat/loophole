@@ -1,0 +1,120 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Important: qemu-kvm security update
+Advisory ID:       RHSA-2020:2126-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:2126
+Issue date:        2020-05-13
+CVE Names:         CVE-2019-14378
+====================================================================
+1. Summary:
+
+An update for qemu-kvm is now available for Red Hat Enterprise Linux 7.6
+Extended Update Support.
+
+Red Hat Product Security has rated this update as having a security impact
+of Important. A Common Vulnerability Scoring System (CVSS) base score,
+which gives a detailed severity rating, is available for each vulnerability
+from the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Enterprise Linux ComputeNode Optional EUS (v. 7.6) - x86_64
+Red Hat Enterprise Linux Server EUS (v. 7.6) - x86_64
+
+3. Description:
+
+Kernel-based Virtual Machine (KVM) is a full virtualization solution for
+Linux on a variety of architectures. The qemu-kvm packages provide the
+user-space component for running virtual machines that use KVM.
+
+Security Fix(es):
+
+* QEMU: slirp: heap buffer overflow during packet reassembly
+(CVE-2019-14378)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+After installing this update, shut down all running virtual machines. Once
+all virtual machines have shut down, start them again for this update to
+take effect.
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1734745 - CVE-2019-14378 QEMU: slirp: heap buffer overflow during packet reassembly
+
+6. Package List:
+
+Red Hat Enterprise Linux ComputeNode Optional EUS (v. 7.6):
+
+Source:
+qemu-kvm-1.5.3-160.el7_6.6.src.rpm
+
+x86_64:
+qemu-img-1.5.3-160.el7_6.6.x86_64.rpm
+qemu-kvm-1.5.3-160.el7_6.6.x86_64.rpm
+qemu-kvm-common-1.5.3-160.el7_6.6.x86_64.rpm
+qemu-kvm-debuginfo-1.5.3-160.el7_6.6.x86_64.rpm
+qemu-kvm-tools-1.5.3-160.el7_6.6.x86_64.rpm
+
+Red Hat Enterprise Linux Server EUS (v. 7.6):
+
+Source:
+qemu-kvm-1.5.3-160.el7_6.6.src.rpm
+
+x86_64:
+qemu-img-1.5.3-160.el7_6.6.x86_64.rpm
+qemu-kvm-1.5.3-160.el7_6.6.x86_64.rpm
+qemu-kvm-common-1.5.3-160.el7_6.6.x86_64.rpm
+qemu-kvm-debuginfo-1.5.3-160.el7_6.6.x86_64.rpm
+qemu-kvm-tools-1.5.3-160.el7_6.6.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2019-14378
+https://access.redhat.com/security/updates/classification/#important
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXrumqtzjgjWX9erEAQhYnQ//aqpO30SqZFOxnOtAy0Ivt8jzAaA97ic3
+e0TG1KRxG8uPRc1yHhj6O7SKWkOkDcq08zFXaENgLKgENro2ev7mYkatKEL6iwEJ
+vCEXlK8ktNKkGXORGsbY0eeWM4jDbtYL35p9DGc6n95Z5xdrRGWMTlGNgpAVy8uE
+9w03GwILVPWyObMti/LDj255f/kv7PT2zqWcjnhevlhdd2Ig/qEd0ZVrA872p6NA
+MTmp3aFYMafNXLewYRJba0GktzGC/L2tHcHQy/7uefC2obxiOxcx7H7IIKg8ftMd
+uBKrPOb3b0F0ggJZJF27PqyX6wm8Q+JgDoxIEKrCgMs+NqWYdBV9P5bRRgdShhXJ
+H004XKsGULdrCZg2GL2Eou+6xSF24G8Ivfb65urPhjI6nOPZNWIVUCPwZIPhC45J
+iHmwiyzKYMY2eCzZ1tEnPIvGKIbx7IiWjH6ZUwsuwyDl28J/2y5raWIE64uJyBKu
+wyAN0dDFK/zwE3/vDGU3hSa5Db9Nkb99mpMNoTig8EuvReXP4wSydmKqLXbWIimM
+i4oWKrd+M4SBslCBsMfm+WumDLJUBRP9XNQxXjrnCwFzevMSNOM8eU1WeAhKPe5Q
+3KbVt2RODSLOL4Z7Ng12mAqIezj2qGykkMfCpBCfD0rXBgvkpi+6Kq+d94RkxZvU
+SzaBEtlZ0/s=IJG4
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

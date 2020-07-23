@@ -1,0 +1,158 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Low: binutils security and bug fix update
+Advisory ID:       RHSA-2020:1797-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:1797
+Issue date:        2020-04-28
+CVE Names:         CVE-2019-17451 CVE-2019-1010204
+====================================================================
+1. Summary:
+
+An update for binutils is now available for Red Hat Enterprise Linux 8.
+
+Red Hat Product Security has rated this update as having a security impact
+of Low. A Common Vulnerability Scoring System (CVSS) base score, which
+gives a detailed severity rating, is available for each vulnerability from
+the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Enterprise Linux AppStream (v. 8) - aarch64, ppc64le, s390x, x86_64
+Red Hat Enterprise Linux BaseOS (v. 8) - aarch64, ppc64le, s390x, x86_64
+
+3. Description:
+
+The binutils packages provide a collection of binary utilities for the
+manipulation of object code in various object file formats. It includes the
+ar, as, gprof, ld, nm, objcopy, objdump, ranlib, readelf, size, strings,
+strip, and addr2line utilities.
+
+Security Fix(es):
+
+* binutils: integer overflow leading to a SEGV in
+_bfd_dwarf2_find_nearest_line in dwarf2.c (CVE-2019-17451)
+
+* binutils: Improper Input Validation, Signed/Unsigned Comparison,
+Out-of-bounds Read in gold/fileread.cc and elfcpp/elfcpp_file.h leads to
+denial of service (CVE-2019-1010204)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+Additional Changes:
+
+For detailed information on changes in this release, see the Red Hat
+Enterprise Linux 8.2 Release Notes linked from the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1726637 - Request a backport of fixes for SVE Vector PCS on AArch64 (binutils part)
+1730906 - ld -r fails to handle .init_array section in comdat group
+1735604 - CVE-2019-1010204 binutils: Improper Input Validation, Signed/Unsigned Comparison, Out-of-bounds Read in gold/fileread.cc and elfcpp/elfcpp_file.h leads to denial of service
+1767711 - Upstream test case "v3 gnu build attribute notes (64-bit)" failed
+1771668 - CVE-2019-17451 binutils: integer overflow leading to a SEGV in _bfd_dwarf2_find_nearest_line in dwarf2.c
+1777002 - Implement workaround in assembler for Intel's JCC errata [RHEL 8.2]
+
+6. Package List:
+
+Red Hat Enterprise Linux AppStream (v. 8):
+
+aarch64:
+binutils-debuginfo-2.30-73.el8.aarch64.rpm
+binutils-debugsource-2.30-73.el8.aarch64.rpm
+binutils-devel-2.30-73.el8.aarch64.rpm
+
+ppc64le:
+binutils-debuginfo-2.30-73.el8.ppc64le.rpm
+binutils-debugsource-2.30-73.el8.ppc64le.rpm
+binutils-devel-2.30-73.el8.ppc64le.rpm
+
+s390x:
+binutils-debuginfo-2.30-73.el8.s390x.rpm
+binutils-debugsource-2.30-73.el8.s390x.rpm
+binutils-devel-2.30-73.el8.s390x.rpm
+
+x86_64:
+binutils-debuginfo-2.30-73.el8.i686.rpm
+binutils-debuginfo-2.30-73.el8.x86_64.rpm
+binutils-debugsource-2.30-73.el8.i686.rpm
+binutils-debugsource-2.30-73.el8.x86_64.rpm
+binutils-devel-2.30-73.el8.i686.rpm
+binutils-devel-2.30-73.el8.x86_64.rpm
+
+Red Hat Enterprise Linux BaseOS (v. 8):
+
+Source:
+binutils-2.30-73.el8.src.rpm
+
+aarch64:
+binutils-2.30-73.el8.aarch64.rpm
+binutils-debuginfo-2.30-73.el8.aarch64.rpm
+binutils-debugsource-2.30-73.el8.aarch64.rpm
+
+ppc64le:
+binutils-2.30-73.el8.ppc64le.rpm
+binutils-debuginfo-2.30-73.el8.ppc64le.rpm
+binutils-debugsource-2.30-73.el8.ppc64le.rpm
+
+s390x:
+binutils-2.30-73.el8.s390x.rpm
+binutils-debuginfo-2.30-73.el8.s390x.rpm
+binutils-debugsource-2.30-73.el8.s390x.rpm
+
+x86_64:
+binutils-2.30-73.el8.x86_64.rpm
+binutils-debuginfo-2.30-73.el8.x86_64.rpm
+binutils-debugsource-2.30-73.el8.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2019-17451
+https://access.redhat.com/security/cve/CVE-2019-1010204
+https://access.redhat.com/security/updates/classification/#low
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/8.2_release_notes/index
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXqhVedzjgjWX9erEAQgPexAAhVsKJOdGyTbIG/iYMNyhnf1ERe5qIRzN
+xuRsHarzMG+QVOiJP83JIBULwmi2p99OIx6CZH50Pi6qZbiovDtK6h+Joq0t+7je
+OMAE5GYaS+mlfDSX0CJGZqyHU3LbN/ZBdvbi2AA5DQC13R/L0uteUoVbrp+e3xot
+s/6F4zphO0YHpZqfX+8vG8i14lK+Sl/sZeoznNhFv/gGXV6hXka55SfpkEQmJTc6
+kFA0L+ekl+j/JNcCOR/zgN770D2hM3DlCZLBqpgxTB+jtUPXoyEE3iKP31djlwE4
+ggeMoKbJKau14C/MOOP/xk064tLeir7RhxDD/gGmxRQOmg41LArkSRjmaAC4lI8X
+gSyd6sgnBqW416qaeYH+ABwKp3mDl8J2r3ttYknYkzwxgTF2Uyf9T9lbDuFlpt4e
+aNBQTLcvIGmB4SCTmSQPTc+iLOrjWni1YfgbB/OgqFxuCLsdBBL+VmE5XcIOk0KI
+VKbneMo243RPwgaoKxQMnnf16ta1F+Wlf8PV5HPH6VxhkuQnprrb1u/isyKNrmG7
+gBrRHsOvRw/bpyO0rhwry2FQxnZcXUq59iyczCOmRx85QJ25B/wm5VGgKxdMC6hO
++63gZugyWrV64h4HovJBFZCIX0LvHGsUH3qsIlUeg4KJUtMXc81LYIvoyouMuMMv
+lP66e14abCw=yBM8
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

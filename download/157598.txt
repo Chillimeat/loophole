@@ -1,0 +1,47 @@
+==========================================================================
+Ubuntu Security Notice USN-4351-1
+May 06, 2020
+
+linux-firmware vulnerability
+==========================================================================
+
+A security issue affects these releases of Ubuntu and its derivatives:
+
+- Ubuntu 18.04 LTS
+- Ubuntu 16.04 LTS
+
+Summary:
+
+The system could be made to expose sensitive information.
+
+Software Description:
+- linux-firmware: Firmware for Linux kernel drivers
+
+Details:
+
+Eli Biham and Lior Neumann discovered that certain Bluetooth devices
+incorrectly validated key exchange parameters. An attacker could possibly
+use this issue to obtain sensitive information.
+
+Update instructions:
+
+The problem can be corrected by updating your system to the following
+package versions:
+
+Ubuntu 18.04 LTS:
+  linux-firmware                  1.173.18
+
+Ubuntu 16.04 LTS:
+  linux-firmware                  1.157.23
+
+After a standard system update you need to reboot your computer to make
+all the necessary changes.
+
+References:
+  https://usn.ubuntu.com/4351-1
+  CVE-2018-5383
+
+Package Information:
+  https://launchpad.net/ubuntu/+source/linux-firmware/1.173.18
+  https://launchpad.net/ubuntu/+source/linux-firmware/1.157.23
+

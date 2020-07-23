@@ -1,0 +1,152 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Important: chromium-browser security update
+Advisory ID:       RHSA-2020:1981-01
+Product:           Red Hat Enterprise Linux Supplementary
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:1981
+Issue date:        2020-04-30
+CVE Names:         CVE-2020-6461 CVE-2020-6462
+====================================================================
+1. Summary:
+
+An update for chromium-browser is now available for Red Hat Enterprise
+Linux 6 Supplementary.
+
+Red Hat Product Security has rated this update as having a security impact
+of Important. A Common Vulnerability Scoring System (CVSS) base score,
+which gives a detailed severity rating, is available for each vulnerability
+from the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Enterprise Linux Desktop Supplementary (v. 6) - i386, i686, x86_64
+Red Hat Enterprise Linux HPC Node Supplementary (v. 6) - i686, x86_64
+Red Hat Enterprise Linux Server Supplementary (v. 6) - i386, i686, x86_64
+Red Hat Enterprise Linux Workstation Supplementary (v. 6) - i386, i686, x86_64
+
+3. Description:
+
+Chromium is an open-source web browser, powered by WebKit (Blink).
+
+This update upgrades Chromium to version 81.0.4044.129.
+
+Security Fix(es):
+
+* chromium-browser: Use after free in storage (CVE-2020-6461)
+
+* chromium-browser: Use after free in task scheduling (CVE-2020-6462)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+After installing the update, Chromium must be restarted for the changes to
+take effect.
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1828859 - CVE-2020-6462 chromium-browser: Use after free in task scheduling
+1828860 - CVE-2020-6461 chromium-browser: Use after free in storage
+
+6. Package List:
+
+Red Hat Enterprise Linux Desktop Supplementary (v. 6):
+
+i386:
+chromium-browser-81.0.4044.129-1.el6_10.i686.rpm
+chromium-browser-debuginfo-81.0.4044.129-1.el6_10.i686.rpm
+
+i686:
+chromium-browser-81.0.4044.129-1.el6_10.i686.rpm
+chromium-browser-debuginfo-81.0.4044.129-1.el6_10.i686.rpm
+
+x86_64:
+chromium-browser-81.0.4044.129-1.el6_10.x86_64.rpm
+chromium-browser-debuginfo-81.0.4044.129-1.el6_10.x86_64.rpm
+
+Red Hat Enterprise Linux HPC Node Supplementary (v. 6):
+
+i686:
+chromium-browser-81.0.4044.129-1.el6_10.i686.rpm
+chromium-browser-debuginfo-81.0.4044.129-1.el6_10.i686.rpm
+
+x86_64:
+chromium-browser-81.0.4044.129-1.el6_10.x86_64.rpm
+chromium-browser-debuginfo-81.0.4044.129-1.el6_10.x86_64.rpm
+
+Red Hat Enterprise Linux Server Supplementary (v. 6):
+
+i386:
+chromium-browser-81.0.4044.129-1.el6_10.i686.rpm
+chromium-browser-debuginfo-81.0.4044.129-1.el6_10.i686.rpm
+
+i686:
+chromium-browser-81.0.4044.129-1.el6_10.i686.rpm
+chromium-browser-debuginfo-81.0.4044.129-1.el6_10.i686.rpm
+
+x86_64:
+chromium-browser-81.0.4044.129-1.el6_10.x86_64.rpm
+chromium-browser-debuginfo-81.0.4044.129-1.el6_10.x86_64.rpm
+
+Red Hat Enterprise Linux Workstation Supplementary (v. 6):
+
+i386:
+chromium-browser-81.0.4044.129-1.el6_10.i686.rpm
+chromium-browser-debuginfo-81.0.4044.129-1.el6_10.i686.rpm
+
+i686:
+chromium-browser-81.0.4044.129-1.el6_10.i686.rpm
+chromium-browser-debuginfo-81.0.4044.129-1.el6_10.i686.rpm
+
+x86_64:
+chromium-browser-81.0.4044.129-1.el6_10.x86_64.rpm
+chromium-browser-debuginfo-81.0.4044.129-1.el6_10.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2020-6461
+https://access.redhat.com/security/cve/CVE-2020-6462
+https://access.redhat.com/security/updates/classification/#important
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXqqgOtzjgjWX9erEAQjhfg/+IzfDnj7xAXSRns3cZuvZZWmKbU1nICSw
+c/4/66HoesJMcSgmMWQEKMJrbUsKKbqlwMuPrnXgYxfml6O9drn4ed1XafHUdgCk
+zEKiHnS6JiejEj5FXS3zrje0Wv7Sd6DCeJw4JA8qWGh3C/sOK0EA7RoC3GPbMZMD
+OuQcihYJV3UjZeb13rKcsv/2BjvC8koxOw6VeKFeRXPLyVEfkRTwBQE4ITDe7kIS
+H+iRufXFp0QnRTByqpPPM+KmoQDDfRMRaXH1IaOV9+hTS1zAYiWmC5i1RMCKC2YK
+fVDKSIhG8itah0VIy8khe5pquFc/zML1elU0Rr9kceCtE9KLnZ5NIp0TYJsYRu7I
+BRTMfpZosCE+X+nV4bB5rwiN2V4xtgcKZ0tfZ/ndqIZaAoVCFg8r+7D91cUB6/dZ
+rtQAofa/7P5nDtb1NdhkEX2AUno+VpgkHmixDFL5bP80nlWJiP4aJrkwhlnfoFys
+z23HEDdCkfLMaKLUzaTrnJIbh0rv6Tjrvt1EwCKGhQ2SeidIeHPZZlVy9M4rTLE7
+3+A9dDBx7Uh71bner0fOEqEI/iUgxG1asDBA5P5gUugmKRFb+OmvpHhcfbBN9isB
+RDMG4+SsoEqxFpk1T0G+SoeStcBk5ABB8DCKmTE37NsT7YTwuzESrZJnIQQ4P6ho
+a9d3Q3iCX4o=5lHR
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

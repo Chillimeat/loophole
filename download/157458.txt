@@ -1,0 +1,217 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Moderate: systemd security, bug fix, and enhancement update
+Advisory ID:       RHSA-2020:1794-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:1794
+Issue date:        2020-04-28
+CVE Names:         CVE-2019-3843 CVE-2019-3844
+====================================================================
+1. Summary:
+
+An update for systemd is now available for Red Hat Enterprise Linux 8.
+
+Red Hat Product Security has rated this update as having a security impact
+of Moderate. A Common Vulnerability Scoring System (CVSS) base score, which
+gives a detailed severity rating, is available for each vulnerability from
+the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Enterprise Linux BaseOS (v. 8) - aarch64, ppc64le, s390x, x86_64
+
+3. Description:
+
+The systemd packages contain systemd, a system and service manager for
+Linux, compatible with the SysV and LSB init scripts. It provides
+aggressive parallelism capabilities, uses socket and D-Bus activation for
+starting services, offers on-demand starting of daemons, and keeps track of
+processes using Linux cgroups. In addition, it supports snapshotting and
+restoring of the system state, maintains mount and automount points, and
+implements an elaborate transactional dependency-based service control
+logic. It can also work as a drop-in replacement for sysvinit.
+
+Security Fix(es):
+
+* systemd: services with DynamicUser can create SUID/SGID binaries
+(CVE-2019-3843)
+
+* systemd: services with DynamicUser can get new privileges and create SGID
+binaries (CVE-2019-3844)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+Additional Changes:
+
+For detailed information on changes in this release, see the Red Hat
+Enterprise Linux 8.2 Release Notes linked from the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1684607 - CVE-2019-3843 systemd: services with DynamicUser can create SUID/SGID binaries
+1684610 - CVE-2019-3844 systemd: services with DynamicUser can get new privileges and create SGID binaries
+1689346 - please add kptr_restrict=1 to /usr/lib/sysctl.conf/50-default.conf
+1696602 - systemd-cryptsetup: Serialize access to memory hard enabled keyslots while unlocking many LUKS devices
+1717603 - Systemd doesn't allow to set User in service files to a username with a dot in it. Error: Invalid user/group name or numeric ID
+1719577 - [RFE] Enhance journald to allow rate-limits to be applied per unit instead of just per server
+1723722 - debug-generator: enable custom systemd.debug_shell tty
+1724617 - RFE: add support for cgroups v2 cpuset controller
+1734787 - Backport NUMA stuff
+1735787 - Unable to repeatedly reload service that fails
+1743235 - journalctl dumps core when stack limit is reduced to 256 KB
+1748258 - systemd rpm has gaps in annobin coverage
+1749212 - Backport 0a2eef1ee1fef74be9d12f7dc4d0006b645b579c
+1752050 - Memory corruption in systemd-cryptsetup
+1753369 - U2F enablement package not available in EPEL8 for RHEL8
+1762679 - Rules in 40-redhat.rules file for SUBSYSTEM==memory are suboptimal and may lead to timing issues
+1763155 - Password fallback when using systemd-cryptsetup-generator keydev option
+1763161 - High load in systemd when cups.path and cups.service is enabled
+1763619 - Assertion failure when system journal rotation fails
+1770189 - sd-bus: bump message queue size
+1776408 - Ambiguous error returned preventing user from understanding the root cause of the error
+1777110 - provide systemd-rpm-macros to keep compatibility with Fedora/EPEL packages
+1778384 - systemd doesn't reset ownership of StateDirectory if directory already exists
+1808940 - cpuset controller group not created for qemu vm
+
+6. Package List:
+
+Red Hat Enterprise Linux BaseOS (v. 8):
+
+Source:
+systemd-239-29.el8.src.rpm
+
+aarch64:
+systemd-239-29.el8.aarch64.rpm
+systemd-container-239-29.el8.aarch64.rpm
+systemd-container-debuginfo-239-29.el8.aarch64.rpm
+systemd-debuginfo-239-29.el8.aarch64.rpm
+systemd-debugsource-239-29.el8.aarch64.rpm
+systemd-devel-239-29.el8.aarch64.rpm
+systemd-journal-remote-239-29.el8.aarch64.rpm
+systemd-journal-remote-debuginfo-239-29.el8.aarch64.rpm
+systemd-libs-239-29.el8.aarch64.rpm
+systemd-libs-debuginfo-239-29.el8.aarch64.rpm
+systemd-pam-239-29.el8.aarch64.rpm
+systemd-pam-debuginfo-239-29.el8.aarch64.rpm
+systemd-tests-239-29.el8.aarch64.rpm
+systemd-tests-debuginfo-239-29.el8.aarch64.rpm
+systemd-udev-239-29.el8.aarch64.rpm
+systemd-udev-debuginfo-239-29.el8.aarch64.rpm
+
+ppc64le:
+systemd-239-29.el8.ppc64le.rpm
+systemd-container-239-29.el8.ppc64le.rpm
+systemd-container-debuginfo-239-29.el8.ppc64le.rpm
+systemd-debuginfo-239-29.el8.ppc64le.rpm
+systemd-debugsource-239-29.el8.ppc64le.rpm
+systemd-devel-239-29.el8.ppc64le.rpm
+systemd-journal-remote-239-29.el8.ppc64le.rpm
+systemd-journal-remote-debuginfo-239-29.el8.ppc64le.rpm
+systemd-libs-239-29.el8.ppc64le.rpm
+systemd-libs-debuginfo-239-29.el8.ppc64le.rpm
+systemd-pam-239-29.el8.ppc64le.rpm
+systemd-pam-debuginfo-239-29.el8.ppc64le.rpm
+systemd-tests-239-29.el8.ppc64le.rpm
+systemd-tests-debuginfo-239-29.el8.ppc64le.rpm
+systemd-udev-239-29.el8.ppc64le.rpm
+systemd-udev-debuginfo-239-29.el8.ppc64le.rpm
+
+s390x:
+systemd-239-29.el8.s390x.rpm
+systemd-container-239-29.el8.s390x.rpm
+systemd-container-debuginfo-239-29.el8.s390x.rpm
+systemd-debuginfo-239-29.el8.s390x.rpm
+systemd-debugsource-239-29.el8.s390x.rpm
+systemd-devel-239-29.el8.s390x.rpm
+systemd-journal-remote-239-29.el8.s390x.rpm
+systemd-journal-remote-debuginfo-239-29.el8.s390x.rpm
+systemd-libs-239-29.el8.s390x.rpm
+systemd-libs-debuginfo-239-29.el8.s390x.rpm
+systemd-pam-239-29.el8.s390x.rpm
+systemd-pam-debuginfo-239-29.el8.s390x.rpm
+systemd-tests-239-29.el8.s390x.rpm
+systemd-tests-debuginfo-239-29.el8.s390x.rpm
+systemd-udev-239-29.el8.s390x.rpm
+systemd-udev-debuginfo-239-29.el8.s390x.rpm
+
+x86_64:
+systemd-239-29.el8.i686.rpm
+systemd-239-29.el8.x86_64.rpm
+systemd-container-239-29.el8.i686.rpm
+systemd-container-239-29.el8.x86_64.rpm
+systemd-container-debuginfo-239-29.el8.i686.rpm
+systemd-container-debuginfo-239-29.el8.x86_64.rpm
+systemd-debuginfo-239-29.el8.i686.rpm
+systemd-debuginfo-239-29.el8.x86_64.rpm
+systemd-debugsource-239-29.el8.i686.rpm
+systemd-debugsource-239-29.el8.x86_64.rpm
+systemd-devel-239-29.el8.i686.rpm
+systemd-devel-239-29.el8.x86_64.rpm
+systemd-journal-remote-239-29.el8.x86_64.rpm
+systemd-journal-remote-debuginfo-239-29.el8.i686.rpm
+systemd-journal-remote-debuginfo-239-29.el8.x86_64.rpm
+systemd-libs-239-29.el8.i686.rpm
+systemd-libs-239-29.el8.x86_64.rpm
+systemd-libs-debuginfo-239-29.el8.i686.rpm
+systemd-libs-debuginfo-239-29.el8.x86_64.rpm
+systemd-pam-239-29.el8.x86_64.rpm
+systemd-pam-debuginfo-239-29.el8.i686.rpm
+systemd-pam-debuginfo-239-29.el8.x86_64.rpm
+systemd-tests-239-29.el8.x86_64.rpm
+systemd-tests-debuginfo-239-29.el8.i686.rpm
+systemd-tests-debuginfo-239-29.el8.x86_64.rpm
+systemd-udev-239-29.el8.x86_64.rpm
+systemd-udev-debuginfo-239-29.el8.i686.rpm
+systemd-udev-debuginfo-239-29.el8.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2019-3843
+https://access.redhat.com/security/cve/CVE-2019-3844
+https://access.redhat.com/security/updates/classification/#moderate
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/8.2_release_notes/index
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXqhV+9zjgjWX9erEAQiwHBAAiUjqnCZWgpNjET3wwKKJo2utL16rTvdA
+/DIq8LUGDQ9scZOUaGBKQTvWwHgBGJCVFqviNXXzjdJr0pnsEUcepER2dog4sjZQ
+b7yYPndyOHUmYldE+C0YWCwoB5U2c9dYK+J7xXAcLGSJGcRaNfY3bYSJQXJ54qj+
+LFankEm+2eW6xYlbmAoyXEPrAKngdVqi5pmNSISNOoZ5rQADFHkFBIAOJuY4EV14
+3mNJ1odH/tp++2ITBzkOL4VSIT9YVe5nCBDYZwkzLpBkFC0DNZR4L2jgi2SjSsFH
+cKIsNSCClDzt05HffQ4YgaoKTBgxNTogTgyBNtigxYOYc18h8v1KIVyuhIhOForN
+tldTRu8sbkCA36bfqQ37FX3ed9GRFtjc7NeH3mtRMoPt5W7H/I48G0ROtR35012E
+OhjWFzaYGJV96fx+vqqAaXnDgWFG/7WjR8USQbXemq5SzDDeOVkNQIxTOcBtdtNW
+nGUPCNhQ5GJ27AWBWmZSfQulVnGMuFIafPVEqnbLmAPhMyxBIEbnNqYMHUv+w8Xg
+JiGk2uYiNEGNqNyJDAWyYH28A51m92wc+wCV9HI5+zOdoY2Cg9+KNihs6g4zkURT
+G3wAUDRWIOnEMHZ3xgUKIaXQiqLekb+J3uRJzjHgeTC2j7P2EkvxcifszOBOBZ5d
+A8KQKRAoKyM=pF4V
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

@@ -1,0 +1,317 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Moderate: ibus and glib2 security and bug fix update
+Advisory ID:       RHSA-2020:1880-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:1880
+Issue date:        2020-04-28
+CVE Names:         CVE-2019-14822
+====================================================================
+1. Summary:
+
+An update for glib2 and ibus is now available for Red Hat Enterprise Linux
+8.
+
+Red Hat Product Security has rated this update as having a security impact
+of Moderate. A Common Vulnerability Scoring System (CVSS) base score, which
+gives a detailed severity rating, is available for each vulnerability from
+the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat CodeReady Linux Builder (v. 8) - aarch64, noarch, ppc64le, s390x, x86_64
+Red Hat Enterprise Linux AppStream (v. 8) - aarch64, noarch, ppc64le, s390x, x86_64
+Red Hat Enterprise Linux BaseOS (v. 8) - aarch64, ppc64le, s390x, x86_64
+
+3. Description:
+
+GLib provides the core application building blocks for libraries and
+applications written in C. It provides the core object system used in
+GNOME, the main loop implementation, and a large set of utility functions
+for strings and common data structures.
+
+The Intelligent Input Bus (IBus) is an input method framework for
+multilingual input in Unix-like operating systems.
+
+Security Fix(es):
+
+* ibus: missing authorization allows local attacker to access the input bus
+of another user (CVE-2019-14822)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+Additional Changes:
+
+For detailed information on changes in this release, see the Red Hat
+Enterprise Linux 8.2 Release Notes linked from the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1717958 - CVE-2019-14822 ibus: missing authorization allows local attacker to access the input bus of another user
+1777213 - IBUS input methods don't work in QT5-based applications
+
+6. Package List:
+
+Red Hat Enterprise Linux AppStream (v. 8):
+
+Source:
+ibus-1.5.19-11.el8.src.rpm
+
+aarch64:
+ibus-1.5.19-11.el8.aarch64.rpm
+ibus-debuginfo-1.5.19-11.el8.aarch64.rpm
+ibus-debugsource-1.5.19-11.el8.aarch64.rpm
+ibus-gtk2-1.5.19-11.el8.aarch64.rpm
+ibus-gtk2-debuginfo-1.5.19-11.el8.aarch64.rpm
+ibus-gtk3-1.5.19-11.el8.aarch64.rpm
+ibus-gtk3-debuginfo-1.5.19-11.el8.aarch64.rpm
+ibus-libs-1.5.19-11.el8.aarch64.rpm
+ibus-libs-debuginfo-1.5.19-11.el8.aarch64.rpm
+ibus-tests-debuginfo-1.5.19-11.el8.aarch64.rpm
+ibus-wayland-1.5.19-11.el8.aarch64.rpm
+ibus-wayland-debuginfo-1.5.19-11.el8.aarch64.rpm
+
+noarch:
+ibus-setup-1.5.19-11.el8.noarch.rpm
+
+ppc64le:
+ibus-1.5.19-11.el8.ppc64le.rpm
+ibus-debuginfo-1.5.19-11.el8.ppc64le.rpm
+ibus-debugsource-1.5.19-11.el8.ppc64le.rpm
+ibus-gtk2-1.5.19-11.el8.ppc64le.rpm
+ibus-gtk2-debuginfo-1.5.19-11.el8.ppc64le.rpm
+ibus-gtk3-1.5.19-11.el8.ppc64le.rpm
+ibus-gtk3-debuginfo-1.5.19-11.el8.ppc64le.rpm
+ibus-libs-1.5.19-11.el8.ppc64le.rpm
+ibus-libs-debuginfo-1.5.19-11.el8.ppc64le.rpm
+ibus-tests-debuginfo-1.5.19-11.el8.ppc64le.rpm
+ibus-wayland-1.5.19-11.el8.ppc64le.rpm
+ibus-wayland-debuginfo-1.5.19-11.el8.ppc64le.rpm
+
+s390x:
+ibus-1.5.19-11.el8.s390x.rpm
+ibus-debuginfo-1.5.19-11.el8.s390x.rpm
+ibus-debugsource-1.5.19-11.el8.s390x.rpm
+ibus-gtk2-1.5.19-11.el8.s390x.rpm
+ibus-gtk2-debuginfo-1.5.19-11.el8.s390x.rpm
+ibus-gtk3-1.5.19-11.el8.s390x.rpm
+ibus-gtk3-debuginfo-1.5.19-11.el8.s390x.rpm
+ibus-libs-1.5.19-11.el8.s390x.rpm
+ibus-libs-debuginfo-1.5.19-11.el8.s390x.rpm
+ibus-tests-debuginfo-1.5.19-11.el8.s390x.rpm
+ibus-wayland-1.5.19-11.el8.s390x.rpm
+ibus-wayland-debuginfo-1.5.19-11.el8.s390x.rpm
+
+x86_64:
+ibus-1.5.19-11.el8.x86_64.rpm
+ibus-debuginfo-1.5.19-11.el8.i686.rpm
+ibus-debuginfo-1.5.19-11.el8.x86_64.rpm
+ibus-debugsource-1.5.19-11.el8.i686.rpm
+ibus-debugsource-1.5.19-11.el8.x86_64.rpm
+ibus-gtk2-1.5.19-11.el8.i686.rpm
+ibus-gtk2-1.5.19-11.el8.x86_64.rpm
+ibus-gtk2-debuginfo-1.5.19-11.el8.i686.rpm
+ibus-gtk2-debuginfo-1.5.19-11.el8.x86_64.rpm
+ibus-gtk3-1.5.19-11.el8.x86_64.rpm
+ibus-gtk3-debuginfo-1.5.19-11.el8.i686.rpm
+ibus-gtk3-debuginfo-1.5.19-11.el8.x86_64.rpm
+ibus-libs-1.5.19-11.el8.i686.rpm
+ibus-libs-1.5.19-11.el8.x86_64.rpm
+ibus-libs-debuginfo-1.5.19-11.el8.i686.rpm
+ibus-libs-debuginfo-1.5.19-11.el8.x86_64.rpm
+ibus-tests-debuginfo-1.5.19-11.el8.i686.rpm
+ibus-tests-debuginfo-1.5.19-11.el8.x86_64.rpm
+ibus-wayland-1.5.19-11.el8.x86_64.rpm
+ibus-wayland-debuginfo-1.5.19-11.el8.i686.rpm
+ibus-wayland-debuginfo-1.5.19-11.el8.x86_64.rpm
+
+Red Hat Enterprise Linux BaseOS (v. 8):
+
+Source:
+glib2-2.56.4-8.el8.src.rpm
+
+aarch64:
+glib2-2.56.4-8.el8.aarch64.rpm
+glib2-debuginfo-2.56.4-8.el8.aarch64.rpm
+glib2-debugsource-2.56.4-8.el8.aarch64.rpm
+glib2-devel-2.56.4-8.el8.aarch64.rpm
+glib2-devel-debuginfo-2.56.4-8.el8.aarch64.rpm
+glib2-fam-2.56.4-8.el8.aarch64.rpm
+glib2-fam-debuginfo-2.56.4-8.el8.aarch64.rpm
+glib2-tests-2.56.4-8.el8.aarch64.rpm
+glib2-tests-debuginfo-2.56.4-8.el8.aarch64.rpm
+
+ppc64le:
+glib2-2.56.4-8.el8.ppc64le.rpm
+glib2-debuginfo-2.56.4-8.el8.ppc64le.rpm
+glib2-debugsource-2.56.4-8.el8.ppc64le.rpm
+glib2-devel-2.56.4-8.el8.ppc64le.rpm
+glib2-devel-debuginfo-2.56.4-8.el8.ppc64le.rpm
+glib2-fam-2.56.4-8.el8.ppc64le.rpm
+glib2-fam-debuginfo-2.56.4-8.el8.ppc64le.rpm
+glib2-tests-2.56.4-8.el8.ppc64le.rpm
+glib2-tests-debuginfo-2.56.4-8.el8.ppc64le.rpm
+
+s390x:
+glib2-2.56.4-8.el8.s390x.rpm
+glib2-debuginfo-2.56.4-8.el8.s390x.rpm
+glib2-debugsource-2.56.4-8.el8.s390x.rpm
+glib2-devel-2.56.4-8.el8.s390x.rpm
+glib2-devel-debuginfo-2.56.4-8.el8.s390x.rpm
+glib2-fam-2.56.4-8.el8.s390x.rpm
+glib2-fam-debuginfo-2.56.4-8.el8.s390x.rpm
+glib2-tests-2.56.4-8.el8.s390x.rpm
+glib2-tests-debuginfo-2.56.4-8.el8.s390x.rpm
+
+x86_64:
+glib2-2.56.4-8.el8.i686.rpm
+glib2-2.56.4-8.el8.x86_64.rpm
+glib2-debuginfo-2.56.4-8.el8.i686.rpm
+glib2-debuginfo-2.56.4-8.el8.x86_64.rpm
+glib2-debugsource-2.56.4-8.el8.i686.rpm
+glib2-debugsource-2.56.4-8.el8.x86_64.rpm
+glib2-devel-2.56.4-8.el8.i686.rpm
+glib2-devel-2.56.4-8.el8.x86_64.rpm
+glib2-devel-debuginfo-2.56.4-8.el8.i686.rpm
+glib2-devel-debuginfo-2.56.4-8.el8.x86_64.rpm
+glib2-fam-2.56.4-8.el8.x86_64.rpm
+glib2-fam-debuginfo-2.56.4-8.el8.i686.rpm
+glib2-fam-debuginfo-2.56.4-8.el8.x86_64.rpm
+glib2-tests-2.56.4-8.el8.x86_64.rpm
+glib2-tests-debuginfo-2.56.4-8.el8.i686.rpm
+glib2-tests-debuginfo-2.56.4-8.el8.x86_64.rpm
+
+Red Hat CodeReady Linux Builder (v. 8):
+
+aarch64:
+glib2-debuginfo-2.56.4-8.el8.aarch64.rpm
+glib2-debugsource-2.56.4-8.el8.aarch64.rpm
+glib2-devel-debuginfo-2.56.4-8.el8.aarch64.rpm
+glib2-fam-debuginfo-2.56.4-8.el8.aarch64.rpm
+glib2-static-2.56.4-8.el8.aarch64.rpm
+glib2-tests-debuginfo-2.56.4-8.el8.aarch64.rpm
+ibus-debuginfo-1.5.19-11.el8.aarch64.rpm
+ibus-debugsource-1.5.19-11.el8.aarch64.rpm
+ibus-devel-1.5.19-11.el8.aarch64.rpm
+ibus-gtk2-debuginfo-1.5.19-11.el8.aarch64.rpm
+ibus-gtk3-debuginfo-1.5.19-11.el8.aarch64.rpm
+ibus-libs-debuginfo-1.5.19-11.el8.aarch64.rpm
+ibus-tests-debuginfo-1.5.19-11.el8.aarch64.rpm
+ibus-wayland-debuginfo-1.5.19-11.el8.aarch64.rpm
+
+noarch:
+glib2-doc-2.56.4-8.el8.noarch.rpm
+ibus-devel-docs-1.5.19-11.el8.noarch.rpm
+
+ppc64le:
+glib2-debuginfo-2.56.4-8.el8.ppc64le.rpm
+glib2-debugsource-2.56.4-8.el8.ppc64le.rpm
+glib2-devel-debuginfo-2.56.4-8.el8.ppc64le.rpm
+glib2-fam-debuginfo-2.56.4-8.el8.ppc64le.rpm
+glib2-static-2.56.4-8.el8.ppc64le.rpm
+glib2-tests-debuginfo-2.56.4-8.el8.ppc64le.rpm
+ibus-debuginfo-1.5.19-11.el8.ppc64le.rpm
+ibus-debugsource-1.5.19-11.el8.ppc64le.rpm
+ibus-devel-1.5.19-11.el8.ppc64le.rpm
+ibus-gtk2-debuginfo-1.5.19-11.el8.ppc64le.rpm
+ibus-gtk3-debuginfo-1.5.19-11.el8.ppc64le.rpm
+ibus-libs-debuginfo-1.5.19-11.el8.ppc64le.rpm
+ibus-tests-debuginfo-1.5.19-11.el8.ppc64le.rpm
+ibus-wayland-debuginfo-1.5.19-11.el8.ppc64le.rpm
+
+s390x:
+glib2-debuginfo-2.56.4-8.el8.s390x.rpm
+glib2-debugsource-2.56.4-8.el8.s390x.rpm
+glib2-devel-debuginfo-2.56.4-8.el8.s390x.rpm
+glib2-fam-debuginfo-2.56.4-8.el8.s390x.rpm
+glib2-static-2.56.4-8.el8.s390x.rpm
+glib2-tests-debuginfo-2.56.4-8.el8.s390x.rpm
+ibus-debuginfo-1.5.19-11.el8.s390x.rpm
+ibus-debugsource-1.5.19-11.el8.s390x.rpm
+ibus-devel-1.5.19-11.el8.s390x.rpm
+ibus-gtk2-debuginfo-1.5.19-11.el8.s390x.rpm
+ibus-gtk3-debuginfo-1.5.19-11.el8.s390x.rpm
+ibus-libs-debuginfo-1.5.19-11.el8.s390x.rpm
+ibus-tests-debuginfo-1.5.19-11.el8.s390x.rpm
+ibus-wayland-debuginfo-1.5.19-11.el8.s390x.rpm
+
+x86_64:
+glib2-debuginfo-2.56.4-8.el8.i686.rpm
+glib2-debuginfo-2.56.4-8.el8.x86_64.rpm
+glib2-debugsource-2.56.4-8.el8.i686.rpm
+glib2-debugsource-2.56.4-8.el8.x86_64.rpm
+glib2-devel-debuginfo-2.56.4-8.el8.i686.rpm
+glib2-devel-debuginfo-2.56.4-8.el8.x86_64.rpm
+glib2-fam-debuginfo-2.56.4-8.el8.i686.rpm
+glib2-fam-debuginfo-2.56.4-8.el8.x86_64.rpm
+glib2-static-2.56.4-8.el8.i686.rpm
+glib2-static-2.56.4-8.el8.x86_64.rpm
+glib2-tests-debuginfo-2.56.4-8.el8.i686.rpm
+glib2-tests-debuginfo-2.56.4-8.el8.x86_64.rpm
+ibus-debuginfo-1.5.19-11.el8.i686.rpm
+ibus-debuginfo-1.5.19-11.el8.x86_64.rpm
+ibus-debugsource-1.5.19-11.el8.i686.rpm
+ibus-debugsource-1.5.19-11.el8.x86_64.rpm
+ibus-devel-1.5.19-11.el8.i686.rpm
+ibus-devel-1.5.19-11.el8.x86_64.rpm
+ibus-gtk2-debuginfo-1.5.19-11.el8.i686.rpm
+ibus-gtk2-debuginfo-1.5.19-11.el8.x86_64.rpm
+ibus-gtk3-debuginfo-1.5.19-11.el8.i686.rpm
+ibus-gtk3-debuginfo-1.5.19-11.el8.x86_64.rpm
+ibus-libs-debuginfo-1.5.19-11.el8.i686.rpm
+ibus-libs-debuginfo-1.5.19-11.el8.x86_64.rpm
+ibus-tests-debuginfo-1.5.19-11.el8.i686.rpm
+ibus-tests-debuginfo-1.5.19-11.el8.x86_64.rpm
+ibus-wayland-debuginfo-1.5.19-11.el8.i686.rpm
+ibus-wayland-debuginfo-1.5.19-11.el8.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2019-14822
+https://access.redhat.com/security/updates/classification/#moderate
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/8.2_release_notes/index
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXqhVm9zjgjWX9erEAQgShA/+Psfn09CwxvJcHA1/Xbax9OR/7xRxCVWR
+lj98Xr7kMz1U3TEefilxXlZVdewflNrUXr26FVBdfa/0veJXOlU9L7V2wQylZE59
+YDYo+/Z4T//zaqZyTltGjpTwfj1RhI8OBX+IFzFKKHeWkjAh2mNzVDMUgogJj32X
+jNqwco5JWZtAaRKQLr0Gr1sFaXkLEYwRKr3OG8ZgVwMNG1Wkc4Tr/NlmwH95JSfE
+WpTs6L/PJH0BuWbW9yrx5tKJ7yY7qAyKqLHhfc4kdXcv6eKtdRjrC2Hcn6SAlHqe
+4D//WR00HaiPfNUJbcNlk9bc7uQSrbL2ibXT4qA7MUeOdjF/mdem15PBVc6iTRWk
+BOjbypZwkFvWI36T3v40WKFqo9I4YNLg2lMMpkRutudyhRBrnzS5wxynD4mpa6CZ
+2JnydBN+hLCjEPlri0LRgiJp7MLiBG5/jp1R8vAsiu0Vwef01sppGjza+Ml/QOxV
+9xNaBlAFS0+dG5cdyu5ynjxHTdlD3o/Q7zvgIQ3JokE7tZ8aOuTzO+ZE0pjvtsZu
+E43Q2M7LpGyoEO3Xy8Ip3fTgKESOtB9q1UhM7bj50yFy1IvKnjgxM9PwRl+7S4lW
+tGaN5ccTWywh9DtWCfnq8fs42rjcDzy/gjMUfalWnOk1lOEtU/cStWcYeE6jO9A2
+bj+2R+IfQs8�rK
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

@@ -1,0 +1,162 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+=====================================================================
+                   Red Hat Security Advisory
+
+Synopsis:          Critical: thunderbird security update
+Advisory ID:       RHSA-2020:2049-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:2049
+Issue date:        2020-05-11
+CVE Names:         CVE-2020-6831 CVE-2020-12387 CVE-2020-12392 
+                   CVE-2020-12395 CVE-2020-12397 
+=====================================================================
+
+1. Summary:
+
+An update for thunderbird is now available for Red Hat Enterprise Linux 6.
+
+Red Hat Product Security has rated this update as having a security impact
+of Critical. A Common Vulnerability Scoring System (CVSS) base score, which
+gives a detailed severity rating, is available for each vulnerability from
+the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Enterprise Linux Desktop (v. 6) - i386, x86_64
+Red Hat Enterprise Linux Server Optional (v. 6) - i386, ppc64, s390x, x86_64
+Red Hat Enterprise Linux Workstation (v. 6) - i386, x86_64
+
+3. Description:
+
+Mozilla Thunderbird is a standalone mail and newsgroup client.
+
+This update upgrades Thunderbird to version 68.8.0.
+
+Security Fix(es):
+
+* Mozilla: Use-after-free during worker shutdown (CVE-2020-12387)
+
+* Mozilla: Memory safety bugs fixed in Firefox 76 and Firefox ESR 68.8
+(CVE-2020-12395)
+
+* usrsctp: Buffer overflow in AUTH chunk input validation (CVE-2020-6831)
+
+* Mozilla: Arbitrary local file access with 'Copy as cURL' (CVE-2020-12392)
+
+* Mozilla: Sender Email Address Spoofing using encoded Unicode characters
+(CVE-2020-12397)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+All running instances of Thunderbird must be restarted for the update to
+take effect.
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1831761 - CVE-2020-12387 Mozilla: Use-after-free during worker shutdown
+1831763 - CVE-2020-6831 usrsctp: Buffer overflow in AUTH chunk input validation
+1831764 - CVE-2020-12392 Mozilla: Arbitrary local file access with 'Copy as cURL'
+1831765 - CVE-2020-12395 Mozilla: Memory safety bugs fixed in Firefox 76 and Firefox ESR 68.8
+1832565 - CVE-2020-12397 Mozilla: Sender Email Address Spoofing using encoded Unicode characters
+
+6. Package List:
+
+Red Hat Enterprise Linux Desktop (v. 6):
+
+Source:
+thunderbird-68.8.0-1.el6_10.src.rpm
+
+i386:
+thunderbird-68.8.0-1.el6_10.i686.rpm
+thunderbird-debuginfo-68.8.0-1.el6_10.i686.rpm
+
+x86_64:
+thunderbird-68.8.0-1.el6_10.x86_64.rpm
+thunderbird-debuginfo-68.8.0-1.el6_10.x86_64.rpm
+
+Red Hat Enterprise Linux Server Optional (v. 6):
+
+Source:
+thunderbird-68.8.0-1.el6_10.src.rpm
+
+i386:
+thunderbird-68.8.0-1.el6_10.i686.rpm
+thunderbird-debuginfo-68.8.0-1.el6_10.i686.rpm
+
+ppc64:
+thunderbird-68.8.0-1.el6_10.ppc64.rpm
+thunderbird-debuginfo-68.8.0-1.el6_10.ppc64.rpm
+
+s390x:
+thunderbird-68.8.0-1.el6_10.s390x.rpm
+thunderbird-debuginfo-68.8.0-1.el6_10.s390x.rpm
+
+x86_64:
+thunderbird-68.8.0-1.el6_10.x86_64.rpm
+thunderbird-debuginfo-68.8.0-1.el6_10.x86_64.rpm
+
+Red Hat Enterprise Linux Workstation (v. 6):
+
+Source:
+thunderbird-68.8.0-1.el6_10.src.rpm
+
+i386:
+thunderbird-68.8.0-1.el6_10.i686.rpm
+thunderbird-debuginfo-68.8.0-1.el6_10.i686.rpm
+
+x86_64:
+thunderbird-68.8.0-1.el6_10.x86_64.rpm
+thunderbird-debuginfo-68.8.0-1.el6_10.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2020-6831
+https://access.redhat.com/security/cve/CVE-2020-12387
+https://access.redhat.com/security/cve/CVE-2020-12392
+https://access.redhat.com/security/cve/CVE-2020-12395
+https://access.redhat.com/security/cve/CVE-2020-12397
+https://access.redhat.com/security/updates/classification/#critical
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXrkcRtzjgjWX9erEAQh8ABAApwt3Xmww6MNPt8NVnDTvoA+d4jE2FlAv
+3+aCwhvM8jvKx1QLLXwt3vKi4zsX64Wx5loiBVEh9l3maRyjZOCdgbJTw4T0rcwW
+QiguheSG1s8xk62eZhYznyEjCIVWdrJwJ6049rtHxY53Kvzqrq+07+RrC/ndoewq
+16hI7WeWAScBg6IxhiiPgV0q0wzWR13QE+dgxX9Q6CrIMe7cJp0POnyY5UmBSMdf
+RC0CBBxBv8gwmVpz4gmfZGH+jvmopsQdk0Sxone4Nbys0j4Fdz3vwfhBr+/SunD8
+JlGP5klpjS9UE6HbLFOlGK5M9IZPKaS7Vb3yDBP1SUclYO4fUG9Ghvz9PKGuZ6In
+AE8msdXS4XugG9Vb+AeSV6Xs13CkWNJFUpRZ0I3/XX4l6IO0E1bKEkL7/rOJfIbn
+9M5wgenHd5sFunDmZLXZDYBCKaormWXtq3qqurc6w2idp8ZiNskJeDRkRxtc1PUt
+x7IT50FvEdSK8CWwtGVbiZ99Yd18aWt+PFPYIEKMPkiKwccfqFvDL45druRH4e85
+GH4OU7YisoWlQU7AZqXTidbFCSq1dxBHl1nC2l5tPlSW37w+dYBlSt9D9hEuacFG
+oWJktroOjROWEOdDZDwh6r6oN3lt5TwWSaMgpedKGfcEMoEQO2iKVswbF0y0t+Mp
+ilDpQQNAa9E=
+=Th1y
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

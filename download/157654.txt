@@ -1,0 +1,235 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+=====================================================================
+                   Red Hat Security Advisory
+
+Synopsis:          Important: kernel-alt security and bug fix update
+Advisory ID:       RHSA-2020:2104-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:2104
+Issue date:        2020-05-12
+CVE Names:         CVE-2017-18551 CVE-2017-18595 CVE-2019-9454 
+                   CVE-2019-12614 CVE-2019-15538 CVE-2019-19447 
+                   CVE-2019-19524 CVE-2019-19768 CVE-2020-9383 
+                   CVE-2020-10711 
+=====================================================================
+
+1. Summary:
+
+An update for kernel-alt is now available for Red Hat Enterprise Linux 7.
+
+Red Hat Product Security has rated this update as having a security impact
+of Important. A Common Vulnerability Scoring System (CVSS) base score,
+which gives a detailed severity rating, is available for each vulnerability
+from the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Enterprise Linux for ARM and IBM Power LE (POWER9) Server (v. 7) - aarch64, noarch, ppc64le, s390x
+Red Hat Enterprise Linux for ARM and IBM Power LE (POWER9) Server Optional (v. 7) - aarch64, noarch, ppc64le
+
+3. Description:
+
+The kernel-alt packages provide the Linux kernel version 4.x.
+
+Security Fix(es):
+
+* kernel: double free may be caused by the function allocate_trace_buffer
+in the file kernel/trace/trace.c (CVE-2017-18595)
+
+* kernel: use-after-free in __blk_add_trace in kernel/trace/blktrace.c
+(CVE-2019-19768)
+
+* Kernel: NetLabel: null pointer dereference while receiving CIPSO packet
+with null category may cause kernel panic (CVE-2020-10711)
+
+* kernel: out of bounds write in function i2c_smbus_xfer_emulated in
+drivers/i2c/i2c-core-smbus.c (CVE-2017-18551)
+
+* kernel: out of bounds write in i2c driver leads to local escalation of
+privilege (CVE-2019-9454)
+
+* kernel: denial of service in in xfs_setattr_nonsize in fs/xfs/xfs_iops.c
+(CVE-2019-15538)
+
+* kernel: mounting a crafted ext4 filesystem image, performing some
+operations, and unmounting can lead to a use-after-free in ext4_put_super
+in fs/ext4/super.c (CVE-2019-19447)
+
+* kernel: a malicious USB device in the drivers/input/ff-memless.c leads to
+use-after-free (CVE-2019-19524)
+
+* kernel: out-of-bounds read in set_fdc in drivers/block/floppy.c
+(CVE-2020-9383)
+
+* kernel: null pointer dereference in dlpar_parse_cc_property in
+arch/powerrc/platforms/pseries/dlpar.c causing denial of service
+(CVE-2019-12614)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+Bug Fix(es):
+
+* [7.5-alt][ext4/xfstests generic/468] fix fdatasync(2) after fallocate(2)
+operation (upstream fixed) [rhel-alt-7.6.z] (BZ#1554273)
+
+* [RHEL-ALT-7.6.z][arm64] CN99xx: DIMM errors not populated in EDAC sysfs
+(BZ#1778697)
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+The system must be rebooted for this update to take effect.
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1718176 - CVE-2019-12614 kernel: null pointer dereference in dlpar_parse_cc_property in arch/powerrc/platforms/pseries/dlpar.c causing denial of service
+1746777 - CVE-2019-15538 kernel: denial of service in in xfs_setattr_nonsize in fs/xfs/xfs_iops.c
+1757368 - CVE-2017-18551 kernel: out of bounds write in function i2c_smbus_xfer_emulated in drivers/i2c/i2c-core-smbus.c
+1758671 - CVE-2017-18595 kernel: double free may be caused by the function allocate_trace_buffer in the file kernel/trace/trace.c
+1781679 - CVE-2019-19447 kernel: mounting a crafted ext4 filesystem image, performing some operations, and unmounting can lead to a use-after-free in ext4_put_super in fs/ext4/super.c
+1783459 - CVE-2019-19524 kernel: a malicious USB device in the drivers/input/ff-memless.c leads to use-after-free
+1786164 - CVE-2019-19768 kernel: use-after-free in __blk_add_trace in kernel/trace/blktrace.c
+1810685 - CVE-2020-9383 kernel: out-of-bounds read in set_fdc in drivers/block/floppy.c
+1818818 - CVE-2019-9454 kernel: out of bounds write in i2c driver leads to local escalation of privilege
+1825116 - CVE-2020-10711 Kernel: NetLabel: null pointer dereference while receiving CIPSO packet with null category may cause kernel panic
+
+6. Package List:
+
+Red Hat Enterprise Linux for ARM and IBM Power LE (POWER9) Server (v. 7):
+
+Source:
+kernel-alt-4.14.0-115.21.2.el7a.src.rpm
+
+aarch64:
+kernel-4.14.0-115.21.2.el7a.aarch64.rpm
+kernel-debug-4.14.0-115.21.2.el7a.aarch64.rpm
+kernel-debug-debuginfo-4.14.0-115.21.2.el7a.aarch64.rpm
+kernel-debug-devel-4.14.0-115.21.2.el7a.aarch64.rpm
+kernel-debuginfo-4.14.0-115.21.2.el7a.aarch64.rpm
+kernel-debuginfo-common-aarch64-4.14.0-115.21.2.el7a.aarch64.rpm
+kernel-devel-4.14.0-115.21.2.el7a.aarch64.rpm
+kernel-headers-4.14.0-115.21.2.el7a.aarch64.rpm
+kernel-tools-4.14.0-115.21.2.el7a.aarch64.rpm
+kernel-tools-debuginfo-4.14.0-115.21.2.el7a.aarch64.rpm
+kernel-tools-libs-4.14.0-115.21.2.el7a.aarch64.rpm
+perf-4.14.0-115.21.2.el7a.aarch64.rpm
+perf-debuginfo-4.14.0-115.21.2.el7a.aarch64.rpm
+python-perf-4.14.0-115.21.2.el7a.aarch64.rpm
+python-perf-debuginfo-4.14.0-115.21.2.el7a.aarch64.rpm
+
+noarch:
+kernel-abi-whitelists-4.14.0-115.21.2.el7a.noarch.rpm
+kernel-doc-4.14.0-115.21.2.el7a.noarch.rpm
+
+ppc64le:
+kernel-4.14.0-115.21.2.el7a.ppc64le.rpm
+kernel-bootwrapper-4.14.0-115.21.2.el7a.ppc64le.rpm
+kernel-debug-4.14.0-115.21.2.el7a.ppc64le.rpm
+kernel-debug-debuginfo-4.14.0-115.21.2.el7a.ppc64le.rpm
+kernel-debuginfo-4.14.0-115.21.2.el7a.ppc64le.rpm
+kernel-debuginfo-common-ppc64le-4.14.0-115.21.2.el7a.ppc64le.rpm
+kernel-devel-4.14.0-115.21.2.el7a.ppc64le.rpm
+kernel-headers-4.14.0-115.21.2.el7a.ppc64le.rpm
+kernel-tools-4.14.0-115.21.2.el7a.ppc64le.rpm
+kernel-tools-debuginfo-4.14.0-115.21.2.el7a.ppc64le.rpm
+kernel-tools-libs-4.14.0-115.21.2.el7a.ppc64le.rpm
+perf-4.14.0-115.21.2.el7a.ppc64le.rpm
+perf-debuginfo-4.14.0-115.21.2.el7a.ppc64le.rpm
+python-perf-4.14.0-115.21.2.el7a.ppc64le.rpm
+python-perf-debuginfo-4.14.0-115.21.2.el7a.ppc64le.rpm
+
+s390x:
+kernel-4.14.0-115.21.2.el7a.s390x.rpm
+kernel-debug-4.14.0-115.21.2.el7a.s390x.rpm
+kernel-debug-debuginfo-4.14.0-115.21.2.el7a.s390x.rpm
+kernel-debug-devel-4.14.0-115.21.2.el7a.s390x.rpm
+kernel-debuginfo-4.14.0-115.21.2.el7a.s390x.rpm
+kernel-debuginfo-common-s390x-4.14.0-115.21.2.el7a.s390x.rpm
+kernel-devel-4.14.0-115.21.2.el7a.s390x.rpm
+kernel-headers-4.14.0-115.21.2.el7a.s390x.rpm
+kernel-kdump-4.14.0-115.21.2.el7a.s390x.rpm
+kernel-kdump-debuginfo-4.14.0-115.21.2.el7a.s390x.rpm
+kernel-kdump-devel-4.14.0-115.21.2.el7a.s390x.rpm
+perf-4.14.0-115.21.2.el7a.s390x.rpm
+perf-debuginfo-4.14.0-115.21.2.el7a.s390x.rpm
+python-perf-4.14.0-115.21.2.el7a.s390x.rpm
+python-perf-debuginfo-4.14.0-115.21.2.el7a.s390x.rpm
+
+Red Hat Enterprise Linux for ARM and IBM Power LE (POWER9) Server Optional (v. 7):
+
+aarch64:
+kernel-debug-debuginfo-4.14.0-115.21.2.el7a.aarch64.rpm
+kernel-debuginfo-4.14.0-115.21.2.el7a.aarch64.rpm
+kernel-debuginfo-common-aarch64-4.14.0-115.21.2.el7a.aarch64.rpm
+kernel-tools-debuginfo-4.14.0-115.21.2.el7a.aarch64.rpm
+kernel-tools-libs-devel-4.14.0-115.21.2.el7a.aarch64.rpm
+perf-debuginfo-4.14.0-115.21.2.el7a.aarch64.rpm
+python-perf-debuginfo-4.14.0-115.21.2.el7a.aarch64.rpm
+
+noarch:
+kernel-doc-4.14.0-115.21.2.el7a.noarch.rpm
+
+ppc64le:
+kernel-debug-debuginfo-4.14.0-115.21.2.el7a.ppc64le.rpm
+kernel-debug-devel-4.14.0-115.21.2.el7a.ppc64le.rpm
+kernel-debuginfo-4.14.0-115.21.2.el7a.ppc64le.rpm
+kernel-debuginfo-common-ppc64le-4.14.0-115.21.2.el7a.ppc64le.rpm
+kernel-tools-debuginfo-4.14.0-115.21.2.el7a.ppc64le.rpm
+kernel-tools-libs-devel-4.14.0-115.21.2.el7a.ppc64le.rpm
+perf-debuginfo-4.14.0-115.21.2.el7a.ppc64le.rpm
+python-perf-debuginfo-4.14.0-115.21.2.el7a.ppc64le.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2017-18551
+https://access.redhat.com/security/cve/CVE-2017-18595
+https://access.redhat.com/security/cve/CVE-2019-9454
+https://access.redhat.com/security/cve/CVE-2019-12614
+https://access.redhat.com/security/cve/CVE-2019-15538
+https://access.redhat.com/security/cve/CVE-2019-19447
+https://access.redhat.com/security/cve/CVE-2019-19524
+https://access.redhat.com/security/cve/CVE-2019-19768
+https://access.redhat.com/security/cve/CVE-2020-9383
+https://access.redhat.com/security/cve/CVE-2020-10711
+https://access.redhat.com/security/updates/classification/#important
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXrq8/9zjgjWX9erEAQiIzg/8DsguZ1mDOfvtXlt7sldnNMSpRqUujBW5
+T+4l+D/U+mYNkLFztqHopxd7SqnbQbugJ0QxuOxtFGtbnnMgGv4aLTiJzEENhuOd
+LuqfU3+Dd8OYqSJ5rlZKxgsnhDXbY5kxZzXW/HwoGT8q76weDpCIUnnC0pZoNhgx
+tcZ4aeFPsq4UyRKEzqkAL8zvD+uDxgbzKGrSxlELxIYDsHInA9gUFSLJz8HmtMi+
+71NJlAtKhxOzGI3kOS7Sp5zNHdE1BBv5WD/yQjSDPcDkUJmjmvloxSXCM/bMNcqW
+CfQbRXSod95rmxFpIUXT4cEZjwaKczwZE/kAB/MU/K00ZL0dXKxKOg7l8lTlzW5M
+fiebQVLLcG3KHf9vjvxseCDklRXa8grWX2+p+lKRF17oTEwrNM1cfqk/qxCqd/Tw
+WwZQSohw8qdtAYDpiWYzCCqhmxy2jnBqr/yOWjtJGjFtg37pfxOgiVowiQpkfB/c
+gOLFAxsYbK2DIyyjLUaOgghAu15B3eiRNUpByoICMOpvyR/4CLQmT6sYo3HPpOHy
+WS6DU1JT1L66Ow9KdZUWWundQlrWyAl9dawpU641R1oTZABU+OmjyYdIcZmVnI5l
+VFrSV2Bjqpf+p6ssMMKeIJTGmW/KwAap0hX/oqWBCr5JQ8cDDm75xbkOaf3ZoQmJ
+JC0PpxZecms=
+=urFc
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

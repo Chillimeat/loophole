@@ -1,0 +1,194 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Important: java-1.7.1-ibm security update
+Advisory ID:       RHSA-2020:2238-01
+Product:           Red Hat Enterprise Linux Supplementary
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:2238
+Issue date:        2020-05-20
+CVE Names:         CVE-2020-2654 CVE-2020-2756 CVE-2020-2757
+                   CVE-2020-2781 CVE-2020-2800 CVE-2020-2803
+                   CVE-2020-2805 CVE-2020-2830
+====================================================================
+1. Summary:
+
+An update for java-1.7.1-ibm is now available for Red Hat Enterprise Linux
+7 Supplementary.
+
+Red Hat Product Security has rated this update as having a security impact
+of Important. A Common Vulnerability Scoring System (CVSS) base score,
+which gives a detailed severity rating, is available for each vulnerability
+from the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Enterprise Linux Client Supplementary (v. 7) - x86_64
+Red Hat Enterprise Linux ComputeNode Supplementary (v. 7) - x86_64
+Red Hat Enterprise Linux Server Supplementary (v. 7) - ppc64, ppc64le, s390x, x86_64
+Red Hat Enterprise Linux Workstation Supplementary (v. 7) - x86_64
+
+3. Description:
+
+IBM Java SE version 7 Release 1 includes the IBM Java Runtime Environment
+and the IBM Java Software Development Kit.
+
+This update upgrades IBM Java SE 7 to version 7R1 SR4-FP65.
+
+Security Fix(es):
+
+* OpenJDK: Incorrect bounds checks in NIO Buffers (Libraries, 8234841)
+(CVE-2020-2803)
+
+* OpenJDK: Incorrect type checks in MethodType.readObject() (Libraries,
+8235274) (CVE-2020-2805)
+
+* OpenJDK: Excessive memory usage in OID processing in X.509 certificate
+parsing (Libraries, 8234037) (CVE-2020-2654)
+
+* OpenJDK: Re-use of single TLS session for new connections (JSSE, 8234408)
+(CVE-2020-2781)
+
+* OpenJDK: CRLF injection into HTTP headers in HttpServer (Lightweight HTTP
+Server, 8234825) (CVE-2020-2800)
+
+* OpenJDK: Regular expression DoS in Scanner (Concurrency, 8236201)
+(CVE-2020-2830)
+
+* OpenJDK: Incorrect handling of references to uninitialized class
+descriptors during deserialization (Serialization, 8224541) (CVE-2020-2756)
+
+* OpenJDK: Uncaught InstantiationError exception in ObjectStreamClass
+(Serialization, 8224549) (CVE-2020-2757)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+All running instances of IBM Java must be restarted for this update to take
+effect.
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1791217 - CVE-2020-2654 OpenJDK: Excessive memory usage in OID processing in X.509 certificate parsing (Libraries, 8234037)
+1823215 - CVE-2020-2756 OpenJDK: Incorrect handling of references to uninitialized class descriptors during deserialization (Serialization, 8224541)
+1823216 - CVE-2020-2757 OpenJDK: Uncaught InstantiationError exception in ObjectStreamClass (Serialization, 8224549)
+1823527 - CVE-2020-2800 OpenJDK: CRLF injection into HTTP headers in HttpServer (Lightweight HTTP Server, 8234825)
+1823542 - CVE-2020-2830 OpenJDK: Regular expression DoS in Scanner (Concurrency, 8236201)
+1823694 - CVE-2020-2803 OpenJDK: Incorrect bounds checks in NIO Buffers (Libraries, 8234841)
+1823844 - CVE-2020-2805 OpenJDK: Incorrect type checks in MethodType.readObject() (Libraries, 8235274)
+1823960 - CVE-2020-2781 OpenJDK: Re-use of single TLS session for new connections (JSSE, 8234408)
+
+6. Package List:
+
+Red Hat Enterprise Linux Client Supplementary (v. 7):
+
+x86_64:
+java-1.7.1-ibm-1.7.1.4.65-1jpp.1.el7.x86_64.rpm
+java-1.7.1-ibm-demo-1.7.1.4.65-1jpp.1.el7.x86_64.rpm
+java-1.7.1-ibm-devel-1.7.1.4.65-1jpp.1.el7.x86_64.rpm
+java-1.7.1-ibm-jdbc-1.7.1.4.65-1jpp.1.el7.x86_64.rpm
+java-1.7.1-ibm-plugin-1.7.1.4.65-1jpp.1.el7.x86_64.rpm
+java-1.7.1-ibm-src-1.7.1.4.65-1jpp.1.el7.x86_64.rpm
+
+Red Hat Enterprise Linux ComputeNode Supplementary (v. 7):
+
+x86_64:
+java-1.7.1-ibm-1.7.1.4.65-1jpp.1.el7.x86_64.rpm
+java-1.7.1-ibm-demo-1.7.1.4.65-1jpp.1.el7.x86_64.rpm
+java-1.7.1-ibm-devel-1.7.1.4.65-1jpp.1.el7.x86_64.rpm
+java-1.7.1-ibm-src-1.7.1.4.65-1jpp.1.el7.x86_64.rpm
+
+Red Hat Enterprise Linux Server Supplementary (v. 7):
+
+ppc64:
+java-1.7.1-ibm-1.7.1.4.65-1jpp.1.el7.ppc64.rpm
+java-1.7.1-ibm-demo-1.7.1.4.65-1jpp.1.el7.ppc64.rpm
+java-1.7.1-ibm-devel-1.7.1.4.65-1jpp.1.el7.ppc64.rpm
+java-1.7.1-ibm-jdbc-1.7.1.4.65-1jpp.1.el7.ppc64.rpm
+java-1.7.1-ibm-src-1.7.1.4.65-1jpp.1.el7.ppc64.rpm
+
+ppc64le:
+java-1.7.1-ibm-1.7.1.4.65-1jpp.1.el7.ppc64le.rpm
+java-1.7.1-ibm-demo-1.7.1.4.65-1jpp.1.el7.ppc64le.rpm
+java-1.7.1-ibm-devel-1.7.1.4.65-1jpp.1.el7.ppc64le.rpm
+java-1.7.1-ibm-jdbc-1.7.1.4.65-1jpp.1.el7.ppc64le.rpm
+java-1.7.1-ibm-src-1.7.1.4.65-1jpp.1.el7.ppc64le.rpm
+
+s390x:
+java-1.7.1-ibm-1.7.1.4.65-1jpp.1.el7.s390x.rpm
+java-1.7.1-ibm-demo-1.7.1.4.65-1jpp.1.el7.s390x.rpm
+java-1.7.1-ibm-devel-1.7.1.4.65-1jpp.1.el7.s390x.rpm
+java-1.7.1-ibm-jdbc-1.7.1.4.65-1jpp.1.el7.s390x.rpm
+java-1.7.1-ibm-src-1.7.1.4.65-1jpp.1.el7.s390x.rpm
+
+x86_64:
+java-1.7.1-ibm-1.7.1.4.65-1jpp.1.el7.x86_64.rpm
+java-1.7.1-ibm-demo-1.7.1.4.65-1jpp.1.el7.x86_64.rpm
+java-1.7.1-ibm-devel-1.7.1.4.65-1jpp.1.el7.x86_64.rpm
+java-1.7.1-ibm-jdbc-1.7.1.4.65-1jpp.1.el7.x86_64.rpm
+java-1.7.1-ibm-plugin-1.7.1.4.65-1jpp.1.el7.x86_64.rpm
+java-1.7.1-ibm-src-1.7.1.4.65-1jpp.1.el7.x86_64.rpm
+
+Red Hat Enterprise Linux Workstation Supplementary (v. 7):
+
+x86_64:
+java-1.7.1-ibm-1.7.1.4.65-1jpp.1.el7.x86_64.rpm
+java-1.7.1-ibm-demo-1.7.1.4.65-1jpp.1.el7.x86_64.rpm
+java-1.7.1-ibm-devel-1.7.1.4.65-1jpp.1.el7.x86_64.rpm
+java-1.7.1-ibm-jdbc-1.7.1.4.65-1jpp.1.el7.x86_64.rpm
+java-1.7.1-ibm-plugin-1.7.1.4.65-1jpp.1.el7.x86_64.rpm
+java-1.7.1-ibm-src-1.7.1.4.65-1jpp.1.el7.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2020-2654
+https://access.redhat.com/security/cve/CVE-2020-2756
+https://access.redhat.com/security/cve/CVE-2020-2757
+https://access.redhat.com/security/cve/CVE-2020-2781
+https://access.redhat.com/security/cve/CVE-2020-2800
+https://access.redhat.com/security/cve/CVE-2020-2803
+https://access.redhat.com/security/cve/CVE-2020-2805
+https://access.redhat.com/security/cve/CVE-2020-2830
+https://access.redhat.com/security/updates/classification/#important
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXsU9+tzjgjWX9erEAQjfHhAAnsKRuH0U5fjUuHrlOm+m4h3qzxvGQ1Am
+w5/rHAQnRq/6dCXkcqa6ZH2z/wzyaLgwGzY+n/cOjF+uSwIqmH1hXAXFHSJVf+g5
+kOAdn1IhqdeH0ghT/tt1Dl+etqxwHJz2bPcQyiBWd+U6TPgK9njrcwMwGI5wXoST
+bxmI6qmPUzSe2SLe+21g+qly/CtPk+Umt+Jqtut7J50c/VPoss9gACMb5qLW/E5s
+EP/mmZDYA80xjPVV9NOhivwgkfRIwA1uTEsdLEoM6lt8T0okZAmLiL4DRuq0rW9D
+NxYdADyxbRk1dFd7y2hEg2c+zEsSsHyAivV/UjUZJAMlsSkHRfNmOy5T+zM41NBl
+CkHHalGSl3ZH9BOLwWuBiuLrpY43YcxUWefwFnD6i9BBVrwPHhleMdImsxILtzfQ
+ykCWWu5wa9AXG1pyacItqnTqFLX7Bvt4vnnFd415DSD06Zs7VzFeJvdZ7ZH84Gzu
+VUKK5ynd8mP0UWRQkRx+LjkyyDb5KoPxsUvG0hEV801rOcq5Jmrsy2yJYWxnELuX
+E/uxORvpPdYgxF0n0cm+8bTtjXVopASGdM7ArS+OjhhVXiPYfJ6ajRWeXW9sTUnb
+C45gIcv9odYZ1uz8e5pWLCaR0l19a4/exlfR25oYWYiQ2FhNYfvVzcBBE+CrCujM
+LeGh6wtbKO0=3oT8
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

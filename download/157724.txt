@@ -1,0 +1,97 @@
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Gentoo Linux Security Advisory                           GLSA 202005-11
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+                                           https://security.gentoo.org/
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ Severity: Normal
+    Title: VLC: Buffer overflow
+     Date: May 14, 2020
+     Bugs: #721940
+       ID: 202005-11
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Synopsis
+========
+
+A buffer overflow in VLC might allow local or remote attacker(s) to
+execute arbitrary code.
+
+Background
+==========
+
+VLC is a cross-platform media player and streaming server.
+
+Affected packages
+=================
+
+    -------------------------------------------------------------------
+     Package              /     Vulnerable     /            Unaffected
+    -------------------------------------------------------------------
+  1  media-video/vlc              < 3.0.10                  >= 3.0.10
+
+Description
+===========
+
+A buffer overflow in DecodeBlock in sdl_image.c was discovered.
+
+Impact
+======
+
+A remote user could craft a specifically crafted image file that could
+execute arbitrary code or cause denial of service.
+
+Workaround
+==========
+
+The user should refrain from opening files from untrusted third parties
+or accessing untrusted remote sites (or disable the VLC browser
+plugins), until they upgrade.
+
+Resolution
+==========
+
+All VLC users should upgrade to the latest version:
+
+  # emerge --sync
+  # emerge --ask --oneshot --verbose ">=media-video/vlc-3.0.10"
+
+References
+==========
+
+[ 1 ] CVE-2019-19721
+      https://nvd.nist.gov/vuln/detail/CVE-2019-19721
+[ 2 ] Upstream patch
+
+https://git.videolan.org/?p=vlc/vlc-3.0.git;a=commit;h=72afe7ebd8305bf4f5360293b8621cde52ec506b
+[ 3 ] VideoLAN-SB-VLC-309
+      https://www.videolan.org/security/sb-vlc309.html
+
+Availability
+============
+
+This GLSA and any updates to it are available for viewing at
+the Gentoo Security Website:
+
+ https://security.gentoo.org/glsa/202005-11
+
+Concerns?
+=========
+
+Security is a primary focus of Gentoo Linux and ensuring the
+confidentiality and security of our users' machines is of utmost
+importance to us. Any security concerns should be addressed to
+security@gentoo.org or alternatively, you may file a bug at
+https://bugs.gentoo.org.
+
+License
+=======
+
+Copyright 2020 Gentoo Foundation, Inc; referenced text
+belongs to its owner(s).
+
+The contents of this document are licensed under the
+Creative Commons - Attribution / Share Alike license.
+
+https://creativecommons.org/licenses/by-sa/2.5

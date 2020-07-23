@@ -1,0 +1,312 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Important: rh-git218-git security update
+Advisory ID:       RHSA-2020:1975-01
+Product:           Red Hat Software Collections
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:1975
+Issue date:        2020-04-29
+CVE Names:         CVE-2020-11008
+====================================================================
+1. Summary:
+
+An update for rh-git218-git is now available for Red Hat Software
+Collections.
+
+Red Hat Product Security has rated this update as having a security impact
+of Important. A Common Vulnerability Scoring System (CVSS) base score,
+which gives a detailed severity rating, is available for each vulnerability
+from the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Software Collections for Red Hat Enterprise Linux Server (v. 7) - aarch64, noarch, ppc64le, s390x, x86_64
+Red Hat Software Collections for Red Hat Enterprise Linux Server EUS (v. 7.6) - noarch, ppc64le, s390x, x86_64
+Red Hat Software Collections for Red Hat Enterprise Linux Server EUS (v. 7.7) - noarch, ppc64le, s390x, x86_64
+Red Hat Software Collections for Red Hat Enterprise Linux Workstation (v. 7) - noarch, x86_64
+
+3. Description:
+
+Git is a distributed revision control system with a decentralized
+architecture. As opposed to centralized version control systems with a
+client-server model, Git ensures that each working copy of a Git repository
+is an exact copy with complete revision history. This not only allows the
+user to work on and contribute to projects without the need to have
+permission to push the changes to their official repositories, but also
+makes it possible for the user to work with no network connection.
+
+The following packages have been upgraded to a later upstream version:
+rh-git218-git (2.18.4). (BZ#1826010)
+
+Security Fix(es):
+
+* git: Crafted URL containing new lines, empty host or lacks a scheme can
+cause credential leak (CVE-2020-11008)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1826001 - CVE-2020-11008 git: Crafted URL containing new lines, empty host or lacks a scheme can cause credential leak
+
+6. Package List:
+
+Red Hat Software Collections for Red Hat Enterprise Linux Server (v. 7):
+
+Source:
+rh-git218-git-2.18.4-1.el7.src.rpm
+
+aarch64:
+rh-git218-git-2.18.4-1.el7.aarch64.rpm
+rh-git218-git-core-2.18.4-1.el7.aarch64.rpm
+rh-git218-git-daemon-2.18.4-1.el7.aarch64.rpm
+rh-git218-git-debuginfo-2.18.4-1.el7.aarch64.rpm
+rh-git218-git-instaweb-2.18.4-1.el7.aarch64.rpm
+rh-git218-git-subtree-2.18.4-1.el7.aarch64.rpm
+rh-git218-git-svn-2.18.4-1.el7.aarch64.rpm
+
+noarch:
+rh-git218-git-all-2.18.4-1.el7.noarch.rpm
+rh-git218-git-core-doc-2.18.4-1.el7.noarch.rpm
+rh-git218-git-cvs-2.18.4-1.el7.noarch.rpm
+rh-git218-git-email-2.18.4-1.el7.noarch.rpm
+rh-git218-git-gui-2.18.4-1.el7.noarch.rpm
+rh-git218-git-p4-2.18.4-1.el7.noarch.rpm
+rh-git218-gitk-2.18.4-1.el7.noarch.rpm
+rh-git218-gitweb-2.18.4-1.el7.noarch.rpm
+rh-git218-perl-Git-2.18.4-1.el7.noarch.rpm
+rh-git218-perl-Git-SVN-2.18.4-1.el7.noarch.rpm
+
+ppc64le:
+rh-git218-git-2.18.4-1.el7.ppc64le.rpm
+rh-git218-git-core-2.18.4-1.el7.ppc64le.rpm
+rh-git218-git-daemon-2.18.4-1.el7.ppc64le.rpm
+rh-git218-git-debuginfo-2.18.4-1.el7.ppc64le.rpm
+rh-git218-git-instaweb-2.18.4-1.el7.ppc64le.rpm
+rh-git218-git-subtree-2.18.4-1.el7.ppc64le.rpm
+rh-git218-git-svn-2.18.4-1.el7.ppc64le.rpm
+
+s390x:
+rh-git218-git-2.18.4-1.el7.s390x.rpm
+rh-git218-git-core-2.18.4-1.el7.s390x.rpm
+rh-git218-git-daemon-2.18.4-1.el7.s390x.rpm
+rh-git218-git-debuginfo-2.18.4-1.el7.s390x.rpm
+rh-git218-git-instaweb-2.18.4-1.el7.s390x.rpm
+rh-git218-git-subtree-2.18.4-1.el7.s390x.rpm
+rh-git218-git-svn-2.18.4-1.el7.s390x.rpm
+
+Red Hat Software Collections for Red Hat Enterprise Linux Server (v. 7):
+
+Source:
+rh-git218-git-2.18.4-1.el7.src.rpm
+
+aarch64:
+rh-git218-git-2.18.4-1.el7.aarch64.rpm
+rh-git218-git-core-2.18.4-1.el7.aarch64.rpm
+rh-git218-git-daemon-2.18.4-1.el7.aarch64.rpm
+rh-git218-git-debuginfo-2.18.4-1.el7.aarch64.rpm
+rh-git218-git-instaweb-2.18.4-1.el7.aarch64.rpm
+rh-git218-git-subtree-2.18.4-1.el7.aarch64.rpm
+rh-git218-git-svn-2.18.4-1.el7.aarch64.rpm
+
+noarch:
+rh-git218-git-all-2.18.4-1.el7.noarch.rpm
+rh-git218-git-core-doc-2.18.4-1.el7.noarch.rpm
+rh-git218-git-cvs-2.18.4-1.el7.noarch.rpm
+rh-git218-git-email-2.18.4-1.el7.noarch.rpm
+rh-git218-git-gui-2.18.4-1.el7.noarch.rpm
+rh-git218-git-p4-2.18.4-1.el7.noarch.rpm
+rh-git218-gitk-2.18.4-1.el7.noarch.rpm
+rh-git218-gitweb-2.18.4-1.el7.noarch.rpm
+rh-git218-perl-Git-2.18.4-1.el7.noarch.rpm
+rh-git218-perl-Git-SVN-2.18.4-1.el7.noarch.rpm
+
+ppc64le:
+rh-git218-git-2.18.4-1.el7.ppc64le.rpm
+rh-git218-git-core-2.18.4-1.el7.ppc64le.rpm
+rh-git218-git-daemon-2.18.4-1.el7.ppc64le.rpm
+rh-git218-git-debuginfo-2.18.4-1.el7.ppc64le.rpm
+rh-git218-git-instaweb-2.18.4-1.el7.ppc64le.rpm
+rh-git218-git-subtree-2.18.4-1.el7.ppc64le.rpm
+rh-git218-git-svn-2.18.4-1.el7.ppc64le.rpm
+
+s390x:
+rh-git218-git-2.18.4-1.el7.s390x.rpm
+rh-git218-git-core-2.18.4-1.el7.s390x.rpm
+rh-git218-git-daemon-2.18.4-1.el7.s390x.rpm
+rh-git218-git-debuginfo-2.18.4-1.el7.s390x.rpm
+rh-git218-git-instaweb-2.18.4-1.el7.s390x.rpm
+rh-git218-git-subtree-2.18.4-1.el7.s390x.rpm
+rh-git218-git-svn-2.18.4-1.el7.s390x.rpm
+
+x86_64:
+rh-git218-git-2.18.4-1.el7.x86_64.rpm
+rh-git218-git-core-2.18.4-1.el7.x86_64.rpm
+rh-git218-git-daemon-2.18.4-1.el7.x86_64.rpm
+rh-git218-git-debuginfo-2.18.4-1.el7.x86_64.rpm
+rh-git218-git-instaweb-2.18.4-1.el7.x86_64.rpm
+rh-git218-git-subtree-2.18.4-1.el7.x86_64.rpm
+rh-git218-git-svn-2.18.4-1.el7.x86_64.rpm
+
+Red Hat Software Collections for Red Hat Enterprise Linux Server EUS (v. 7.6):
+
+Source:
+rh-git218-git-2.18.4-1.el7.src.rpm
+
+noarch:
+rh-git218-git-all-2.18.4-1.el7.noarch.rpm
+rh-git218-git-core-doc-2.18.4-1.el7.noarch.rpm
+rh-git218-git-cvs-2.18.4-1.el7.noarch.rpm
+rh-git218-git-email-2.18.4-1.el7.noarch.rpm
+rh-git218-git-gui-2.18.4-1.el7.noarch.rpm
+rh-git218-git-p4-2.18.4-1.el7.noarch.rpm
+rh-git218-gitk-2.18.4-1.el7.noarch.rpm
+rh-git218-gitweb-2.18.4-1.el7.noarch.rpm
+rh-git218-perl-Git-2.18.4-1.el7.noarch.rpm
+rh-git218-perl-Git-SVN-2.18.4-1.el7.noarch.rpm
+
+ppc64le:
+rh-git218-git-2.18.4-1.el7.ppc64le.rpm
+rh-git218-git-core-2.18.4-1.el7.ppc64le.rpm
+rh-git218-git-daemon-2.18.4-1.el7.ppc64le.rpm
+rh-git218-git-debuginfo-2.18.4-1.el7.ppc64le.rpm
+rh-git218-git-instaweb-2.18.4-1.el7.ppc64le.rpm
+rh-git218-git-subtree-2.18.4-1.el7.ppc64le.rpm
+rh-git218-git-svn-2.18.4-1.el7.ppc64le.rpm
+
+s390x:
+rh-git218-git-2.18.4-1.el7.s390x.rpm
+rh-git218-git-core-2.18.4-1.el7.s390x.rpm
+rh-git218-git-daemon-2.18.4-1.el7.s390x.rpm
+rh-git218-git-debuginfo-2.18.4-1.el7.s390x.rpm
+rh-git218-git-instaweb-2.18.4-1.el7.s390x.rpm
+rh-git218-git-subtree-2.18.4-1.el7.s390x.rpm
+rh-git218-git-svn-2.18.4-1.el7.s390x.rpm
+
+x86_64:
+rh-git218-git-2.18.4-1.el7.x86_64.rpm
+rh-git218-git-core-2.18.4-1.el7.x86_64.rpm
+rh-git218-git-daemon-2.18.4-1.el7.x86_64.rpm
+rh-git218-git-debuginfo-2.18.4-1.el7.x86_64.rpm
+rh-git218-git-instaweb-2.18.4-1.el7.x86_64.rpm
+rh-git218-git-subtree-2.18.4-1.el7.x86_64.rpm
+rh-git218-git-svn-2.18.4-1.el7.x86_64.rpm
+
+Red Hat Software Collections for Red Hat Enterprise Linux Server EUS (v. 7.7):
+
+Source:
+rh-git218-git-2.18.4-1.el7.src.rpm
+
+noarch:
+rh-git218-git-all-2.18.4-1.el7.noarch.rpm
+rh-git218-git-core-doc-2.18.4-1.el7.noarch.rpm
+rh-git218-git-cvs-2.18.4-1.el7.noarch.rpm
+rh-git218-git-email-2.18.4-1.el7.noarch.rpm
+rh-git218-git-gui-2.18.4-1.el7.noarch.rpm
+rh-git218-git-p4-2.18.4-1.el7.noarch.rpm
+rh-git218-gitk-2.18.4-1.el7.noarch.rpm
+rh-git218-gitweb-2.18.4-1.el7.noarch.rpm
+rh-git218-perl-Git-2.18.4-1.el7.noarch.rpm
+rh-git218-perl-Git-SVN-2.18.4-1.el7.noarch.rpm
+
+ppc64le:
+rh-git218-git-2.18.4-1.el7.ppc64le.rpm
+rh-git218-git-core-2.18.4-1.el7.ppc64le.rpm
+rh-git218-git-daemon-2.18.4-1.el7.ppc64le.rpm
+rh-git218-git-debuginfo-2.18.4-1.el7.ppc64le.rpm
+rh-git218-git-instaweb-2.18.4-1.el7.ppc64le.rpm
+rh-git218-git-subtree-2.18.4-1.el7.ppc64le.rpm
+rh-git218-git-svn-2.18.4-1.el7.ppc64le.rpm
+
+s390x:
+rh-git218-git-2.18.4-1.el7.s390x.rpm
+rh-git218-git-core-2.18.4-1.el7.s390x.rpm
+rh-git218-git-daemon-2.18.4-1.el7.s390x.rpm
+rh-git218-git-debuginfo-2.18.4-1.el7.s390x.rpm
+rh-git218-git-instaweb-2.18.4-1.el7.s390x.rpm
+rh-git218-git-subtree-2.18.4-1.el7.s390x.rpm
+rh-git218-git-svn-2.18.4-1.el7.s390x.rpm
+
+x86_64:
+rh-git218-git-2.18.4-1.el7.x86_64.rpm
+rh-git218-git-core-2.18.4-1.el7.x86_64.rpm
+rh-git218-git-daemon-2.18.4-1.el7.x86_64.rpm
+rh-git218-git-debuginfo-2.18.4-1.el7.x86_64.rpm
+rh-git218-git-instaweb-2.18.4-1.el7.x86_64.rpm
+rh-git218-git-subtree-2.18.4-1.el7.x86_64.rpm
+rh-git218-git-svn-2.18.4-1.el7.x86_64.rpm
+
+Red Hat Software Collections for Red Hat Enterprise Linux Workstation (v. 7):
+
+Source:
+rh-git218-git-2.18.4-1.el7.src.rpm
+
+noarch:
+rh-git218-git-all-2.18.4-1.el7.noarch.rpm
+rh-git218-git-core-doc-2.18.4-1.el7.noarch.rpm
+rh-git218-git-cvs-2.18.4-1.el7.noarch.rpm
+rh-git218-git-email-2.18.4-1.el7.noarch.rpm
+rh-git218-git-gui-2.18.4-1.el7.noarch.rpm
+rh-git218-git-p4-2.18.4-1.el7.noarch.rpm
+rh-git218-gitk-2.18.4-1.el7.noarch.rpm
+rh-git218-gitweb-2.18.4-1.el7.noarch.rpm
+rh-git218-perl-Git-2.18.4-1.el7.noarch.rpm
+rh-git218-perl-Git-SVN-2.18.4-1.el7.noarch.rpm
+
+x86_64:
+rh-git218-git-2.18.4-1.el7.x86_64.rpm
+rh-git218-git-core-2.18.4-1.el7.x86_64.rpm
+rh-git218-git-daemon-2.18.4-1.el7.x86_64.rpm
+rh-git218-git-debuginfo-2.18.4-1.el7.x86_64.rpm
+rh-git218-git-instaweb-2.18.4-1.el7.x86_64.rpm
+rh-git218-git-subtree-2.18.4-1.el7.x86_64.rpm
+rh-git218-git-svn-2.18.4-1.el7.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2020-11008
+https://access.redhat.com/security/updates/classification/#important
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXqneZ9zjgjWX9erEAQj4MBAAoIYjluuL1cP93YpEwxniqj0jxuq1m8ld
+CUqt3qTa6LiwWojEH4GKxJXG79V5GP7IRcxv84iED7EFSJ5YHHjyHcP50iEDEgKq
+PpEV34RzBd5lDUNVVxAPIAog5stwmr4HhE3gUHxoIKNWzKMS7KAvy42u7xvQQhJu
+mKY/dRyVIHVRrshJl1uDAJpzjIKtyJ0Zl6UjoRbEzpRtBok27XAn05jgojrg85sw
+mzh9GYdb9L/+62eTf2+gnXW+L8P+OwZ+klZ6S7xVIpePVTHgS6XfpQIHmKm+A2Ak
+lY5NzzdgkngcQlmqAly/17y7hWtcnJSC3+sYYyNbPtmCXavFZIx/TP1B23oWwQVK
+RW4etHj0E//5zJqJedsHe+9LmCmf10cONvapvwlfh+53VOW/AZ1LYGTe3q/rTQ9z
+bb7CK3mm2hK55gVxTMChqo5CiRgozG7ll0pLciiF3/d3YeikdcH3Xt5QCYqlXikU
+QZzb5GAVW44CJ5cUwndNfsdob8gP5aYXnrnU2TTCfVXdyrEs2xr9mFf/VYxxwmJv
+rWl/XGMumOfmdh675BvgL1fple1XO4riNFd/R25MPq64iHdv388vzTzePsEHP1rz
+E3A9FviQyHhYyF7KPxOe6/n5dFU4/MY+OqJaegAPagO3tJE4ykFN3EldcxNOZFDj
+exqUbgav3MY=Qr+5
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

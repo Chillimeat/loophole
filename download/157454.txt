@@ -1,0 +1,123 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Moderate: patch security and bug fix update
+Advisory ID:       RHSA-2020:1852-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:1852
+Issue date:        2020-04-28
+CVE Names:         CVE-2019-13636
+====================================================================
+1. Summary:
+
+An update for patch is now available for Red Hat Enterprise Linux 8.
+
+Red Hat Product Security has rated this update as having a security impact
+of Moderate. A Common Vulnerability Scoring System (CVSS) base score, which
+gives a detailed severity rating, is available for each vulnerability from
+the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Enterprise Linux BaseOS (v. 8) - aarch64, ppc64le, s390x, x86_64
+
+3. Description:
+
+The patch program applies diff files to originals. The diff command is used
+to compare an original to a changed file. Diff lists the changes made to
+the file. A person who has the original file can then use the patch command
+with the diff file to add the changes to their original file (patching the
+file).
+
+Security Fix(es):
+
+* patch: the following of symlinks in inp.c and util.c is mishandled in
+cases other than input files (CVE-2019-13636)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+Additional Changes:
+
+For detailed information on changes in this release, see the Red Hat
+Enterprise Linux 8.2 Release Notes linked from the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1732781 - CVE-2019-13636 patch: the following of symlinks in inp.c and util.c is mishandled in cases other than input files
+
+6. Package List:
+
+Red Hat Enterprise Linux BaseOS (v. 8):
+
+Source:
+patch-2.7.6-11.el8.src.rpm
+
+aarch64:
+patch-2.7.6-11.el8.aarch64.rpm
+patch-debuginfo-2.7.6-11.el8.aarch64.rpm
+patch-debugsource-2.7.6-11.el8.aarch64.rpm
+
+ppc64le:
+patch-2.7.6-11.el8.ppc64le.rpm
+patch-debuginfo-2.7.6-11.el8.ppc64le.rpm
+patch-debugsource-2.7.6-11.el8.ppc64le.rpm
+
+s390x:
+patch-2.7.6-11.el8.s390x.rpm
+patch-debuginfo-2.7.6-11.el8.s390x.rpm
+patch-debugsource-2.7.6-11.el8.s390x.rpm
+
+x86_64:
+patch-2.7.6-11.el8.x86_64.rpm
+patch-debuginfo-2.7.6-11.el8.x86_64.rpm
+patch-debugsource-2.7.6-11.el8.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2019-13636
+https://access.redhat.com/security/updates/classification/#moderate
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/8.2_release_notes/index
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXqhWW9zjgjWX9erEAQgxhg/9Er8V2/Av4iQkAuoiuIha4kNSbN13hDV/
+kL3Vx48T5euyF3kEKHssDZ6iSMmZWnEbAaVybmRSV5rslg3hMBAxwymy6vSxBBDB
+0T4e4W8pMOGV0xS1m7EZ86Elpw3nGi1y0012Jz+BN8c0uJibZqoMbmeifca3AqF8
+TgZDzLmbjps+QZvvjl3wrLHKqAz4VePXAv99eCZx92SrtQZLijxxsn82poaON78K
+DL3bXHEN+ktD3GogZjHXwsGYsvFw96o7R59u3xvxePbCL28aluyfb0cuIl7GvJsB
+JHxBFPE2qDUNbTVujt8vs4OZ3DGoxLGq5fhhdJVq0NR1WAgQGu2pina74EuG1Fr3
+gepL2JY2mjxxUYdCauIgo8yMomqvMYQuL8zgF7SDbYbulXzx37nQiMT3HmucFveD
+p25NhtrWo5xvS1YzqBmxhVqHQh/P3LoB/3m3avmbg0DjLtR7UIa+0rnxPyes9dPw
+FktI5DjswowNHwioVUkkJjMBops28XIs73alaWhmdm0+zRecDxLDz4PNad/gBNwm
+LwIUeHHwd8yBHCrFHeCGoKx55yv9dDtyQMqqdkEsutP1cimTbYEFdHkUkgYDQ65R
+kPMW5L8BzK3IKylWTCuvKIpGg6MjrOWsmn6t0XB98FDgAQrI1cthdAfk0Pqh1KNI
+N2hAKZxMuHs=Njwb
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

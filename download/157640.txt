@@ -1,0 +1,171 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Important: Red Hat JBoss Enterprise Application Platform 7.2.8 security update
+Advisory ID:       RHSA-2020:2061-01
+Product:           Red Hat JBoss Enterprise Application Platform
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:2061
+Issue date:        2020-05-11
+CVE Names:         CVE-2019-10172 CVE-2019-12423 CVE-2019-17573
+                   CVE-2020-1719 CVE-2020-1729 CVE-2020-1732
+                   CVE-2020-1745 CVE-2020-1757 CVE-2020-7226
+                   CVE-2020-10705 CVE-2020-10719
+====================================================================
+1. Summary:
+
+An update is now available for Red Hat JBoss Enterprise Application
+Platform 7.2.
+
+Red Hat Product Security has rated this update as having a security impact
+of Important. A Common Vulnerability Scoring System (CVSS) base score,
+which gives a detailed severity rating, is available for each vulnerability
+from the CVE link(s) in the References section.
+
+2. Description:
+
+This release of Red Hat JBoss Enterprise Application Platform 7.2.8 serves
+as a replacement for Red Hat JBoss Enterprise Application Platform 7.2.7,
+and includes bug fixes and enhancements. See the Red Hat JBoss Enterprise
+Application Platform 7.2.8 Release Notes for information about the most
+significant bug fixes and enhancements included in this release.
+
+Security Fix(es):
+
+* cxf: reflected XSS in the services listing page (CVE-2019-17573)
+
+* smallrye-config: SmallRye: SecuritySupport class is incorrectly public
+and contains a static method to access the current threads context class
+loader (CVE-2020-1729)
+
+* jackson-databind: XML external entity similar to CVE-2016-3720
+(CVE-2019-10172)
+
+* wildfly: Soteria: security identity corruption across concurrent threads
+(CVE-2020-1732)
+
+* undertow: AJP File Read/Inclusion Vulnerability (CVE-2020-1745)
+
+* cryptacular: excessive memory allocation during a decode operation
+(CVE-2020-7226)
+
+* cxf-core: cxf: OpenId Connect token service does not properly validate
+the clientId (CVE-2019-12423)
+
+* undertow: servletPath in normalized incorrectly leading to dangerous
+application mapping which could result in security bypass (CVE-2020-1757)
+
+* wildfly: EJBContext principal is not popped back after invoking another
+EJB using a different Security Domain (CVE-2020-1719)
+
+* undertow: invalid HTTP request with large chunk size (CVE-2020-10719)
+
+* undertow: Memory exhaustion issue in HttpReadListener via "Expect:
+100-continue" header (CVE-2020-10705)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, and other related information, see the CVE page(s) listed in the
+References section.
+
+3. Solution:
+
+Before applying this update, back up your existing Red Hat JBoss Enterprise
+Application Platform installation and deployed applications.
+
+The References section of this erratum contains a download link (you must
+log in to download the update).
+
+The JBoss server process must be restarted for the update to take effect.
+
+4. Bugs fixed (https://bugzilla.redhat.com/):
+
+1715075 - CVE-2019-10172 jackson-mapper-asl: XML external entity similar to CVE-2016-3720
+1752770 - CVE-2020-1757 undertow: servletPath is normalized incorrectly leading to dangerous application mapping which could result in security bypass
+1796617 - CVE-2020-1719 Wildfly: EJBContext principal is not popped back after invoking another EJB using a different Security Domain
+1797006 - CVE-2019-12423 cxf: OpenId Connect token service does not properly validate the clientId
+1797011 - CVE-2019-17573 cxf: reflected XSS in the services listing page
+1801380 - CVE-2020-7226 cryptacular: excessive memory allocation during a decode operation
+1801726 - CVE-2020-1732 Soteria: security identity corruption across concurrent threads
+1802444 - CVE-2020-1729 SmallRye: SecuritySupport class is incorrectly public and contains a static method to access the current threads context class loader
+1803241 - CVE-2020-10705 undertow: Memory exhaustion issue in HttpReadListener via "Expect: 100-continue" header
+1807305 - CVE-2020-1745 undertow: AJP File Read/Inclusion Vulnerability
+1828459 - CVE-2020-10719 undertow: invalid HTTP request with large chunk size
+
+5. JIRA issues fixed (https://issues.jboss.org/):
+
+JBEAP-18071 - [GSS](7.2.z) Upgrade RESTEasy from 3.6.1.SP7 to 3.6.1.SP8
+JBEAP-18267 - [GSS] (7.2.z) Upgrade Undertow from 2.0.28.SP1-redhat-00001 to 2.0.30.SP1-redhat-00001
+JBEAP-18278 - [GSS](7.2.z) Upgrade JBoss JSF API from 2.3.5.SP2-redhat-00001 to 2.3.5.SP2-redhat-00003
+JBEAP-18423 - [GSS](7.2.z) Upgrade JSF based on Mojarra 2.3.5.SP3-redhat-00005 to 2.3.5.SP3-redhat-00008
+JBEAP-18438 - (7.2.z) Upgrade jboss-ejb-client from 4.0.28.Final to 4.0.31.Final
+JBEAP-18503 - (7.2.z) Upgrade WildFly Naming Client from 1.0.10.Final to 1.0.12.Final
+JBEAP-18506 - [GSS](7.2.z) Upgrade HAL from 3.0.20.Final to 3.0.21.Final
+JBEAP-18536 - [GSS](7.2.z) Upgrade Bouncycastle from 1.60.0-redhat-00001 to 1.60.0-redhat-00002
+JBEAP-18595 - [GSS](7.2.z) Upgrade JBoss Modules from 1.8.8 to 1.8.9
+JBEAP-18616 - [Runtimes] (7.2.z) Update components in line with EAP 7.3 stream
+JBEAP-18628 - [Runtimes] (7.2.x) Upgrade EAP components to latest Runtimes supported version
+JBEAP-18631 - [Runtimes] (7.2.x) WFCORE - Upgrade components to latest versions from EAP 7.3
+JBEAP-18639 - [Runtimes] (7.2.x) Upgrade slf4j-jboss-logmanager from 1.0.3.GA.redhat-2 to 1.0.4.GA.redhat-00001
+JBEAP-18646 - [GSS](7.2.z) Upgrade Artemis from 2.9.0.redhat-00009 to 2.9.0.redhat-00010
+JBEAP-18652 - (7.2.z) Upgrade Apache CXF from 3.2.11.redhat-00001 to 3.2.12.redhat-00001
+JBEAP-18664 - [GSS](7.2.z) Upgrade javax.el-impl from 3.0.1.b08-redhat-00003 to 3.0.1.b08-redhat-00004
+JBEAP-18724 - (7.2.z) Upgrade Soteria to 1.0.0-redhat-00002
+JBEAP-18729 - [GSS](7.2.z) Upgrade wildfly-transaction-client from 1.1.9.Final-redhat-00001 to 1.1.10.Final-redhat-00001
+JBEAP-18787 - (7.2.z) Upgrade wss4j from 2.2.2.redhat-00002 to 2.2.5.redhat-00001
+JBEAP-18789 - (7.2.z) Upgrade cryptacular from 1.2.0.redhat-1 to 1.2.4.redhat-00001
+JBEAP-18817 - (7.2.z) Upgrade PicketBox from 5.0.3.Final-redhat-00005 to 5.0.3.Final-redhat-00006
+JBEAP-18827 - [GSS](7.2.z) Upgrade JBoss Remoting from 5.0.17-redhat-00001 to 5.0.18-redhat-00001
+JBEAP-18835 - [GSS](7.2.z) Upgrade Remoting JMX from 3.0.3 to 3.0.4
+JBEAP-18931 - [GSS](7.2.z) Upgrade WildFly Elytron from 1.6.5.Final-redhat-00001 to 1.6.6.Final-redhat-00001
+JBEAP-18988 - (7.2.z) Upgrade jasypt from 1.9.2 to 1.9.3
+JBEAP-18989 - (7.2.z) Upgrade opensaml from 3.3.0.redhat-1 to 3.3.1-redhat-00002
+JBEAP-19233 - (7.2.z) Upgrade undertow from 2.0.30.SP1-redhat-00001 to 2.0.30.SP2-redhat-00001
+JBEAP-19234 - (7.2.z) Upgrade WildFly Core from 6.0.26.Final-redhat-00001 to 6.0.27.Final-redhat-00001
+
+6. References:
+
+https://access.redhat.com/security/cve/CVE-2019-10172
+https://access.redhat.com/security/cve/CVE-2019-12423
+https://access.redhat.com/security/cve/CVE-2019-17573
+https://access.redhat.com/security/cve/CVE-2020-1719
+https://access.redhat.com/security/cve/CVE-2020-1729
+https://access.redhat.com/security/cve/CVE-2020-1732
+https://access.redhat.com/security/cve/CVE-2020-1745
+https://access.redhat.com/security/cve/CVE-2020-1757
+https://access.redhat.com/security/cve/CVE-2020-7226
+https://access.redhat.com/security/cve/CVE-2020-10705
+https://access.redhat.com/security/cve/CVE-2020-10719
+https://access.redhat.com/security/updates/classification/#important
+https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?product=appplatform&downloadType=securityPatches&version=7.2
+https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.2/
+https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.2/html-single/installation_guide/
+
+7. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXrmzetzjgjWX9erEAQjVVQ/+JPGJTnun1CO16ordpN+/Nk0Q6Mzt6Hp/
++pUWAd3afaKMqLOTN1CpN9YZKzqfB2dT324L04r4opd4c66TJHg9+yfHk9sKrqVU
+WIYoSuVevpXOA3U0qPxlvmqP4fy0TnJT/z9g0t2W9fzKYS/Ejwzb5BPO7Ote60xx
+wYsyWsQcU75p1/PbOttxBswXv1G1C6c8F8KTvYraCAnaOcvMSpfDkLMKbVtLn7DV
+OQ5C0xRgXNJja3KKU3I5okRxBgpJ4rqP2QNsDKyFqjbXx1DNzGfwG8Lwe7zZj33A
+XN6sfkz1xoyMIasUjcpC8+eUMnbHj8AlqyWoBX6+6oVVXO5X4f8nmZUZp6Jddp16
+8ClUtQ+p601GJgwV1/OV/lyRba+Ku05j+PwhnbtJepvoQWsk0dEAisdwaJbSAhAS
+SXtg4SiiCwoRTJfaTsHjqj7OCRSyVcxPbPl8U+SRjM46eFcpIWxy+g5KBaw2eXWZ
+kgpgIS4iERjnpe42xusmNBS6lZ1IP9KLUBbPXuLKyx27ctcqNWVjyAo9UKkutM8W
+QJYosu33LHA0qkiFP9SB7ZudZq/wEzlNHSEj5yTDqMOagvtjmbgovGxiwcvpKREw
+kuBmKwy3Lu0gsdMBZcZndCKqlhm3PV2ltK+1FB2tW1AK97hwYbOGkPO4MeSDvXlO
+lk0tZrG2jyg=5UKn
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

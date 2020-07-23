@@ -1,0 +1,129 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Important: kernel-rt security and bug fix update
+Advisory ID:       RHSA-2020:2242-01
+Product:           Red Hat Enterprise MRG for RHEL-6
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:2242
+Issue date:        2020-05-20
+CVE Names:         CVE-2017-18595 CVE-2019-19768 CVE-2020-10711
+====================================================================
+1. Summary:
+
+An update for kernel-rt is now available for Red Hat Enterprise MRG 2.
+
+Red Hat Product Security has rated this update as having a security impact
+of Important. A Common Vulnerability Scoring System (CVSS) base score,
+which gives a detailed severity rating, is available for each vulnerability
+from the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat MRG Realtime for RHEL 6 Server v.2 - noarch, x86_64
+
+3. Description:
+
+The kernel-rt packages provide the Real Time Linux Kernel, which enables
+fine-tuning for systems with extremely high determinism requirements.
+
+Security Fix(es):
+
+* kernel: double free may be caused by the function allocate_trace_buffer
+in the file kernel/trace/trace.c (CVE-2017-18595)
+
+* kernel: use-after-free in __blk_add_trace in kernel/trace/blktrace.c
+(CVE-2019-19768)
+
+* Kernel: NetLabel: null pointer dereference while receiving CIPSO packet
+with null category may cause kernel panic (CVE-2020-10711)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+Bug Fix(es):
+
+* update the MRG 2.5.z 3.10 realtime-kernel sources (BZ#1823371)
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+The system must be rebooted for this update to take effect.
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1758671 - CVE-2017-18595 kernel: double free may be caused by the function allocate_trace_buffer in the file kernel/trace/trace.c
+1786164 - CVE-2019-19768 kernel: use-after-free in __blk_add_trace in kernel/trace/blktrace.c
+1825116 - CVE-2020-10711 Kernel: NetLabel: null pointer dereference while receiving CIPSO packet with null category may cause kernel panic
+
+6. Package List:
+
+Red Hat MRG Realtime for RHEL 6 Server v.2:
+
+Source:
+kernel-rt-3.10.0-693.67.1.rt56.665.el6rt.src.rpm
+
+noarch:
+kernel-rt-doc-3.10.0-693.67.1.rt56.665.el6rt.noarch.rpm
+kernel-rt-firmware-3.10.0-693.67.1.rt56.665.el6rt.noarch.rpm
+
+x86_64:
+kernel-rt-3.10.0-693.67.1.rt56.665.el6rt.x86_64.rpm
+kernel-rt-debug-3.10.0-693.67.1.rt56.665.el6rt.x86_64.rpm
+kernel-rt-debug-debuginfo-3.10.0-693.67.1.rt56.665.el6rt.x86_64.rpm
+kernel-rt-debug-devel-3.10.0-693.67.1.rt56.665.el6rt.x86_64.rpm
+kernel-rt-debuginfo-3.10.0-693.67.1.rt56.665.el6rt.x86_64.rpm
+kernel-rt-debuginfo-common-x86_64-3.10.0-693.67.1.rt56.665.el6rt.x86_64.rpm
+kernel-rt-devel-3.10.0-693.67.1.rt56.665.el6rt.x86_64.rpm
+kernel-rt-trace-3.10.0-693.67.1.rt56.665.el6rt.x86_64.rpm
+kernel-rt-trace-debuginfo-3.10.0-693.67.1.rt56.665.el6rt.x86_64.rpm
+kernel-rt-trace-devel-3.10.0-693.67.1.rt56.665.el6rt.x86_64.rpm
+kernel-rt-vanilla-3.10.0-693.67.1.rt56.665.el6rt.x86_64.rpm
+kernel-rt-vanilla-debuginfo-3.10.0-693.67.1.rt56.665.el6rt.x86_64.rpm
+kernel-rt-vanilla-devel-3.10.0-693.67.1.rt56.665.el6rt.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2017-18595
+https://access.redhat.com/security/cve/CVE-2019-19768
+https://access.redhat.com/security/cve/CVE-2020-10711
+https://access.redhat.com/security/updates/classification/#important
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXsVqgtzjgjWX9erEAQh5BA/8DN08cbace9L36AhZIM8AWC8ur15LJlMP
+Wnrhp5EC27PGN3y5Sx3lGPg3e/CKm7eVtGkd32aAWK7xcbzoURq+Z5GEWs32AvGD
+GU2x0FNFnunkac/xvfKnn0AT1PNWplsBx1fXfKW2P1fc0hQ9mP6gP9riX9e0kpml
+NbqaGONo9d/9+7L2L6vB6qZAJ9FaN9o2bf0FpUTK2gfHikPCk0H1VzaUqSlZ2fUE
+6K/pHqRI1ekRhMzn8PynupX5k4+GkBPqV9ilIU3Gpj6P8aqm23vNwt6+OWVsfdFb
+dcbUdMXwLscIzfs/PpPFaeCRYA2Ac/8Z2bueYOTO/1w69+3R7f+MaJcMLIyfY1LO
+xeWEIEbmdx3tlwBG5ZWRSxJktiX3lYAf5nigjHK9YVsERn4tnJ72k6dVC9px9dSq
+5FtMNzHVWiWWEbX8uC6hDR95JpZgzo33TwoC+R+zSkVVgWgtl6kLH45lHSrMGfiH
+7XiuLnuXoahKAf75mCWo96L6+nnQdo4ecTqqEiA1Gq7xFvGAoP4L42QyAu/dpruw
+rFZmucBN6EOgawqrtkGb+EjmOM7SVn+DN1CBdlT3LulOUX+sagOpDFuX8DVHrEiG
+4R0GsPU3eGPYfJqR3XUjaDw7lQaLicMCiIl/cTg4X4QwgGnv+jVhpij5AX32XWy9
+/4i3Wz/rGhw=RFSy
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

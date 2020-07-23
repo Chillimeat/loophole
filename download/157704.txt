@@ -1,0 +1,148 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+=====================================================================
+                   Red Hat Security Advisory
+
+Synopsis:          Important: .NET Core on Red Hat Enterprise Linux security and bug fix update
+Advisory ID:       RHSA-2020:2146-01
+Product:           .NET Core on Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:2146
+Issue date:        2020-05-13
+CVE Names:         CVE-2020-1108 
+=====================================================================
+
+1. Summary:
+
+An update for rh-dotnet21-dotnet is now available for .NET Core on Red Hat
+Enterprise Linux 7.
+
+Red Hat Product Security has rated this update as having a security impact
+of Important. A Common Vulnerability Scoring System (CVSS) base score,
+which gives a detailed severity rating, is available for each vulnerability
+from the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+.NET Core on Red Hat Enterprise Linux ComputeNode (v. 7) - x86_64
+.NET Core on Red Hat Enterprise Linux Server (v. 7) - x86_64
+.NET Core on Red Hat Enterprise Linux Workstation (v. 7) - x86_64
+
+3. Description:
+
+.NET Core is a managed-software framework. It implements a subset of the
+.NET framework APIs and several new APIs, and it includes a CLR
+implementation.
+
+New versions of .NET Core that address a security vulnerability are now
+available. The updated version is .NET Core Runtime 2.1.18 and SDK 2.1.514.
+
+Security Fix(es):
+
+* dotnet: Denial of service via untrusted input (CVE-2020-1108)
+
+Default inclusions for applications built with .NET Core have been updated
+to reference the newest versions and their security fixes.
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1827643 - CVE-2020-1108 dotnet: Denial of service via untrusted input
+
+6. Package List:
+
+.NET Core on Red Hat Enterprise Linux ComputeNode (v. 7):
+
+Source:
+rh-dotnet21-2.1-17.el7.src.rpm
+rh-dotnet21-dotnet-2.1.514-2.el7.src.rpm
+
+x86_64:
+rh-dotnet21-2.1-17.el7.x86_64.rpm
+rh-dotnet21-dotnet-2.1.514-2.el7.x86_64.rpm
+rh-dotnet21-dotnet-debuginfo-2.1.514-2.el7.x86_64.rpm
+rh-dotnet21-dotnet-host-2.1.18-2.el7.x86_64.rpm
+rh-dotnet21-dotnet-runtime-2.1-2.1.18-2.el7.x86_64.rpm
+rh-dotnet21-dotnet-sdk-2.1-2.1.514-2.el7.x86_64.rpm
+rh-dotnet21-dotnet-sdk-2.1.5xx-2.1.514-2.el7.x86_64.rpm
+rh-dotnet21-runtime-2.1-17.el7.x86_64.rpm
+
+.NET Core on Red Hat Enterprise Linux Server (v. 7):
+
+Source:
+rh-dotnet21-2.1-17.el7.src.rpm
+rh-dotnet21-dotnet-2.1.514-2.el7.src.rpm
+
+x86_64:
+rh-dotnet21-2.1-17.el7.x86_64.rpm
+rh-dotnet21-dotnet-2.1.514-2.el7.x86_64.rpm
+rh-dotnet21-dotnet-debuginfo-2.1.514-2.el7.x86_64.rpm
+rh-dotnet21-dotnet-host-2.1.18-2.el7.x86_64.rpm
+rh-dotnet21-dotnet-runtime-2.1-2.1.18-2.el7.x86_64.rpm
+rh-dotnet21-dotnet-sdk-2.1-2.1.514-2.el7.x86_64.rpm
+rh-dotnet21-dotnet-sdk-2.1.5xx-2.1.514-2.el7.x86_64.rpm
+rh-dotnet21-runtime-2.1-17.el7.x86_64.rpm
+
+.NET Core on Red Hat Enterprise Linux Workstation (v. 7):
+
+Source:
+rh-dotnet21-2.1-17.el7.src.rpm
+rh-dotnet21-dotnet-2.1.514-2.el7.src.rpm
+
+x86_64:
+rh-dotnet21-2.1-17.el7.x86_64.rpm
+rh-dotnet21-dotnet-2.1.514-2.el7.x86_64.rpm
+rh-dotnet21-dotnet-debuginfo-2.1.514-2.el7.x86_64.rpm
+rh-dotnet21-dotnet-host-2.1.18-2.el7.x86_64.rpm
+rh-dotnet21-dotnet-runtime-2.1-2.1.18-2.el7.x86_64.rpm
+rh-dotnet21-dotnet-sdk-2.1-2.1.514-2.el7.x86_64.rpm
+rh-dotnet21-dotnet-sdk-2.1.5xx-2.1.514-2.el7.x86_64.rpm
+rh-dotnet21-runtime-2.1-17.el7.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2020-1108
+https://access.redhat.com/security/updates/classification/#important
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXrwqJdzjgjWX9erEAQhDGw/+O4nHTj49NGV8Jgyv+A+4wZZFYi/nCY9Z
+2WWyvXNIHzdY7v6s2+Mch5IQx4XxW/gxQHoZvyQ425OjvzutgDTLWt93MB6XYuz7
+tLUXfOgRE9StEKh8TIHJailb4ObKfcj5j/Zl8Y721wwBPZUfGXgxj5IxX5bf4qlV
+U4P9HlFCNx9h1wTO8Bt/YP60Hdu/D6Pg+Lbhw06sD1nT+quDGBzYYzmc1J4X+5eM
+Cik9z7/6BCNgD62hiVC/4RZ89FrwIaaSXsEDBhJVvvmqy1tw8FQsBhF6rsU9yjY7
+3jva6sfv88tHPwB5YsMjoEy07GedocoOjfBQEAr7R93/3iq3GyTvS7pE8eACUJmE
+bsolZJdHi1IQAKwDzYpjBbse70ys3L8EaJhIna+GN9Ng9FvIzzIlHL8KLuz4sbG5
+IJ1ZmeE48nFKkIPmlBPlJZ+gwFnhFVrkDGInQtiI9OPZq6fXi7tfrCSHx1Rt5HBZ
+55MKyL3Dxw2WILfMX1ceA6HoDyHYvjeTWLdW1o8P71QVmWhWrQjEUEcJDHbC6v/N
+rmSMDUaAnsCjng5mNFM2a6BwrUKYp03ZmjWTPthDxV5DWGjOCqB2t0KhZoyfkvD/
+XJemjU1Sjw8FPfvlfAdIITnSDqmasRlgQBfbHdnRbJUP5vbbZjxEnlNb5WEmBHX1
+/fB3INjR6aw=
+=jAjh
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

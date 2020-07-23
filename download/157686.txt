@@ -1,0 +1,112 @@
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Gentoo Linux Security Advisory                           GLSA 202005-03
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+                                           https://security.gentoo.org/
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ Severity: Normal
+    Title: Mozilla Thunderbird: Multiple vulnerabilities
+     Date: May 12, 2020
+     Bugs: #721324
+       ID: 202005-03
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Synopsis
+========
+
+Multiple vulnerabilities have been found in Mozilla Thunderbird, the
+worst of which could result in the arbitrary execution of code.
+
+Background
+==========
+
+Mozilla Thunderbird is a popular open-source email client from the
+Mozilla project.
+
+Affected packages
+=================
+
+    -------------------------------------------------------------------
+     Package              /     Vulnerable     /            Unaffected
+    -------------------------------------------------------------------
+  1  mail-client/thunderbird      < 68.8.0                  >= 68.8.0
+  2  mail-client/thunderbird-bin
+                                  < 68.8.0                  >= 68.8.0
+    -------------------------------------------------------------------
+     2 affected packages
+
+Description
+===========
+
+Multiple vulnerabilities have been discovered in Mozilla Thunderbird.
+Please review the CVE identifiers referenced below for details.
+
+Impact
+======
+
+A remote attacker may be able to execute arbitrary code, cause a Denial
+of Service condition or spoof sender email address.
+
+Workaround
+==========
+
+There is no known workaround at this time.
+
+Resolution
+==========
+
+All Mozilla Thunderbird users should upgrade to the latest version:
+
+  # emerge --sync
+  # emerge --ask --oneshot --verbose ">=mail-client/thunderbird-68.8.0"
+
+All Mozilla Thunderbird binary users should upgrade to the latest
+version:
+
+  # emerge --sync
+  # emerge --ask --oneshot -v ">=mail-client/thunderbird-bin-68.8.0"
+
+References
+==========
+
+[ 1 ] CVE-2020-12387
+      https://nvd.nist.gov/vuln/detail/CVE-2020-12387
+[ 2 ] CVE-2020-12392
+      https://nvd.nist.gov/vuln/detail/CVE-2020-12392
+[ 3 ] CVE-2020-12395
+      https://nvd.nist.gov/vuln/detail/CVE-2020-12395
+[ 4 ] CVE-2020-12397
+      https://nvd.nist.gov/vuln/detail/CVE-2020-12397
+[ 5 ] CVE-2020-6831
+      https://nvd.nist.gov/vuln/detail/CVE-2020-6831
+[ 6 ] MFSA-2020-18
+      https://www.mozilla.org/en-US/security/advisories/mfsa2020-18/
+
+Availability
+============
+
+This GLSA and any updates to it are available for viewing at
+the Gentoo Security Website:
+
+ https://security.gentoo.org/glsa/202005-03
+
+Concerns?
+=========
+
+Security is a primary focus of Gentoo Linux and ensuring the
+confidentiality and security of our users' machines is of utmost
+importance to us. Any security concerns should be addressed to
+security@gentoo.org or alternatively, you may file a bug at
+https://bugs.gentoo.org.
+
+License
+=======
+
+Copyright 2020 Gentoo Foundation, Inc; referenced text
+belongs to its owner(s).
+
+The contents of this document are licensed under the
+Creative Commons - Attribution / Share Alike license.
+
+https://creativecommons.org/licenses/by-sa/2.5

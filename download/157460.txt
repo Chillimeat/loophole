@@ -1,0 +1,318 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+====================================================================                   
+Red Hat Security Advisory
+
+Synopsis:          Moderate: container-tools:rhel8 security, bug fix, and enhancement update
+Advisory ID:       RHSA-2020:1650-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:1650
+Issue date:        2020-04-28
+CVE Names:         CVE-2019-19921 CVE-2020-1702 CVE-2020-1726
+====================================================================
+1. Summary:
+
+An update for the container-tools:rhel8 module is now available for Red Hat
+Enterprise Linux 8.
+
+Red Hat Product Security has rated this update as having a security impact
+of Moderate. A Common Vulnerability Scoring System (CVSS) base score, which
+gives a detailed severity rating, is available for each vulnerability from
+the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Enterprise Linux AppStream (v. 8) - aarch64, noarch, ppc64le, s390x, x86_64
+
+3. Description:
+
+The container-tools module contains tools for working with containers,
+notably podman, buildah, skopeo, and runc.
+
+Security Fix(es):
+
+* runc: volume mount race condition with shared mounts leads to information
+leak/integrity manipulation (CVE-2019-19921)
+
+* containers/image: Container images read entire image manifest into memory
+(CVE-2020-1702)
+
+* podman: incorrectly allows existing files in volumes to be overwritten by
+a container when it is created (CVE-2020-1726)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+Additional Changes:
+
+For detailed information on changes in this release, see the Red Hat
+Enterprise Linux 8.2 Release Notes linked from the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1703245 - [RFE] Add button to run terminal within the container
+1717357 - buildah images -f "dangling=true" is not working as expect
+1731107 - support podman ps filter regular expressions
+1732704 - udica should be able to update the generated policy based on AVC denial messages
+1732713 - Run container from cockpit-podman with memory limit doesn't work
+1748519 - avc: podman run --security-opt label=type:svirt_qemu_net_t
+1749999 - podman bash completion error
+1754744 - [8.2] Backport Podman's --env-host support to 8.1
+1754763 - [8.2] Podman search shows limited numbers of images
+1755119 - Read-only podman run errors when one of the volumes it by default mounts as tmpfs are also defined as VOLUME
+1756919 - Podman inspect does not parse the keys of the returned JSON
+1757693 - Rebase udica to 0.2.0
+1757845 - You have to remove that container to be able to reuse that name.: that name is already in use (due to exec user process caused "no such file or directory")
+1763454 - libslirp sends RST to app in response to arriving FIN when containerized socket is shutdown() with SHUT_WR
+1766774 - podman-1.6.2-1 rootless: Error: slirp4netns failed
+1768930 - backport json-file logging support to 1.4.2
+1769469 - Selinux won't allow SCTP inter pod communication
+1771990 - Varlink subcommand is missing for podman in rhel-8.2
+1774755 - syslog getting spammed with `{Created,Removed} slice libcontainer_*`
+1775307 - Concurrent 'podman pull/run' sometimes fails with "Error processing tar file(io: read/write on closed pipe)"
+1776112 - journald errors out with "write child: broken pipe"
+1779834 - [8.2] Deadlock when pulling an image is interrupted
+1783267 - Podman is not compiled with FIPS mode - container-tools-rhel8.-8.2.0
+1783268 - Skopeo is not compiled with FIPS mode - container-tools-rhel8-8.2.0
+1783270 - Buildah  is not compiled with FIPS mode - container-tools-rhel8-8.2.0
+1783272 - runc  is not compiled with FIPS mode - container-tools-rhel8-8.2.0
+1783274 - containernetworking-plugins is not compiled with FIPS mode - container-tools-rhel8-8.2.0
+1784267 - Remove quay.io from the default search list
+1784952 - Buildah needs to support FIPS Mode bind mount in RHEL8.2++ containers.
+1788539 - podman and podman-manpages needs merging
+1792796 - CVE-2020-1702 containers/image: Container images read entire image manifest into memory
+1793084 - "podman play kube" generates wrong UserCommand when creating pod, defaults to /bin/bash
+1793598 - podman commands failing and reporting "cannot chdir: Permission denied"
+1796107 - CVE-2019-19921 runc: volume mount race condition with shared mounts leads to information leak/integrity manipulation
+1801152 - CVE-2020-1726 podman: incorrectly allows existing files in volumes to be overwritten by a container when it is created
+1802907 - useradd and groupadd fail under rootless Buildah and podman
+1803496 - useradd and groupadd fail under rootless Buildah and podman [stream-container-tools-rhel8-rhel-8.2.0]
+1804849 - fuse-overlayfs segfault
+1805017 - fuse-overlayfs segfault [stream-container-tools-rhel8-rhel-8.2.0/fuse-overlayfs]
+1805212 - podman (1.6.4) rhel 8.1 no route to host from inside container
+1806901 - podman (1.6.4) rhel 8.1 no route to host from inside container [stream-container-tools-rhel8-rhel-8.2.0/podman]
+1808707 - [FJ8.2 Bug]: [REG]The "--group-add" option of "podman create" doesn't function. [stream-container-tools-rhel8-rhel-8.2.0/podman]
+1810053 - Proposed registries.conf for container-tools-rhel8-8.2.0
+1811514 - [container-tools:rhel8] Failed to start existing container
+1813295 - Skopeo doesn't handle HTTP 429 errors properly
+
+6. Package List:
+
+Red Hat Enterprise Linux AppStream (v. 8):
+
+Source:
+buildah-1.11.6-7.module+el8.2.0+5856+b8046c6d.src.rpm
+cockpit-podman-12-1.module+el8.2.0+5950+6d183a6a.src.rpm
+conmon-2.0.6-1.module+el8.2.0+5182+3136e5d4.src.rpm
+container-selinux-2.124.0-1.module+el8.2.0+5182+3136e5d4.src.rpm
+containernetworking-plugins-0.8.3-5.module+el8.2.0+5201+6b31f0d9.src.rpm
+criu-3.12-9.module+el8.2.0+5029+3ac48e7d.src.rpm
+fuse-overlayfs-0.7.2-5.module+el8.2.0+6060+9dbc027d.src.rpm
+podman-1.6.4-10.module+el8.2.0+6063+e761893a.src.rpm
+python-podman-api-1.2.0-0.2.gitd0a45fe.module+el8.2.0+5201+6b31f0d9.src.rpm
+runc-1.0.0-65.rc10.module+el8.2.0+5762+aaee29fb.src.rpm
+skopeo-0.1.40-10.module+el8.2.0+5955+6cd70ceb.src.rpm
+slirp4netns-0.4.2-3.git21fdece.module+el8.2.0+5658+9a15711d.src.rpm
+toolbox-0.0.7-1.module+el8.2.0+6096+9c3f08f3.src.rpm
+udica-0.2.1-2.module+el8.2.0+4896+8f613c81.src.rpm
+
+aarch64:
+buildah-1.11.6-7.module+el8.2.0+5856+b8046c6d.aarch64.rpm
+buildah-debuginfo-1.11.6-7.module+el8.2.0+5856+b8046c6d.aarch64.rpm
+buildah-debugsource-1.11.6-7.module+el8.2.0+5856+b8046c6d.aarch64.rpm
+buildah-tests-1.11.6-7.module+el8.2.0+5856+b8046c6d.aarch64.rpm
+buildah-tests-debuginfo-1.11.6-7.module+el8.2.0+5856+b8046c6d.aarch64.rpm
+conmon-2.0.6-1.module+el8.2.0+5182+3136e5d4.aarch64.rpm
+containernetworking-plugins-0.8.3-5.module+el8.2.0+5201+6b31f0d9.aarch64.rpm
+containernetworking-plugins-debuginfo-0.8.3-5.module+el8.2.0+5201+6b31f0d9.aarch64.rpm
+containernetworking-plugins-debugsource-0.8.3-5.module+el8.2.0+5201+6b31f0d9.aarch64.rpm
+containers-common-0.1.40-10.module+el8.2.0+5955+6cd70ceb.aarch64.rpm
+crit-3.12-9.module+el8.2.0+5029+3ac48e7d.aarch64.rpm
+criu-3.12-9.module+el8.2.0+5029+3ac48e7d.aarch64.rpm
+criu-debuginfo-3.12-9.module+el8.2.0+5029+3ac48e7d.aarch64.rpm
+criu-debugsource-3.12-9.module+el8.2.0+5029+3ac48e7d.aarch64.rpm
+fuse-overlayfs-0.7.2-5.module+el8.2.0+6060+9dbc027d.aarch64.rpm
+fuse-overlayfs-debuginfo-0.7.2-5.module+el8.2.0+6060+9dbc027d.aarch64.rpm
+fuse-overlayfs-debugsource-0.7.2-5.module+el8.2.0+6060+9dbc027d.aarch64.rpm
+podman-1.6.4-10.module+el8.2.0+6063+e761893a.aarch64.rpm
+podman-debuginfo-1.6.4-10.module+el8.2.0+6063+e761893a.aarch64.rpm
+podman-debugsource-1.6.4-10.module+el8.2.0+6063+e761893a.aarch64.rpm
+podman-remote-1.6.4-10.module+el8.2.0+6063+e761893a.aarch64.rpm
+podman-remote-debuginfo-1.6.4-10.module+el8.2.0+6063+e761893a.aarch64.rpm
+podman-tests-1.6.4-10.module+el8.2.0+6063+e761893a.aarch64.rpm
+python3-criu-3.12-9.module+el8.2.0+5029+3ac48e7d.aarch64.rpm
+runc-1.0.0-65.rc10.module+el8.2.0+5762+aaee29fb.aarch64.rpm
+runc-debuginfo-1.0.0-65.rc10.module+el8.2.0+5762+aaee29fb.aarch64.rpm
+runc-debugsource-1.0.0-65.rc10.module+el8.2.0+5762+aaee29fb.aarch64.rpm
+skopeo-0.1.40-10.module+el8.2.0+5955+6cd70ceb.aarch64.rpm
+skopeo-debuginfo-0.1.40-10.module+el8.2.0+5955+6cd70ceb.aarch64.rpm
+skopeo-debugsource-0.1.40-10.module+el8.2.0+5955+6cd70ceb.aarch64.rpm
+skopeo-tests-0.1.40-10.module+el8.2.0+5955+6cd70ceb.aarch64.rpm
+slirp4netns-0.4.2-3.git21fdece.module+el8.2.0+5658+9a15711d.aarch64.rpm
+slirp4netns-debuginfo-0.4.2-3.git21fdece.module+el8.2.0+5658+9a15711d.aarch64.rpm
+slirp4netns-debugsource-0.4.2-3.git21fdece.module+el8.2.0+5658+9a15711d.aarch64.rpm
+
+noarch:
+cockpit-podman-12-1.module+el8.2.0+5950+6d183a6a.noarch.rpm
+container-selinux-2.124.0-1.module+el8.2.0+5182+3136e5d4.noarch.rpm
+podman-docker-1.6.4-10.module+el8.2.0+6063+e761893a.noarch.rpm
+python-podman-api-1.2.0-0.2.gitd0a45fe.module+el8.2.0+5201+6b31f0d9.noarch.rpm
+toolbox-0.0.7-1.module+el8.2.0+6096+9c3f08f3.noarch.rpm
+udica-0.2.1-2.module+el8.2.0+4896+8f613c81.noarch.rpm
+
+ppc64le:
+buildah-1.11.6-7.module+el8.2.0+5856+b8046c6d.ppc64le.rpm
+buildah-debuginfo-1.11.6-7.module+el8.2.0+5856+b8046c6d.ppc64le.rpm
+buildah-debugsource-1.11.6-7.module+el8.2.0+5856+b8046c6d.ppc64le.rpm
+buildah-tests-1.11.6-7.module+el8.2.0+5856+b8046c6d.ppc64le.rpm
+buildah-tests-debuginfo-1.11.6-7.module+el8.2.0+5856+b8046c6d.ppc64le.rpm
+conmon-2.0.6-1.module+el8.2.0+5182+3136e5d4.ppc64le.rpm
+containernetworking-plugins-0.8.3-5.module+el8.2.0+5201+6b31f0d9.ppc64le.rpm
+containernetworking-plugins-debuginfo-0.8.3-5.module+el8.2.0+5201+6b31f0d9.ppc64le.rpm
+containernetworking-plugins-debugsource-0.8.3-5.module+el8.2.0+5201+6b31f0d9.ppc64le.rpm
+containers-common-0.1.40-10.module+el8.2.0+5955+6cd70ceb.ppc64le.rpm
+crit-3.12-9.module+el8.2.0+5029+3ac48e7d.ppc64le.rpm
+criu-3.12-9.module+el8.2.0+5029+3ac48e7d.ppc64le.rpm
+criu-debuginfo-3.12-9.module+el8.2.0+5029+3ac48e7d.ppc64le.rpm
+criu-debugsource-3.12-9.module+el8.2.0+5029+3ac48e7d.ppc64le.rpm
+fuse-overlayfs-0.7.2-5.module+el8.2.0+6060+9dbc027d.ppc64le.rpm
+fuse-overlayfs-debuginfo-0.7.2-5.module+el8.2.0+6060+9dbc027d.ppc64le.rpm
+fuse-overlayfs-debugsource-0.7.2-5.module+el8.2.0+6060+9dbc027d.ppc64le.rpm
+podman-1.6.4-10.module+el8.2.0+6063+e761893a.ppc64le.rpm
+podman-debuginfo-1.6.4-10.module+el8.2.0+6063+e761893a.ppc64le.rpm
+podman-debugsource-1.6.4-10.module+el8.2.0+6063+e761893a.ppc64le.rpm
+podman-remote-1.6.4-10.module+el8.2.0+6063+e761893a.ppc64le.rpm
+podman-remote-debuginfo-1.6.4-10.module+el8.2.0+6063+e761893a.ppc64le.rpm
+podman-tests-1.6.4-10.module+el8.2.0+6063+e761893a.ppc64le.rpm
+python3-criu-3.12-9.module+el8.2.0+5029+3ac48e7d.ppc64le.rpm
+runc-1.0.0-65.rc10.module+el8.2.0+5762+aaee29fb.ppc64le.rpm
+runc-debuginfo-1.0.0-65.rc10.module+el8.2.0+5762+aaee29fb.ppc64le.rpm
+runc-debugsource-1.0.0-65.rc10.module+el8.2.0+5762+aaee29fb.ppc64le.rpm
+skopeo-0.1.40-10.module+el8.2.0+5955+6cd70ceb.ppc64le.rpm
+skopeo-debuginfo-0.1.40-10.module+el8.2.0+5955+6cd70ceb.ppc64le.rpm
+skopeo-debugsource-0.1.40-10.module+el8.2.0+5955+6cd70ceb.ppc64le.rpm
+skopeo-tests-0.1.40-10.module+el8.2.0+5955+6cd70ceb.ppc64le.rpm
+slirp4netns-0.4.2-3.git21fdece.module+el8.2.0+5658+9a15711d.ppc64le.rpm
+slirp4netns-debuginfo-0.4.2-3.git21fdece.module+el8.2.0+5658+9a15711d.ppc64le.rpm
+slirp4netns-debugsource-0.4.2-3.git21fdece.module+el8.2.0+5658+9a15711d.ppc64le.rpm
+
+s390x:
+buildah-1.11.6-7.module+el8.2.0+5856+b8046c6d.s390x.rpm
+buildah-debuginfo-1.11.6-7.module+el8.2.0+5856+b8046c6d.s390x.rpm
+buildah-debugsource-1.11.6-7.module+el8.2.0+5856+b8046c6d.s390x.rpm
+buildah-tests-1.11.6-7.module+el8.2.0+5856+b8046c6d.s390x.rpm
+buildah-tests-debuginfo-1.11.6-7.module+el8.2.0+5856+b8046c6d.s390x.rpm
+conmon-2.0.6-1.module+el8.2.0+5182+3136e5d4.s390x.rpm
+containernetworking-plugins-0.8.3-5.module+el8.2.0+5201+6b31f0d9.s390x.rpm
+containernetworking-plugins-debuginfo-0.8.3-5.module+el8.2.0+5201+6b31f0d9.s390x.rpm
+containernetworking-plugins-debugsource-0.8.3-5.module+el8.2.0+5201+6b31f0d9.s390x.rpm
+containers-common-0.1.40-10.module+el8.2.0+5955+6cd70ceb.s390x.rpm
+crit-3.12-9.module+el8.2.0+5029+3ac48e7d.s390x.rpm
+criu-3.12-9.module+el8.2.0+5029+3ac48e7d.s390x.rpm
+criu-debuginfo-3.12-9.module+el8.2.0+5029+3ac48e7d.s390x.rpm
+criu-debugsource-3.12-9.module+el8.2.0+5029+3ac48e7d.s390x.rpm
+fuse-overlayfs-0.7.2-5.module+el8.2.0+6060+9dbc027d.s390x.rpm
+fuse-overlayfs-debuginfo-0.7.2-5.module+el8.2.0+6060+9dbc027d.s390x.rpm
+fuse-overlayfs-debugsource-0.7.2-5.module+el8.2.0+6060+9dbc027d.s390x.rpm
+podman-1.6.4-10.module+el8.2.0+6063+e761893a.s390x.rpm
+podman-debuginfo-1.6.4-10.module+el8.2.0+6063+e761893a.s390x.rpm
+podman-debugsource-1.6.4-10.module+el8.2.0+6063+e761893a.s390x.rpm
+podman-remote-1.6.4-10.module+el8.2.0+6063+e761893a.s390x.rpm
+podman-remote-debuginfo-1.6.4-10.module+el8.2.0+6063+e761893a.s390x.rpm
+podman-tests-1.6.4-10.module+el8.2.0+6063+e761893a.s390x.rpm
+python3-criu-3.12-9.module+el8.2.0+5029+3ac48e7d.s390x.rpm
+runc-1.0.0-65.rc10.module+el8.2.0+5762+aaee29fb.s390x.rpm
+runc-debuginfo-1.0.0-65.rc10.module+el8.2.0+5762+aaee29fb.s390x.rpm
+runc-debugsource-1.0.0-65.rc10.module+el8.2.0+5762+aaee29fb.s390x.rpm
+skopeo-0.1.40-10.module+el8.2.0+5955+6cd70ceb.s390x.rpm
+skopeo-debuginfo-0.1.40-10.module+el8.2.0+5955+6cd70ceb.s390x.rpm
+skopeo-debugsource-0.1.40-10.module+el8.2.0+5955+6cd70ceb.s390x.rpm
+skopeo-tests-0.1.40-10.module+el8.2.0+5955+6cd70ceb.s390x.rpm
+slirp4netns-0.4.2-3.git21fdece.module+el8.2.0+5658+9a15711d.s390x.rpm
+slirp4netns-debuginfo-0.4.2-3.git21fdece.module+el8.2.0+5658+9a15711d.s390x.rpm
+slirp4netns-debugsource-0.4.2-3.git21fdece.module+el8.2.0+5658+9a15711d.s390x.rpm
+
+x86_64:
+buildah-1.11.6-7.module+el8.2.0+5856+b8046c6d.x86_64.rpm
+buildah-debuginfo-1.11.6-7.module+el8.2.0+5856+b8046c6d.x86_64.rpm
+buildah-debugsource-1.11.6-7.module+el8.2.0+5856+b8046c6d.x86_64.rpm
+buildah-tests-1.11.6-7.module+el8.2.0+5856+b8046c6d.x86_64.rpm
+buildah-tests-debuginfo-1.11.6-7.module+el8.2.0+5856+b8046c6d.x86_64.rpm
+conmon-2.0.6-1.module+el8.2.0+5182+3136e5d4.x86_64.rpm
+containernetworking-plugins-0.8.3-5.module+el8.2.0+5201+6b31f0d9.x86_64.rpm
+containernetworking-plugins-debuginfo-0.8.3-5.module+el8.2.0+5201+6b31f0d9.x86_64.rpm
+containernetworking-plugins-debugsource-0.8.3-5.module+el8.2.0+5201+6b31f0d9.x86_64.rpm
+containers-common-0.1.40-10.module+el8.2.0+5955+6cd70ceb.x86_64.rpm
+crit-3.12-9.module+el8.2.0+5029+3ac48e7d.x86_64.rpm
+criu-3.12-9.module+el8.2.0+5029+3ac48e7d.x86_64.rpm
+criu-debuginfo-3.12-9.module+el8.2.0+5029+3ac48e7d.x86_64.rpm
+criu-debugsource-3.12-9.module+el8.2.0+5029+3ac48e7d.x86_64.rpm
+fuse-overlayfs-0.7.2-5.module+el8.2.0+6060+9dbc027d.x86_64.rpm
+fuse-overlayfs-debuginfo-0.7.2-5.module+el8.2.0+6060+9dbc027d.x86_64.rpm
+fuse-overlayfs-debugsource-0.7.2-5.module+el8.2.0+6060+9dbc027d.x86_64.rpm
+podman-1.6.4-10.module+el8.2.0+6063+e761893a.x86_64.rpm
+podman-debuginfo-1.6.4-10.module+el8.2.0+6063+e761893a.x86_64.rpm
+podman-debugsource-1.6.4-10.module+el8.2.0+6063+e761893a.x86_64.rpm
+podman-remote-1.6.4-10.module+el8.2.0+6063+e761893a.x86_64.rpm
+podman-remote-debuginfo-1.6.4-10.module+el8.2.0+6063+e761893a.x86_64.rpm
+podman-tests-1.6.4-10.module+el8.2.0+6063+e761893a.x86_64.rpm
+python3-criu-3.12-9.module+el8.2.0+5029+3ac48e7d.x86_64.rpm
+runc-1.0.0-65.rc10.module+el8.2.0+5762+aaee29fb.x86_64.rpm
+runc-debuginfo-1.0.0-65.rc10.module+el8.2.0+5762+aaee29fb.x86_64.rpm
+runc-debugsource-1.0.0-65.rc10.module+el8.2.0+5762+aaee29fb.x86_64.rpm
+skopeo-0.1.40-10.module+el8.2.0+5955+6cd70ceb.x86_64.rpm
+skopeo-debuginfo-0.1.40-10.module+el8.2.0+5955+6cd70ceb.x86_64.rpm
+skopeo-debugsource-0.1.40-10.module+el8.2.0+5955+6cd70ceb.x86_64.rpm
+skopeo-tests-0.1.40-10.module+el8.2.0+5955+6cd70ceb.x86_64.rpm
+slirp4netns-0.4.2-3.git21fdece.module+el8.2.0+5658+9a15711d.x86_64.rpm
+slirp4netns-debuginfo-0.4.2-3.git21fdece.module+el8.2.0+5658+9a15711d.x86_64.rpm
+slirp4netns-debugsource-0.4.2-3.git21fdece.module+el8.2.0+5658+9a15711d.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2019-19921
+https://access.redhat.com/security/cve/CVE-2020-1702
+https://access.redhat.com/security/cve/CVE-2020-1726
+https://access.redhat.com/security/updates/classification/#moderate
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/8.2_release_notes/index
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXqhV4NzjgjWX9erEAQicCw//aqK54Gmn0Tz+B62o51MN7eWI+Zc4IvPv
+THU1yyyiung2vaua+lxTENlB5YHAjLeN4Em38qxeMuyR1eSSMo7GqHFysUu87fzE
+gWPNicCavBhYV1YCVshWNfzlLvWvKsMWNQb+eiWNiu9Bn66RxzBf3Q9Pi0PapQEs
+BDgN4Y82bCtTrVoWXG6LXq7agj1eOBqIQaG9ARS8TRiH6ez/2RYk0ZtwKPQFmwb5
+j3w5YSEbAxxLSG7Ws9qLP79KQTuHT8xkoVIJEMyh2OEZcqyXJ6d5PgS37ksnuM6w
+/bLYdrlJReNaxga/9ItMMnecj5nIXXHj8N76XKlq6RwooDHOivbpm8Kh80loSVKD
++8wFk1bnPVDQ1Dr6ps3Br145m4PxMvbzNvTec39Pbpc8Kv0DxSs9ShlCs7S3Q1qW
+JVKQu+CP7AVOzWtl2qGgk8Prg9HubiG0vEAdo5LnOWUkVR1Wsp869OrSznLyOkju
+HIoSv/O86yhKybrOMA6bI9Ufrfot8PYMXcTVp6VmwBFgJtBCwWVHPuLv/OYo2SOY
+mDkiEbrw3ai6Cz4zo+LWNFBYqshKN3ZmwGuff3Of4PdhIWHNyof4uRZl1C3BILlQ
+yXkKRknEOwVfrk8ty+qsdaFFN0TJ//gRzGLmpY3rltE3PIjECXCLQmLhutXZKFgi
+XQ1sBK7VVuM=0kyE
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

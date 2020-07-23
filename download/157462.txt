@@ -1,0 +1,134 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+=====================================================================
+                   Red Hat Security Advisory
+
+Synopsis:          Low: dnsmasq security, bug fix, and enhancement update
+Advisory ID:       RHSA-2020:1715-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:1715
+Issue date:        2020-04-28
+CVE Names:         CVE-2019-14834 
+=====================================================================
+
+1. Summary:
+
+An update for dnsmasq is now available for Red Hat Enterprise Linux 8.
+
+Red Hat Product Security has rated this update as having a security impact
+of Low. A Common Vulnerability Scoring System (CVSS) base score, which
+gives a detailed severity rating, is available for each vulnerability from
+the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Enterprise Linux AppStream (v. 8) - aarch64, ppc64le, s390x, x86_64
+
+3. Description:
+
+The dnsmasq packages contain Dnsmasq, a lightweight DNS (Domain Name
+Server) forwarder and DHCP (Dynamic Host Configuration Protocol) server.
+
+Security Fix(es):
+
+* dnsmasq: memory leak in the create_helper() function in /src/helper.c
+(CVE-2019-14834)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+Additional Changes:
+
+For detailed information on changes in this release, see the Red Hat
+Enterprise Linux 8.2 Release Notes linked from the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1700916 - dnsmasq does not reply to non-recursive queries with local data
+1746411 - dhcp_lease_time doesn´t return time
+1749092 - [RHEL-8] Change dhcp_release to use default address when no IP subnet matches
+1764425 - CVE-2019-14834 dnsmasq: memory leak in the create_helper() function in /src/helper.c
+1779187 - Can't PXE/iPXE boot with dnsmasq and DHCPv6
+
+6. Package List:
+
+Red Hat Enterprise Linux AppStream (v. 8):
+
+Source:
+dnsmasq-2.79-11.el8.src.rpm
+
+aarch64:
+dnsmasq-2.79-11.el8.aarch64.rpm
+dnsmasq-debuginfo-2.79-11.el8.aarch64.rpm
+dnsmasq-debugsource-2.79-11.el8.aarch64.rpm
+dnsmasq-utils-2.79-11.el8.aarch64.rpm
+dnsmasq-utils-debuginfo-2.79-11.el8.aarch64.rpm
+
+ppc64le:
+dnsmasq-2.79-11.el8.ppc64le.rpm
+dnsmasq-debuginfo-2.79-11.el8.ppc64le.rpm
+dnsmasq-debugsource-2.79-11.el8.ppc64le.rpm
+dnsmasq-utils-2.79-11.el8.ppc64le.rpm
+dnsmasq-utils-debuginfo-2.79-11.el8.ppc64le.rpm
+
+s390x:
+dnsmasq-2.79-11.el8.s390x.rpm
+dnsmasq-debuginfo-2.79-11.el8.s390x.rpm
+dnsmasq-debugsource-2.79-11.el8.s390x.rpm
+dnsmasq-utils-2.79-11.el8.s390x.rpm
+dnsmasq-utils-debuginfo-2.79-11.el8.s390x.rpm
+
+x86_64:
+dnsmasq-2.79-11.el8.x86_64.rpm
+dnsmasq-debuginfo-2.79-11.el8.x86_64.rpm
+dnsmasq-debugsource-2.79-11.el8.x86_64.rpm
+dnsmasq-utils-2.79-11.el8.x86_64.rpm
+dnsmasq-utils-debuginfo-2.79-11.el8.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2019-14834
+https://access.redhat.com/security/updates/classification/#low
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/8.2_release_notes/index
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXqhV5dzjgjWX9erEAQiJYhAAikb8A4aIuIpOkV6yWs5O4sKl2uwV1yST
+539hERDsFs0jKFpMFWL4QZ0sozoRpSTvawwCP8yYIr8k/IrIqM/Rpxn+yeKS6TZo
+OPVx/fjVdFlMqC73/cWvBuqKVZyz6sjclyAO8ytXcg+fM3ManWn6GVFfXNWYqZWm
+8VdExdloiMzj7YCy5p5iq05J/ieVDGO792hVtfrOqmkCSyNc7G9+juJWfSZknj0Q
+7vVKuyrK1nOgtd12DUEchXWP4lUskQ99rfgoALagny/MvRjxQC/OqIrbHrIbcI0B
+nopWlL+RC2T2+e+PCE+uiJ74ivcEmHJX4QSha2ErmHvVIfoeUxpL/drrdorcDEIE
+4xZZXAE1ouGoyoqt3REitAUBxKx47n0TwqZcEBgK5xqkkV7+yubvYWovsvXZoqv2
+2OUTkV+ZrGpcSpDFNW7g2B5zsgFicQ9y9eOByBtItGm9oW+YAwGeyD2BkL5YaKIg
+zQ9jBHJBaQLGQB+FNqz3EzgoVpxWKljP9NSHW1ZdQC3gi7CjIV5lq+2hHFxmGYe8
+/36djFvZFfPzEowHnm/szb2DmKjhvxSLMRSheGo/OkeOw3SGgur7RvpQoJh8mkHH
+NSSKKCtgkGTPw31XWx6c71n2ZI6DBJ0GySXGQT1w2SVeo82cH8zjDxhYVKvCl6Pj
+cQDIyD8MopM=
+=RHI3
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

@@ -1,0 +1,134 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+=====================================================================
+                   Red Hat Security Advisory
+
+Synopsis:          Critical: firefox security update
+Advisory ID:       RHSA-2020:2031-01
+Product:           Red Hat Enterprise Linux
+Advisory URL:      https://access.redhat.com/errata/RHSA-2020:2031
+Issue date:        2020-05-06
+CVE Names:         CVE-2020-6831 CVE-2020-12387 CVE-2020-12392 
+                   CVE-2020-12395 
+=====================================================================
+
+1. Summary:
+
+An update for firefox is now available for Red Hat Enterprise Linux 8.
+
+Red Hat Product Security has rated this update as having a security impact
+of Critical. A Common Vulnerability Scoring System (CVSS) base score, which
+gives a detailed severity rating, is available for each vulnerability from
+the CVE link(s) in the References section.
+
+2. Relevant releases/architectures:
+
+Red Hat Enterprise Linux AppStream (v. 8) - aarch64, ppc64le, s390x, x86_64
+
+3. Description:
+
+Mozilla Firefox is an open-source web browser, designed for standards
+compliance, performance, and portability.
+
+This update upgrades Firefox to version 68.8.0 ESR.
+
+Security Fix(es):
+
+* Mozilla: Use-after-free during worker shutdown (CVE-2020-12387)
+
+* Mozilla: Memory safety bugs fixed in Firefox 76 and Firefox ESR 68.8
+(CVE-2020-12395)
+
+* Mozilla: Buffer overflow in SCTP chunk input validation (CVE-2020-6831)
+
+* Mozilla: Arbitrary local file access with 'Copy as cURL' (CVE-2020-12392)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, acknowledgments, and other related information, refer to the CVE
+page(s) listed in the References section.
+
+4. Solution:
+
+For details on how to apply this update, which includes the changes
+described in this advisory, refer to:
+
+https://access.redhat.com/articles/11258
+
+After installing the update, Firefox must be restarted for the changes to
+take effect.
+
+5. Bugs fixed (https://bugzilla.redhat.com/):
+
+1831761 - CVE-2020-12387 Mozilla: Use-after-free during worker shutdown
+1831763 - CVE-2020-6831 Mozilla: Buffer overflow in SCTP chunk input validation
+1831764 - CVE-2020-12392 Mozilla: Arbitrary local file access with 'Copy as cURL'
+1831765 - CVE-2020-12395 Mozilla: Memory safety bugs fixed in Firefox 76 and Firefox ESR 68.8
+
+6. Package List:
+
+Red Hat Enterprise Linux AppStream (v. 8):
+
+Source:
+firefox-68.8.0-1.el8_2.src.rpm
+
+aarch64:
+firefox-68.8.0-1.el8_2.aarch64.rpm
+firefox-debuginfo-68.8.0-1.el8_2.aarch64.rpm
+firefox-debugsource-68.8.0-1.el8_2.aarch64.rpm
+
+ppc64le:
+firefox-68.8.0-1.el8_2.ppc64le.rpm
+firefox-debuginfo-68.8.0-1.el8_2.ppc64le.rpm
+firefox-debugsource-68.8.0-1.el8_2.ppc64le.rpm
+
+s390x:
+firefox-68.8.0-1.el8_2.s390x.rpm
+firefox-debuginfo-68.8.0-1.el8_2.s390x.rpm
+firefox-debugsource-68.8.0-1.el8_2.s390x.rpm
+
+x86_64:
+firefox-68.8.0-1.el8_2.x86_64.rpm
+firefox-debuginfo-68.8.0-1.el8_2.x86_64.rpm
+firefox-debugsource-68.8.0-1.el8_2.x86_64.rpm
+
+These packages are GPG signed by Red Hat for security.  Our key and
+details on how to verify the signature are available from
+https://access.redhat.com/security/team/key/
+
+7. References:
+
+https://access.redhat.com/security/cve/CVE-2020-6831
+https://access.redhat.com/security/cve/CVE-2020-12387
+https://access.redhat.com/security/cve/CVE-2020-12392
+https://access.redhat.com/security/cve/CVE-2020-12395
+https://access.redhat.com/security/updates/classification/#critical
+
+8. Contact:
+
+The Red Hat security contact is <secalert@redhat.com>. More contact
+details at https://access.redhat.com/security/team/contact/
+
+Copyright 2020 Red Hat, Inc.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUBXrJ40tzjgjWX9erEAQhPEg/5AV9V68w1Pwr0fBV0sldXKFnPF+xJ2/2r
+eV9Bv46+Tb0gOlak7cLqmbL3FCNhNH2qV2b48UKrvfHZgWu/bIozLyq+JmCeExrk
+o0II7XaKja5hBdvKqlKX/4q5sm9PWR+Oay6kX6cR6PwZg91mbJ81QdRuCWBqvCXM
+251NMmjzaFBnlLmfhBq/5cRxiNB36UMwn3RTB3Ai0z94WG3XYIEIVujBOjMlaxEq
+hn78HOUz34AuCu+kvaJwH3/L3Qtqu2FChlT56bk+TmYx+02mezS6ivhF7+gmal47
+379sI7tKEY7CgqFWctrxAeGLzKI/zVR0ucoY9AFrJA1YaY36d6RTsdAQlrX76S6z
+4SjhXXKNSnWlGqLkJtIu5oBFPXeGs6zUm8bvWLutQXPmQcUL1CwsCV72BTzzAHIm
+zxOE04EU0b3f2UWObI3VUYjbtOxj+YUEyBNdNRaN42JEJgq+S1XjHx+nsdBfXJqY
+HZ28fJ8ddzfDiGzkbczrYd8aKcIBIQ6qSbt0kT2ddg4Zm+TYHCk7f0nLGp00Fhwe
+k3RjH2q9f+8s/D/XcHjoOvgJaZ4gispSLdxRM6vZeHoS4whcH5mbaCDeU7IMUU+J
+s03BH0QOOz5ShDaIpuWzMYitQi5SwZCoxhvtKOSJio2ejhiIY8A+aBirfV0BfsIh
+NOHKwK5q/UY=
+=XmB/
+-----END PGP SIGNATURE-----
+
+--
+RHSA-announce mailing list
+RHSA-announce@redhat.com
+https://www.redhat.com/mailman/listinfo/rhsa-announce

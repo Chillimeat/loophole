@@ -1,0 +1,55 @@
+=========================================================================
+Ubuntu Security Notice USN-4359-1
+May 14, 2020
+
+apt vulnerability
+=========================================================================
+A security issue affects these releases of Ubuntu and its derivatives:
+
+- Ubuntu 20.04 LTS
+- Ubuntu 19.10
+- Ubuntu 18.04 LTS
+- Ubuntu 16.04 LTS
+
+Summary:
+
+APT could be made to crash if it opened a specially crafted file.
+
+Software Description:
+- apt: Advanced front-end for dpkg
+
+Details:
+
+It was discovered that APT incorrectly handled certain filenames during
+package installation. If an attacker could provide a specially crafted
+package to be installed by the system administrator, this could cause APT
+to crash.
+
+Update instructions:
+
+The problem can be corrected by updating your system to the following
+package versions:
+
+Ubuntu 20.04 LTS:
+  apt                             2.0.2ubuntu0.1
+
+Ubuntu 19.10:
+  apt                             1.9.4ubuntu0.1
+
+Ubuntu 18.04 LTS:
+  apt                             1.6.12ubuntu0.1
+
+Ubuntu 16.04 LTS:
+  apt                             1.2.32ubuntu0.1
+
+In general, a standard system update will make all the necessary changes.
+
+References:
+  https://usn.ubuntu.com/4359-1
+  CVE-2020-3810
+
+Package Information:
+  https://launchpad.net/ubuntu/+source/apt/2.0.2ubuntu0.1
+  https://launchpad.net/ubuntu/+source/apt/1.9.4ubuntu0.1
+  https://launchpad.net/ubuntu/+source/apt/1.6.12ubuntu0.1
+  https://launchpad.net/ubuntu/+source/apt/1.2.32ubuntu0.1

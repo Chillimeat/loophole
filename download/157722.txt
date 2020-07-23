@@ -1,0 +1,109 @@
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Gentoo Linux Security Advisory                           GLSA 202005-09
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+                                           https://security.gentoo.org/
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ Severity: Normal
+    Title: Python: Denial of Service
+     Date: May 14, 2020
+     Bugs: #707822
+       ID: 202005-09
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Synopsis
+========
+
+A vulnerability in Python could lead to a Denial of Service condition.
+
+Background
+==========
+
+Python is an interpreted, interactive, object-oriented programming
+language.
+
+Affected packages
+=================
+
+    -------------------------------------------------------------------
+     Package              /     Vulnerable     /            Unaffected
+    -------------------------------------------------------------------
+  1  dev-lang/python            < 2.7.18:2.7            >= 2.7.18:2.7
+                              < 3.6.10-r2:3.6        >= 3.6.10-r2:3.6
+                               < 3.7.7-r2:3.7         >= 3.7.7-r2:3.7
+                               < 3.8.2-r2:3.8         >= 3.8.2-r2:3.8
+
+Description
+===========
+
+An issue was discovered in urllib.request.AbstractBasicAuthHandler
+which allowed a remote attacker to send malicious data causing
+extensive regular expression backtracking.
+
+Impact
+======
+
+An attacker could cause a possible Denial of Service condition.
+
+Workaround
+==========
+
+There is no known workaround at this time.
+
+Resolution
+==========
+
+All Python 2.7 users should upgrade to the latest version:
+
+  # emerge --sync
+  # emerge --ask --oneshot --verbose ">=dev-lang/python-2.7.18:2.7"
+
+All Python 3.6 users should upgrade to the latest version:
+
+  # emerge --sync
+  # emerge --ask --oneshot --verbose ">=dev-lang/python-3.6.10-r2:3.6"
+
+All Python 3.7 users should upgrade to the latest version:
+
+  # emerge --sync
+  # emerge --ask --oneshot --verbose ">=dev-lang/python-3.7.7-r2:3.7"
+
+All Python 3.8 users should upgrade to the latest version:
+
+  # emerge --sync
+  # emerge --ask --oneshot --verbose ">=dev-lang/python-3.8.2-r2:3.8"
+
+References
+==========
+
+[ 1 ] CVE-2020-8492
+      https://nvd.nist.gov/vuln/detail/CVE-2020-8492
+
+Availability
+============
+
+This GLSA and any updates to it are available for viewing at
+the Gentoo Security Website:
+
+ https://security.gentoo.org/glsa/202005-09
+
+Concerns?
+=========
+
+Security is a primary focus of Gentoo Linux and ensuring the
+confidentiality and security of our users' machines is of utmost
+importance to us. Any security concerns should be addressed to
+security@gentoo.org or alternatively, you may file a bug at
+https://bugs.gentoo.org.
+
+License
+=======
+
+Copyright 2020 Gentoo Foundation, Inc; referenced text
+belongs to its owner(s).
+
+The contents of this document are licensed under the
+Creative Commons - Attribution / Share Alike license.
+
+https://creativecommons.org/licenses/by-sa/2.5
