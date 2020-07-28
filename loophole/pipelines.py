@@ -105,6 +105,171 @@ class MysqlPipeline(object):
         return item
 
 
+class YouMysqlPipeline(object):
+    def __init__(self, host, port, user, password, database, table):
+        self.host = host
+        self.port = port
+        self.user = user
+        self.password = password
+        self.database = database
+        self.table = table
+
+    def create_database(self):
+        links = {
+            'host': self.host,
+            'port': self.port,
+            'user': self.user,
+            'password': self.password
+        }
+        try:
+            con = pymysql.Connection(**links)
+            with con.cursor() as cursor:
+                cursor.execute(
+                    f'create database {self.database} character set UTF8mb4 collate utf8mb4_bin'
+                )
+                con.close()
+        except pymysql.err.ProgrammingError as e:
+            if '1007' in str(e):
+                pass
+        except Exception as e:
+            raise e
+
+    @classmethod
+    def from_crawler(cls, crawler):
+        return cls(
+            host=crawler.settings.get("YOU_MYSQL_HOST"),
+            port=crawler.settings.get("MYSQL_PORT"),
+            user=crawler.settings.get("MYSQL_USER"),
+            password=crawler.settings.get("MYSQL_PASSWORD"),
+            database=crawler.settings.get("YOU_MYSQL_DATABASE"),
+            table=crawler.settings.get("YOU_MYSQL_TABLE"),
+        )
+
+    def open_spider(self, spider):
+        self.create_database()
+        self.db = pymysql.connect(self.host, self.user, self.password, self.database, charset="utf8", port=self.port)
+        self.cursor = self.db.cursor()
+
+    def close_spider(self, spider):
+        self.db.close()
+
+    def process_item(self, item, spider):
+        data = dict(item)
+        keys = ', '.join(data.keys())
+        values = ', '.join(["%s"] * len(data))
+        sql_insert = 'insert into %s (%s) values (%s)' % (self.table, keys, values)
+        sql_query = "select * from {} where name = '{}'".format(
+            self.table,
+            pymysql.escape_string(item['name'])
+        )
+        sql_create_table = """create table if not exists {} ({}, {}, {},{})""".format(
+            self.table,
+            'id int(11) AUTO_INCREMENT primary key',
+            'name varchar(100)',
+            'add_time datetime',
+            'urlinfo text',
+        )
+        try:
+            if self.cursor.execute(sql_create_table):
+                self.db.commit()
+        except Exception as e:
+            print(f'table exist: {e}')
+        try:
+            self.cursor.execute(sql_query)
+            result = self.cursor.fetchall()
+        except Exception as e:
+            print(f'sql query error: {e}')
+            result = ""
+        if not result:
+            self.cursor.execute(sql_insert, tuple(data.values()))
+            self.db.commit()
+        return item
+
+
+class ExploitDbMysqlPipeline(object):
+    def __init__(self, host, port, user, password, database, table):
+        self.host = host
+        self.port = port
+        self.user = user
+        self.password = password
+        self.database = database
+        self.table = table
+
+    def create_database(self):
+        links = {
+            'host': self.host,
+            'port': self.port,
+            'user': self.user,
+            'password': self.password
+        }
+        try:
+            con = pymysql.Connection(**links)
+            with con.cursor() as cursor:
+                cursor.execute(
+                    f'create database {self.database} character set UTF8mb4 collate utf8mb4_bin'
+                )
+                con.close()
+        except pymysql.err.ProgrammingError as e:
+            if '1007' in str(e):
+                pass
+        except Exception as e:
+            raise e
+
+    @classmethod
+    def from_crawler(cls, crawler):
+        return cls(
+            host=crawler.settings.get("YOU_MYSQL_HOST"),
+            port=crawler.settings.get("MYSQL_PORT"),
+            user=crawler.settings.get("MYSQL_USER"),
+            password=crawler.settings.get("MYSQL_PASSWORD"),
+            database=crawler.settings.get("YOU_MYSQL_DATABASE"),
+            table=crawler.settings.get("EXPLOIT_DB_MYSQL_TABLE"),
+        )
+
+    def open_spider(self, spider):
+        self.create_database()
+        self.db = pymysql.connect(self.host, self.user, self.password, self.database, charset="utf8", port=self.port)
+        self.cursor = self.db.cursor()
+
+    def close_spider(self, spider):
+        self.db.close()
+
+    def process_item(self, item, spider):
+        data = dict(item)
+        keys = ', '.join(data.keys())
+        values = ', '.join(["%s"] * len(data))
+        sql_insert = 'insert into %s (%s) values (%s)' % (self.table, keys, values)
+        sql_query = "select * from {} where name = '{}'".format(
+            self.table,
+            pymysql.escape_string(item['name'])
+        )
+        sql_create_table = """create table if not exists {} ({}, {}, {}, {}, {}, {})""".format(
+            self.table,
+            'id int(11) AUTO_INCREMENT primary key',
+            'name varchar(200)',
+            'add_time datetime',
+            'language varchar(20)',
+            # 'infotype varchar(50)',
+            'infotype int',
+            'urlinfo text',
+        )
+        try:
+            if self.cursor.execute(sql_create_table):
+                self.db.commit()
+        except Exception as e:
+            print(f'table exist: {e}')
+        try:
+            self.cursor.execute(sql_query)
+            result = self.cursor.fetchall()
+        except Exception as e:
+            print(f'sql query error: {e}')
+            result = ""
+        if not result:
+            self.cursor.execute(sql_insert, tuple(data.values()))
+            self.db.commit()
+        return item
+
+
 class MysqlPipeline1(object):
     def __init__(self, host, port, user, password, database, table):
         self.host = host

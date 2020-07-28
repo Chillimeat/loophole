@@ -28,5 +28,20 @@ class RepositoryItem(scrapy.Item):
     detail_info = scrapy.Field()
 
 
+class YouRepositoryItem(scrapy.Item):
+    name = scrapy.Field()
+    add_time = scrapy.Field()
+    urlinfo = scrapy.Field()
+
+
+class ExploitDbItem(scrapy.Item):
+    name = scrapy.Field()
+    add_time = scrapy.Field()
+    language = scrapy.Field()
+    infotype = scrapy.Field()
+    urlinfo = scrapy.Field()
+
+
+
 
 

@@ -4,7 +4,7 @@ import time
 from scrapy.http import Request
 from copy import deepcopy
 from urllib.parse import urljoin
-from loophole.items import RepositoryItem
+from loophole.items import RepositoryItem, YouRepositoryItem
 from loophole.settings import SLEEP_TIME, TOTAL_PAGES
 
 
@@ -13,6 +13,14 @@ class AnquankeSpider(scrapy.Spider):
     allowed_domains = ['anquanke.com']
     source = 'https://www.anquanke.com'
     start_urls = ['https://www.anquanke.com/vul']
+
+    custom_settings = {
+        # 设置管道下载
+        'ITEM_PIPELINES': {
+            'loophole.pipelines.YouMysqlPipeline': 300,
+        },
+    }
+
     page = 1
     headers = {
         'Referer': 'https://www.anquanke.com'
@@ -20,26 +28,33 @@ class AnquankeSpider(scrapy.Spider):
 
     def parse(self, response):
         print("==========当前抓取第{}页==========".format(self.page))
-        item = RepositoryItem()
+        item = YouRepositoryItem()
         tr_list_xpath = '//div[@id="vul-list"]//table/tbody//tr'
         tr_list = response.xpath(tr_list_xpath)
         for tr in tr_list:
             link = tr.xpath('./td/div/a/@href').extract()
+            detail_link = urljoin(self.source, link[0])
             title = tr.xpath('./td/div/a/text()').extract()
             update_date = tr.xpath('./td[5]/text()').extract()
             cve = tr.xpath('./td[2]//text()').extract()
             platform = [platform.strip() for platform in tr.xpath('./td[3]//text()').extract() if platform.strip()]
-            item['link'] = urljoin(self.source, link[0])
-            item['title'] = title[0].strip() if title else ''
-            item['date'] = update_date[0].strip()
-            item['cve'] = cve[0]
-            item['source'] = self.source
-            item['download_id'] = 0
-            item['type'] = ''
-            item['author'] = ''
-            item['platform'] = platform[-1]
-            item['verified'] = ''
-            yield Request(url=item.get('link'), meta={'item': deepcopy(item)}, headers=self.headers, callback=self.parse_detail)
+
+            # # 我的原始代码存储字段
+            # item['link'] = urljoin(self.source, link[0])
+            # item['title'] = title[0].strip() if title else ''
+            # item['date'] = update_date[0].strip()
+            # item['cve'] = cve[0]
+            # item['source'] = self.source
+            # item['download_id'] = 0
+            # item['type'] = ''
+            # item['author'] = ''
+            # item['platform'] = platform[-1]
+            # item['verified'] = ''
+
+            # you_sir 数据存储字段
+            item['name'] = cve[0]
+            item['add_time'] = update_date[0].strip()
+            yield Request(url=detail_link, meta={'item': deepcopy(item)}, headers=self.headers, callback=self.parse_detail)
             time.sleep(SLEEP_TIME)
 
         self.page += 1
@@ -52,8 +67,22 @@ class AnquankeSpider(scrapy.Spider):
 
     def parse_detail(self, response):
         item = response.meta.get('item')
-        type = response.xpath('//table/tbody/tr[1]/td[4]/text()').extract_first("")
-        item['type'] = type
+
+        # # 我的
+        # type = response.xpath('//table/tbody/tr[1]/td[4]/text()').extract_first("")
+        # item['type'] = type
+        # div = response.xpath('//div[contains(@class,"col-md-24")]')
+        # vul_sources = div.xpath('./div[2]//text()').extract()
+        # vul_sources_list = [i.strip() for i in vul_sources if i.strip()] + ["\n"]
+        # vul_detail = div.xpath('./div[3]//text()').extract()
+        # vul_detail_list = [j.strip() for j in vul_detail if j.strip()] + ["\n"]
+        # references = div.xpath('./div[4]//text()').extract()
+        # references_list = [z.strip() for z in references if z.strip()]
+        # info_list = vul_sources_list + vul_detail_list + references_list
+        # info_str = item['cve'] + '\n\n' + '\n'.join(info_list)
+        # item['detail_info'] = info_str
+
+        # you_sir的
         div = response.xpath('//div[contains(@class,"col-md-24")]')
         vul_sources = div.xpath('./div[2]//text()').extract()
         vul_sources_list = [i.strip() for i in vul_sources if i.strip()] + ["\n"]
@@ -62,8 +91,9 @@ class AnquankeSpider(scrapy.Spider):
         references = div.xpath('./div[4]//text()').extract()
         references_list = [z.strip() for z in references if z.strip()]
         info_list = vul_sources_list + vul_detail_list + references_list
-        info_str = item['cve'] + '\n\n' + '\n'.join(info_list)
-        item['detail_info'] = info_str
+        info_str = item['name'] + '\n\n' + '\n'.join(info_list)
+        item['urlinfo'] = info_str
+
         print(item)
         yield deepcopy(item)
 

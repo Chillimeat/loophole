@@ -108,11 +108,15 @@ URLLENGTH_LIMIT = 5000
 
 # mysql database config
 MYSQL_HOST = '127.0.0.1'
+YOU_MYSQL_HOST = '192.168.0.130'
 MYSQL_USER = 'root'
 MYSQL_PASSWORD = 'root'
 MYSQL_PORT = 3306
 MYSQL_DATABASE = 'spider'
+YOU_MYSQL_DATABASE = 'gcdb'
 MYSQL_TABLE = 'vul_info'
+YOU_MYSQL_TABLE = 'bug_cve'
+EXPLOIT_DB_MYSQL_TABLE = 'bug_expdb'
 MYSQL_TABLE1 = 'vul_info1'
 
 # set proxy
